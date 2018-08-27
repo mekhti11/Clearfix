@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar color="tabColor">
+    <ion-title text-center>YENİ HESAP OLUŞTUR</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="closePage()">
+         Kapat    
+         </button>
+   </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card class="card-parent">
+        <img src="/assets/imgs/clearfix.png"/>
+        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>
+      </ion-card>
+
+  
+     
+    <ion-item>
+        <ion-label style="font-weight: bold;">+90</ion-label>
+          <ion-input type="tel"   placeholder="(111)-111-1111" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}"></ion-input> 
+      </ion-item>
+      <br>
+      <button ion-button class="button-middle" (click)="smsOPT()">AKTİVASYON KODU GÖNDER</button>
+
+</ion-content>
