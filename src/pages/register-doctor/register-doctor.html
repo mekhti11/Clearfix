@@ -1,0 +1,73 @@
+
+<ion-header>
+
+  <ion-navbar color="tabColor">
+    <ion-title text-center>HEKİM KAYIT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div col-lg-4 class="login-content card" padding>
+        <!--logo-->
+        <div padding text-center>
+          <div class="logo primary-bg">
+              <img src="/assets/imgs/clearfix.png"/>
+          </div>
+          <h5 style="font-weight: bold; color:rgb(101, 183, 221);">Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir.</h5>
+        </div>
+         <!-- Login form -->
+         <ion-list class="list-form list-no-border">
+            <ion-item>
+              <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soyadınız</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+      
+            <ion-item>
+              <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>
+              <ion-input type="email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon</ion-label>
+                <ion-input type="tel"></ion-input>
+              </ion-item>
+      
+            <ion-item>
+              <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreniz</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreyi onayla</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+      
+          </ion-list>
+      
+          <!--<p text-right ion-text color="light">Forgot Password?</p>-->
+          <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>
+          <ion-label >Lisanslı Diş Hekimi olduğumu onaylıyorum. </ion-label>
+          
+          <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>
+          <ion-label>Beyan ettiğim bilgilerin doğruluğunu ve <a>Clearfix</a><br> üyelik kural ve koşullarını kabul ediyorum.</ion-label>
+          
+
+          <div margin-top>
+            <button ion-button block class="button-middle"  (click)="register()">
+              Kaydol
+            </button>
+          </div>
+      
+          <!-- Other links -->
+          <div text-center margin-top>
+            <span ion-text (click)="login()">Hesabın var mı?</span>
+          </div>
+         </div>
+</ion-content>

@@ -1,0 +1,31 @@
+page-make-appointment-1 {
+    .card-title {
+        position: absolute;
+        top: 5%;
+        font-size: 1.4em;
+        width: 100%;
+        margin-left: -1.5%;
+        color:rgb(112, 205, 248);
+        font-weight: bold;
+
+      }
+      .card {
+        margin-bottom:20%;
+        //box-shadow: none;
+      }
+      .card-parent {
+       position:relative;
+       box-shadow: none;
+       width:350px;
+       height:140px;
+      }
+      .button-middle {
+        position:relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:94%;
+       background-color: #4FC3F7;
+      }
+  
+}

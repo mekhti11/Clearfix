@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-
-/**
- * Generated class for the SmsOtpPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { SuccessActivationPage } from '../success-activation/success-activation';
 
 @Component({
   selector: 'page-sms-otp',
@@ -24,6 +17,12 @@ export class SmsOtpPage {
   }
   closePage(){
     this.navCtrl.setRoot(HomePage)
+  }
+  completeAppointment(){
+    this.navCtrl.setRoot(SuccessActivationPage);
+  }
+  repeatTheSmsOPT(){
+
   }
 
 }

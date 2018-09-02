@@ -1,0 +1,147 @@
+
+<ion-header>
+
+  <ion-navbar color="tabColor">
+    <ion-title text-center>RANDEVU AL (1/4)</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card class="card-parent">
+        <div class="card-title" text-center><br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.</div>
+      </ion-card>
+      
+
+        <ion-item>
+          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
+          <ion-input type="text" placeholder="Lütfen adınızı yazınız"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>
+          <ion-input type="text" placeholder="Lütfen soyadınızı yazınız"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>
+          <ion-input type="email"  placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>
+        </ion-item>
+        
+        <ion-list>
+          <ion-item>
+            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="male">Bay</ion-option>
+              <ion-option value="female">Bayan</ion-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>
+            <ion-select [(ngModel)]="city">
+              <ion-option value="1">Adana</ion-option>
+              <ion-option value="2">Adıyaman</ion-option>
+              <ion-option value="3">Afyonkarahisar</ion-option>
+              <ion-option value="4">Ağrı</ion-option>
+              <ion-option value="5">Amasya</ion-option>
+              <ion-option value="6">Ankara</ion-option>
+              <ion-option value="7">Antalya</ion-option>
+              <ion-option value="8">Artvin</ion-option>
+              <ion-option value="9">Aydın</ion-option>
+              <ion-option value="10">Balıkesir</ion-option>
+              <ion-option value="11">Bilecik</ion-option>
+              <ion-option value="12">Bingöl</ion-option>
+              <ion-option value="13">Bitlis</ion-option>
+              <ion-option value="14">Bolu</ion-option>
+              <ion-option value="15">Burdur</ion-option>
+              <ion-option value="16">Bursa</ion-option>
+              <ion-option value="17">Çanakkale</ion-option>
+              <ion-option value="18">Çankırı</ion-option>
+              <ion-option value="19">Çorum</ion-option>
+              <ion-option value="20">Denizli</ion-option>
+              <ion-option value="21">Diyarbakır</ion-option>
+              <ion-option value="22">Edirne</ion-option>
+              <ion-option value="23">Elazığ</ion-option>
+              <ion-option value="24">Erzincan</ion-option>
+              <ion-option value="25">Erzurum</ion-option>
+              <ion-option value="26">Eskişehir</ion-option>
+              <ion-option value="27">Gaziantep</ion-option>
+              <ion-option value="28">Giresun</ion-option>
+              <ion-option value="29">Gümüşhane</ion-option>
+              <ion-option value="30">Hakkâri</ion-option>
+              <ion-option value="31">Hatay</ion-option>
+              <ion-option value="32">Isparta</ion-option>
+              <ion-option value="33">Mersin</ion-option>
+              <ion-option value="34">İstanbul</ion-option>
+              <ion-option value="35">İzmir</ion-option>
+              <ion-option value="36">Kars</ion-option>
+              <ion-option value="37">Kastamonu</ion-option>
+              <ion-option value="38">Kayseri</ion-option>
+              <ion-option value="39">Kırklareli</ion-option>
+              <ion-option value="40">Kırşehir</ion-option>
+              <ion-option value="41">Kocaeli</ion-option>
+              <ion-option value="42">Konya</ion-option>
+              <ion-option value="43">Kütahya</ion-option>
+              <ion-option value="44">Malatya</ion-option>
+              <ion-option value="45">Manisa</ion-option>
+              <ion-option value="46">Kahramanmaraş</ion-option>
+              <ion-option value="47">Mardin</ion-option>
+              <ion-option value="48">Muğla</ion-option>
+              <ion-option value="49">Muş</ion-option>
+              <ion-option value="50">Nevşehir</ion-option>
+              <ion-option value="51">Niğde</ion-option>
+              <ion-option value="52">Ordu</ion-option>
+              <ion-option value="53">Rize</ion-option>
+              <ion-option value="54">Sakarya</ion-option>
+              <ion-option value="55">Samsun</ion-option>
+              <ion-option value="56">Siirt</ion-option>
+              <ion-option value="57">Sinop</ion-option>
+              <ion-option value="58">Sivas</ion-option>
+              <ion-option value="59">Tekirdağ</ion-option>
+              <ion-option value="60">Tokat</ion-option>
+              <ion-option value="61">Trabzon</ion-option>
+              <ion-option value="62">Tunceli</ion-option>
+              <ion-option value="63">Şanlıurfa</ion-option>
+              <ion-option value="64">Uşak</ion-option>
+              <ion-option value="65">Van</ion-option>
+              <ion-option value="66">Yozgat</ion-option>
+              <ion-option value="67">Zonguldak</ion-option>
+              <ion-option value="68">Aksaray</ion-option>
+              <ion-option value="69">Bayburt</ion-option>
+              <ion-option value="70">Karaman</ion-option>
+              <ion-option value="71">Kırıkkale</ion-option>
+              <ion-option value="72">Batman</ion-option>
+              <ion-option value="73">Şırnak</ion-option>
+              <ion-option value="74">Bartın</ion-option>
+              <ion-option value="75">Ardahan</ion-option>
+              <ion-option value="76">Iğdır</ion-option>
+              <ion-option value="77">Yalova</ion-option>
+              <ion-option value="78">Karabük</ion-option>
+              <ion-option value="79">Kilis</ion-option>
+              <ion-option value="80">Osmaniye</ion-option>
+              <ion-option value="81">Düzce</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        
+        <ion-item>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>
+          <ion-input type="text"  placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>
+          <ion-textarea rows="4" [(ngModel)]="text" autosize placeholder="Eklemek istediğiniz...."></ion-textarea>
+        </ion-item>
+        <button ion-button class="button-middle" (click)="nextStep_1()">Sonraki Adım</button>
+
+      
+      
+
+        
+        
+
+
+</ion-content>

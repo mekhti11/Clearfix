@@ -22,4 +22,9 @@ export class AppointmentsPage {
     console.log('ionViewDidLoad AppointmentsPage');
   }
 
+  infoAppointment(){
+    console.log("Randevu detayları");
+    
+  }
+
 }

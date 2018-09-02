@@ -27,7 +27,7 @@ export class NewAccountPage {
     this.navCtrl.setRoot(HomePage)
   }
   // one time password
-  smsOPT(){ 
+  sendSmsOPT(){ 
     this.navCtrl.setRoot(SmsOtpPage);
   }
 

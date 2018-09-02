@@ -27972,6 +27972,30 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-appointments .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 1.4em;
+  width: 100%;
+  margin-left: -6.5%;
+  color: black;
+}
+
+page-appointments .card {
+  margin-bottom: 20%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-appointments .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
 page-home .card-title {
   position: absolute;
   top: 36%;
@@ -27988,6 +28012,177 @@ page-home .card {
 }
 
 page-home .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-login-doctor .login-content, page-register-doctor .login-content {
+  margin: 5em auto;
+}
+
+page-login-doctor .button-middle, page-register-doctor .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #53b8e7;
+}
+
+page-make-appointment-1 .card-title {
+  position: absolute;
+  top: 5%;
+  font-size: 1.4em;
+  width: 100%;
+  margin-left: -1.5%;
+  color: #70cdf8;
+  font-weight: bold;
+}
+
+page-make-appointment-1 .card {
+  margin-bottom: 20%;
+}
+
+page-make-appointment-1 .card-parent {
+  position: relative;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 350px;
+  height: 140px;
+}
+
+page-make-appointment-1 .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-make-appointment-2 .card-title {
+  position: absolute;
+  top: 5%;
+  font-size: 1.4em;
+  width: 100%;
+  margin-left: -1.5%;
+  color: #41aadb;
+}
+
+page-make-appointment-2 .card-parent {
+  position: relative;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 350px;
+  height: 140px;
+}
+
+page-make-appointment-2 .h1 {
+  font-weight: bold;
+}
+
+page-make-appointment-2 .photoCard {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 7px;
+}
+
+page-make-appointment-2 .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #0c86be;
+}
+
+page-make-appointment-2 .button-nextStep {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-make-appointment-2 .h5 {
+  position: relative;
+  color: #128bc4;
+  left: 100px;
+}
+
+page-make-appointment-3 .card-title {
+  position: absolute;
+  top: 5%;
+  font-size: 1.4em;
+  width: 100%;
+  margin-left: -1.5%;
+  color: #41aadb;
+}
+
+page-make-appointment-3 .card-parent {
+  position: relative;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 350px;
+  height: 140px;
+}
+
+page-make-appointment-3 .h1 {
+  font-weight: bold;
+  color: #41aadb;
+}
+
+page-make-appointment-3 .photoCard {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 7px;
+}
+
+page-make-appointment-3 .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #0c86be;
+}
+
+page-make-appointment-3 .button-edit-information {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-make-appointment-3 .h5 {
+  position: relative;
+  color: #128bc4;
+  left: 100px;
+}
+
+page-make-appointment-4 .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 1.5em;
+  width: 100%;
+  margin-left: -6.5%;
+  color: black;
+}
+
+page-make-appointment-4 .card {
+  margin-bottom: 20%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-make-appointment-4 .button-middle {
   position: relative;
   display: block;
   margin-left: auto;
@@ -28042,4 +28237,47 @@ page-sms-otp .button-middle {
   margin-right: auto;
   width: 94%;
   background-color: #4FC3F7;
+}
+
+page-success-activation .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 1.5em;
+  width: 100%;
+  margin-left: -6.5%;
+  color: black;
+}
+
+page-success-activation .card {
+  margin-bottom: 20%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-success-activation .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-ticket-list ion-scroll[scrollX] {
+  white-space: nowrap;
+}
+
+page-ticket-list .scroll-header {
+  display: inline-block;
+  font-size: 21px;
+  word-wrap: break-word;
+  width: 165px;
+  background-color: #008db1;
+}
+
+page-ticket-list .scroll-item {
+  display: inline-block;
+  width: 165px;
+  font-size: 18px;
+  background-color: lightblue;
 }

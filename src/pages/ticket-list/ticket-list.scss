@@ -1,0 +1,19 @@
+page-ticket-list {
+    ion-scroll[scrollX] {
+        white-space: nowrap;
+    }
+        .scroll-header {
+            display: inline-block;
+            font-size:21px;
+            word-wrap:break-word;
+            width:165px;
+            background-color: #008db1;
+          }
+        .scroll-item {
+          display: inline-block;
+          width:165px;
+          font-size:18px;
+          background-color: lightblue;
+        }
+      
+}

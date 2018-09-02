@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { RegisterDoctorPage } from '../register-doctor/register-doctor';
 
 /**
  * Generated class for the LoginDoctorPage page.
@@ -20,6 +21,19 @@ export class LoginDoctorPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginDoctorPage');
+  }
+
+  login(){
+    console.log("Bana tıkladın login");
+    // doktorun kaydına bakılacak, kaydı var mı yok mu?
+    // doktor login olduktan sonra, doktoru işlem sayfasına atmasını gerekiyor
+    
+    
+  }
+  register(){
+    console.log("Bana tıkladın Register");
+    this.navCtrl.setRoot(RegisterDoctorPage);
+    
   }
 
 }
