@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="tabColor">
+    <ion-title text-center>chat-with-doctor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item  no-lines> <!---burada *ngFor olacak-->
+          <div class="chat-status" text-center >
+            <span class="chat-date"><!-- {{chat.sendDate | date:'short'}} --></span>
+            <span class="chat-content-center"><!-- {{chat.message}} --></span>
+          </div>
+          <ng-template #message>
+            <div class="chat-message" text-right > <!-- *ngIf="chat.user === nickname" burasi doktor attiginda sag gider mesaj --> 
+              <div class="right-bubble">
+                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->
+                <span class="msg-date"><!-- {{chat.sendDate | date:'short'}} --></span>
+                <p text-wrap><!-- {{chat.message}} --></p>
+              </div>
+            </div>
+            <div class="chat-message" text-left > <!-- *ngIf="chat.user !== nickname" burasi hasta attiginda sola gider --> 
+              <div class="left-bubble">
+                <span class="msg-name"><!-- {{chat.user}} --></span>
+                <span class="msg-date"><!-- {{chat.sendDate | date:'short'}} --></span>
+                <p text-wrap><!-- {{chat.message}} --></p>
+              </div>
+            </div>
+          </ng-template>
+        </ion-item>
+      </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message"></ion-input> <!-- [(ngModel)]="data.message" inputun içinde olacak -->
+        </ion-col>
+        <ion-col col-2 > <!-- (click)="sendMessage()"  gönderme buttonu --> 
+          <ion-icon name="paper-plane"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+

@@ -15,6 +15,9 @@ import { LoginDoctorPage } from '../pages/login-doctor/login-doctor';
 import { RegisterDoctorPage } from '../pages/register-doctor/register-doctor';
 import { LoginUserPage } from '../pages/login-user/login-user';
 import { TicketListPage } from '../pages/ticket-list/ticket-list';
+import { TimerPage } from '../pages/timer/timer';
+import { SimulationPage } from '../pages/simulation/simulation';
+import { ChatWithDoctorPage } from '../pages/chat-with-doctor/chat-with-doctor';
 import { SuccessActivationPage } from '../pages/success-activation/success-activation';
 import { MakeAppointment_1Page } from '../pages/make-appointment-1/make-appointment-1';
 import { MakeAppointment_2Page } from '../pages/make-appointment-2/make-appointment-2';
@@ -25,6 +28,7 @@ import { MakeAppointment_4Page } from '../pages/make-appointment-4/make-appointm
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IdListPage } from '../pages/id-list/id-list';
 
 
 
@@ -41,7 +45,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginDoctorPage,
     LoginUserPage,
     TicketListPage,
+    IdListPage,
+    SimulationPage,
+    TimerPage,
     RegisterDoctorPage,
+    ChatWithDoctorPage,
     SuccessActivationPage,
     MakeAppointment_1Page,
     MakeAppointment_2Page,
@@ -66,6 +74,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginUserPage,
     RegisterDoctorPage,
     TicketListPage,
+    SimulationPage,
+    ChatWithDoctorPage,
+    IdListPage,
+    TimerPage,
     SuccessActivationPage,
     MakeAppointment_1Page,
     MakeAppointment_2Page,

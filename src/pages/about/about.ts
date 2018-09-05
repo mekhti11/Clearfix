@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { TimerPage } from '../timer/timer';
+import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
+import { SimulationPage } from '../simulation/simulation';
 
 @Component({
   selector: 'page-about',
@@ -8,6 +11,17 @@ import { NavController } from 'ionic-angular';
 export class AboutPage {
 
   constructor(public navCtrl: NavController) {
+
+  }
+  timer(){
+    this.navCtrl.setRoot(TimerPage);
+  }
+  chatWithDoctor(){
+    this.navCtrl.setRoot(ChatWithDoctorPage);
+
+  }
+  simulation(){
+    this.navCtrl.setRoot(SimulationPage);
 
   }
 

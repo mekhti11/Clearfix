@@ -2,193 +2,118 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>TİCKET LİSTESİ</ion-title>
+    <ion-title >TİCKET LİSTESİ</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content >
-    <ion-card no-padding style="box-shadow: none;">
-      
-      
-        <ion-card-content>
-            <b style="font-size:25px; color:rgb(101, 183, 221);"> Bütün ticket listesini görmek için lütfen yana kaydırınız.</b>
-        </ion-card-content>
-      </ion-card>
-     
-      <ion-scroll scrollX scrollY style="height:200px;">
-          <div class="scroll-header">
-          ID
-          </div>
-          <div class="scroll-header">
-          Durum
-          </div>
-        <div class="scroll-header">
-          Öncelik
-          </div>
-      <div class="scroll-header">
-          Konu
-        </div>
-        <div class="scroll-header">
-          Yükselten
-          </div>
-          <div class="scroll-header">
-          Kategori
-            </div>
-       <div class="scroll-header">
-          Yetkili 
-        </div>
-      <div class="scroll-header">
-           OLuşturldu
-        </div>
-      <div class="scroll-header">
-           Güncellendi
-      </div>
-      <div class="scroll-header">
-          Adım
-      </div>
-          <br>
-          <div class="scroll-item">
-              Item 1
-              </div> 
-              <div class="scroll-item">
-              Item 2
-              </div>
-            <div class="scroll-item">
-              Item 3
-              </div>
-          <div class="scroll-item">
-              Item 4
-            </div>
-            <div class="scroll-item">
-              Item 5
-              </div>
-              <div class="scroll-item">
-              Item 6
-                </div>
-           <div class="scroll-item">
-              Item 7
-            </div>
-          <div class="scroll-item">
-              Item 8
-            </div>
-          <div class="scroll-item">
-              Item 9
-          </div>
-          <br>
-          <div class="scroll-item">
-              Item 1
-              </div>
-              <div class="scroll-item">
-              Item 2
-              </div>
-            <div class="scroll-item">
-              Item 3
-              </div>
-          <div class="scroll-item">
-              Item 4
-            </div>
-            <div class="scroll-item">
-              Item 5
-              </div>
-              <div class="scroll-item">
-              Item 6
-                </div>
-           <div class="scroll-item">
-              Item 7
-            </div>
-          <div class="scroll-item">
-              Item 8
-            </div>
-          <div class="scroll-item">
-              Item 9
-          </div>
-          <br>
-          <div class="scroll-item">
-              Item 1
-              </div>
-              <div class="scroll-item">
-              Item 2
-              </div>
-            <div class="scroll-item">
-              Item 3
-              </div>
-          <div class="scroll-item">
-              Item 4
-            </div>
-            <div class="scroll-item">
-              Item 5
-              </div>
-              <div class="scroll-item">
-              Item 6
-                </div>
-           <div class="scroll-item">
-              Item 7
-            </div>
-          <div class="scroll-item">
-              Item 8
-            </div>
-          <div class="scroll-item">
-              Item 9
-          </div>
-          <br>
-          <div class="scroll-item">
-              Item 1
-              </div>
-              <div class="scroll-item">
-              Item 2
-              </div>
-            <div class="scroll-item">
-              Item 3
-              </div>
-          <div class="scroll-item">
-              Item 4
-            </div>
-            <div class="scroll-item">
-              Item 5
-              </div>
-              <div class="scroll-item">
-              Item 6
-                </div>
-           <div class="scroll-item">
-              Item 7
-            </div>
-          <div class="scroll-item">
-              Item 8
-            </div>
-          <div class="scroll-item">
-              Item 9
-          </div>
-          <br>
-          <div class="scroll-item">
-              Item 1
-              </div>
-              <div class="scroll-item">
-              Item 2
-              </div>
-            <div class="scroll-item">
-              Item 3
-              </div>
-          <div class="scroll-item">
-              Item 4
-            </div>
-            <div class="scroll-item">
-              Item 5
-              </div>
-              <div class="scroll-item">
-              Item 6
-                </div>
-           <div class="scroll-item">
-              Item 7
-            </div>
-          <div class="scroll-item">
-              Item 8
-            </div>
-          <div class="scroll-item">
-              Item 9
-          </div>
-        </ion-scroll>
-      
+  
+  <ion-grid>
 
+    <ion-row center>
+      <ion-col col-6 no-padding>
+        <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+              ID
+            </ion-card-header>
+            <ion-card-content>
+             <b style="font-size:20px;">12345678</b>
+            </ion-card-content>
+        </ion-card>
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor"> 
+            <ion-card-header style="font-size:20px;">
+                Durum
+              </ion-card-header>
+              <ion-card-content>
+              <ion-badge color="primary" style="font-size:18px;">İşleme Alınıyor</ion-badge>
+            </ion-card-content>
+        </ion-card>   
+      </ion-col>
+      <ion-col col-6 no-padding> 
+          <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+                Öncelik
+            </ion-card-header>
+            <ion-card-content>
+                <ion-badge color="danger" style="font-size:18px;">24-48 saat</ion-badge>
+            </ion-card-content>
+          </ion-card>   
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+          <ion-card-header style="font-size:20px;">
+              Konu
+          </ion-card-header>
+          <ion-card-content>
+              <b style="font-size:18px;">Mine Uzunbayır</b>
+          </ion-card-content>
+        </ion-card>   
+  </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+              Yükseltildi
+            </ion-card-header>
+            <ion-card-content>
+                <b style="font-size:16px;">Dr.İlke Kardelen</b>
+            </ion-card-content>
+        </ion-card>   
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+                Kategori
+            </ion-card-header>
+            <ion-card-content>
+                <b style="font-size:16px;">Vaka Danışma</b>
+            </ion-card-content>
+        </ion-card>   
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+                Yetkili
+            </ion-card-header>
+            <ion-card-content>
+                <b style="font-size:18px;">Yok</b>
+            </ion-card-content>
+        </ion-card>   
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+            <ion-card-header style="font-size:20px;">
+                Oluşturuldu
+            </ion-card-header>
+            <ion-card-content>
+                <b style="font-size:16px;">2018/08/29 12:23:09</b>
+            </ion-card-content>
+        </ion-card>   
+    </ion-col>
+    <ion-col col-6 no-padding> 
+        <ion-card text-center class="cardColor">
+        <ion-card-header style="font-size:20px;">
+            Güncellendi
+        </ion-card-header>
+        <ion-card-content>
+            <b style="font-size:16px;">2018/08/29 12:23:09</b>
+        </ion-card-content>
+        </ion-card>   
+   </ion-col>
+   <ion-col col-6 no-padding> 
+      <ion-card text-center class="cardColor">
+      <ion-card-header style="font-size:20px;">
+          Adım
+      </ion-card-header>
+      <ion-card-content>
+          <ion-badge color="secondary" style="font-size:18px;">Tamamlandı</ion-badge>
+      </ion-card-content>
+      </ion-card>   
+     </ion-col>
+      </ion-row>
+    </ion-grid>   
+     
 </ion-content>

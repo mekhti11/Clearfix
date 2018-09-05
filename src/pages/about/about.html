@@ -7,6 +7,17 @@
 </ion-header>
 
 <ion-content padding>
+    <div>
+        <ion-card style="background-color:rgb(220, 241, 243);">
+          <ion-card-content>
+            <b style="font-size:18px; color:rgb(75, 168, 211); "> Lütfen aşağıdaki işlemlerden birini seçiniz</b>
+          </ion-card-content>
+        </ion-card>
+        </div>
    
-
+  <button ion-button class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>
+  <button ion-button class="button-middle" (click)="timer()">Değiştirme süresi</button>
+  <button ion-button class="button-middle" (click)="simulation()">3D simülasyon</button>
+  
+ 
 </ion-content>
