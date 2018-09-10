@@ -1,3 +1,4 @@
+import { HomePage } from '../../pages/home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -13,6 +14,9 @@ export class LoginUserPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginUserPage');
+  }
+  userLogin(){
+    this.navCtrl.setRoot(HomePage); // Deneme amaciyla anasayfaya atıyorum.
   }
 
 }

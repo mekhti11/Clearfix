@@ -1,3 +1,25 @@
 page-login-user {
+    .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 1.7em;
+        width: 100%;
+        margin-left: -8.4%;
+        color: black;
+      }
+      .card {
+        margin-bottom:20%;
+        
+        box-shadow: none;
+      }
+      .button-middle {
+        position:relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:94%;
+       background-color: #4FC3F7;
+      }
+    
 
 }
