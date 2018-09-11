@@ -14,14 +14,14 @@ export class AboutPage {
 
   }
   timer(){
-    this.navCtrl.setRoot(TimerPage);
+    this.navCtrl.push(TimerPage);
   }
   chatWithDoctor(){
-    this.navCtrl.setRoot(ChatWithDoctorPage);
+    this.navCtrl.push(ChatWithDoctorPage);
 
   }
   simulation(){
-    this.navCtrl.setRoot(SimulationPage);
+    this.navCtrl.push(SimulationPage);
 
   }
 

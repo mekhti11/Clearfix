@@ -27972,6 +27972,38 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+ion-icon[class*="custom-"] {
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+ion-icon[class*="custom-truck"] {
+  -webkit-mask-image: url(../assets/svg/delivery-truck.svg);
+  mask-image: url(../assets/svg/delivery-truck.svg);
+}
+
+ion-icon[class*="custom-register"] {
+  -webkit-mask-image: url(../assets/svg/register.svg);
+  mask-image: url(../assets/svg/register.svg);
+}
+
+ion-icon[class*="custom-ruler"] {
+  -webkit-mask-image: url(../assets/svg/ruler.svg);
+  mask-image: url(../assets/svg/ruler.svg);
+}
+
+ion-icon[class*="custom-plan"] {
+  -webkit-mask-image: url(../assets/svg/planing.svg);
+  mask-image: url(../assets/svg/planing.svg);
+}
+
 page-about .button-middle {
   position: relative;
   display: block;
@@ -28003,6 +28035,23 @@ page-appointments .button-middle {
   margin-right: auto;
   width: 94%;
   background-color: #4FC3F7;
+}
+
+page-category .divIcon {
+  margin: 0 auto;
+  padding: 0.2em 1.25em 0.1em 0.35em;
+  width: 2.1em;
+  border-radius: 10%;
+  font-size: 5em;
+  margin-left: 0.2em;
+}
+
+page-category .bfont {
+  font-size: 20px;
+}
+
+page-category .cardColor {
+  background-color: #EBF5FB;
 }
 
 page-chat-with-doctor ion-content {
@@ -28162,6 +28211,30 @@ page-login-doctor .button-middle, page-register-doctor .button-middle {
   margin-right: auto;
   width: 94%;
   background-color: #53b8e7;
+}
+
+page-login-user .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 1.7em;
+  width: 100%;
+  margin-left: -8.4%;
+  color: black;
+}
+
+page-login-user .card {
+  margin-bottom: 20%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-login-user .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
 }
 
 page-make-appointment-1 .card-title {
@@ -28344,6 +28417,11 @@ page-new-account .button-middle {
   margin-right: auto;
   width: 94%;
   background-color: #4FC3F7;
+}
+
+page-simulation .iframe {
+  width: 100%;
+  height: 100%;
 }
 
 page-sms-otp .card-title {

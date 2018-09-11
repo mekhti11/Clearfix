@@ -24,10 +24,12 @@
         </div>
     
         <!-- Login form -->
-        <ion-list class="list-form list-no-border">
+        <form (ngSubmit)="login()">
     
           <ion-item>
+              
             <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>
+            
             <ion-input type="email">
             </ion-input>
           </ion-item>
@@ -38,16 +40,14 @@
             </ion-input>
           </ion-item>
     
-        </ion-list>
-    
         <!--<p text-right ion-text color="light">Forgot Password?</p>-->
     
         <div margin-top>
-          <button ion-button block class="button-middle" (click)="login()">
-            GIRIŞ YAP
+          <button ion-button block class="button-middle" type="submit">
+              GIRIŞ YAP 
           </button>
         </div>
-    
+      </form>
         <!-- Other links -->
         <div text-center margin-top>
           <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>

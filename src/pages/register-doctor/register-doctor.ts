@@ -1,4 +1,4 @@
-import { IdListPage } from './../id-list/id-list';
+import { CategoryPage } from './../category/category';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginDoctorPage } from '../login-doctor/login-doctor';
@@ -17,7 +17,7 @@ export class RegisterDoctorPage {
     console.log('ionViewDidLoad RegisterDoctorPage');
   }
   register(){
-    this.navCtrl.setRoot(IdListPage);
+    this.navCtrl.setRoot(CategoryPage);
 
   }
 

@@ -2,12 +2,14 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>3D Simülasyon</ion-title>
+    <ion-title >3D Simülasyon</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  
+    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen></iframe>
 
 </ion-content>

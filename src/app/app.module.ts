@@ -17,6 +17,7 @@ import { LoginUserPage } from '../pages/login-user/login-user';
 import { TicketListPage } from '../pages/ticket-list/ticket-list';
 import { TimerPage } from '../pages/timer/timer';
 import { SimulationPage } from '../pages/simulation/simulation';
+import { CategoryPage } from '../pages/category/category';
 import { ChatWithDoctorPage } from '../pages/chat-with-doctor/chat-with-doctor';
 import { SuccessActivationPage } from '../pages/success-activation/success-activation';
 import { MakeAppointment_1Page } from '../pages/make-appointment-1/make-appointment-1';
@@ -48,6 +49,7 @@ import { IdListPage } from '../pages/id-list/id-list';
     IdListPage,
     SimulationPage,
     TimerPage,
+    CategoryPage,
     RegisterDoctorPage,
     ChatWithDoctorPage,
     SuccessActivationPage,
@@ -75,6 +77,7 @@ import { IdListPage } from '../pages/id-list/id-list';
     RegisterDoctorPage,
     TicketListPage,
     SimulationPage,
+    CategoryPage,
     ChatWithDoctorPage,
     IdListPage,
     TimerPage,
