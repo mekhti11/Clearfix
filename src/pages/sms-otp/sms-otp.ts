@@ -1,3 +1,4 @@
+import { PasswordPage } from './../password/password';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
@@ -19,7 +20,7 @@ export class SmsOtpPage {
     this.navCtrl.setRoot(HomePage)
   }
   completeAppointment(){
-    this.navCtrl.setRoot(SuccessActivationPage);
+    this.navCtrl.setRoot(PasswordPage);
   }
   repeatTheSmsOPT(){
 

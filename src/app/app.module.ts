@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Camera } from '@ionic-native/camera';
+
 
     // imort pages
 import { AboutPage } from '../pages/about/about';
@@ -18,6 +20,7 @@ import { TicketListPage } from '../pages/ticket-list/ticket-list';
 import { TimerPage } from '../pages/timer/timer';
 import { SimulationPage } from '../pages/simulation/simulation';
 import { CategoryPage } from '../pages/category/category';
+import { PasswordPage } from '../pages/password/password';
 import { ChatWithDoctorPage } from '../pages/chat-with-doctor/chat-with-doctor';
 import { SuccessActivationPage } from '../pages/success-activation/success-activation';
 import { MakeAppointment_1Page } from '../pages/make-appointment-1/make-appointment-1';
@@ -30,6 +33,8 @@ import { MakeAppointment_4Page } from '../pages/make-appointment-4/make-appointm
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IdListPage } from '../pages/id-list/id-list';
+import { CameraProvider } from '../app/providers/camera.provider';
+
 
 
 
@@ -50,6 +55,7 @@ import { IdListPage } from '../pages/id-list/id-list';
     SimulationPage,
     TimerPage,
     CategoryPage,
+    PasswordPage,
     RegisterDoctorPage,
     ChatWithDoctorPage,
     SuccessActivationPage,
@@ -81,6 +87,7 @@ import { IdListPage } from '../pages/id-list/id-list';
     ChatWithDoctorPage,
     IdListPage,
     TimerPage,
+    PasswordPage,
     SuccessActivationPage,
     MakeAppointment_1Page,
     MakeAppointment_2Page,
@@ -91,6 +98,8 @@ import { IdListPage } from '../pages/id-list/id-list';
   providers: [
     StatusBar,
     SplashScreen,
+    CameraProvider,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
