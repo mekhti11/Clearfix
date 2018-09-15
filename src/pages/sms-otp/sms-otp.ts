@@ -2,7 +2,6 @@ import { PasswordPage } from './../password/password';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { SuccessActivationPage } from '../success-activation/success-activation';
 
 @Component({
   selector: 'page-sms-otp',
