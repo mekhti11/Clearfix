@@ -28106,9 +28106,9 @@ page-category .divIcon {
   margin: 0 auto;
   padding: 0.2em 1.25em 0.1em 0.35em;
   width: 2.1em;
-  border-radius: 10%;
+  border-radius: 9% auto;
   font-size: 5em;
-  margin-left: 0.2em;
+  margin-left: 9% auto;
 }
 
 page-category .bfont {
@@ -28246,7 +28246,7 @@ page-home .card-title {
   top: 36%;
   font-size: 1.5em;
   width: 100%;
-  margin-left: -6.5%;
+  margin-left: -6.5% auto;
   color: black;
 }
 

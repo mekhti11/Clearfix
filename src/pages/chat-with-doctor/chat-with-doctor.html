@@ -12,7 +12,7 @@
         <ion-item  no-lines> <!---burada *ngFor olacak-->
           <div class="chat-status" text-center >
             <span class="chat-date"><!-- {{chat.sendDate | date:'short'}} --></span>
-            <span class="chat-content-center"><!-- {{chat.message}} --></span>
+            <span class="chat-content-center"><!-- {{chat.message}} -->Oturum açıldı</span>
           </div>
           <ng-template #message>
             <div class="chat-message" text-right > <!-- *ngIf="chat.user === nickname" burasi doktor attiginda sag gider mesaj --> 
