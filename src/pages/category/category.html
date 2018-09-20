@@ -14,7 +14,7 @@
         <ion-row>
           <ion-col col-6>
             
-           <ion-card class="cardColor" (click)="userList()">
+           <ion-card class="cardColor" (click)="userList(0)">
               <div class="divIcon">
                   <ion-icon name="list-box" color="tabColor"></ion-icon>
               </div>
@@ -23,13 +23,13 @@
               </div>
               <div>
                 <br>
-                <h1 text-center><b>6</b></h1>
+                <h1 text-center><b>{{rows[0]}}</b></h1>
               </div>
            </ion-card>
 
         </ion-col>
         <ion-col col-6>
-            <ion-card class="cardColor" (click)="userList()">
+            <ion-card class="cardColor" (click)="userList(1)">
                 <div class="divIcon">
                     <ion-icon name="custom-ruler" color="tabColor"></ion-icon>
                 </div>
@@ -38,12 +38,12 @@
                 </div>
                 <div>
                   <br>
-                  <h1 text-center><b>8</b></h1>
+                  <h1 text-center><b>{{rows[1]}}</b></h1>
                 </div>
              </ion-card> 
       </ion-col >
       <ion-col col-6>
-          <ion-card class="cardColor" (click)="userList()">
+          <ion-card class="cardColor" (click)="userList(2)">
               <div class="divIcon">
                   <ion-icon name="qr-scanner" color="tabColor"></ion-icon>
               </div>
@@ -52,12 +52,12 @@
               </div>
               <div>
                 <br>
-                <h1 text-center><b>4</b></h1>
+                <h1 text-center><b>{{rows[2]}}</b></h1>
               </div>
            </ion-card> 
     </ion-col >
     <ion-col col-6>
-        <ion-card class="cardColor" (click)="userList()">
+        <ion-card class="cardColor" (click)="userList(3)">
             <div class="divIcon">
                 <ion-icon name="custom-register" color="tabColor"></ion-icon>
                 
@@ -67,12 +67,12 @@
             </div>
             <div>
               <br>
-              <h1 text-center><b>4</b></h1>
+              <h1 text-center><b>{{rows[3]}}</b></h1>
             </div>
          </ion-card> 
   </ion-col >
   <ion-col col-6>
-      <ion-card class="cardColor" (click)="userList()">
+      <ion-card class="cardColor" (click)="userList(4)">
           <div class="divIcon">
               <ion-icon name="cog" color="tabColor"></ion-icon>
           </div>
@@ -81,12 +81,12 @@
           </div>
           <div>
             <br>
-            <h1 text-center><b>7</b></h1>
+            <h1 text-center><b>{{rows[4]}}</b></h1>
           </div>
        </ion-card> 
   </ion-col >
   <ion-col col-6>
-      <ion-card class="cardColor" (click)="userList()">
+      <ion-card class="cardColor" (click)="userList(5)">
           <div class="divIcon">
               <ion-icon name="custom-plan" color="tabColor"></ion-icon>
           </div>
@@ -95,12 +95,12 @@
           </div>
           <div>
             <br>
-            <h1 text-center><b>3</b></h1>
+            <h1 text-center><b>{{rows[5]}}</b></h1>
           </div>
        </ion-card> 
   </ion-col >
   <ion-col col-6>
-      <ion-card class="cardColor" (click)="userList()">
+      <ion-card class="cardColor" (click)="userList(6)">
           <div class="divIcon">
               <ion-icon name="log-out" color="tabColor"></ion-icon>
           </div>
@@ -109,12 +109,12 @@
           </div>
           <div>
             <br>
-            <h1 text-center><b>2</b></h1>
+            <h1 text-center><b>{{rows[6]}}</b></h1>
           </div>
        </ion-card> 
   </ion-col >
   <ion-col col-6>
-      <ion-card class="cardColor" (click)="userList()">
+      <ion-card class="cardColor" (click)="userList(7)">
           <div class="divIcon">
               <ion-icon name="color-fill" color="tabColor"></ion-icon>
           </div>
@@ -123,24 +123,38 @@
           </div>
           <div>
             <br>
-            <h1 text-center><b>10</b></h1>
+            <h1 text-center><b>{{rows[7]}}</b></h1>
           </div>
        </ion-card> 
   </ion-col >
   <ion-col col-6>
-    <ion-card class="cardColor" (click)="userList()">
+    <ion-card class="cardColor" (click)="userList(8)">
         <div class="divIcon">
             <ion-icon name="custom-truck" color="tabColor"></ion-icon>
         </div>
         <div>
-          <h3 text-center><b class="bfont">A.F.K</b></h3>
+          <h3 text-center><b class="bfont">Kargoda</b></h3>
         </div>
         <div>
           <br>
-          <h1 text-center><b>21</b></h1>
+          <h1 text-center><b>{{rows[8]}}</b></h1>
         </div>
      </ion-card> 
   </ion-col >
+  <ion-col col-6>
+      <ion-card class="cardColor" (click)="userList(9)">
+          <div class="divIcon">
+              <ion-icon name="checkbox" color="tabColor"></ion-icon>
+          </div>
+          <div>
+            <h3 text-center><b class="bfont">Tamamlanmış</b></h3>
+          </div>
+          <div>
+            <br>
+            <h1 text-center><b>{{rows[9]}}</b></h1>
+          </div>
+       </ion-card> 
+    </ion-col >
         </ion-row>
       </ion-grid>
 

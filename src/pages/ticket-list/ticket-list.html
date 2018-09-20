@@ -19,7 +19,7 @@
               ID
             </ion-card-header>
             <ion-card-content>
-             <b style="font-size:20px;">12345678</b>
+             <b style="font-size:20px;">{{ticket.id}}</b>
             </ion-card-content>
         </ion-card>
     </ion-col>
@@ -29,7 +29,7 @@
                 Öncelik
             </ion-card-header>
             <ion-card-content>
-                <ion-badge color="danger" style="font-size:18px;">24-48 saat</ion-badge>
+                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>
             </ion-card-content>
           </ion-card>   
     </ion-col>
@@ -39,29 +39,27 @@
               Konu
           </ion-card-header>
           <ion-card-content>
-              <b style="font-size:18px;">Mine Uzunbayır</b>
+              <b style="font-size:18px;">{{ticket.subject}}</b>
           </ion-card-content>
         </ion-card>   
   </ion-col>
-   
     <ion-col col-6 no-padding> 
         <ion-card text-center class="cardColor">
             <ion-card-header style="font-size:20px;">
                 Kategori
             </ion-card-header>
             <ion-card-content>
-                <b style="font-size:16px;">Vaka Danışma</b>
+                <b style="font-size:16px;">{{ticket.cat_id}}</b>
             </ion-card-content>
         </ion-card>   
     </ion-col>
-
     <ion-col col-6 no-padding> 
         <ion-card text-center class="cardColor">
             <ion-card-header style="font-size:20px;">
                 Oluşturuldu
             </ion-card-header>
             <ion-card-content>
-                <b style="font-size:16px;">2018/08/29 12:23:09</b>
+                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>
             </ion-card-content>
         </ion-card>   
     </ion-col>
@@ -71,7 +69,7 @@
             Güncellendi
         </ion-card-header>
         <ion-card-content>
-            <b style="font-size:16px;">2018/08/29 12:23:09</b>
+            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>
         </ion-card-content>
         </ion-card>   
    </ion-col>
@@ -81,7 +79,7 @@
           Adım
       </ion-card-header>
       <ion-card-content>
-          <ion-badge color="secondary" style="font-size:18px;">Tamamlandı</ion-badge>
+          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>
       </ion-card-content>
       </ion-card>   
      </ion-col>

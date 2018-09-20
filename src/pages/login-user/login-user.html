@@ -14,28 +14,28 @@
           <img src="/assets/imgs/clearfix.png"/>
           <div class="card-title" text-center><br> <b> Giriş Yapınız</b></div>
         </ion-card>
-        <form (ngSubmit)="userLogin()">
 
               <ion-item>
                 <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon:</ion-label>
-                <ion-input type="number" >
+                <ion-input [(ngModel)]="user_data" type="text" >
                 </ion-input>
+                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>
               </ion-item>
         
               <ion-item>
                 <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>
-                <ion-input type="password">
+                <ion-input [(ngModel)]="pass_data" type="password">
                 </ion-input>
+                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>
               </ion-item>
         
           
             <!--<p text-right ion-text color="light">Forgot Password?</p>-->
             <div margin-top>
-              <button ion-button block class="button-middle" type="submit">
-                GIRIŞ YAP
+              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">
+                GİRİŞ YAP
               </button>
             </div>
-          </form>
  
 
 </ion-content>

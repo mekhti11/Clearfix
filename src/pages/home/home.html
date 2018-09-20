@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar color="tabColor">
     <ion-title text-center>CLEARFIX</ion-title>
+      <ion-buttons end *ngIf="account">
+          <button ion-button icon-only (click)="logoutUser()">
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -8,12 +13,16 @@
 
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearfix.png"/>
-        <div class="card-title" text-center> <br> clearfix mobil <br>uygulamasına hoş geldiniz.</div>
+        <div class="card-title" text-center> <br> Clearfix mobil <br>uygulamasına hoş geldiniz.</div>
+        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>
       </ion-card>
       
-      <button ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>
-      <button ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>
-      <button ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>
+      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>
+      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>
+      <ng-template #loggedIn>
+          <button *ngIf="authority == '1'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>
+      </ng-template>
+      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>
 
 
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Refresher } from 'ionic-angular';
+import { Http } from "@angular/http";
 
 
 @Component({
@@ -8,7 +9,54 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ChatWithDoctorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  chats : {};
+  message: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    this.refreshMessages();
+  }
+
+  refreshMessages() {
+    this.loadMessages((json_result) => {
+      this.chats = json_result;
+      this.message = '';
+      console.log(this.chats);
+    });
+  }
+
+  sendMessage() {
+    if(this.message !== '') {
+      this.postSendMessage(() => { 
+        this.refreshMessages() 
+      });
+    }
+  }
+  
+  postSendMessage(callback) {
+
+    let formData = new FormData();
+
+    formData.append("action", "send");
+    formData.append("your_id", "10"); // Bunlar geçici.
+    formData.append("other_id", "15"); // Bunlar geçici.
+    formData.append("content", this.message);
+
+    this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+      callback();
+    });
+  }
+
+  loadMessages(callback) {
+    let formData = new FormData();
+
+    formData.append("action", "load");
+    formData.append("your_id", "10"); // Bunlar geçici.
+    formData.append("other_id", "15"); // Bunlar geçici.
+
+    this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+      let json_result = JSON.parse(res['_body']);
+      callback(json_result);
+    });
   }
 
   ionViewDidLoad() {

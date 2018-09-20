@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title >Doktor ile Konuşunuz</ion-title>
+    <ion-title >Sohbet</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -9,27 +9,21 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item  no-lines> <!---burada *ngFor olacak-->
-          <div class="chat-status" text-center >
-            <span class="chat-date"><!-- {{chat.sendDate | date:'short'}} --></span>
-            <span class="chat-content-center"><!-- {{chat.message}} -->Oturum açıldı</span>
-          </div>
-          <ng-template #message>
-            <div class="chat-message" text-right > <!-- *ngIf="chat.user === nickname" burasi doktor attiginda sag gider mesaj --> 
+        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->
+            <div class="chat-message" text-right *ngIf="chat.receiver_id !== '10'"> <!-- burasi doktor attiginda sag gider mesaj --> 
               <div class="right-bubble">
                 <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->
-                <span class="msg-date"><!-- {{chat.sendDate | date:'short'}} --></span>
-                <p text-wrap><!-- {{chat.message}} --></p>
+                <span class="msg-date">{{chat.date | date:'short'}}</span>
+                <p text-wrap> <b>{{chat.content}}</b></p>
               </div>
             </div>
-            <div class="chat-message" text-left > <!-- *ngIf="chat.user !== nickname" burasi hasta attiginda sola gider --> 
+            <div class="chat-message" text-left *ngIf="chat.receiver_id === '10'"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> 
               <div class="left-bubble">
-                <span class="msg-name"><!-- {{chat.user}} --></span>
-                <span class="msg-date"><!-- {{chat.sendDate | date:'short'}} --></span>
-                <p text-wrap><!-- {{chat.message}} --></p>
+                <span class="msg-name">{{chat.your_id}}</span>
+                <span class="msg-date">{{chat.date | date:'short'}}</span>
+                <p text-wrap> <b>{{chat.content}}</b></p>
               </div>
             </div>
-          </ng-template>
         </ion-item>
       </ion-list>
 
@@ -39,9 +33,9 @@
     <ion-grid>
       <ion-row>
         <ion-col col-10>
-          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message"></ion-input> <!-- [(ngModel)]="data.message" inputun içinde olacak -->
+          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>
         </ion-col>
-        <ion-col col-2 > <!-- (click)="sendMessage()"  gönderme buttonu --> 
+        <ion-col col-2 (click)="sendMessage()">
           <ion-icon name="paper-plane"></ion-icon>
         </ion-col>
       </ion-row>

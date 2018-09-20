@@ -9,34 +9,19 @@
 
 
 <ion-content padding>
-  <div>
-      <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar>
-  </div>
+  <!-- <div>
+     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar> 
+  </div> -->
     <ion-card no-padding style="box-shadow: none;">
         <ion-card-content>
             <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>
         </ion-card-content>
       </ion-card>
-
-      <ion-card (click)="ticket()">
+    
+      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">
           <ion-card-header>
-            <b> Yağmur Zengin 0 </b>
+            <b> {{ticket.id}}: {{ticket.subject}} </b>
           </ion-card-header>
         </ion-card>
-        <ion-card (click)="ticket()">
-        <ion-card-header>
-          <b> Yağmur Zengin 1 </b>
-        </ion-card-header>
-        </ion-card>
-        <ion-card (click)="ticket()">
-          <ion-card-header>
-            <b> Yağmur Zengin 2 </b>
-          </ion-card-header>
-         </ion-card>
-         <ion-card (click)="ticket()">
-            <ion-card-header>
-              <b> Yağmur Zengin 3 </b>
-            </ion-card-header>
-          </ion-card>
 
 </ion-content>

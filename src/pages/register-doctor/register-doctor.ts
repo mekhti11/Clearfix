@@ -17,7 +17,7 @@ export class RegisterDoctorPage {
     console.log('ionViewDidLoad RegisterDoctorPage');
   }
   register(){
-    this.navCtrl.setRoot(CategoryPage);
+    console.log('Nothing');
 
   }
 

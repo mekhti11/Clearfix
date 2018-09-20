@@ -28006,8 +28006,8 @@ ion-icon[class*="custom-plan"] {
 
 .radial-progress {
   margin: 50px;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   background-color: #d6dadc;
   border-radius: 50%;
 }
@@ -28015,8 +28015,8 @@ ion-icon[class*="custom-plan"] {
 .radial-progress .circle .fill,
 .radial-progress .circle .mask,
 .radial-progress .circle .shadow {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   position: absolute;
   border-radius: 50%;
 }
@@ -28037,20 +28037,20 @@ ion-icon[class*="custom-plan"] {
 }
 
 .radial-progress .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
+  clip: rect(0px, 180px, 180px, 90px);
 }
 
 .radial-progress .circle .mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
+  clip: rect(0px, 90px, 180px, 0px);
   background-color: #4787ff;
 }
 
 .radial-progress .inset {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   position: absolute;
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
   background-color: #fbfbfb;
   border-radius: 50%;
   -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
@@ -28060,7 +28060,7 @@ ion-icon[class*="custom-plan"] {
 .radial-progress .inset .percentage {
   width: 100%;
   position: absolute;
-  top: 49px;
+  top: 69px;
   line-height: 1;
   text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28106,9 +28106,9 @@ page-category .divIcon {
   margin: 0 auto;
   padding: 0.2em 1.25em 0.1em 0.35em;
   width: 2.1em;
-  border-radius: 9% auto;
+  border-radius: 10%;
   font-size: 5em;
-  margin-left: 9% auto;
+  margin-left: 0.2em;
 }
 
 page-category .bfont {
@@ -28160,7 +28160,7 @@ page-chat-with-doctor .chat-status .chat-content-center {
   background-color: #e1e1f7;
   border-radius: 6px;
   font-size: 12px;
-  color: #555;
+  color: #292727;
   height: 34px;
   left: 10%;
   right: 10%;
@@ -28173,7 +28173,7 @@ page-chat-with-doctor .chat-message {
 
 page-chat-with-doctor .chat-message .right-bubble {
   position: relative;
-  background: #dcf8c6;
+  background: #c6e4e9;
   border-top-left-radius: .4em;
   border-bottom-left-radius: .4em;
   border-bottom-right-radius: .4em;
@@ -28246,7 +28246,7 @@ page-home .card-title {
   top: 36%;
   font-size: 1.5em;
   width: 100%;
-  margin-left: -6.5% auto;
+  margin-left: -6.5%;
   color: black;
 }
 

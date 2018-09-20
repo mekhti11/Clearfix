@@ -85,7 +85,6 @@ export class MakeAppointment_2Page {
       alert(error);
     });
   }
-  
   nextStep_2(){
     this.navCtrl.setRoot(MakeAppointment_3Page);
   }

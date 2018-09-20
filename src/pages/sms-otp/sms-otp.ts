@@ -10,7 +10,6 @@ import { HomePage } from '../home/home';
 export class SmsOtpPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
   }
 
   ionViewDidLoad() {
@@ -26,7 +25,4 @@ export class SmsOtpPage {
 
   }
 
-
-
-  
 }

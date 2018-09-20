@@ -24,30 +24,28 @@
         </div>
     
         <!-- Login form -->
-        <form (ngSubmit)="login()">
     
           <ion-item>
               
             <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>
             
-            <ion-input type="email">
+            <ion-input type="email" [(ngModel)]="user_data">
             </ion-input>
           </ion-item>
     
           <ion-item>
             <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre</ion-label>
-            <ion-input type="password">
+            <ion-input type="password" [(ngModel)]="pass_data">
             </ion-input>
           </ion-item>
     
         <!--<p text-right ion-text color="light">Forgot Password?</p>-->
     
         <div margin-top>
-          <button ion-button block class="button-middle" type="submit">
+          <button ion-button block (click)="login()" class="button-middle">
               GIRIŞ YAP 
           </button>
         </div>
-      </form>
         <!-- Other links -->
         <div text-center margin-top>
           <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>

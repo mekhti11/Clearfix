@@ -2,13 +2,14 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ComponentsModule } from './components/components.module';
+import { HttpModule } from '@angular/http';
 
-
+    // Cordova
 import { MyApp } from './app.component';
 import { Camera } from '@ionic-native/camera';
 
 
-    // imort pages
+    // import pages
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -70,6 +71,7 @@ import { CameraProvider } from '../app/providers/camera.provider';
   imports: [
     BrowserModule,
     ComponentsModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

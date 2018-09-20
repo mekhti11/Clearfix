@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Http} from '@angular/http';
 
 export interface CountdownTimer {
   seconds: number;
@@ -16,16 +17,31 @@ export interface CountdownTimer {
 })
 export class TimerProgress {
 
-  @Input() timeInSeconds: number;
+  timeInSeconds = 1209600;
   timer: CountdownTimer;
   private increment;
   private transform;
   private percent;
   private fixTransform;
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, public http: Http) { 
+    this.postDataLoad( (json_result) => {
+      console.log(json_result);
+      if(json_result['message'] === 'found') {
+        this.timeInSeconds = json_result['time'];
+        this.initTimer();
+        this.startTimerWithoutPostDataSend();
+      }
+      else
+      {
+        this.timeInSeconds = 1209600;
+        this.initTimer();
+      }
+      
+    });
+  }
 
   ngOnInit() {
-    this.initTimer();
+    
   }
 
   hasFinished() {
@@ -55,11 +71,31 @@ export class TimerProgress {
   
   }
 
-  startTimer() {
+  startTimerWithoutPostDataSend() {
     this.timer.hasStarted = true;
     this.timer.runTimer = true;
     this.timerTick();
   }
+
+  startTimer() {
+    this.timer.hasStarted = true;
+    this.timer.runTimer = true;
+    this.timerTick();
+    this.postDataSend();
+  }
+
+  postDataSend() {
+    let formData = new FormData();
+
+    formData.append("action", "send");
+    formData.append("id", localStorage.getItem("id"));
+    formData.append("time", "1209600");
+
+    this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+      
+    });
+  }
+
 
   pauseTimer() {
     this.timer.runTimer = false;
@@ -67,6 +103,18 @@ export class TimerProgress {
 
   resumeTimer() {
     this.startTimer();
+  }
+
+  postDataLoad(callback) {
+    let formData = new FormData();
+
+    formData.append("action", "load");
+    formData.append("id", localStorage.getItem("id"));
+
+    this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+      var json_result = JSON.parse(res['_body']);
+      callback(json_result);
+    });
   }
 
   timerTick() {
@@ -89,16 +137,19 @@ export class TimerProgress {
 
   getSecondsAsDigitalClock(inputSeconds: number) {
     const secNum = parseInt(inputSeconds.toString(), 10); // don't forget the second param
-    const hours = Math.floor(secNum / 3600);
-    const minutes = Math.floor((secNum - (hours * 3600)) / 60);
-    const seconds = secNum - (hours * 3600) - (minutes * 60);
+    const days = Math.floor(secNum / 86400);
+    const hours = Math.floor((secNum - (days * 86400)) / 3600);
+    const minutes = Math.floor((secNum - (days * 86400) - (hours * 3600)) / 60);
+    const seconds = secNum - (days * 86400) - (hours * 3600) - (minutes * 60);
+    let daysString = '';
     let hoursString = '';
     let minutesString = '';
     let secondsString = '';
+    daysString = (days < 10) ? '0' + days : days.toString();
     hoursString = (hours < 10) ? '0' + hours : hours.toString();
     minutesString = (minutes < 10) ? '0' + minutes : minutes.toString();
     secondsString = (seconds < 10) ? '0' + seconds : seconds.toString();
-    return hoursString + ':' + minutesString + ':' + secondsString;
+    return daysString + ":" + hoursString + ':' + minutesString + ':' + secondsString;
   }
 
 }
