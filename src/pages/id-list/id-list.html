@@ -9,6 +9,9 @@
 
 
 <ion-content padding>
+  <div>
+      <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar>
+  </div>
     <ion-card no-padding style="box-shadow: none;">
         <ion-card-content>
             <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>

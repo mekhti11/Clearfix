@@ -18,5 +18,7 @@ export class IdListPage {
   ticket(){
     this.navCtrl.push(TicketListPage);
   }
+  getItems(searchbar) {
+  }
 
 }
