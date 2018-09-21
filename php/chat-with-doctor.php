@@ -6,7 +6,7 @@
 	session_cache_limiter(false);
 	session_start();
 	
-	header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: GET,POST');
     header('Content-Type: application/json; charset: utf-8');
 	
