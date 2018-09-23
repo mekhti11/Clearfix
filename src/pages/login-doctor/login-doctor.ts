@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { RegisterDoctorPage } from '../register-doctor/register-doctor';
 import { HomePage } from '../home/home';
 import { Http } from '@angular/http';
@@ -23,7 +23,10 @@ export class LoginDoctorPage {
     pass_data : string;
     warning_pass : string;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    constructor(public navCtrl: NavController,
+                public navParams: NavParams,
+                public http: Http,
+                public loadingCtrl: LoadingController) {
     }
 
     ionViewDidLoad() {
@@ -63,8 +66,12 @@ export class LoginDoctorPage {
             this.warning_pass = "";
         // Check whether all credentials are valid or not.
         if(this.user_data && this.pass_data) {
-
+            const loader = this.loadingCtrl.create({
+                content : 'Lütfen Bekleyiniz...'
+            });
+            loader.present();
             this.postData((json_result) => {
+                loader.dismiss();
                 // Check if database query is valid or not.
                 if(json_result['message'] == 'error') {
                 this.warning_user = "Email veya şifre yanlış.";

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Refresher } from 'ionic-angular';
+import { NavController, NavParams, Refresher , LoadingController } from 'ionic-angular';
 import { Http } from "@angular/http";
 
 
@@ -12,8 +12,16 @@ export class ChatWithDoctorPage {
   chats : {};
   message: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  constructor(public navCtrl: NavController,
+                public navParams: NavParams,
+                public http: Http,
+                public loadingCtrl: LoadingController) {
+      const loader = this.loadingCtrl.create({
+          content : 'Lütfen Bekleyiniz...'
+      });
+      loader.present();
     this.refreshMessages();
+    loader.dismiss();
   }
 
   refreshMessages() {
@@ -26,12 +34,17 @@ export class ChatWithDoctorPage {
 
   sendMessage() {
     if(this.message !== '') {
-      this.postSendMessage(() => { 
-        this.refreshMessages() 
-      });
+        const loader = this.loadingCtrl.create({
+            content : 'Lütfen Bekleyiniz...'
+        });
+        loader.present();
+        this.postSendMessage(() => {
+            this.refreshMessages();
+            loader.dismiss();
+        });
     }
   }
-  
+
   postSendMessage(callback) {
 
     let formData = new FormData();

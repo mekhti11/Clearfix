@@ -11,9 +11,18 @@ export class CategoryPage {
 
   rows: Array<number>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  constructor(public navCtrl: NavController,
+                public navParams: NavParams,
+                public loadingCtrl : LoadingController,
+                public alertCtrl: AlertController ,
+                public http: Http) {
     this.rows = [];
+    const loader = this.loadingCtrl.create({
+        content : 'Lütfen Bekleyiniz...'
+    });
+    loader.present();
     this.postData((json_result) => {
+        loader.dismiss();
       for(var i = 0; i < 10; i++)
         this.rows[i] = json_result['row' + i];
     });

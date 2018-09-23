@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams , LoadingController } from 'ionic-angular';
 import { TicketListPage } from '../ticket-list/ticket-list';
 import { Http} from "@angular/http";
 
@@ -10,11 +10,19 @@ import { Http} from "@angular/http";
 })
 export class IdListPage {
 
-  tickets: Object;
+    tickets: Object;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
-    this.postData( (json_result) => {   
-      this.tickets = json_result;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public http: Http,
+              public loadingCtrl: LoadingController) {
+    const loader = this.loadingCtrl.create({
+        content : 'Lütfen Bekleyiniz...'
+    });
+    loader.present();
+    this.postData( (json_result) => {
+        loader.dismiss();
+        this.tickets = json_result;
     });
   }
 
@@ -50,5 +58,3 @@ export class IdListPage {
 
     }*/
   }
-
-

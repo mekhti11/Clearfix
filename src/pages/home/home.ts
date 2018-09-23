@@ -65,22 +65,25 @@ export class HomePage {
     this.navCtrl.setRoot(LoginDoctorPage)
   }
 
-  accountCheck() {
-    this.postData((json_result) => {
-      if(json_result['message'] == 'not_logged_in') {
-        this.account = false;
-        
-      }
-      else 
-      {
-        this.account      = true;
-        this.name         = localStorage.getItem("name");
-        this.surname      = localStorage.getItem("surname");
-        this.authority    = localStorage.getItem("authority");
-      }
-      console.log(json_result);
-    }, "check");
-  }
+    accountCheck() {
+        const loader = this.loadingCtrl.create({
+            content : 'Lütfen Bekleyiniz...'
+        });
+        loader.present();
+        this.postData((json_result) => {
+            loader.dismiss()
+            if(json_result['message'] == 'not_logged_in') {
+                this.account = false;
+            }
+            else {
+                this.account      = true;
+                this.name         = localStorage.getItem("name");
+                this.surname      = localStorage.getItem("surname");
+                this.authority    = localStorage.getItem("authority");
+            }
+            console.log(json_result);
+        }, "check");
+    }
 
   postData(callback, action) {
     // Create credentials.
