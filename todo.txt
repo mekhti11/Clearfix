@@ -1,7 +1,7 @@
 Necessary APIs for Clearfix
 
 -> hasta giris  (done)
--> SMS OTP (api alinacak Arslandan)
+-> SMS OTP (done)
 -> Doktor kayit (done)
 -> Doktor Giris (done)
 -> getPatientsByDoktorId (done)
