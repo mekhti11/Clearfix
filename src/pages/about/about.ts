@@ -5,24 +5,24 @@ import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
 import { SimulationPage } from '../simulation/simulation';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+	selector: 'page-about',
+	templateUrl: 'about.html'
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+	constructor(public navCtrl: NavController) {
 
-  }
-  timer(){
-    this.navCtrl.push(TimerPage);
-  }
-  chatWithDoctor(){
-    this.navCtrl.push(ChatWithDoctorPage);
+	}
+	timer() {
+		this.navCtrl.push(TimerPage);
+	}
+	chatWithDoctor() {
+		this.navCtrl.push(ChatWithDoctorPage);
 
-  }
-  simulation(){
-    this.navCtrl.push(SimulationPage);
+	}
+	simulation() {
+		this.navCtrl.push(SimulationPage);
 
-  }
+	}
 
 }

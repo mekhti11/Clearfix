@@ -1,0 +1,13 @@
+Necessary APIs for Clearfix
+
+-> hasta giris  (done)
+-> SMS OTP (api alinacak Arslandan)
+-> Doktor kayit (done)
+-> Doktor Giris (done)
+-> getPatientsByDoktorId (done)
+-> getPatientDataById (done)
+-> getMessagesBy(doktor ve hasta id) (done)
+-> Tracker Time (done)
+-> Yeni Rezervasyon (not)
+-> Hastanin randevularini dondur (not)
+-> 3D Simulasyon Linkler (not)

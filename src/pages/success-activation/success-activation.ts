@@ -5,24 +5,24 @@ import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-success-activation',
-  templateUrl: 'success-activation.html',
+	selector: 'page-success-activation',
+	templateUrl: 'success-activation.html',
 })
 export class SuccessActivationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SuccessActivationPage');
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad SuccessActivationPage');
+	}
 
-  homePage(){
-    this.navCtrl.setRoot(HomePage);
-  }
-  
-  makeappointment(){
-    this.navCtrl.setRoot(MakeAppointment_1Page);
-  }
+	homePage() {
+		this.navCtrl.setRoot(HomePage);
+	}
+
+	makeappointment() {
+		this.navCtrl.setRoot(MakeAppointment_1Page);
+	}
 
 }

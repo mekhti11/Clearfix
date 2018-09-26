@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SmsOtpPage } from '../sms-otp/sms-otp';
 
@@ -12,23 +12,23 @@ import { SmsOtpPage } from '../sms-otp/sms-otp';
 
 
 @Component({
-  selector: 'page-new-account',
-  templateUrl: 'new-account.html',
+	selector: 'page-new-account',
+	templateUrl: 'new-account.html',
 })
 export class NewAccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewAccountPage');
-  }
-  closePage(){
-    this.navCtrl.setRoot(HomePage)
-  }
-  // one time password
-  sendSmsOPT(){ 
-    this.navCtrl.setRoot(SmsOtpPage);
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad NewAccountPage');
+	}
+	closePage() {
+		this.navCtrl.setRoot(HomePage)
+	}
+	// one time password
+	sendSmsOPT() {
+		this.navCtrl.setRoot(SmsOtpPage);
+	}
 
 }

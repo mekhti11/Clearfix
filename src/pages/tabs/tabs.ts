@@ -6,16 +6,16 @@ import { HomePage } from '../home/home';
 import { AppointmentsPage } from '../appointments/appointments';
 
 @Component({
-  templateUrl: 'tabs.html'
+	templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-  tab4Root = AppointmentsPage
+	tab1Root = HomePage;
+	tab2Root = AboutPage;
+	tab3Root = ContactPage;
+	tab4Root = AppointmentsPage
 
-  constructor() {
+	constructor() {
 
-  }
+	}
 }

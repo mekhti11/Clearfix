@@ -4,19 +4,19 @@ import { SuccessActivationPage } from '../success-activation/success-activation'
 
 
 @Component({
-  selector: 'page-password',
-  templateUrl: 'password.html',
+	selector: 'page-password',
+	templateUrl: 'password.html',
 })
 export class PasswordPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PasswordPage');
-  }
-  loginUser() {
-    this.navCtrl.push(SuccessActivationPage);
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad PasswordPage');
+	}
+	loginUser() {
+		this.navCtrl.push(SuccessActivationPage);
+	}
 
 }
