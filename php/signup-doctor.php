@@ -32,14 +32,14 @@
 
             if($stmnt->execute()){
                 echo json_encode(array(
-                    'msg' => 'succes',
+                    'msg' => 'Success',
                     'uname' => $uname ,
                     'name' => $name
                     )
                 );
             }else{
                 echo json_encode(array(
-                    'msg' => 'error'
+                    'msg' => 'Error'
                     )
                 );
             }

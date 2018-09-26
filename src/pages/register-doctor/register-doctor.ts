@@ -39,7 +39,7 @@ export class RegisterDoctorPage {
 		formData.append("name", this.name);
 
 		var json_result;
-		this.http.post("http://localhost:8001/php/signup-doctor.php", formData).subscribe(function respond(res) {
+		this.http.post("http://localhost:8000/php/signup-doctor.php", formData).subscribe(function respond(res) {
 			json_result = JSON.parse(res['_body']);
 			console.log(json_result);
 			callback(json_result);
@@ -55,7 +55,7 @@ export class RegisterDoctorPage {
 		this.postData((json_result) => {
 			loader.dismiss();
 			// Check if database query is valid or not.
-			if (json_result['message'] == 'error') {
+			if (json_result['message'] == 'Error') {
 				const alert = this.alertCtrl.create({
 					title: 'HATA!',
 					subTitle: 'Bir şeyler yanlış gitti. Lütfen yeniden deneyiniz!',
@@ -72,7 +72,7 @@ export class RegisterDoctorPage {
 				localStorage.setItem('name', json_result['name']);
 				// localStorage.setItem('surname', json_result['surname']);
 				localStorage.setItem('username', json_result['uname']);
-				// localStorage.setItem('authority', json_result['user_authority']);
+				localStorage.setItem('authority', '1');
 				// localStorage.setItem("id", json_result['id']);
 				this.navCtrl.setRoot(HomePage); // After the authentication is complete, redirect to the main page.
 			}

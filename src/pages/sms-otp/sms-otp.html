@@ -25,10 +25,10 @@
       </ion-card>
       <ion-item>
           <ion-label stacked>SMS ile gelen şifre:<br></ion-label> 
-          <ion-input type="number" placeholder="XXXXXX"></ion-input>
+          <ion-input type="number" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>
         </ion-item>
         <button ion-button class="button-middle" (click)="completeAppointment()">AKTİVASYONU TAMAMLA</button>
-        <button ion-button class="button-middle" (click)="repeatTheSmsOPT()">ŞİFREYİ TEKRAR GÖNDER</button>
+        <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">ŞİFREYİ TEKRAR GÖNDER</button>
 
 
 

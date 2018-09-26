@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MakeAppointment_2Page } from '../make-appointment-2/make-appointment-2';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -9,7 +10,15 @@ import { MakeAppointment_2Page } from '../make-appointment-2/make-appointment-2'
 })
 export class MakeAppointment_1Page {
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	name: string;
+	surname: string;
+	email: string;
+	gender: string;
+	city: string;
+	district: string;
+
+
+	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 	}
 
 	ionViewDidLoad() {
@@ -19,4 +28,20 @@ export class MakeAppointment_1Page {
 		this.navCtrl.setRoot(MakeAppointment_2Page);
 	}
 
+	postData(callback) {
+		// Create credentials.
+		var json_result;
+		var formData = new FormData();
+		formData.append("action", "getinfo");
+		formData.append("name", this.name);
+		formData.append("surname", this.surname);
+		formData.append("email", this.email);
+		formData.append("gender", this.gender);
+		formData.append("city", this.city);
+		formData.append("district", this.district);
+		this.http.post("http://localhost:8000/php/home.php", formData).subscribe(function respond(res) {
+			json_result = JSON.parse(res['_body']);
+			callback(json_result);
+		});
+	}
 }
