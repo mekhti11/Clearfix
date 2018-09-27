@@ -4,12 +4,7 @@ import { HomePage } from '../home/home';
 import { SmsOtpPage } from '../sms-otp/sms-otp';
 import { Http } from "@angular/http";
 
-/**
- * Generated class for the NewAccountPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 
 @Component({
