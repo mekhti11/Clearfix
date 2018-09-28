@@ -23,21 +23,25 @@ export class PasswordPage {
 	}
 
 	loginUser() {
-		this.postData((json_result) => {
+		// this.postData((json_result) => {
+		//
+		// });
 
-		});
+		localStorage.setItem('password', this.pword);
+		console.log(localStorage.getItem('tel_no'));
+		console.log(localStorage.getItem('password'));
 		this.navCtrl.setRoot(SuccessActivationPage);
 	}
 
-	postData(callback) {
-		let formData = new FormData();
-		formData.append("action", "send");
-		formData.append("password", this.pword);
-		this.http.post("http://localhost:8000/php/password.php", formData).subscribe(function(res) {
-			let json_result = JSON.parse(res['_body']);
-			callback(json_result);
-		});
-	}
+	// postData(callback) {
+	// 	let formData = new FormData();
+	// 	formData.append("action", "send");
+	// 	formData.append("password", this.pword);
+	// 	this.http.post("http://localhost:8000/php/password.php", formData).subscribe(function(res) {
+	// 		let json_result = JSON.parse(res['_body']);
+	// 		callback(json_result);
+	// 	});
+	// }
 
 
 }

@@ -2,14 +2,17 @@
   /*
    * Bulutfon Api
    * SMS Gönderme*/
-   
+   header('Access-Control-Allow-Origin: *');
+   header('Access-Control-Allow-Methods: GET,POST');
+   header('Content-Type: application/json; charset: utf-8' );
+
    if(isset($_POST['action'])) {
 	   if($_POST['action'] == 'send') {
 		  $token = "3ba5d8f3c7ba67ebc732f962d96ca706e7fd61f9f2f5c0fb0f0c19f959027fed"; // Bulutfon panelinden alcağınız master token
 		  $title = "Clearfix"; // Bulutfon üzerinden onaylattığınız sms başlığı
 
 		  $rand = (rand() % 8999) + 1000;
-		  
+
 		  $prefix = "+90";
 		  $receivers = $prefix . $_POST['telephone']; // Formdan gelen alıcı listesi
 		  $message   = "Aktivasyon şifreniz: " . $rand; // Formdan gelen mesaj alanı
@@ -22,12 +25,12 @@
 		  curl_setopt($ch, CURLOPT_POSTFIELDS, 'title=' . $title . '&access_token=' . $token . '&receivers=' . $receivers . '&content=' . $message); //  Burada ise göndereceğimiz parametreleri belirtiyoruz.
 		  curl_exec($ch); // Curl calıştır.
 		  curl_close($ch); // Curl oturumunu kapat
-		  
+
 		  $arr = array("activation" => $rand);
 		  echo json_encode($arr);
 	   }
    }
 
-      
+
 // /send sms
 ?>

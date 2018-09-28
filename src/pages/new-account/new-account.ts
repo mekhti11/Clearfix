@@ -29,6 +29,7 @@ export class NewAccountPage {
 		this.postData((json_result) => {
 			localStorage.setItem("activation", json_result['activation']);
 			localStorage.setItem("tel_no", this.telephone);
+			console.log(localStorage.getItem('tel-no'));
 			console.log(json_result['activation']);
 		});
 		this.navCtrl.setRoot(SmsOtpPage);
@@ -40,6 +41,7 @@ export class NewAccountPage {
 		formData.append("telephone", this.telephone);
 		this.http.post("http://localhost:8000/php/new-account.php", formData).subscribe(function(res) {
 			let json_result = JSON.parse(res['_body']);
+			console.log(json_result);
 			callback(json_result);
 		});
 	}
