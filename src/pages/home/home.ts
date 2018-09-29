@@ -93,7 +93,7 @@ export class HomePage {
 		var formData = new FormData();
 		formData.append("action", action);
 		formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
-		this.http.post("http://localhost:8000/php/home.php", formData).subscribe(function respond(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
 			json_result = JSON.parse(res['_body']);
 			callback(json_result);
 		});

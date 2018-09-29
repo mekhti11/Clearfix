@@ -15,23 +15,23 @@
 
         <ion-item>
           <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
-          <ion-input type="text" [(ngModel)]="name" placeholder="Lütfen adınızı yazınız"></ion-input>
+          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="Lütfen adınızı yazınız"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>
-          <ion-input type="text" [(ngModel)]="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>
+          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>
-          <ion-input type="email" [(ngModel)]="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>
+          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>
         </ion-item>
         
         <ion-list>
           <ion-item>
             <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>
-            <ion-select [(ngModel)]="gender">
+            <ion-select [(ngModel)]="gender" name="gender" ngDefaultControl>
               <ion-option value="male">Bay</ion-option>
               <ion-option value="female">Bayan</ion-option>
             </ion-select>
@@ -39,7 +39,7 @@
         
           <ion-item>
             <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>
-            <ion-select [(ngModel)]="city">
+            <ion-select [(ngModel)]="city" name="city" ngDefaultControl>
               <ion-option value="1">Adana</ion-option>
               <ion-option value="2">Adıyaman</ion-option>
               <ion-option value="3">Afyonkarahisar</ion-option>
@@ -127,14 +127,14 @@
         
         <ion-item>
           <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>
-          <ion-input type="text" [(ngModel)]="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>
+          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>
-          <ion-textarea rows="4" [(ngModel)]="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>
+          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>
         </ion-item>
-        <button ion-button class="button-middle" (click)="nextStep_1()">Sonraki Adım</button>
+        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">Sonraki Adım</button>
 
       
       

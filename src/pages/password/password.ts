@@ -37,7 +37,7 @@ export class PasswordPage {
 	// 	let formData = new FormData();
 	// 	formData.append("action", "send");
 	// 	formData.append("password", this.pword);
-	// 	this.http.post("http://localhost:8000/php/password.php", formData).subscribe(function(res) {
+	// 	this.http.post("http://www.clearfix.com.tr/clearfix_new_app/password.php", formData).subscribe(function(res) {
 	// 		let json_result = JSON.parse(res['_body']);
 	// 		callback(json_result);
 	// 	});

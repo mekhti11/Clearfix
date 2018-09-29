@@ -22,26 +22,26 @@
     
     
         <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
-        <h5>Muratcan</h5>
+        <h5>{{name}}</h5>
     
         <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">Soyadınız</ion-label>
-        <h5>Kılıç</h5>
+        <h5>{{surname}}</h5>
       
       
         <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>
-        <h5>murat34@gmail.com</h5>
+        <h5>{{email}}</h5>
       
         <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>
-        <h5>Bay</h5>
+        <h5>{{gender}}</h5>
 
         <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>
-        <h5>İstanbul</h5>
+        <h5>{{city}}</h5>
 
         <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>
-        <h5>Kadıköy</h5>
+        <h5>{{district}}</h5>
 
         <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek istediğniz</ion-label>
-        <h5>Teknopark indiriminden yaralanmak istiyorum.</h5>
+        <h5>{{text}}</h5>
 
         <h5 class="h5">1. FOTOĞRAF </h5>
         <ion-grid>
@@ -54,13 +54,13 @@
             <ion-col col-6 no-padding> 
                 <ion-card>
                     <ion-avatar >
-                        <img [src]="chosenPicture || placeholder" onerror="this.src='/assets/imgs/apple.png'" />
+                        <img [src]="chosenPicture1" onerror="this.src='/assets/imgs/apple.png'" />
                     </ion-avatar>
                 </ion-card>   
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture()">1. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture1()">1. FOTOĞRAF EKLE</button>
           <br><br>
           <h5 class="h5">2. FOTOĞRAF </h5>
         <ion-grid>
@@ -73,13 +73,13 @@
             <ion-col col-6 no-padding> 
                 <ion-card>
                     <ion-avatar >
-                        <img [src]="chosenPicture || placeholder" onerror="this.src='/assets/imgs/apple.png'" />
+                        <img [src]="chosenPicture2" onerror="this.src='/assets/imgs/apple.png'" />
                     </ion-avatar>
                 </ion-card>   
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture()">2. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture2()">2. FOTOĞRAF EKLE</button>
           <br><br>
           <h5 class="h5">3. FOTOĞRAF </h5>
         <ion-grid>
@@ -92,13 +92,13 @@
             <ion-col col-6 no-padding> 
                 <ion-card>
                     <ion-avatar >
-                        <img [src]="chosenPicture || placeholder" onerror="this.src='/assets/imgs/apple.png'" />
+                        <img [src]="chosenPicture3" onerror="this.src='/assets/imgs/apple.png'" />
                     </ion-avatar>
                 </ion-card>   
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture()">3. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture3()">3. FOTOĞRAF EKLE</button>
           <br><br>
           <h5 class="h5">4. FOTOĞRAF </h5>
         <ion-grid>
@@ -111,13 +111,13 @@
             <ion-col col-6 no-padding> 
                 <ion-card>
                     <ion-avatar >
-                      <img [src]="chosenPicture || placeholder" onerror="this.src='/assets/imgs/apple.png'" />
+                      <img [src]="chosenPicture4" onerror="this.src='/assets/imgs/apple.png'" />
                    </ion-avatar>
                 </ion-card>   
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture()">4. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture4()">4. FOTOĞRAF EKLE</button>
           <br><br>
           <h5 class="h5">5. FOTOĞRAF </h5>
         <ion-grid>
@@ -130,13 +130,13 @@
             <ion-col col-6 no-padding> 
                 <ion-card>
                     <ion-avatar >
-                       <img [src]="chosenPicture || placeholder" onerror="this.src='/assets/imgs/apple.png'" />
+                       <img [src]="chosenPicture5" onerror="this.src='/assets/imgs/apple.png'" />
                     </ion-avatar>
                 </ion-card>   
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture()">5. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture5()">5. FOTOĞRAF EKLE</button>
           <br><br><br><br>
           <button ion-button class="button-edit-information">BİLİGİLERİMİ DÜZENLE</button>
           <br>

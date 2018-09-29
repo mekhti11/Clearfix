@@ -22,4 +22,16 @@ export class SimulationPage {
 		return this.domSanitizer.bypassSecurityTrustResourceUrl(vid);
 	}
 
+	ngOnInit() {
+		this.changeIcons();
+	}
+
+
+	changeIcons()
+	{
+	// Example Message 2 - Place all navigation icons at the right side
+	var msg = '{"type":"ICONS_RIGHT","value":"1rem"}';
+	window.frames[0].postMessage(msg, "*");
+	}
+
 }

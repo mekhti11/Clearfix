@@ -91,7 +91,7 @@ export class TimerProgress {
     formData.append("id", localStorage.getItem("id"));
     formData.append("time", "1209600");
 
-    this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+    this.http.post("http://www.clearfix.com.tr/clearfix_new_app/timer.php", formData).subscribe(function response(res) {
       
     });
   }
@@ -111,7 +111,7 @@ export class TimerProgress {
     formData.append("action", "load");
     formData.append("id", localStorage.getItem("id"));
 
-    this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+    this.http.post("http://www.clearfix.com.tr/clearfix_new_app/timer.php", formData).subscribe(function response(res) {
       var json_result = JSON.parse(res['_body']);
       callback(json_result);
     });

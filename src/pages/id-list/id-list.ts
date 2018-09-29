@@ -31,7 +31,7 @@ export class IdListPage {
 		formData.append("action", "load");
 		formData.append("category", localStorage.getItem("category"));
 		formData.append("id", localStorage.getItem("id"));
-		this.http.post("http://localhost:8000/php/id-list.php", formData).subscribe(function response(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/id-list.php", formData).subscribe(function response(res) {
 			var json_result = JSON.parse(res['_body']);
 			callback(json_result);
 		});

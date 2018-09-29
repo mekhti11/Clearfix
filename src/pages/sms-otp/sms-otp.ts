@@ -57,7 +57,7 @@ export class SmsOtpPage {
 		let formData = new FormData();
 		formData.append("action", "send");
 		formData.append("telephone", localStorage.getItem("tel_no"));
-		this.http.post("http://localhost:8000/php/new-account.php", formData).subscribe(function(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/new-account.php", formData).subscribe(function(res) {
 			let json_result = JSON.parse(res['_body']);
 			callback(json_result);
 		});

@@ -37,7 +37,7 @@ export class LoginDoctorPage {
 		formData.append("password", this.pass_data);
 
 		var json_result;
-		this.http.post("http://localhost:8000/php/login-doctor.php", formData).subscribe(function respond(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/login-doctor.php", formData).subscribe(function respond(res) {
 			json_result = JSON.parse(res['_body']);
 			console.log(json_result);
 			callback(json_result);
@@ -50,7 +50,7 @@ export class LoginDoctorPage {
 
 		// Check if username (telephone number) is empty or not.
 		if (!this.user_data) {
-			this.warning_user = "Kullanici adi boş bırakılamaz.";
+			this.warning_user = "Kullanıcı adı boş bırakılamaz.";
 		} else
 			this.warning_user = "";
 

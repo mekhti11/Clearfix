@@ -39,7 +39,7 @@ export class RegisterDoctorPage {
 		formData.append("name", this.name);
 
 		var json_result;
-		this.http.post("http://localhost:8000/php/signup-doctor.php", formData).subscribe(function respond(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/signup-doctor.php", formData).subscribe(function respond(res) {
 			json_result = JSON.parse(res['_body']);
 			console.log(json_result);
 			callback(json_result);

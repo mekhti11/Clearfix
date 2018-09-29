@@ -72,6 +72,7 @@ var CameraProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -83,10 +84,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppointmentsPage = /** @class */ (function () {
-    function AppointmentsPage(navCtrl, navParams) {
+    function AppointmentsPage(navCtrl, navParams, http) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.http = http;
+        this.appointments = [];
+        this.postData(function (json_result) {
+            console.log(json_result);
+            _this.appointments = json_result;
+        });
     }
     AppointmentsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad AppointmentsPage');
@@ -94,17 +103,24 @@ var AppointmentsPage = /** @class */ (function () {
     AppointmentsPage.prototype.infoAppointment = function () {
         console.log("Randevu detayları");
     };
+    AppointmentsPage.prototype.postData = function (callback) {
+        var formData = new FormData();
+        formData.append("action", "load");
+        formData.append("id", localStorage.getItem("id"));
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/appointments.php", formData).subscribe(function response(res) {
+            //this.http.post("http://localhost:8000/php/appointments.php", formData).subscribe(function response(res) {
+            var json_result = JSON.parse(res['_body']);
+            callback(json_result);
+        });
+    };
     AppointmentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-appointments',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/appointments/appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVULARIM</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card style="background-color:#EBEDEF;">\n\n    <ion-card-content>\n\n      <h2>Randevu No: 743</h2><br>\n\n      <h2>Randevu Tarihi: 28 şubat 2018 19:40</h2><br>\n\n      <h2>Randevu Durumu: ücretsiz muayene hakkı </h2><br>\n\n    </ion-card-content>\n\n    <button ion-button full style="background-color: #4FC3F7;" (click)="infoAppointment()">Randevu Detayı</button> <br>\n\n    \n\n  </ion-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/appointments/appointments.html"*/,
-=======
-            selector: 'page-appointments',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/appointments/appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVULARIM</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card style="background-color:#EBEDEF;">\n\n    <ion-card-content>\n\n      <h2>Randevu No: 743</h2><br>\n\n      <h2>Randevu Tarihi: 28 şubat 2018 19:40</h2><br>\n\n      <h2>Randevu Durumu: ücretsiz muayene hakkı </h2><br>\n\n    </ion-card-content>\n\n    <button ion-button full style="background-color: #4FC3F7;" (click)="infoAppointment()">Randevu Detayı</button> <br>\n\n    \n\n  </ion-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/appointments/appointments.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-appointments',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\appointments\appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVULARIM</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">\n\n    <ion-card-content>\n\n      <h2>Randevu No: {{appointment.appointment_no}}</h2><br>\n\n      <h2>Randevu Tarihi: {{appointment.appointment_date}}</h2><br>\n\n      <h2>Randevu Durumu: {{appointment.appointment_content}}</h2><br>\n\n    </ion-card-content>\n\n    <button ion-button full style="background-color: #4FC3F7;" (click)="infoAppointment()">Randevu Detayı</button> <br>\n\n    \n\n  </ion-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\appointments\appointments.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
     ], AppointmentsPage);
     return AppointmentsPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=appointments.js.map
@@ -120,11 +136,7 @@ var AppointmentsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -157,7 +169,7 @@ var LoginDoctorPage = /** @class */ (function () {
         formData.append("username", this.user_data);
         formData.append("password", this.pass_data);
         var json_result;
-        this.http.post("http://localhost:8000/php/login-doctor.php", formData).subscribe(function respond(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/login-doctor.php", formData).subscribe(function respond(res) {
             json_result = JSON.parse(res['_body']);
             console.log(json_result);
             callback(json_result);
@@ -169,7 +181,7 @@ var LoginDoctorPage = /** @class */ (function () {
         // LOGIN FUNCTION
         // Check if username (telephone number) is empty or not.
         if (!this.user_data) {
-            this.warning_user = "Kullanici adi boş bırakılamaz.";
+            this.warning_user = "Kullanıcı adı boş bırakılamaz.";
         }
         else
             this.warning_user = "";
@@ -210,11 +222,7 @@ var LoginDoctorPage = /** @class */ (function () {
     };
     LoginDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-login-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/login-doctor/login-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HEKİM GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding>\n\n\n\n        <!-- Logo -->\n\n        <div padding text-center>\n\n          <div class="logo primary-bg">\n\n              <img src="/assets/imgs/clearfix.png"/>\n\n          </div>\n\n        </div>\n\n\n\n        <!-- Login form -->\n\n\n\n          <ion-item>\n\n\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n\n\n            <ion-input type="email" [(ngModel)]="user_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre</ion-label>\n\n            <ion-input type="password" [(ngModel)]="pass_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n\n\n        <div margin-top>\n\n          <button ion-button block (click)="login()" class="button-middle">\n\n              GIRIŞ YAP\n\n          </button>\n\n        </div>\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n          <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>\n\n        </div>\n\n      </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/login-doctor/login-doctor.html"*/,
-=======
-            selector: 'page-login-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/login-doctor/login-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HEKİM GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding>\n\n\n\n        <!-- Logo -->\n\n        <div padding text-center>\n\n          <div class="logo primary-bg">\n\n              <img src="/assets/imgs/clearfix.png"/>\n\n          </div>\n\n        </div>\n\n\n\n        <!-- Login form -->\n\n\n\n          <ion-item>\n\n\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n\n\n            <ion-input type="email" [(ngModel)]="user_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre</ion-label>\n\n            <ion-input type="password" [(ngModel)]="pass_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n\n\n        <div margin-top>\n\n          <button ion-button block (click)="login()" class="button-middle">\n\n              GIRIŞ YAP\n\n          </button>\n\n        </div>\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n          <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>\n\n        </div>\n\n      </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/login-doctor/login-doctor.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-login-doctor',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\login-doctor\login-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HEKİM GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding>\n\n\n\n        <!-- Logo -->\n\n        <div padding text-center>\n\n          <div class="logo primary-bg">\n\n              <img src="/assets/imgs/clearfix.png"/>\n\n          </div>\n\n        </div>\n\n\n\n        <!-- Login form -->\n\n\n\n          <ion-item>\n\n\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n\n\n            <ion-input type="email" [(ngModel)]="user_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre</ion-label>\n\n            <ion-input type="password" [(ngModel)]="pass_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n\n\n        <div margin-top>\n\n          <button ion-button block (click)="login()" class="button-middle">\n\n              GIRIŞ YAP\n\n          </button>\n\n        </div>\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n          <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>\n\n        </div>\n\n      </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\login-doctor\login-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -294,11 +302,7 @@ var TabsPage = /** @class */ (function () {
         this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__["a" /* AppointmentsPage */];
     }
     TabsPage = __decorate([
-<<<<<<< HEAD
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Anasayfa" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Randevularım" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Hesabım" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="İletişim" tabIcon="contacts"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/tabs/tabs.html"*/
-=======
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Anasayfa" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Randevularım" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Hesabım" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="İletişim" tabIcon="contacts"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/tabs/tabs.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Anasayfa" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Randevularım" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Hesabım" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="İletişim" tabIcon="contacts"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -349,11 +353,7 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-about',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/about/about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      HESABIM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); "> Lütfen aşağıdaki işlemlerden birini seçiniz</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>\n\n  <button ion-button class="button-middle" (click)="timer()">Değiştirme süresi</button>\n\n  <button ion-button class="button-middle" (click)="simulation()">3D simülasyon</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/about/about.html"*/
-=======
-            selector: 'page-about',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/about/about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      HESABIM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); "> Lütfen aşağıdaki işlemlerden birini seçiniz</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>\n\n  <button ion-button class="button-middle" (click)="timer()">Değiştirme süresi</button>\n\n  <button ion-button class="button-middle" (click)="simulation()">3D simülasyon</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/about/about.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      HESABIM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); "> Lütfen aşağıdaki işlemlerden birini seçiniz</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>\n\n  <button ion-button class="button-middle" (click)="timer()">Değiştirme süresi</button>\n\n  <button ion-button class="button-middle" (click)="simulation()">3D simülasyon</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], AboutPage);
@@ -394,11 +394,7 @@ var TimerPage = /** @class */ (function () {
     };
     TimerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-timer',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/timer/timer.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Zamanlayıcı</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <timer-progress #countdownTimerProgress></timer-progress>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/timer/timer.html"*/,
-=======
-            selector: 'page-timer',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/timer/timer.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Zamanlayıcı</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <timer-progress #countdownTimerProgress></timer-progress>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/timer/timer.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-timer',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\timer\timer.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Zamanlayıcı</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <timer-progress #countdownTimerProgress></timer-progress>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\timer\timer.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TimerPage);
@@ -416,11 +412,7 @@ var TimerPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatWithDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -470,19 +462,19 @@ var ChatWithDoctorPage = /** @class */ (function () {
     ChatWithDoctorPage.prototype.postSendMessage = function (callback) {
         var formData = new FormData();
         formData.append("action", "send");
-        formData.append("your_id", "10"); // Bunlar geçici.
+        formData.append("your_id", localStorage.getItem('id'));
         formData.append("other_id", "15"); // Bunlar geçici.
         formData.append("content", this.message);
-        this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
             callback();
         });
     };
     ChatWithDoctorPage.prototype.loadMessages = function (callback) {
         var formData = new FormData();
         formData.append("action", "load");
-        formData.append("your_id", "10"); // Bunlar geçici.
+        formData.append("your_id", localStorage.getItem('id'));
         formData.append("other_id", "15"); // Bunlar geçici.
-        this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
             var json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
@@ -492,18 +484,12 @@ var ChatWithDoctorPage = /** @class */ (function () {
     };
     ChatWithDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >Sohbet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== \'10\'"> <!-- burasi doktor attiginda sag gider mesaj --> \n\n              <div class="right-bubble">\n\n                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === \'10\'"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> \n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/,
-=======
-            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >Sohbet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== \'10\'"> <!-- burasi doktor attiginda sag gider mesaj --> \n\n              <div class="right-bubble">\n\n                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === \'10\'"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> \n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >Sohbet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== \'10\'"> <!-- burasi doktor attiginda sag gider mesaj --> \n\n              <div class="right-bubble">\n\n                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === \'10\'"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> \n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object])
     ], ChatWithDoctorPage);
     return ChatWithDoctorPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=chat-with-doctor.js.map
@@ -544,13 +530,17 @@ var SimulationPage = /** @class */ (function () {
     SimulationPage.prototype.sanitizer = function (vid) {
         return this.domSanitizer.bypassSecurityTrustResourceUrl(vid);
     };
+    SimulationPage.prototype.ngOnInit = function () {
+        this.changeIcons();
+    };
+    SimulationPage.prototype.changeIcons = function () {
+        // Example Message 2 - Place all navigation icons at the right side
+        var msg = '{"type":"ICONS_RIGHT","value":"1rem"}';
+        window.frames[0].postMessage(msg, "*");
+    };
     SimulationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-simulation',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/simulation/simulation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >3D Simülasyon</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen></iframe>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/simulation/simulation.html"*/,
-=======
-            selector: 'page-simulation',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/simulation/simulation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >3D Simülasyon</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen></iframe>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/simulation/simulation.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-simulation',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\simulation\simulation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >3D Simülasyon</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen name="OnyxCephWebGL"></iframe>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\simulation\simulation.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]])
@@ -586,11 +576,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-contact',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      İLETİŞİM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/contact/contact.html"*/
-=======
-            selector: 'page-contact',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      İLETİŞİM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/contact/contact.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-contact',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      İLETİŞİM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], ContactPage);
@@ -610,11 +596,7 @@ var ContactPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(205);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -647,7 +629,7 @@ var NewAccountPage = /** @class */ (function () {
         this.postData(function (json_result) {
             localStorage.setItem("activation", json_result['activation']);
             localStorage.setItem("tel_no", _this.telephone);
-            console.log(localStorage.getItem('tel-no'));
+            console.log(localStorage.getItem('tel_no'));
             console.log(json_result['activation']);
         });
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__["a" /* SmsOtpPage */]);
@@ -656,7 +638,7 @@ var NewAccountPage = /** @class */ (function () {
         var formData = new FormData();
         formData.append("action", "send");
         formData.append("telephone", this.telephone);
-        this.http.post("http://localhost:8000/php/new-account.php", formData).subscribe(function (res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/new-account.php", formData).subscribe(function (res) {
             var json_result = JSON.parse(res['_body']);
             console.log(json_result);
             callback(json_result);
@@ -664,11 +646,7 @@ var NewAccountPage = /** @class */ (function () {
     };
     NewAccountPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-new-account',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>YENİ HESAP OLUŞTUR</ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat    \n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input> \n\n      </ion-item>\n\n      <br>\n\n      <button ion-button class="button-middle" (click)="sendSmsOTP()">AKTİVASYON KODU GÖNDER</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/new-account/new-account.html"*/,
-=======
-            selector: 'page-new-account',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>YENİ HESAP OLUŞTUR</ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat    \n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input> \n\n      </ion-item>\n\n      <br>\n\n      <button ion-button class="button-middle" (click)="sendSmsOTP()">AKTİVASYON KODU GÖNDER</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/new-account/new-account.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-new-account',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\new-account\new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>YENİ HESAP OLUŞTUR</ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat    \n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input> \n\n      </ion-item>\n\n      <br>\n\n      <button ion-button class="button-middle" (click)="sendSmsOTP()">AKTİVASYON KODU GÖNDER</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\new-account\new-account.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]])
     ], NewAccountPage);
@@ -688,11 +666,7 @@ var NewAccountPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -757,18 +731,14 @@ var SmsOtpPage = /** @class */ (function () {
         var formData = new FormData();
         formData.append("action", "send");
         formData.append("telephone", localStorage.getItem("tel_no"));
-        this.http.post("http://localhost:8000/php/new-account.php", formData).subscribe(function (res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/new-account.php", formData).subscribe(function (res) {
             var json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
     };
     SmsOtpPage = SmsOtpPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-sms-otp',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/sms-otp/sms-otp.html"*/'<!--\n\n  Generated template for the SmsOtpPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat    \n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n      <ion-item>\n\n          <ion-label stacked>SMS ile gelen şifre:<br></ion-label> \n\n          <ion-input type="number" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="completeAppointment()">AKTİVASYONU TAMAMLA</button>\n\n        <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">ŞİFREYİ TEKRAR GÖNDER</button>\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/sms-otp/sms-otp.html"*/,
-=======
-            selector: 'page-sms-otp',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/sms-otp/sms-otp.html"*/'<!--\n\n  Generated template for the SmsOtpPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat    \n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n      <ion-item>\n\n          <ion-label stacked>SMS ile gelen şifre:<br></ion-label> \n\n          <ion-input type="number" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="completeAppointment()">AKTİVASYONU TAMAMLA</button>\n\n        <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">ŞİFREYİ TEKRAR GÖNDER</button>\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/sms-otp/sms-otp.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-sms-otp',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\sms-otp\sms-otp.html"*/'<!--\n\n  Generated template for the SmsOtpPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         Kapat\n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.</div>\n\n      </ion-card>\n\n      <ion-item>\n\n          <ion-label stacked>SMS ile gelen şifre:<br></ion-label>\n\n          <ion-input type="text" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="completeAppointment()">AKTİVASYONU TAMAMLA</button>\n\n        <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">ŞİFREYİ TEKRAR GÖNDER</button>\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\sms-otp\sms-otp.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* AlertController */]])
     ], SmsOtpPage);
@@ -823,16 +793,14 @@ var PasswordPage = /** @class */ (function () {
     };
     PasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-password',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/password/password.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title> Şifre Oluşturma</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> <b style="color:rgb(101, 183, 221);">Şifrenizi Oluşturunuz</b></div>\n\n    </ion-card>\n\n    <form (ngSubmit)="loginUser()">\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n          <ion-input type="password" [(ngModel)]=\'pword\' [ngModelOptions]="{standalone: true}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre Onaylayınız:</ion-label>\n\n            <ion-input type="password" [(ngModel)]=\'confirmation_pword\' [ngModelOptions]="{standalone: true}">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n              Şifre onayı asıl şifre ile aynı olmalıdır.\n\n          </p>\n\n          <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n          <div margin-top>\n\n            <button ion-button block class="button-middle" type="submit" [disabled]="!pword ||\n\n                        !confirmation_pword ||\n\n                        pword != confirmation_pword">\n\n              ONAYLA\n\n            </button>\n\n          </div>\n\n        </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/password/password.html"*/,
-=======
-            selector: 'page-password',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/password/password.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title> Şifre Oluşturma</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> <b style="color:rgb(101, 183, 221);">Şifrenizi Oluşturunuz</b></div>\n\n      </ion-card>\n\n      <form (ngSubmit)="loginUser()">\n\n\n\n            \n\n      \n\n            <ion-item>\n\n              <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n              <ion-input type="password">\n\n              </ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre Onaylayınız:</ion-label>\n\n                <ion-input type="password">\n\n                </ion-input>\n\n              </ion-item>\n\n      \n\n        \n\n          <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n          <div margin-top>\n\n            <button ion-button block class="button-middle" type="submit">\n\n              ONAYLA\n\n            </button>\n\n          </div>\n\n        </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/password/password.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-password',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\password\password.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title> Şifre Oluşturma</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> <b style="color:rgb(101, 183, 221);">Şifrenizi Oluşturunuz</b></div>\n\n    </ion-card>\n\n    <form (ngSubmit)="loginUser()">\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n          <ion-input type="password" [(ngModel)]=\'pword\' [ngModelOptions]="{standalone: true}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre Onaylayınız:</ion-label>\n\n            <ion-input type="password" [(ngModel)]=\'confirmation_pword\' [ngModelOptions]="{standalone: true}">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n              Şifre onayı asıl şifre ile aynı olmalıdır.\n\n          </p>\n\n          <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n          <div margin-top>\n\n            <button ion-button block class="button-middle" type="submit" [disabled]="!pword ||\n\n                        !confirmation_pword ||\n\n                        pword != confirmation_pword">\n\n              ONAYLA\n\n            </button>\n\n          </div>\n\n        </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\password\password.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
     ], PasswordPage);
     return PasswordPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=password.js.map
@@ -877,11 +845,7 @@ var SuccessActivationPage = /** @class */ (function () {
     };
     SuccessActivationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-success-activation',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/success-activation/success-activation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Tebrikler! Aktivasyon işlemleri başarıyla tamamlandı.</div>\n\n      </ion-card>\n\n     \n\n        <button ion-button class="button-middle" (click)="makeappointment()">BAŞLA</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/success-activation/success-activation.html"*/,
-=======
-            selector: 'page-success-activation',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/success-activation/success-activation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Tebrikler! Aktivasyon işlemleri başarıyla tamamlandı.</div>\n\n      </ion-card>\n\n     \n\n        <button ion-button class="button-middle" (click)="makeappointment()">BAŞLA</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/success-activation/success-activation.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-success-activation',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\success-activation\success-activation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>HESAP AKTİVASYONU</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center><br> Tebrikler! Aktivasyon işlemleri başarıyla tamamlandı.</div>\n\n      </ion-card>\n\n     \n\n        <button ion-button class="button-middle" (click)="makeappointment()">BAŞLA</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\success-activation\success-activation.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */]])
     ], SuccessActivationPage);
@@ -900,11 +864,7 @@ var SuccessActivationPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(209);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -928,31 +888,18 @@ var MakeAppointment_1Page = /** @class */ (function () {
         console.log('randevu al sayfsındayım');
     };
     MakeAppointment_1Page.prototype.nextStep_1 = function () {
+        localStorage.setItem("name_register", this.name);
+        localStorage.setItem("surname_register", this.surname);
+        localStorage.setItem("email_register", this.email);
+        localStorage.setItem("gender_register", this.gender);
+        localStorage.setItem("city_register", this.city);
+        localStorage.setItem("district_register", this.district);
+        localStorage.setItem("want_to_add", this.text);
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__["a" /* MakeAppointment_2Page */]);
-    };
-    MakeAppointment_1Page.prototype.postData = function (callback) {
-        // Create credentials.
-        var json_result;
-        var formData = new FormData();
-        formData.append("action", "getinfo");
-        formData.append("name", this.name);
-        formData.append("surname", this.surname);
-        formData.append("email", this.email);
-        formData.append("gender", this.gender);
-        formData.append("city", this.city);
-        formData.append("district", this.district);
-        this.http.post("http://localhost:8000/php/home.php", formData).subscribe(function respond(res) {
-            json_result = JSON.parse(res['_body']);
-            callback(json_result);
-        });
     };
     MakeAppointment_1Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-make-appointment-1',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (1/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.</div>\n\n      </ion-card>\n\n      \n\n\n\n        <ion-item>\n\n          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="name" placeholder="Lütfen adınızı yazınız"></ion-input>\n\n        </ion-item>\n\n      \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n          <ion-input type="email" [(ngModel)]="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>\n\n        </ion-item>\n\n        \n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n            <ion-select [(ngModel)]="gender">\n\n              <ion-option value="male">Bay</ion-option>\n\n              <ion-option value="female">Bayan</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        \n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n            <ion-select [(ngModel)]="city">\n\n              <ion-option value="1">Adana</ion-option>\n\n              <ion-option value="2">Adıyaman</ion-option>\n\n              <ion-option value="3">Afyonkarahisar</ion-option>\n\n              <ion-option value="4">Ağrı</ion-option>\n\n              <ion-option value="5">Amasya</ion-option>\n\n              <ion-option value="6">Ankara</ion-option>\n\n              <ion-option value="7">Antalya</ion-option>\n\n              <ion-option value="8">Artvin</ion-option>\n\n              <ion-option value="9">Aydın</ion-option>\n\n              <ion-option value="10">Balıkesir</ion-option>\n\n              <ion-option value="11">Bilecik</ion-option>\n\n              <ion-option value="12">Bingöl</ion-option>\n\n              <ion-option value="13">Bitlis</ion-option>\n\n              <ion-option value="14">Bolu</ion-option>\n\n              <ion-option value="15">Burdur</ion-option>\n\n              <ion-option value="16">Bursa</ion-option>\n\n              <ion-option value="17">Çanakkale</ion-option>\n\n              <ion-option value="18">Çankırı</ion-option>\n\n              <ion-option value="19">Çorum</ion-option>\n\n              <ion-option value="20">Denizli</ion-option>\n\n              <ion-option value="21">Diyarbakır</ion-option>\n\n              <ion-option value="22">Edirne</ion-option>\n\n              <ion-option value="23">Elazığ</ion-option>\n\n              <ion-option value="24">Erzincan</ion-option>\n\n              <ion-option value="25">Erzurum</ion-option>\n\n              <ion-option value="26">Eskişehir</ion-option>\n\n              <ion-option value="27">Gaziantep</ion-option>\n\n              <ion-option value="28">Giresun</ion-option>\n\n              <ion-option value="29">Gümüşhane</ion-option>\n\n              <ion-option value="30">Hakkâri</ion-option>\n\n              <ion-option value="31">Hatay</ion-option>\n\n              <ion-option value="32">Isparta</ion-option>\n\n              <ion-option value="33">Mersin</ion-option>\n\n              <ion-option value="34">İstanbul</ion-option>\n\n              <ion-option value="35">İzmir</ion-option>\n\n              <ion-option value="36">Kars</ion-option>\n\n              <ion-option value="37">Kastamonu</ion-option>\n\n              <ion-option value="38">Kayseri</ion-option>\n\n              <ion-option value="39">Kırklareli</ion-option>\n\n              <ion-option value="40">Kırşehir</ion-option>\n\n              <ion-option value="41">Kocaeli</ion-option>\n\n              <ion-option value="42">Konya</ion-option>\n\n              <ion-option value="43">Kütahya</ion-option>\n\n              <ion-option value="44">Malatya</ion-option>\n\n              <ion-option value="45">Manisa</ion-option>\n\n              <ion-option value="46">Kahramanmaraş</ion-option>\n\n              <ion-option value="47">Mardin</ion-option>\n\n              <ion-option value="48">Muğla</ion-option>\n\n              <ion-option value="49">Muş</ion-option>\n\n              <ion-option value="50">Nevşehir</ion-option>\n\n              <ion-option value="51">Niğde</ion-option>\n\n              <ion-option value="52">Ordu</ion-option>\n\n              <ion-option value="53">Rize</ion-option>\n\n              <ion-option value="54">Sakarya</ion-option>\n\n              <ion-option value="55">Samsun</ion-option>\n\n              <ion-option value="56">Siirt</ion-option>\n\n              <ion-option value="57">Sinop</ion-option>\n\n              <ion-option value="58">Sivas</ion-option>\n\n              <ion-option value="59">Tekirdağ</ion-option>\n\n              <ion-option value="60">Tokat</ion-option>\n\n              <ion-option value="61">Trabzon</ion-option>\n\n              <ion-option value="62">Tunceli</ion-option>\n\n              <ion-option value="63">Şanlıurfa</ion-option>\n\n              <ion-option value="64">Uşak</ion-option>\n\n              <ion-option value="65">Van</ion-option>\n\n              <ion-option value="66">Yozgat</ion-option>\n\n              <ion-option value="67">Zonguldak</ion-option>\n\n              <ion-option value="68">Aksaray</ion-option>\n\n              <ion-option value="69">Bayburt</ion-option>\n\n              <ion-option value="70">Karaman</ion-option>\n\n              <ion-option value="71">Kırıkkale</ion-option>\n\n              <ion-option value="72">Batman</ion-option>\n\n              <ion-option value="73">Şırnak</ion-option>\n\n              <ion-option value="74">Bartın</ion-option>\n\n              <ion-option value="75">Ardahan</ion-option>\n\n              <ion-option value="76">Iğdır</ion-option>\n\n              <ion-option value="77">Yalova</ion-option>\n\n              <ion-option value="78">Karabük</ion-option>\n\n              <ion-option value="79">Kilis</ion-option>\n\n              <ion-option value="80">Osmaniye</ion-option>\n\n              <ion-option value="81">Düzce</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        </ion-list>\n\n        \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n          <ion-input type="text" [(ngModel)]="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>\n\n          <ion-textarea rows="4" [(ngModel)]="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="nextStep_1()">Sonraki Adım</button>\n\n\n\n      \n\n      \n\n\n\n        \n\n        \n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/,
-=======
-            selector: 'page-make-appointment-1',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (1/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.</div>\n\n      </ion-card>\n\n      \n\n\n\n        <ion-item>\n\n          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="name" placeholder="Lütfen adınızı yazınız"></ion-input>\n\n        </ion-item>\n\n      \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n          <ion-input type="email" [(ngModel)]="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>\n\n        </ion-item>\n\n        \n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n            <ion-select [(ngModel)]="gender">\n\n              <ion-option value="male">Bay</ion-option>\n\n              <ion-option value="female">Bayan</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        \n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n            <ion-select [(ngModel)]="city">\n\n              <ion-option value="1">Adana</ion-option>\n\n              <ion-option value="2">Adıyaman</ion-option>\n\n              <ion-option value="3">Afyonkarahisar</ion-option>\n\n              <ion-option value="4">Ağrı</ion-option>\n\n              <ion-option value="5">Amasya</ion-option>\n\n              <ion-option value="6">Ankara</ion-option>\n\n              <ion-option value="7">Antalya</ion-option>\n\n              <ion-option value="8">Artvin</ion-option>\n\n              <ion-option value="9">Aydın</ion-option>\n\n              <ion-option value="10">Balıkesir</ion-option>\n\n              <ion-option value="11">Bilecik</ion-option>\n\n              <ion-option value="12">Bingöl</ion-option>\n\n              <ion-option value="13">Bitlis</ion-option>\n\n              <ion-option value="14">Bolu</ion-option>\n\n              <ion-option value="15">Burdur</ion-option>\n\n              <ion-option value="16">Bursa</ion-option>\n\n              <ion-option value="17">Çanakkale</ion-option>\n\n              <ion-option value="18">Çankırı</ion-option>\n\n              <ion-option value="19">Çorum</ion-option>\n\n              <ion-option value="20">Denizli</ion-option>\n\n              <ion-option value="21">Diyarbakır</ion-option>\n\n              <ion-option value="22">Edirne</ion-option>\n\n              <ion-option value="23">Elazığ</ion-option>\n\n              <ion-option value="24">Erzincan</ion-option>\n\n              <ion-option value="25">Erzurum</ion-option>\n\n              <ion-option value="26">Eskişehir</ion-option>\n\n              <ion-option value="27">Gaziantep</ion-option>\n\n              <ion-option value="28">Giresun</ion-option>\n\n              <ion-option value="29">Gümüşhane</ion-option>\n\n              <ion-option value="30">Hakkâri</ion-option>\n\n              <ion-option value="31">Hatay</ion-option>\n\n              <ion-option value="32">Isparta</ion-option>\n\n              <ion-option value="33">Mersin</ion-option>\n\n              <ion-option value="34">İstanbul</ion-option>\n\n              <ion-option value="35">İzmir</ion-option>\n\n              <ion-option value="36">Kars</ion-option>\n\n              <ion-option value="37">Kastamonu</ion-option>\n\n              <ion-option value="38">Kayseri</ion-option>\n\n              <ion-option value="39">Kırklareli</ion-option>\n\n              <ion-option value="40">Kırşehir</ion-option>\n\n              <ion-option value="41">Kocaeli</ion-option>\n\n              <ion-option value="42">Konya</ion-option>\n\n              <ion-option value="43">Kütahya</ion-option>\n\n              <ion-option value="44">Malatya</ion-option>\n\n              <ion-option value="45">Manisa</ion-option>\n\n              <ion-option value="46">Kahramanmaraş</ion-option>\n\n              <ion-option value="47">Mardin</ion-option>\n\n              <ion-option value="48">Muğla</ion-option>\n\n              <ion-option value="49">Muş</ion-option>\n\n              <ion-option value="50">Nevşehir</ion-option>\n\n              <ion-option value="51">Niğde</ion-option>\n\n              <ion-option value="52">Ordu</ion-option>\n\n              <ion-option value="53">Rize</ion-option>\n\n              <ion-option value="54">Sakarya</ion-option>\n\n              <ion-option value="55">Samsun</ion-option>\n\n              <ion-option value="56">Siirt</ion-option>\n\n              <ion-option value="57">Sinop</ion-option>\n\n              <ion-option value="58">Sivas</ion-option>\n\n              <ion-option value="59">Tekirdağ</ion-option>\n\n              <ion-option value="60">Tokat</ion-option>\n\n              <ion-option value="61">Trabzon</ion-option>\n\n              <ion-option value="62">Tunceli</ion-option>\n\n              <ion-option value="63">Şanlıurfa</ion-option>\n\n              <ion-option value="64">Uşak</ion-option>\n\n              <ion-option value="65">Van</ion-option>\n\n              <ion-option value="66">Yozgat</ion-option>\n\n              <ion-option value="67">Zonguldak</ion-option>\n\n              <ion-option value="68">Aksaray</ion-option>\n\n              <ion-option value="69">Bayburt</ion-option>\n\n              <ion-option value="70">Karaman</ion-option>\n\n              <ion-option value="71">Kırıkkale</ion-option>\n\n              <ion-option value="72">Batman</ion-option>\n\n              <ion-option value="73">Şırnak</ion-option>\n\n              <ion-option value="74">Bartın</ion-option>\n\n              <ion-option value="75">Ardahan</ion-option>\n\n              <ion-option value="76">Iğdır</ion-option>\n\n              <ion-option value="77">Yalova</ion-option>\n\n              <ion-option value="78">Karabük</ion-option>\n\n              <ion-option value="79">Kilis</ion-option>\n\n              <ion-option value="80">Osmaniye</ion-option>\n\n              <ion-option value="81">Düzce</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        </ion-list>\n\n        \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n          <ion-input type="text" [(ngModel)]="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>\n\n          <ion-textarea rows="4" [(ngModel)]="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="nextStep_1()">Sonraki Adım</button>\n\n\n\n      \n\n      \n\n\n\n        \n\n        \n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-make-appointment-1',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-1\make-appointment-1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (1/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.</div>\n\n      </ion-card>\n\n      \n\n\n\n        <ion-item>\n\n          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="Lütfen adınızı yazınız"></ion-input>\n\n        </ion-item>\n\n      \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>\n\n          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>\n\n        </ion-item>\n\n        \n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n            <ion-select [(ngModel)]="gender" name="gender" ngDefaultControl>\n\n              <ion-option value="male">Bay</ion-option>\n\n              <ion-option value="female">Bayan</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        \n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n            <ion-select [(ngModel)]="city" name="city" ngDefaultControl>\n\n              <ion-option value="1">Adana</ion-option>\n\n              <ion-option value="2">Adıyaman</ion-option>\n\n              <ion-option value="3">Afyonkarahisar</ion-option>\n\n              <ion-option value="4">Ağrı</ion-option>\n\n              <ion-option value="5">Amasya</ion-option>\n\n              <ion-option value="6">Ankara</ion-option>\n\n              <ion-option value="7">Antalya</ion-option>\n\n              <ion-option value="8">Artvin</ion-option>\n\n              <ion-option value="9">Aydın</ion-option>\n\n              <ion-option value="10">Balıkesir</ion-option>\n\n              <ion-option value="11">Bilecik</ion-option>\n\n              <ion-option value="12">Bingöl</ion-option>\n\n              <ion-option value="13">Bitlis</ion-option>\n\n              <ion-option value="14">Bolu</ion-option>\n\n              <ion-option value="15">Burdur</ion-option>\n\n              <ion-option value="16">Bursa</ion-option>\n\n              <ion-option value="17">Çanakkale</ion-option>\n\n              <ion-option value="18">Çankırı</ion-option>\n\n              <ion-option value="19">Çorum</ion-option>\n\n              <ion-option value="20">Denizli</ion-option>\n\n              <ion-option value="21">Diyarbakır</ion-option>\n\n              <ion-option value="22">Edirne</ion-option>\n\n              <ion-option value="23">Elazığ</ion-option>\n\n              <ion-option value="24">Erzincan</ion-option>\n\n              <ion-option value="25">Erzurum</ion-option>\n\n              <ion-option value="26">Eskişehir</ion-option>\n\n              <ion-option value="27">Gaziantep</ion-option>\n\n              <ion-option value="28">Giresun</ion-option>\n\n              <ion-option value="29">Gümüşhane</ion-option>\n\n              <ion-option value="30">Hakkâri</ion-option>\n\n              <ion-option value="31">Hatay</ion-option>\n\n              <ion-option value="32">Isparta</ion-option>\n\n              <ion-option value="33">Mersin</ion-option>\n\n              <ion-option value="34">İstanbul</ion-option>\n\n              <ion-option value="35">İzmir</ion-option>\n\n              <ion-option value="36">Kars</ion-option>\n\n              <ion-option value="37">Kastamonu</ion-option>\n\n              <ion-option value="38">Kayseri</ion-option>\n\n              <ion-option value="39">Kırklareli</ion-option>\n\n              <ion-option value="40">Kırşehir</ion-option>\n\n              <ion-option value="41">Kocaeli</ion-option>\n\n              <ion-option value="42">Konya</ion-option>\n\n              <ion-option value="43">Kütahya</ion-option>\n\n              <ion-option value="44">Malatya</ion-option>\n\n              <ion-option value="45">Manisa</ion-option>\n\n              <ion-option value="46">Kahramanmaraş</ion-option>\n\n              <ion-option value="47">Mardin</ion-option>\n\n              <ion-option value="48">Muğla</ion-option>\n\n              <ion-option value="49">Muş</ion-option>\n\n              <ion-option value="50">Nevşehir</ion-option>\n\n              <ion-option value="51">Niğde</ion-option>\n\n              <ion-option value="52">Ordu</ion-option>\n\n              <ion-option value="53">Rize</ion-option>\n\n              <ion-option value="54">Sakarya</ion-option>\n\n              <ion-option value="55">Samsun</ion-option>\n\n              <ion-option value="56">Siirt</ion-option>\n\n              <ion-option value="57">Sinop</ion-option>\n\n              <ion-option value="58">Sivas</ion-option>\n\n              <ion-option value="59">Tekirdağ</ion-option>\n\n              <ion-option value="60">Tokat</ion-option>\n\n              <ion-option value="61">Trabzon</ion-option>\n\n              <ion-option value="62">Tunceli</ion-option>\n\n              <ion-option value="63">Şanlıurfa</ion-option>\n\n              <ion-option value="64">Uşak</ion-option>\n\n              <ion-option value="65">Van</ion-option>\n\n              <ion-option value="66">Yozgat</ion-option>\n\n              <ion-option value="67">Zonguldak</ion-option>\n\n              <ion-option value="68">Aksaray</ion-option>\n\n              <ion-option value="69">Bayburt</ion-option>\n\n              <ion-option value="70">Karaman</ion-option>\n\n              <ion-option value="71">Kırıkkale</ion-option>\n\n              <ion-option value="72">Batman</ion-option>\n\n              <ion-option value="73">Şırnak</ion-option>\n\n              <ion-option value="74">Bartın</ion-option>\n\n              <ion-option value="75">Ardahan</ion-option>\n\n              <ion-option value="76">Iğdır</ion-option>\n\n              <ion-option value="77">Yalova</ion-option>\n\n              <ion-option value="78">Karabük</ion-option>\n\n              <ion-option value="79">Kilis</ion-option>\n\n              <ion-option value="80">Osmaniye</ion-option>\n\n              <ion-option value="81">Düzce</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        </ion-list>\n\n        \n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>\n\n          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">Sonraki Adım</button>\n\n\n\n      \n\n      \n\n\n\n        \n\n        \n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-1\make-appointment-1.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
     ], MakeAppointment_1Page);
@@ -997,7 +944,7 @@ var MakeAppointment_2Page = /** @class */ (function () {
     MakeAppointment_2Page.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad MakeAppointment_2Page');
     };
-    MakeAppointment_2Page.prototype.changePicture = function () {
+    MakeAppointment_2Page.prototype.changePicture1 = function () {
         var _this = this;
         var actionsheet = this.actionsheetCtrl.create({
             title: 'Fotoğraf Yükle',
@@ -1006,14 +953,14 @@ var MakeAppointment_2Page = /** @class */ (function () {
                     text: 'Kamera',
                     icon: !this.platform.is('ios') ? 'camera' : null,
                     handler: function () {
-                        _this.takePicture();
+                        _this.takePicture1();
                     }
                 },
                 {
                     text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
                     icon: !this.platform.is('ios') ? 'image' : null,
                     handler: function () {
-                        _this.getPicture();
+                        _this.getPicture1();
                     }
                 },
                 {
@@ -1028,26 +975,254 @@ var MakeAppointment_2Page = /** @class */ (function () {
         });
         return actionsheet.present();
     };
-    MakeAppointment_2Page.prototype.takePicture = function () {
+    MakeAppointment_2Page.prototype.changePicture2 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture2();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture2();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_2Page.prototype.changePicture3 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture3();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture3();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_2Page.prototype.changePicture4 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture4();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture4();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_2Page.prototype.changePicture5 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture5();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture5();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_2Page.prototype.takePicture1 = function () {
         var _this = this;
         var loading = this.loadingCtrl.create();
         loading.present();
         return this.cameraProvider.getPictureFromCamera().then(function (picture) {
             if (picture) {
-                _this.chosenPicture = picture;
+                _this.chosenPicture1 = picture;
             }
             loading.dismiss();
         }, function (error) {
             alert(error);
         });
     };
-    MakeAppointment_2Page.prototype.getPicture = function () {
+    MakeAppointment_2Page.prototype.takePicture2 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture2 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.takePicture3 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture3 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.takePicture4 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture4 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.takePicture5 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture5 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.getPicture1 = function () {
         var _this = this;
         var loading = this.loadingCtrl.create();
         loading.present();
         return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
             if (picture) {
-                _this.chosenPicture = picture;
+                _this.chosenPicture1 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.getPicture2 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture2 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.getPicture3 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture3 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.getPicture4 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture4 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_2Page.prototype.getPicture5 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture5 = picture;
             }
             loading.dismiss();
         }, function (error) {
@@ -1055,15 +1230,16 @@ var MakeAppointment_2Page = /** @class */ (function () {
         });
     };
     MakeAppointment_2Page.prototype.nextStep_2 = function () {
+        localStorage.setItem("ch1", this.chosenPicture1);
+        localStorage.setItem("ch2", this.chosenPicture2);
+        localStorage.setItem("ch3", this.chosenPicture3);
+        localStorage.setItem("ch4", this.chosenPicture4);
+        localStorage.setItem("ch5", this.chosenPicture5);
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__make_appointment_3_make_appointment_3__["a" /* MakeAppointment_3Page */]);
     };
     MakeAppointment_2Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-make-appointment-2',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/'<!--\n\n  Generated template for the MakeAppointment_2Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (2/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br><h1 class="h1">FOTOĞRAF YÜKLEME</h1><br>Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz</div>\n\n      </ion-card>  <br><br>\n\n      <h5 class="h5">1. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">1. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">2. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">2. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">3. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                    <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()" >3. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">4. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                     <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">4. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">5. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">5. FOTOĞRAF EKLE</button>\n\n        <br><br><br><br>\n\n        <button ion-button class="button-nextStep" (click)="nextStep_2()">SONRAKİ ADIM</button>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/,
-=======
-            selector: 'page-make-appointment-2',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/'<!--\n\n  Generated template for the MakeAppointment_2Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (2/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br><h1 class="h1">FOTOĞRAF YÜKLEME</h1><br>Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz</div>\n\n      </ion-card>  <br><br>\n\n      <h5 class="h5">1. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">1. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">2. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">2. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">3. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                    <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()" >3. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">4. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                     <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">4. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">5. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                <ion-avatar >\n\n                   <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture()">5. FOTOĞRAF EKLE</button>\n\n        <br><br><br><br>\n\n        <button ion-button class="button-nextStep" (click)="nextStep_2()">SONRAKİ ADIM</button>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-make-appointment-2',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-2\make-appointment-2.html"*/'<!--\n\n  Generated template for the MakeAppointment_2Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (2/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br><h1 class="h1">FOTOĞRAF YÜKLEME</h1><br>Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz</div>\n\n      </ion-card>  <br><br>\n\n      <h5 class="h5">1. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture1()">1. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">2. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture2()">2. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">3. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                    <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture3()">3. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">4. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                  <ion-avatar >\n\n                     <img [src]="chosenPicture4"  onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture4()">4. FOTOĞRAF EKLE</button>\n\n        <br><br>\n\n        <h5 class="h5">5. FOTOĞRAF EKLE</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/apple.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding> \n\n              <ion-card>\n\n                <ion-avatar >\n\n                   <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                </ion-avatar>\n\n              </ion-card>   \n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture5()">5. FOTOĞRAF EKLE</button>\n\n        <br><br><br><br>\n\n        <button ion-button class="button-nextStep" (click)="nextStep_2()">SONRAKİ ADIM</button>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-2\make-appointment-2.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -1087,7 +1263,8 @@ var MakeAppointment_2Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__make_appointment_4_make_appointment_4__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1101,19 +1278,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MakeAppointment_3Page = /** @class */ (function () {
-    function MakeAppointment_3Page(navCtrl, navParams, cameraProvider, loadingCtrl, platform, actionsheetCtrl) {
+    function MakeAppointment_3Page(navCtrl, navParams, cameraProvider, loadingCtrl, platform, actionsheetCtrl, http) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.cameraProvider = cameraProvider;
         this.loadingCtrl = loadingCtrl;
         this.platform = platform;
         this.actionsheetCtrl = actionsheetCtrl;
+        this.http = http;
+        this.name = localStorage.getItem("name_register");
+        this.surname = localStorage.getItem("surname_register");
+        this.gender = localStorage.getItem("gender_register");
+        this.email = localStorage.getItem("email_register");
+        this.city = localStorage.getItem("city_register");
+        this.district = localStorage.getItem("district_register");
+        this.text = localStorage.getItem("want_to_add");
+        this.chosenPicture1 = localStorage.getItem("ch1");
+        this.chosenPicture2 = localStorage.getItem("ch2");
+        this.chosenPicture3 = localStorage.getItem("ch3");
+        this.chosenPicture4 = localStorage.getItem("ch4");
+        this.chosenPicture5 = localStorage.getItem("ch5");
     }
     MakeAppointment_3Page.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad MakeAppointment_3Page');
     };
-    MakeAppointment_3Page.prototype.changePicture = function () {
+    // Şunları da kopyalayıver.
+    MakeAppointment_3Page.prototype.changePicture1 = function () {
         var _this = this;
         var actionsheet = this.actionsheetCtrl.create({
             title: 'Fotoğraf Yükle',
@@ -1122,14 +1314,14 @@ var MakeAppointment_3Page = /** @class */ (function () {
                     text: 'Kamera',
                     icon: !this.platform.is('ios') ? 'camera' : null,
                     handler: function () {
-                        _this.takePicture();
+                        _this.takePicture1();
                     }
                 },
                 {
                     text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
                     icon: !this.platform.is('ios') ? 'image' : null,
                     handler: function () {
-                        _this.getPicture();
+                        _this.getPicture1();
                     }
                 },
                 {
@@ -1144,48 +1336,295 @@ var MakeAppointment_3Page = /** @class */ (function () {
         });
         return actionsheet.present();
     };
-    MakeAppointment_3Page.prototype.takePicture = function () {
+    MakeAppointment_3Page.prototype.changePicture2 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture2();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture2();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_3Page.prototype.changePicture3 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture3();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture3();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_3Page.prototype.changePicture4 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture4();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture4();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_3Page.prototype.changePicture5 = function () {
+        var _this = this;
+        var actionsheet = this.actionsheetCtrl.create({
+            title: 'Fotoğraf Yükle',
+            buttons: [
+                {
+                    text: 'Kamera',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        _this.takePicture5();
+                    }
+                },
+                {
+                    text: !this.platform.is('ios') ? 'gallery' : 'Galeri',
+                    icon: !this.platform.is('ios') ? 'image' : null,
+                    handler: function () {
+                        _this.getPicture5();
+                    }
+                },
+                {
+                    text: 'Kapat',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    role: 'destructive',
+                    handler: function () {
+                        console.log('the user has cancelled the interaction.');
+                    }
+                }
+            ]
+        });
+        return actionsheet.present();
+    };
+    MakeAppointment_3Page.prototype.takePicture1 = function () {
         var _this = this;
         var loading = this.loadingCtrl.create();
         loading.present();
         return this.cameraProvider.getPictureFromCamera().then(function (picture) {
             if (picture) {
-                _this.chosenPicture = picture;
+                _this.chosenPicture1 = picture;
             }
             loading.dismiss();
         }, function (error) {
             alert(error);
         });
     };
-    MakeAppointment_3Page.prototype.getPicture = function () {
+    MakeAppointment_3Page.prototype.takePicture2 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture2 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.takePicture3 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture3 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.takePicture4 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture4 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.takePicture5 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromCamera().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture5 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.getPicture1 = function () {
         var _this = this;
         var loading = this.loadingCtrl.create();
         loading.present();
         return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
             if (picture) {
-                _this.chosenPicture = picture;
+                _this.chosenPicture1 = picture;
             }
             loading.dismiss();
         }, function (error) {
             alert(error);
         });
     };
+    MakeAppointment_3Page.prototype.getPicture2 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture2 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.getPicture3 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture3 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.getPicture4 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture4 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.getPicture5 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create();
+        loading.present();
+        return this.cameraProvider.getPictureFromPhotoLibrary().then(function (picture) {
+            if (picture) {
+                _this.chosenPicture5 = picture;
+            }
+            loading.dismiss();
+        }, function (error) {
+            alert(error);
+        });
+    };
+    MakeAppointment_3Page.prototype.postData = function () {
+        // Create credentials.
+        var formData = new FormData();
+        formData.append("action", "register");
+        formData.append("name", this.name);
+        formData.append("surname", this.surname);
+        formData.append("email", this.email);
+        formData.append("tel_no", localStorage.getItem("tel_no"));
+        formData.append("password", localStorage.getItem("password"));
+        formData.append("gender", this.gender);
+        formData.append("city", this.city);
+        formData.append("district", this.district);
+        formData.append("text", this.text);
+        formData.append("chosenpicture1", this.chosenPicture1);
+        formData.append("chosenpicture2", this.chosenPicture2);
+        formData.append("chosenpicture3", this.chosenPicture3);
+        formData.append("chosenpicture4", this.chosenPicture4);
+        formData.append("chosenpicture5", this.chosenPicture5);
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/make-appointment.php", formData).subscribe(function respond() {
+        });
+    };
     MakeAppointment_3Page.prototype.create_appointment = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */]);
+        this.postData();
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */]);
     };
     MakeAppointment_3Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-make-appointment-3',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/'<!--\n\n  Generated template for the MakeAppointment_3Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (3/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n          <h1 class="h1">BİLGİLERİNİZİ KONTROL EDİNİZ </h1>\n\n        <br>Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz</div>\n\n    </ion-card><br><br>\n\n    \n\n    \n\n        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n        <h5>Muratcan</h5>\n\n    \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">Soyadınız</ion-label>\n\n        <h5>Kılıç</h5>\n\n      \n\n      \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n        <h5>murat34@gmail.com</h5>\n\n      \n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n        <h5>Bay</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n        <h5>İstanbul</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n        <h5>Kadıköy</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek istediğniz</ion-label>\n\n        <h5>Teknopark indiriminden yaralanmak istiyorum.</h5>\n\n\n\n        <h5 class="h5">1. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">1. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">2. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">2. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">3. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">3. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">4. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                      <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                   </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">4. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">5. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                       <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">5. FOTOĞRAF EKLE</button>\n\n          <br><br><br><br>\n\n          <button ion-button class="button-edit-information">BİLİGİLERİMİ DÜZENLE</button>\n\n          <br>\n\n          <button ion-button class="button-edit-information" (click)="create_appointment()">RANDEVUYU OLUŞTUR</button>\n\n\n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/,
-=======
-            selector: 'page-make-appointment-3',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/'<!--\n\n  Generated template for the MakeAppointment_3Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (3/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n          <h1 class="h1">BİLGİLERİNİZİ KONTROL EDİNİZ </h1>\n\n        <br>Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz</div>\n\n    </ion-card><br><br>\n\n    \n\n    \n\n        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n        <h5>Muratcan</h5>\n\n    \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">Soyadınız</ion-label>\n\n        <h5>Kılıç</h5>\n\n      \n\n      \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n        <h5>murat34@gmail.com</h5>\n\n      \n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n        <h5>Bay</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n        <h5>İstanbul</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n        <h5>Kadıköy</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek istediğniz</ion-label>\n\n        <h5>Teknopark indiriminden yaralanmak istiyorum.</h5>\n\n\n\n        <h5 class="h5">1. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">1. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">2. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">2. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">3. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">3. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">4. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                      <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                   </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">4. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">5. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                       <img [src]="chosenPicture || placeholder" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture()">5. FOTOĞRAF EKLE</button>\n\n          <br><br><br><br>\n\n          <button ion-button class="button-edit-information">BİLİGİLERİMİ DÜZENLE</button>\n\n          <br>\n\n          <button ion-button class="button-edit-information" (click)="create_appointment()">RANDEVUYU OLUŞTUR</button>\n\n\n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-make-appointment-3',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-3\make-appointment-3.html"*/'<!--\n\n  Generated template for the MakeAppointment_3Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (3/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n          <h1 class="h1">BİLGİLERİNİZİ KONTROL EDİNİZ </h1>\n\n        <br>Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz</div>\n\n    </ion-card><br><br>\n\n    \n\n    \n\n        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>\n\n        <h5>{{name}}</h5>\n\n    \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">Soyadınız</ion-label>\n\n        <h5>{{surname}}</h5>\n\n      \n\n      \n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>\n\n        <h5>{{email}}</h5>\n\n      \n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>\n\n        <h5>{{gender}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>\n\n        <h5>{{city}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>\n\n        <h5>{{district}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek istediğniz</ion-label>\n\n        <h5>{{text}}</h5>\n\n\n\n        <h5 class="h5">1. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture1()">1. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">2. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture2()">2. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">3. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture3()">3. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">4. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                      <img [src]="chosenPicture4" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                   </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture4()">4. FOTOĞRAF EKLE</button>\n\n          <br><br>\n\n          <h5 class="h5">5. FOTOĞRAF </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/apple.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding> \n\n                <ion-card>\n\n                    <ion-avatar >\n\n                       <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/apple.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>   \n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture5()">5. FOTOĞRAF EKLE</button>\n\n          <br><br><br><br>\n\n          <button ion-button class="button-edit-information">BİLİGİLERİMİ DÜZENLE</button>\n\n          <br>\n\n          <button ion-button class="button-edit-information" (click)="create_appointment()">RANDEVUYU OLUŞTUR</button>\n\n\n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-3\make-appointment-3.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__["a" /* CameraProvider */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
     ], MakeAppointment_3Page);
     return MakeAppointment_3Page;
 }());
@@ -1227,11 +1666,7 @@ var MakeAppointment_4Page = /** @class */ (function () {
     };
     MakeAppointment_4Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-make-appointment-4',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/'<!--\n\n  Generated template for the MakeAppointment_4Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (4/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br>TEBRİKLER<br>Randevunuz başarılı bir şeklide oluşturulmuştur. </div>\n\n      </ion-card>\n\n      <br><br>\n\n      <button ion-button class="button-middle" (click)="appointments()">Randevularıma Git</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/,
-=======
-            selector: 'page-make-appointment-4',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/'<!--\n\n  Generated template for the MakeAppointment_4Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (4/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br>TEBRİKLER<br>Randevunuz başarılı bir şeklide oluşturulmuştur. </div>\n\n      </ion-card>\n\n      <br><br>\n\n      <button ion-button class="button-middle" (click)="appointments()">Randevularıma Git</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-make-appointment-4',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-4\make-appointment-4.html"*/'<!--\n\n  Generated template for the MakeAppointment_4Page page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVU AL (4/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br>TEBRİKLER<br>Randevunuz başarılı bir şeklide oluşturulmuştur. </div>\n\n      </ion-card>\n\n      <br><br>\n\n      <button ion-button class="button-middle" (click)="appointments()">Randevularıma Git</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\make-appointment-4\make-appointment-4.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
     ], MakeAppointment_4Page);
@@ -1250,11 +1685,7 @@ var MakeAppointment_4Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_home_home__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1290,7 +1721,7 @@ var LoginUserPage = /** @class */ (function () {
         formData.append("username", this.user_data);
         formData.append("password", this.pass_data);
         var json_result;
-        this.http.post("http://localhost:8000/php/login-user.php", formData).subscribe(function respond(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/login-user.php", formData).subscribe(function respond(res) {
             json_result = JSON.parse(res['_body']);
             console.log(json_result);
             callback(json_result);
@@ -1338,11 +1769,7 @@ var LoginUserPage = /** @class */ (function () {
     };
     LoginUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-login-user',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>ÜYE GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n      <ion-card class="card-parent">\n\n          <img src="/assets/imgs/clearfix.png"/>\n\n          <div class="card-title" text-center><br> <b> Giriş Yapınız</b></div>\n\n        </ion-card>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon:</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n        \n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n        \n\n          \n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                GİRİŞ YAP\n\n              </button>\n\n            </div>\n\n \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/login-user/login-user.html"*/,
-=======
-            selector: 'page-login-user',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>ÜYE GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n      <ion-card class="card-parent">\n\n          <img src="/assets/imgs/clearfix.png"/>\n\n          <div class="card-title" text-center><br> <b> Giriş Yapınız</b></div>\n\n        </ion-card>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon:</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n        \n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n        \n\n          \n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                GİRİŞ YAP\n\n              </button>\n\n            </div>\n\n \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/login-user/login-user.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-login-user',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\login-user\login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>ÜYE GİRİŞİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  \n\n      <ion-card class="card-parent">\n\n          <img src="/assets/imgs/clearfix.png"/>\n\n          <div class="card-title" text-center><br> <b> Giriş Yapınız</b></div>\n\n        </ion-card>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon:</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n        \n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n        \n\n          \n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                GİRİŞ YAP\n\n              </button>\n\n            </div>\n\n \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\login-user\login-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */],
@@ -1363,11 +1790,7 @@ var LoginUserPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_doctor_login_doctor__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1404,7 +1827,7 @@ var RegisterDoctorPage = /** @class */ (function () {
         formData.append("email", this.email);
         formData.append("name", this.name);
         var json_result;
-        this.http.post("http://localhost:8000/php/signup-doctor.php", formData).subscribe(function respond(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/signup-doctor.php", formData).subscribe(function respond(res) {
             json_result = JSON.parse(res['_body']);
             console.log(json_result);
             callback(json_result);
@@ -1450,11 +1873,7 @@ var RegisterDoctorPage = /** @class */ (function () {
     };
     RegisterDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-register-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/register-doctor/register-doctor.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="tabColor">\n\n        <ion-title text-center>HEKİM KAYIT</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding="padding">\n\n        <!--logo-->\n\n        <div padding text-center="text-center">\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/clearfix.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir.</h5>\n\n        </div>\n\n        <!-- Login form -->\n\n        <ion-list class="list-form list-no-border">\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Tam Adınız</ion-label>\n\n                <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Kullanıcı Adı</ion-label>\n\n                <ion-input type="text" [(ngModel)]="uname"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n                <ion-input type="email" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreniz</ion-label>\n\n                <ion-input type="password" [(ngModel)]="pword"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreyi onayla</ion-label>\n\n                <ion-input type="password" [(ngModel)]="confirmation_pword"></ion-input>\n\n\n\n            </ion-item>\n\n            <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n\n\n                Şifre onayı asıl şifre ile aynı olmalıdır.\n\n            </p>\n\n        </ion-list>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label >Lisanslı Diş Hekimi olduğumu onaylıyorum.\n\n        </ion-label>\n\n\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label>Beyan ettiğim bilgilerin doğruluğunu ve<br>\n\n            <a>Clearfix</a>\n\n            üyelik kural ve koşullarını kabul <br>ediyorum.</ion-label>\n\n\n\n        <div margin-top="margin-top">\n\n            <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword ||           pword != confirmation_pword   ">\n\n                Kaydol\n\n            </button>\n\n        </div>\n\n\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n            <span ion-text (click)="login()">Hesabın var mı?</span>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/register-doctor/register-doctor.html"*/,
-=======
-            selector: 'page-register-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/register-doctor/register-doctor.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="tabColor">\n\n        <ion-title text-center>HEKİM KAYIT</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding="padding">\n\n        <!--logo-->\n\n        <div padding text-center="text-center">\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/clearfix.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir.</h5>\n\n        </div>\n\n        <!-- Login form -->\n\n        <ion-list class="list-form list-no-border">\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Tam Adınız</ion-label>\n\n                <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Kullanıcı Adı</ion-label>\n\n                <ion-input type="text" [(ngModel)]="uname"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n                <ion-input type="email" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreniz</ion-label>\n\n                <ion-input type="password" [(ngModel)]="pword"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreyi onayla</ion-label>\n\n                <ion-input type="password" [(ngModel)]="confirmation_pword"></ion-input>\n\n\n\n            </ion-item>\n\n            <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n\n\n                Şifre onayı asıl şifre ile aynı olmalıdır.\n\n            </p>\n\n        </ion-list>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label >Lisanslı Diş Hekimi olduğumu onaylıyorum.\n\n        </ion-label>\n\n\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label>Beyan ettiğim bilgilerin doğruluğunu ve<br>\n\n            <a>Clearfix</a>\n\n            üyelik kural ve koşullarını kabul <br>ediyorum.</ion-label>\n\n\n\n        <div margin-top="margin-top">\n\n            <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword ||           pword != confirmation_pword   ">\n\n                Kaydol\n\n            </button>\n\n        </div>\n\n\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n            <span ion-text (click)="login()">Hesabın var mı?</span>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/register-doctor/register-doctor.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-register-doctor',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\register-doctor\register-doctor.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="tabColor">\n\n        <ion-title text-center>HEKİM KAYIT</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding="padding">\n\n        <!--logo-->\n\n        <div padding text-center="text-center">\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/clearfix.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir.</h5>\n\n        </div>\n\n        <!-- Login form -->\n\n        <ion-list class="list-form list-no-border">\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Tam Adınız</ion-label>\n\n                <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Kullanıcı Adı</ion-label>\n\n                <ion-input type="text" [(ngModel)]="uname"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>\n\n                <ion-input type="email" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreniz</ion-label>\n\n                <ion-input type="password" [(ngModel)]="pword"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifreyi onayla</ion-label>\n\n                <ion-input type="password" [(ngModel)]="confirmation_pword"></ion-input>\n\n\n\n            </ion-item>\n\n            <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n\n\n                Şifre onayı asıl şifre ile aynı olmalıdır.\n\n            </p>\n\n        </ion-list>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label >Lisanslı Diş Hekimi olduğumu onaylıyorum.\n\n        </ion-label>\n\n\n\n        <ion-checkbox style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label>Beyan ettiğim bilgilerin doğruluğunu ve<br>\n\n            <a>Clearfix</a>\n\n            üyelik kural ve koşullarını kabul <br>ediyorum.</ion-label>\n\n\n\n        <div margin-top="margin-top">\n\n            <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword ||           pword != confirmation_pword   ">\n\n                Kaydol\n\n            </button>\n\n        </div>\n\n\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n            <span ion-text (click)="login()">Hesabın var mı?</span>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\register-doctor\register-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -1477,11 +1896,7 @@ var RegisterDoctorPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(216);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1518,7 +1933,7 @@ var CategoryPage = /** @class */ (function () {
         var formData = new FormData();
         formData.append("action", "load");
         formData.append("id", localStorage.getItem("id"));
-        this.http.post("http://localhost:8000/php/category.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/category.php", formData).subscribe(function response(res) {
             var json_result = JSON.parse(res['_body']);
             console.log(json_result);
             callback(json_result);
@@ -1533,11 +1948,7 @@ var CategoryPage = /** @class */ (function () {
     };
     CategoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-category',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/category/category.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>Kategori</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-grid >\n\n        <ion-row>\n\n          <ion-col col-6>\n\n            \n\n           <ion-card class="cardColor" (click)="userList(0)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="list-box" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tüm Vakalar</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[0]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n\n\n        </ion-col>\n\n        <ion-col col-6>\n\n            <ion-card class="cardColor" (click)="userList(1)">\n\n                <div class="divIcon">\n\n                    <ion-icon name="custom-ruler" color="tabColor"></ion-icon>\n\n                </div>\n\n                <div>\n\n                  <h3 text-center><b class="bfont">Ölçüler</b></h3>\n\n                </div>\n\n                <div>\n\n                  <br>\n\n                  <h1 text-center><b>{{rows[1]}}</b></h1>\n\n                </div>\n\n             </ion-card> \n\n      </ion-col >\n\n      <ion-col col-6>\n\n          <ion-card class="cardColor" (click)="userList(2)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="qr-scanner" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tarama</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[2]}}</b></h1>\n\n              </div>\n\n           </ion-card> \n\n    </ion-col >\n\n    <ion-col col-6>\n\n        <ion-card class="cardColor" (click)="userList(3)">\n\n            <div class="divIcon">\n\n                <ion-icon name="custom-register" color="tabColor"></ion-icon>\n\n                \n\n            </div>\n\n            <div>\n\n              <h3 text-center><b class="bfont">Kayıt</b></h3>\n\n            </div>\n\n            <div>\n\n              <br>\n\n              <h1 text-center><b>{{rows[3]}}</b></h1>\n\n            </div>\n\n         </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(4)">\n\n          <div class="divIcon">\n\n              <ion-icon name="cog" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Set-Up</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[4]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(5)">\n\n          <div class="divIcon">\n\n              <ion-icon name="custom-plan" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Planlama</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[5]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(6)">\n\n          <div class="divIcon">\n\n              <ion-icon name="log-out" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Export</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[6]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(7)">\n\n          <div class="divIcon">\n\n              <ion-icon name="color-fill" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">P.Ç.T</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[7]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n    <ion-card class="cardColor" (click)="userList(8)">\n\n        <div class="divIcon">\n\n            <ion-icon name="custom-truck" color="tabColor"></ion-icon>\n\n        </div>\n\n        <div>\n\n          <h3 text-center><b class="bfont">Kargoda</b></h3>\n\n        </div>\n\n        <div>\n\n          <br>\n\n          <h1 text-center><b>{{rows[8]}}</b></h1>\n\n        </div>\n\n     </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(9)">\n\n          <div class="divIcon">\n\n              <ion-icon name="checkbox" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Tamamlanmış</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[9]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n    </ion-col >\n\n        </ion-row>\n\n      </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/category/category.html"*/,
-=======
-            selector: 'page-category',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/category/category.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>Kategori</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-grid >\n\n        <ion-row>\n\n          <ion-col col-6>\n\n            \n\n           <ion-card class="cardColor" (click)="userList(0)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="list-box" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tüm Vakalar</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[0]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n\n\n        </ion-col>\n\n        <ion-col col-6>\n\n            <ion-card class="cardColor" (click)="userList(1)">\n\n                <div class="divIcon">\n\n                    <ion-icon name="custom-ruler" color="tabColor"></ion-icon>\n\n                </div>\n\n                <div>\n\n                  <h3 text-center><b class="bfont">Ölçüler</b></h3>\n\n                </div>\n\n                <div>\n\n                  <br>\n\n                  <h1 text-center><b>{{rows[1]}}</b></h1>\n\n                </div>\n\n             </ion-card> \n\n      </ion-col >\n\n      <ion-col col-6>\n\n          <ion-card class="cardColor" (click)="userList(2)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="qr-scanner" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tarama</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[2]}}</b></h1>\n\n              </div>\n\n           </ion-card> \n\n    </ion-col >\n\n    <ion-col col-6>\n\n        <ion-card class="cardColor" (click)="userList(3)">\n\n            <div class="divIcon">\n\n                <ion-icon name="custom-register" color="tabColor"></ion-icon>\n\n                \n\n            </div>\n\n            <div>\n\n              <h3 text-center><b class="bfont">Kayıt</b></h3>\n\n            </div>\n\n            <div>\n\n              <br>\n\n              <h1 text-center><b>{{rows[3]}}</b></h1>\n\n            </div>\n\n         </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(4)">\n\n          <div class="divIcon">\n\n              <ion-icon name="cog" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Set-Up</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[4]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(5)">\n\n          <div class="divIcon">\n\n              <ion-icon name="custom-plan" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Planlama</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[5]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(6)">\n\n          <div class="divIcon">\n\n              <ion-icon name="log-out" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Export</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[6]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(7)">\n\n          <div class="divIcon">\n\n              <ion-icon name="color-fill" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">P.Ç.T</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[7]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n    <ion-card class="cardColor" (click)="userList(8)">\n\n        <div class="divIcon">\n\n            <ion-icon name="custom-truck" color="tabColor"></ion-icon>\n\n        </div>\n\n        <div>\n\n          <h3 text-center><b class="bfont">Kargoda</b></h3>\n\n        </div>\n\n        <div>\n\n          <br>\n\n          <h1 text-center><b>{{rows[8]}}</b></h1>\n\n        </div>\n\n     </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(9)">\n\n          <div class="divIcon">\n\n              <ion-icon name="checkbox" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Tamamlanmış</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[9]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n    </ion-col >\n\n        </ion-row>\n\n      </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/category/category.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-category',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\category\category.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>Kategori</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-grid >\n\n        <ion-row>\n\n          <ion-col col-6>\n\n            \n\n           <ion-card class="cardColor" (click)="userList(0)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="list-box" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tüm Vakalar</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[0]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n\n\n        </ion-col>\n\n        <ion-col col-6>\n\n            <ion-card class="cardColor" (click)="userList(1)">\n\n                <div class="divIcon">\n\n                    <ion-icon name="custom-ruler" color="tabColor"></ion-icon>\n\n                </div>\n\n                <div>\n\n                  <h3 text-center><b class="bfont">Ölçüler</b></h3>\n\n                </div>\n\n                <div>\n\n                  <br>\n\n                  <h1 text-center><b>{{rows[1]}}</b></h1>\n\n                </div>\n\n             </ion-card> \n\n      </ion-col >\n\n      <ion-col col-6>\n\n          <ion-card class="cardColor" (click)="userList(2)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="qr-scanner" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center><b class="bfont">Tarama</b></h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[2]}}</b></h1>\n\n              </div>\n\n           </ion-card> \n\n    </ion-col >\n\n    <ion-col col-6>\n\n        <ion-card class="cardColor" (click)="userList(3)">\n\n            <div class="divIcon">\n\n                <ion-icon name="custom-register" color="tabColor"></ion-icon>\n\n                \n\n            </div>\n\n            <div>\n\n              <h3 text-center><b class="bfont">Kayıt</b></h3>\n\n            </div>\n\n            <div>\n\n              <br>\n\n              <h1 text-center><b>{{rows[3]}}</b></h1>\n\n            </div>\n\n         </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(4)">\n\n          <div class="divIcon">\n\n              <ion-icon name="cog" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Set-Up</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[4]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(5)">\n\n          <div class="divIcon">\n\n              <ion-icon name="custom-plan" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Planlama</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[5]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(6)">\n\n          <div class="divIcon">\n\n              <ion-icon name="log-out" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Export</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[6]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(7)">\n\n          <div class="divIcon">\n\n              <ion-icon name="color-fill" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">P.Ç.T</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[7]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n    <ion-card class="cardColor" (click)="userList(8)">\n\n        <div class="divIcon">\n\n            <ion-icon name="custom-truck" color="tabColor"></ion-icon>\n\n        </div>\n\n        <div>\n\n          <h3 text-center><b class="bfont">Kargoda</b></h3>\n\n        </div>\n\n        <div>\n\n          <br>\n\n          <h1 text-center><b>{{rows[8]}}</b></h1>\n\n        </div>\n\n     </ion-card> \n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(9)">\n\n          <div class="divIcon">\n\n              <ion-icon name="checkbox" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Tamamlanmış</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[9]}}</b></h1>\n\n          </div>\n\n       </ion-card> \n\n    </ion-col >\n\n        </ion-row>\n\n      </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\category\category.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -1560,11 +1971,7 @@ var CategoryPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(217);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1599,7 +2006,7 @@ var IdListPage = /** @class */ (function () {
         formData.append("action", "load");
         formData.append("category", localStorage.getItem("category"));
         formData.append("id", localStorage.getItem("id"));
-        this.http.post("http://localhost:8000/php/id-list.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/id-list.php", formData).subscribe(function response(res) {
             var json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
@@ -1613,11 +2020,7 @@ var IdListPage = /** @class */ (function () {
     };
     IdListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-id-list',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/id-list/id-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Hasta listesi</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!-- <div>\n\n     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar> \n\n  </div> -->\n\n    <ion-card no-padding style="box-shadow: none;">\n\n        <ion-card-content>\n\n            <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    \n\n      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">\n\n          <ion-card-header>\n\n            <b> {{ticket.id}}: {{ticket.subject}} </b>\n\n          </ion-card-header>\n\n        </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/id-list/id-list.html"*/,
-=======
-            selector: 'page-id-list',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/id-list/id-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Hasta listesi</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!-- <div>\n\n     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar> \n\n  </div> -->\n\n    <ion-card no-padding style="box-shadow: none;">\n\n        <ion-card-content>\n\n            <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    \n\n      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">\n\n          <ion-card-header>\n\n            <b> {{ticket.id}}: {{ticket.subject}} </b>\n\n          </ion-card-header>\n\n        </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/id-list/id-list.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-id-list',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\id-list\id-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>Hasta listesi</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!-- <div>\n\n     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar> \n\n  </div> -->\n\n    <ion-card no-padding style="box-shadow: none;">\n\n        <ion-card-content>\n\n            <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    \n\n      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">\n\n          <ion-card-header>\n\n            <b> {{ticket.id}}: {{ticket.subject}} </b>\n\n          </ion-card-header>\n\n        </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\id-list\id-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -1709,11 +2112,7 @@ var TicketListPage = /** @class */ (function () {
     };
     TicketListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-ticket-list',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/ticket-list/ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >TİCKET LİSTESİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n  \n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding> \n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Öncelik\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              Konu\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>   \n\n  </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Kategori\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Oluşturuldu\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            Güncellendi\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>   \n\n   </ion-col>\n\n   <ion-col col-6 no-padding> \n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          Adım\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>   \n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>   \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/ticket-list/ticket-list.html"*/,
-=======
-            selector: 'page-ticket-list',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/ticket-list/ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >TİCKET LİSTESİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n  \n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding> \n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Öncelik\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              Konu\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>   \n\n  </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Kategori\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Oluşturuldu\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            Güncellendi\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>   \n\n   </ion-col>\n\n   <ion-col col-6 no-padding> \n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          Adım\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>   \n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>   \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/ticket-list/ticket-list.html"*/,
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-ticket-list',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >TİCKET LİSTESİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n  \n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding> \n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Öncelik\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              Konu\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>   \n\n  </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Kategori\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Oluşturuldu\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            Güncellendi\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>   \n\n   </ion-col>\n\n   <ion-col col-6 no-padding> \n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          Adım\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>   \n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>   \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TicketListPage);
@@ -1747,11 +2146,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(284);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_about_about__ = __webpack_require__(199);
@@ -1909,11 +2304,7 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(104);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2007,18 +2398,14 @@ var HomePage = /** @class */ (function () {
         var formData = new FormData();
         formData.append("action", action);
         formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
-        this.http.post("http://localhost:8000/php/home.php", formData).subscribe(function respond(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
             json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
     };
     HomePage = HomePage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-home',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>CLEARFIX</ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br> Clearfix mobil <br>uygulamasına hoş geldiniz.</div>\n\n        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/pages/home/home.html"*/
-=======
-            selector: 'page-home',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>CLEARFIX</ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br> Clearfix mobil <br>uygulamasına hoş geldiniz.</div>\n\n        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/pages/home/home.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>CLEARFIX</ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br> Clearfix mobil <br>uygulamasına hoş geldiniz.</div>\n\n        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -2077,11 +2464,7 @@ var ComponentsModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerProgress; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(14);
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2155,7 +2538,7 @@ var TimerProgress = /** @class */ (function () {
         formData.append("action", "send");
         formData.append("id", localStorage.getItem("id"));
         formData.append("time", "1209600");
-        this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/timer.php", formData).subscribe(function response(res) {
         });
     };
     TimerProgress.prototype.pauseTimer = function () {
@@ -2168,7 +2551,7 @@ var TimerProgress = /** @class */ (function () {
         var formData = new FormData();
         formData.append("action", "load");
         formData.append("id", localStorage.getItem("id"));
-        this.http.post("http://localhost:8000/php/timer.php", formData).subscribe(function response(res) {
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/timer.php", formData).subscribe(function response(res) {
             var json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
@@ -2212,11 +2595,7 @@ var TimerProgress = /** @class */ (function () {
     };
     TimerProgress = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<ion-card *ngIf="timer">\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Yanlış Ayarlandı</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Sıfırla\n\n        </button>\n\n		<button ion-button clear class="large" (click)="pauseTimer()" item-end *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="pause"></ion-icon>\n\n            Durdur\n\n        </button>\n\n		<button ion-button clear class="large" (click)="resumeTimer()" item-end *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="play"></ion-icon>\n\n            Devam Et\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Başla\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
-=======
-            selector: 'timer-progress',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<ion-card *ngIf="timer">\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Yanlış Ayarlandı</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Sıfırla\n\n        </button>\n\n		<button ion-button clear class="large" (click)="pauseTimer()" item-end *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="pause"></ion-icon>\n\n            Durdur\n\n        </button>\n\n		<button ion-button clear class="large" (click)="resumeTimer()" item-end *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="play"></ion-icon>\n\n            Devam Et\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Başla\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+            selector: 'timer-progress',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\app\components\timer-progress\timer-progress.html"*/'<ion-card *ngIf="timer">\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Yanlış Ayarlandı</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Sıfırla\n\n        </button>\n\n		<button ion-button clear class="large" (click)="pauseTimer()" item-end *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="pause"></ion-icon>\n\n            Durdur\n\n        </button>\n\n		<button ion-button clear class="large" (click)="resumeTimer()" item-end *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">\n\n            <ion-icon name="play"></ion-icon>\n\n            Devam Et\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Başla\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\app\components\timer-progress\timer-progress.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
     ], TimerProgress);
@@ -2262,11 +2641,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-<<<<<<< HEAD
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/Clearfix/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/Clearfix/src/app/app.html"*/
-=======
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/Clearfix/Clearfix/src/app/app.html"*/
->>>>>>> 39d2c5f96d8a6a685de13b4fb04e87c5a7a9545d
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);

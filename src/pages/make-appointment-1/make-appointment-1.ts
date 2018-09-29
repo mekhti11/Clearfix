@@ -16,7 +16,7 @@ export class MakeAppointment_1Page {
 	gender: string;
 	city: string;
 	district: string;
-
+	text: string;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 	}
@@ -25,23 +25,13 @@ export class MakeAppointment_1Page {
 		console.log('randevu al sayfsındayım');
 	}
 	nextStep_1() {
+		localStorage.setItem("name_register", this.name);
+		localStorage.setItem("surname_register", this.surname);
+		localStorage.setItem("email_register", this.email);
+		localStorage.setItem("gender_register", this.gender);
+		localStorage.setItem("city_register", this.city);
+		localStorage.setItem("district_register", this.district);
+		localStorage.setItem("want_to_add", this.text);
 		this.navCtrl.setRoot(MakeAppointment_2Page);
-	}
-
-	postData(callback) {
-		// Create credentials.
-		var json_result;
-		var formData = new FormData();
-		formData.append("action", "getinfo");
-		formData.append("name", this.name);
-		formData.append("surname", this.surname);
-		formData.append("email", this.email);
-		formData.append("gender", this.gender);
-		formData.append("city", this.city);
-		formData.append("district", this.district);
-		this.http.post("http://localhost:8000/php/home.php", formData).subscribe(function respond(res) {
-			json_result = JSON.parse(res['_body']);
-			callback(json_result);
-		});
 	}
 }

@@ -34,7 +34,7 @@ export class CategoryPage {
 		formData.append("action", "load");
 		formData.append("id", localStorage.getItem("id"));
 
-		this.http.post("http://localhost:8000/php/category.php", formData).subscribe(function response(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/category.php", formData).subscribe(function response(res) {
 			var json_result = JSON.parse(res['_body']);
 			console.log(json_result);
 			callback(json_result);

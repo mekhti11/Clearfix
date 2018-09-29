@@ -37,7 +37,7 @@ export class LoginUserPage {
 		formData.append("password", this.pass_data);
 
 		var json_result;
-		this.http.post("http://localhost:8000/php/login-user.php", formData).subscribe(function respond(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/login-user.php", formData).subscribe(function respond(res) {
 			json_result = JSON.parse(res['_body']);
 			console.log(json_result);
 			callback(json_result);

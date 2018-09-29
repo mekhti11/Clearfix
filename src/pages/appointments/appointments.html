@@ -10,11 +10,11 @@
 
 <ion-content padding>
 
-  <ion-card style="background-color:#EBEDEF;">
+  <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">
     <ion-card-content>
-      <h2>Randevu No: 743</h2><br>
-      <h2>Randevu Tarihi: 28 şubat 2018 19:40</h2><br>
-      <h2>Randevu Durumu: ücretsiz muayene hakkı </h2><br>
+      <h2>Randevu No: {{appointment.appointment_no}}</h2><br>
+      <h2>Randevu Tarihi: {{appointment.appointment_date}}</h2><br>
+      <h2>Randevu Durumu: {{appointment.appointment_content}}</h2><br>
     </ion-card-content>
     <button ion-button full style="background-color: #4FC3F7;" (click)="infoAppointment()">Randevu Detayı</button> <br>
     

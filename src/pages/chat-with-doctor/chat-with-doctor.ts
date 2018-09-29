@@ -50,11 +50,11 @@ export class ChatWithDoctorPage {
 		let formData = new FormData();
 
 		formData.append("action", "send");
-		formData.append("your_id", "10"); // Bunlar geçici.
+		formData.append("your_id", localStorage.getItem('id'));
 		formData.append("other_id", "15"); // Bunlar geçici.
 		formData.append("content", this.message);
 
-		this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
 			callback();
 		});
 	}
@@ -63,10 +63,10 @@ export class ChatWithDoctorPage {
 		let formData = new FormData();
 
 		formData.append("action", "load");
-		formData.append("your_id", "10"); // Bunlar geçici.
+		formData.append("your_id", localStorage.getItem('id'));
 		formData.append("other_id", "15"); // Bunlar geçici.
 
-		this.http.post("http://localhost:8000/php/chat-with-doctor.php", formData).subscribe(function response(res) {
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
 			let json_result = JSON.parse(res['_body']);
 			callback(json_result);
 		});
