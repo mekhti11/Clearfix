@@ -2,6 +2,9 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ComponentsModule } from './components/components.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpModule } from '@angular/http';
 
     // Cordova
@@ -39,6 +42,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IdListPage } from '../pages/id-list/id-list';
 import { CameraProvider } from '../app/providers/camera.provider';
 
+// The translate loader needs to know where to load i18n files
+// in Ionic's static asset pipeline.
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 
 
@@ -72,6 +81,14 @@ import { CameraProvider } from '../app/providers/camera.provider';
     BrowserModule,
     ComponentsModule,
     HttpModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
     IonicModule.forRoot(MyApp, {
       scrollAssist: false, 
       autoFocusAssist: false

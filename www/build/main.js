@@ -1,13 +1,13 @@
 webpackJsonp([0],{
 
-/***/ 102:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatWithDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -95,13 +95,13 @@ var ChatWithDoctorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(219);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -160,14 +160,14 @@ var CameraProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 104:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -222,16 +222,16 @@ var AppointmentsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 105:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -331,7 +331,7 @@ var LoginDoctorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 115:
+/***/ 120:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -344,11 +344,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 115;
+webpackEmptyAsyncContext.id = 120;
 
 /***/ }),
 
-/***/ 156:
+/***/ 163:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -361,20 +361,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 156;
+webpackEmptyAsyncContext.id = 163;
 
 /***/ }),
 
-/***/ 199:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -408,17 +408,17 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 200:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_timer__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat_with_doctor_chat_with_doctor__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simulation_simulation__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_timer__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat_with_doctor_chat_with_doctor__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simulation_simulation__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -493,7 +493,7 @@ var AboutPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 201:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -534,14 +534,14 @@ var TimerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimulationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -590,7 +590,7 @@ var SimulationPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 203:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -625,16 +625,16 @@ var ContactPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewAccountPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -710,16 +710,16 @@ var NewAccountPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SmsOtpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__password_password__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__password_password__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -803,15 +803,15 @@ var SmsOtpPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success_activation_success_activation__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success_activation_success_activation__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -860,13 +860,13 @@ var PasswordPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuccessActivationPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__make_appointment_1_make_appointment_1__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__make_appointment_1_make_appointment_1__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -909,15 +909,15 @@ var SuccessActivationPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeAppointment_1Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -963,15 +963,15 @@ var MakeAppointment_1Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeAppointment_2Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__make_appointment_3_make_appointment_3__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__make_appointment_3_make_appointment_3__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1308,16 +1308,16 @@ var MakeAppointment_2Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeAppointment_3Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(221);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1686,12 +1686,12 @@ var MakeAppointment_3Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeAppointment_4Page; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__appointments_appointments__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__appointments_appointments__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1730,15 +1730,15 @@ var MakeAppointment_4Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginUserPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_home_home__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_home_home__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1836,16 +1836,16 @@ var LoginUserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_doctor_login_doctor__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_doctor_login_doctor__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1941,15 +1941,15 @@ var RegisterDoctorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2016,15 +2016,15 @@ var CategoryPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IdListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2087,15 +2087,15 @@ var IdListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TicketListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat_with_doctor_chat_with_doctor__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat_with_doctor_chat_with_doctor__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2211,13 +2211,13 @@ var TicketListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(245);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -2225,49 +2225,56 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 241:
+/***/ 245:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_about_about__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_contact_contact__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_appointments_appointments__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_new_account_new_account__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_sms_otp_sms_otp__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_login_doctor_login_doctor__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_register_doctor_register_doctor__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_login_user_login_user__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ticket_list_ticket_list__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_timer_timer__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_simulation_simulation__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_category_category__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_password_password__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_chat_with_doctor_chat_with_doctor__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_success_activation_success_activation__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_make_appointment_1_make_appointment_1__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_make_appointment_2_make_appointment_2__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_make_appointment_3_make_appointment_3__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_4_make_appointment_4__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_splash_screen__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_id_list_id_list__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__app_providers_camera_provider__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ngx_translate_http_loader__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_camera__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_about_about__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_contact_contact__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_home_home__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_appointments_appointments__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_new_account_new_account__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_sms_otp_sms_otp__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_login_doctor_login_doctor__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_register_doctor_register_doctor__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_login_user_login_user__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_ticket_list_ticket_list__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_timer_timer__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_simulation_simulation__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_category_category__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_password_password__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_chat_with_doctor_chat_with_doctor__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_success_activation_success_activation__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_1_make_appointment_1__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_2_make_appointment_2__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_3_make_appointment_3__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_make_appointment_4_make_appointment_4__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_splash_screen__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_id_list_id_list__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__app_providers_camera_provider__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -2302,41 +2309,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// The translate loader needs to know where to load i18n files
+// in Ionic's static asset pipeline.
+function createTranslateLoader(http) {
+    return new __WEBPACK_IMPORTED_MODULE_6__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, './assets/i18n/', '.json');
+}
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_appointments_appointments__["a" /* AppointmentsPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_new_account_new_account__["a" /* NewAccountPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_sms_otp_sms_otp__["a" /* SmsOtpPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_login_doctor_login_doctor__["a" /* LoginDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_login_user_login_user__["a" /* LoginUserPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_ticket_list_ticket_list__["a" /* TicketListPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_id_list_id_list__["a" /* IdListPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_simulation_simulation__["a" /* SimulationPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_timer_timer__["a" /* TimerPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_category_category__["a" /* CategoryPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_password_password__["a" /* PasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_register_doctor_register_doctor__["a" /* RegisterDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_chat_with_doctor_chat_with_doctor__["a" /* ChatWithDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_success_activation_success_activation__["a" /* SuccessActivationPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_make_appointment_1_make_appointment_1__["a" /* MakeAppointment_1Page */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_make_appointment_2_make_appointment_2__["a" /* MakeAppointment_2Page */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_make_appointment_3_make_appointment_3__["a" /* MakeAppointment_3Page */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */],
+                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_appointments_appointments__["a" /* AppointmentsPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_new_account_new_account__["a" /* NewAccountPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_sms_otp_sms_otp__["a" /* SmsOtpPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_login_doctor_login_doctor__["a" /* LoginDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_login_user_login_user__["a" /* LoginUserPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_ticket_list_ticket_list__["a" /* TicketListPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_id_list_id_list__["a" /* IdListPage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_simulation_simulation__["a" /* SimulationPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_timer_timer__["a" /* TimerPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_category_category__["a" /* CategoryPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_password_password__["a" /* PasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_register_doctor_register_doctor__["a" /* RegisterDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_chat_with_doctor_chat_with_doctor__["a" /* ChatWithDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_success_activation_success_activation__["a" /* SuccessActivationPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_1_make_appointment_1__["a" /* MakeAppointment_1Page */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_2_make_appointment_2__["a" /* MakeAppointment_2Page */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_3_make_appointment_3__["a" /* MakeAppointment_3Page */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {
+                __WEBPACK_IMPORTED_MODULE_7__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["b" /* TranslateModule */].forRoot({
+                    loader: {
+                        provide: __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["a" /* TranslateLoader */],
+                        useFactory: (createTranslateLoader),
+                        deps: [__WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]]
+                    }
+                }),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {
                     scrollAssist: false,
                     autoFocusAssist: false
                 }, {
@@ -2345,35 +2365,35 @@ var AppModule = /** @class */ (function () {
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_appointments_appointments__["a" /* AppointmentsPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_new_account_new_account__["a" /* NewAccountPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_sms_otp_sms_otp__["a" /* SmsOtpPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_login_doctor_login_doctor__["a" /* LoginDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_login_user_login_user__["a" /* LoginUserPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_register_doctor_register_doctor__["a" /* RegisterDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_ticket_list_ticket_list__["a" /* TicketListPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_simulation_simulation__["a" /* SimulationPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_category_category__["a" /* CategoryPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_chat_with_doctor_chat_with_doctor__["a" /* ChatWithDoctorPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_id_list_id_list__["a" /* IdListPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_timer_timer__["a" /* TimerPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_password_password__["a" /* PasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_success_activation_success_activation__["a" /* SuccessActivationPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_make_appointment_1_make_appointment_1__["a" /* MakeAppointment_1Page */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_make_appointment_2_make_appointment_2__["a" /* MakeAppointment_2Page */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_make_appointment_3_make_appointment_3__["a" /* MakeAppointment_3Page */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */],
+                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_about_about__["a" /* AboutPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_appointments_appointments__["a" /* AppointmentsPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_new_account_new_account__["a" /* NewAccountPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_sms_otp_sms_otp__["a" /* SmsOtpPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_login_doctor_login_doctor__["a" /* LoginDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_login_user_login_user__["a" /* LoginUserPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_register_doctor_register_doctor__["a" /* RegisterDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_ticket_list_ticket_list__["a" /* TicketListPage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_simulation_simulation__["a" /* SimulationPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_category_category__["a" /* CategoryPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_chat_with_doctor_chat_with_doctor__["a" /* ChatWithDoctorPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_id_list_id_list__["a" /* IdListPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_timer_timer__["a" /* TimerPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_password_password__["a" /* PasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_success_activation_success_activation__["a" /* SuccessActivationPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_1_make_appointment_1__["a" /* MakeAppointment_1Page */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_2_make_appointment_2__["a" /* MakeAppointment_2Page */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_3_make_appointment_3__["a" /* MakeAppointment_3Page */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_make_appointment_4_make_appointment_4__["a" /* MakeAppointment_4Page */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_28__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_29__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_31__app_providers_camera_provider__["a" /* CameraProvider */],
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_31__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_32__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_34__app_providers_camera_provider__["a" /* CameraProvider */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_camera__["a" /* Camera */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] }
             ]
         })
@@ -2385,132 +2405,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 27:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(215);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, loadingCtrl, http) {
-        this.navCtrl = navCtrl;
-        this.loadingCtrl = loadingCtrl;
-        this.http = http;
-        // Define the undefined values.
-        if (!localStorage.getItem('isLoggedIn'))
-            localStorage.setItem('isLoggedIn', 'false');
-        if (!localStorage.getItem('name'))
-            localStorage.setItem('name', '');
-        if (!localStorage.getItem('surname'))
-            localStorage.setItem('surname', '');
-        if (!localStorage.getItem('user_authority'))
-            localStorage.setItem('user_authority', '');
-        if (!localStorage.getItem('username'))
-            localStorage.setItem('username', '');
-        if (!localStorage.getItem('id'))
-            localStorage.setItem('id', '');
-        this.accountCheck();
-        console.log(localStorage.getItem('name'));
-        console.log(localStorage.getItem('surname'));
-        console.log(localStorage.getItem('username'));
-        console.log(localStorage.getItem('id'));
-    }
-    HomePage_1 = HomePage;
-    HomePage.prototype.goToCategories = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__category_category__["a" /* CategoryPage */]);
-    };
-    HomePage.prototype.newAccount = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__new_account_new_account__["a" /* NewAccountPage */]);
-    };
-    HomePage.prototype.loginUser = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_user_login_user__["a" /* LoginUserPage */]);
-    };
-    HomePage.prototype.logoutUser = function () {
-        var _this = this;
-        this.postData(function () {
-            _this.account = false;
-            localStorage.setItem('isLoggedIn', 'false');
-            localStorage.setItem('name', '');
-            localStorage.setItem('username', '');
-            localStorage.setItem('authority', '');
-            localStorage.setItem('surname', '');
-            localStorage.setItem('id', '');
-            _this.navCtrl.setRoot(HomePage_1);
-        }, "logout");
-    };
-    HomePage.prototype.loginDoctor = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__["a" /* LoginDoctorPage */]);
-    };
-    HomePage.prototype.accountCheck = function () {
-        var _this = this;
-        var loader = this.loadingCtrl.create({
-            content: 'Lütfen Bekleyiniz...'
-        });
-        loader.present();
-        this.postData(function (json_result) {
-            loader.dismiss();
-            if (json_result['message'] == 'not_logged_in') {
-                _this.account = false;
-            }
-            else {
-                _this.account = true;
-                _this.name = localStorage.getItem("name");
-                _this.surname = localStorage.getItem("surname");
-                _this.authority = localStorage.getItem("authority");
-            }
-            console.log(json_result);
-        }, "check");
-    };
-    HomePage.prototype.postData = function (callback, action) {
-        // Create credentials.
-        var json_result;
-        var formData = new FormData();
-        formData.append("action", action);
-        formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
-        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
-            json_result = JSON.parse(res['_body']);
-            callback(json_result);
-        });
-    };
-    HomePage = HomePage_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>CLEARFIX</ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearHosgeldiniz.png"/>\n\n        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/Clearfix/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
-    ], HomePage);
-    return HomePage;
-    var HomePage_1;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 284:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2518,7 +2413,7 @@ var HomePage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_progress_timer_progress__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_progress_timer_progress__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2548,14 +2443,14 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerProgress; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2697,16 +2592,141 @@ var TimerProgress = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 29:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(224);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl, loadingCtrl, http) {
+        this.navCtrl = navCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.http = http;
+        // Define the undefined values.
+        if (!localStorage.getItem('isLoggedIn'))
+            localStorage.setItem('isLoggedIn', 'false');
+        if (!localStorage.getItem('name'))
+            localStorage.setItem('name', '');
+        if (!localStorage.getItem('surname'))
+            localStorage.setItem('surname', '');
+        if (!localStorage.getItem('user_authority'))
+            localStorage.setItem('user_authority', '');
+        if (!localStorage.getItem('username'))
+            localStorage.setItem('username', '');
+        if (!localStorage.getItem('id'))
+            localStorage.setItem('id', '');
+        this.accountCheck();
+        console.log(localStorage.getItem('name'));
+        console.log(localStorage.getItem('surname'));
+        console.log(localStorage.getItem('username'));
+        console.log(localStorage.getItem('id'));
+    }
+    HomePage_1 = HomePage;
+    HomePage.prototype.goToCategories = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__category_category__["a" /* CategoryPage */]);
+    };
+    HomePage.prototype.newAccount = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__new_account_new_account__["a" /* NewAccountPage */]);
+    };
+    HomePage.prototype.loginUser = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_user_login_user__["a" /* LoginUserPage */]);
+    };
+    HomePage.prototype.logoutUser = function () {
+        var _this = this;
+        this.postData(function () {
+            _this.account = false;
+            localStorage.setItem('isLoggedIn', 'false');
+            localStorage.setItem('name', '');
+            localStorage.setItem('username', '');
+            localStorage.setItem('authority', '');
+            localStorage.setItem('surname', '');
+            localStorage.setItem('id', '');
+            _this.navCtrl.setRoot(HomePage_1);
+        }, "logout");
+    };
+    HomePage.prototype.loginDoctor = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__["a" /* LoginDoctorPage */]);
+    };
+    HomePage.prototype.accountCheck = function () {
+        var _this = this;
+        var loader = this.loadingCtrl.create({
+            content: 'Lütfen Bekleyiniz...'
+        });
+        loader.present();
+        this.postData(function (json_result) {
+            loader.dismiss();
+            if (json_result['message'] == 'not_logged_in') {
+                _this.account = false;
+            }
+            else {
+                _this.account = true;
+                _this.name = localStorage.getItem("name");
+                _this.surname = localStorage.getItem("surname");
+                _this.authority = localStorage.getItem("authority");
+            }
+            console.log(json_result);
+        }, "check");
+    };
+    HomePage.prototype.postData = function (callback, action) {
+        // Create credentials.
+        var json_result;
+        var formData = new FormData();
+        formData.append("action", action);
+        formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
+            json_result = JSON.parse(res['_body']);
+            callback(json_result);
+        });
+    };
+    HomePage = HomePage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>CLEARFIX</ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearHosgeldiniz.png"/>\n\n        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/Clearfix/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
+    ], HomePage);
+    return HomePage;
+    var HomePage_1;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2743,5 +2763,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[218]);
+},[227]);
 //# sourceMappingURL=main.js.map
