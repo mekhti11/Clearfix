@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SmsOtpPage } from '../sms-otp/sms-otp';
 import { Http } from "@angular/http";
@@ -15,7 +15,10 @@ export class NewAccountPage {
 
 	telephone: string;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+	constructor(public navCtrl: NavController,
+		public navParams: NavParams,
+		public http: Http,
+		public alertCtrl: AlertController) {
 	}
 
 	ionViewDidLoad() {
@@ -26,13 +29,25 @@ export class NewAccountPage {
 	}
 	// one time password
 	sendSmsOTP() {
-		this.postData((json_result) => {
-			localStorage.setItem("activation", json_result['activation']);
-			localStorage.setItem("tel_no", this.telephone);
-			console.log(localStorage.getItem('tel_no'));
-			console.log(json_result['activation']);
-		});
-		this.navCtrl.setRoot(SmsOtpPage);
+		if (this.telephone && this.telephone.length == 10) {
+			this.postData((json_result) => {
+				localStorage.setItem("activation", json_result['activation']);
+				localStorage.setItem("tel_no", this.telephone);
+				console.log(localStorage.getItem('tel_no'));
+				console.log(json_result['activation']);
+			});
+			this.navCtrl.setRoot(SmsOtpPage);
+		} else {
+			const alert = this.alertCtrl.create({
+				title: 'HATA!',
+				subTitle: 'Lütfen 10 haneli telefon numaranızı doğru giriniz!',
+				buttons: ['OK']
+			});
+			alert.present();
+			console.log(this.telephone)
+		}
+
+
 	}
 
 	postData(callback) {

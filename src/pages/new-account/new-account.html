@@ -5,7 +5,7 @@
     <ion-title text-center>YENİ HESAP OLUŞTUR</ion-title>
     <ion-buttons end>
         <button ion-button icon-only (click)="closePage()">
-         Kapat    
+         Kapat
          </button>
    </ion-buttons>
   </ion-navbar>
@@ -22,8 +22,8 @@
 
     <ion-item>
         <ion-label style="font-weight: bold;">+90</ion-label>
-          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input> 
-      </ion-item>
+          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input>
+    </ion-item>
       <br>
       <button ion-button class="button-middle" (click)="sendSmsOTP()">AKTİVASYON KODU GÖNDER</button>
 
