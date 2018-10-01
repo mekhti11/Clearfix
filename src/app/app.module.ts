@@ -72,7 +72,10 @@ import { CameraProvider } from '../app/providers/camera.provider';
     BrowserModule,
     ComponentsModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      scrollAssist: false, 
+      autoFocusAssist: false
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

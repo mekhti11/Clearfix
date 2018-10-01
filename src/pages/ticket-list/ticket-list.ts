@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
+import { Http } from '@angular/http';
+import { ToastController } from 'ionic-angular';
 
 @Component({
 	selector: 'page-ticket-list',
@@ -10,7 +12,8 @@ export class TicketListPage {
 
 	ticket: Object;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, 
+		public toastCtrl: ToastController) {
 		this.ticket = JSON.parse(localStorage.getItem("ticketJSON"));
 		switch (this.ticket['step']) {
 			case '0': this.ticket['step'] = 'Ölçüler'; break;
@@ -35,6 +38,37 @@ export class TicketListPage {
 
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad TicketListPage');
+	}
+	
+	goToChat() {
+		this.postData((json_result) => {
+			if(json_result['message'] == 'success') {
+				localStorage.setItem("chatval", json_result['id']);	
+				this.navCtrl.setRoot(ChatWithDoctorPage);	
+			}
+			else
+			{
+				let toast = this.toastCtrl.create({
+					message: 'Sohbete ulaşılamadı. Bu hasta veritabanında kayıtlı değil.',
+					duration: 3000,
+					position: 'bottom'
+				  });
+				toast.present();
+			}
+ 		});
+		
+		
+	}
+
+	postData(callback) {
+		let formData = new FormData();
+		formData.append("action", "detect");
+		formData.append("subject", this.ticket['subject']);
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/ticket-list.php", formData).subscribe(function response(res) {
+			let json_result = JSON.parse(res['_body']);
+			console.log(json_result);
+			callback(json_result);
+		});
 	}
 
 }

@@ -72,7 +72,7 @@ var CameraProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppointmentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -117,10 +117,10 @@ var AppointmentsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-appointments',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\appointments\appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>RANDEVULARIM</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">\n\n    <ion-card-content>\n\n      <h2>Randevu No: {{appointment.appointment_no}}</h2><br>\n\n      <h2>Randevu Tarihi: {{appointment.appointment_date}}</h2><br>\n\n      <h2>Randevu Durumu: {{appointment.appointment_content}}</h2><br>\n\n    </ion-card-content>\n\n    <button ion-button full style="background-color: #4FC3F7;" (click)="infoAppointment()">Randevu Detayı</button> <br>\n\n    \n\n  </ion-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\appointments\appointments.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
     ], AppointmentsPage);
     return AppointmentsPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=appointments.js.map
@@ -136,7 +136,7 @@ var AppointmentsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -353,7 +353,7 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      HESABIM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); "> Lütfen aşağıdaki işlemlerden birini seçiniz</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>\n\n  <button ion-button class="button-middle" (click)="timer()">Değiştirme süresi</button>\n\n  <button ion-button class="button-middle" (click)="simulation()">3D simülasyon</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      HESABIM\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == \'true\'; else notLoggedIn"> Lütfen aşağıdaki işlemlerden birini seçiniz</b>\n\n            <ng-template #notLoggedIn>\n\n              <b style="font-size:18px; color:rgb(75, 168, 211); "> İşlem yapmak için lütfen giriş yapınız</b>\n\n          </ng-template>\n\n          </ion-card-content>\n\n          \n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>\n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="timer()">Değiştirme süresi</button>\n\n  <button ion-button *ngIf="authority == \'1\'" class="button-middle" (click)="simulation()">3D simülasyon</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], AboutPage);
@@ -412,7 +412,7 @@ var TimerPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatWithDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -484,12 +484,14 @@ var ChatWithDoctorPage = /** @class */ (function () {
     };
     ChatWithDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >Sohbet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== \'10\'"> <!-- burasi doktor attiginda sag gider mesaj --> \n\n              <div class="right-bubble">\n\n                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === \'10\'"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> \n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/,
+            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >Sohbet</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== your_id"> <!-- burasi doktor attiginda sag gider mesaj --> \n\n              <div class="right-bubble">\n\n                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === your_id"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> \n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\chat-with-doctor\chat-with-doctor.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
     ], ChatWithDoctorPage);
     return ChatWithDoctorPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=chat-with-doctor.js.map
@@ -596,7 +598,7 @@ var ContactPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -666,7 +668,7 @@ var NewAccountPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -758,7 +760,7 @@ var SmsOtpPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success_activation_success_activation__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -864,7 +866,7 @@ var SuccessActivationPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1263,7 +1265,7 @@ var MakeAppointment_2Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1685,7 +1687,7 @@ var MakeAppointment_4Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_home_home__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1790,7 +1792,7 @@ var LoginUserPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_doctor_login_doctor__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1896,7 +1898,7 @@ var RegisterDoctorPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1971,7 +1973,7 @@ var CategoryPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2112,7 +2114,7 @@ var TicketListPage = /** @class */ (function () {
     };
     TicketListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-ticket-list',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >TİCKET LİSTESİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n  \n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding> \n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Öncelik\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              Konu\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>   \n\n  </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Kategori\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Oluşturuldu\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            Güncellendi\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>   \n\n   </ion-col>\n\n   <ion-col col-6 no-padding> \n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          Adım\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>   \n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>   \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/,
+            selector: 'page-ticket-list',template:/*ion-inline-start:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >TİCKET LİSTESİ</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n  \n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding> \n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Öncelik\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              Konu\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>   \n\n  </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Kategori\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                Oluşturuldu\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>\n\n    <ion-col col-6 no-padding> \n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            Güncellendi\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>   \n\n   </ion-col>\n\n   <ion-col col-6 no-padding> \n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          Adım\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>   \n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>   \n\n     \n\n    <ion-card text-center class="cardColor">\n\n        <ion-card-content>\n\n            <button (click)="goToChat();" ion-button color="secondary" style="font-size:18px;">İletişime Geç</button>\n\n        </ion-card-content>\n\n    </ion-card> \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Muratcan\Documents\IONIC\Clearfix\src\pages\ticket-list\ticket-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TicketListPage);
@@ -2146,7 +2148,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_about_about__ = __webpack_require__(199);
@@ -2304,7 +2306,7 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2464,7 +2466,7 @@ var ComponentsModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerProgress; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

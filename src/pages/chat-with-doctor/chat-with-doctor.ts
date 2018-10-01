@@ -11,6 +11,8 @@ export class ChatWithDoctorPage {
 
 	chats: {};
 	message: string;
+	your_id: string;
+	their_id: string;
 
 	constructor(public navCtrl: NavController,
 		public navParams: NavParams,
@@ -28,6 +30,8 @@ export class ChatWithDoctorPage {
 		this.loadMessages((json_result) => {
 			this.chats = json_result;
 			this.message = '';
+			this.your_id = localStorage.getItem('id');
+			this.their_id = localStorage.getItem('chatval');
 			console.log(this.chats);
 		});
 	}
@@ -51,7 +55,7 @@ export class ChatWithDoctorPage {
 
 		formData.append("action", "send");
 		formData.append("your_id", localStorage.getItem('id'));
-		formData.append("other_id", "15"); // Bunlar geçici.
+		formData.append("other_id", localStorage.getItem('chatval')); // Bunlar geçici.
 		formData.append("content", this.message);
 
 		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
@@ -64,7 +68,7 @@ export class ChatWithDoctorPage {
 
 		formData.append("action", "load");
 		formData.append("your_id", localStorage.getItem('id'));
-		formData.append("other_id", "15"); // Bunlar geçici.
+		formData.append("other_id", localStorage.getItem('chatval')); // Bunlar geçici.
 
 		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/chat-with-doctor.php", formData).subscribe(function response(res) {
 			let json_result = JSON.parse(res['_body']);
