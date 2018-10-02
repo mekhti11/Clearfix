@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser'; // videoyu çalıştırmak için bu kütüphaneye çağırdım
-
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 @Component({
 	selector: 'page-simulation',
@@ -9,10 +9,11 @@ import { DomSanitizer } from '@angular/platform-browser'; // videoyu çalıştı
 })
 export class SimulationPage {
 	// linki buradan aliyor.
-	vid = 'http://real-dental.com/3df2i/index.html?mlink=http://real-dental.com/3df2i/Client1651/28248032/1A5F749D74534FB285C394E17F2967FF.iiwgl&fg=000&bg=eee&p=UCHGCM';
+	vid = localStorage.getItem('simulation');
 
 	constructor(public navCtrl: NavController, public navParams: NavParams,
-		public domSanitizer: DomSanitizer) {
+		public domSanitizer: DomSanitizer, public screenOrientation: ScreenOrientation) {
+			this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
 	}
 
 	ionViewDidLoad() {
@@ -24,6 +25,11 @@ export class SimulationPage {
 
 	ngOnInit() {
 		this.changeIcons();
+	}
+
+	ionViewWillLeave() {
+		this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+		this.screenOrientation.unlock();
 	}
 
 

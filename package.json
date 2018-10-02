@@ -23,7 +23,7 @@
     "@ionic-native/camera": "^4.12.2",
     "@ionic-native/core": "~4.11.0",
     "@ionic-native/http": "^4.13.0",
-    "@ionic-native/screen-orientation": "^4.12.2",
+    "@ionic-native/screen-orientation": "^4.15.0",
     "@ionic-native/splash-screen": "~4.11.0",
     "@ionic-native/status-bar": "~4.11.0",
     "@ionic/storage": "2.1.3",

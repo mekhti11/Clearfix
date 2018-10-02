@@ -10,9 +10,12 @@
     <div>
         <ion-card style="background-color:rgb(220, 241, 243);">
           <ion-card-content>
-            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == 'true'; else notLoggedIn"> Lütfen aşağıdaki işlemlerden birini seçiniz</b>
-            <ng-template #notLoggedIn>
-              <b style="font-size:18px; color:rgb(75, 168, 211); "> İşlem yapmak için lütfen giriş yapınız</b>
+            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == 'false'; else loggedIn"> İşlem yapmak için lütfen giriş yapınız</b>
+          <ng-template #loggedIn>
+              <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="authority == '0'; else isDoctor"> Lütfen aşağıdaki işlemlerden birini seçiniz</b>
+          </ng-template>
+          <ng-template #isDoctor>
+            <b style="font-size:18px; color:rgb(75, 168, 211); ">Bu kısım sadece hastalar içindir.</b>
           </ng-template>
           </ion-card-content>
           
@@ -21,7 +24,6 @@
    
   <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>
   <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="timer()">Değiştirme süresi</button>
-  <button ion-button *ngIf="authority == '1'" class="button-middle" (click)="simulation()">3D simülasyon</button>
   
  
 </ion-content>

@@ -35,5 +35,20 @@
 			
 			echo json_encode($arr, JSON_UNESCAPED_UNICODE);
 		}
+		
+		if($_POST['action'] == 'simulate') {
+			$messages = $db_wp->query('SELECT * FROM wp_wpsp_ticket_simulations WHERE ticket_id = ' . $_POST['id'] . ' AND isAccepted = 1 ORDER BY date');
+			if ( $messages->rowCount() ){
+				foreach( $messages as $msg ){
+					$arr = array('url' => $msg['link'], 'message' => 'success');
+				}
+			}  
+			else
+			{
+				$arr = array('message' => 'failure');
+			}
+			
+			echo json_encode($arr, JSON_UNESCAPED_UNICODE);
+		}
 	}
 ?>

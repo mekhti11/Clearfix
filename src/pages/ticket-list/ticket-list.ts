@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
 import { Http } from '@angular/http';
 import { ToastController } from 'ionic-angular';
+import { SimulationPage } from '../simulation/simulation';
 
 @Component({
 	selector: 'page-ticket-list',
@@ -58,6 +59,37 @@ export class TicketListPage {
  		});
 		
 		
+	}
+
+	goToSimulation() {
+		this.postDataSimulation((json_result) => {
+			if(json_result['message'] == 'success') {
+				localStorage.setItem("simulation", json_result['url']);	
+				this.navCtrl.setRoot(SimulationPage);	
+			}
+			else
+			{
+				let toast = this.toastCtrl.create({
+					message: 'Simülasyona ulaşılamadı. Bu hasta için simülasyon yok.',
+					duration: 3000,
+					position: 'bottom'
+				  });
+				toast.present();
+			}
+ 		});
+		
+		
+	}
+
+	postDataSimulation(callback) {
+		let formData = new FormData();
+		formData.append("action", "simulate");
+		formData.append("id", this.ticket['id']);
+		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/ticket-list.php", formData).subscribe(function response(res) {
+			let json_result = JSON.parse(res['_body']);
+			console.log(json_result);
+			callback(json_result);
+		});
 	}
 
 	postData(callback) {

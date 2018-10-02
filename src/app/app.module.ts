@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ComponentsModule } from './components/components.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpModule } from '@angular/http';
 
     // Cordova
 import { MyApp } from './app.component';
 import { Camera } from '@ionic-native/camera';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 
     // import pages
@@ -44,9 +43,6 @@ import { CameraProvider } from '../app/providers/camera.provider';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
 
 
 
@@ -82,13 +78,6 @@ export function createTranslateLoader(http: HttpClient) {
     ComponentsModule,
     HttpModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
     IonicModule.forRoot(MyApp, {
       scrollAssist: false, 
       autoFocusAssist: false
@@ -125,6 +114,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     CameraProvider,
+    ScreenOrientation,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
