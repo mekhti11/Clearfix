@@ -5,6 +5,7 @@ import { LoginUserPage } from '../login-user/login-user';
 import { LoginDoctorPage } from '../login-doctor/login-doctor';
 import { Http } from '@angular/http';
 import { CategoryPage } from '../category/category';
+import {  TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'page-home',
@@ -16,10 +17,14 @@ export class HomePage {
 	name: string;
 	surname: string;
 	authority: string;
-
+	lang:any;
 	constructor(public navCtrl: NavController,
 		public loadingCtrl: LoadingController,
-		public http: Http) {
+		public http: Http,
+		public translate: TranslateService) {
+		
+		this.lang = "tr";
+		
 		// Define the undefined values.
 		if (!localStorage.getItem('isLoggedIn'))
 			localStorage.setItem('isLoggedIn', 'false');
@@ -38,6 +43,15 @@ export class HomePage {
 		console.log(localStorage.getItem('surname'));
 		console.log(localStorage.getItem('username'));
 		console.log(localStorage.getItem('id'));
+	}
+
+	switchLang(){
+		if(this.lang == "tr"){
+			this.lang = "en";
+		}else{
+			this.lang = "tr";
+		}
+		this.translate.use(this.lang);
 	}
 
 	goToCategories() {

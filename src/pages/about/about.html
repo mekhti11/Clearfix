@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="tabColor">
     <ion-title text-center>
-      HESABIM
+      {{'AboutPage.BASLIK' | translate}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,20 +10,20 @@
     <div>
         <ion-card style="background-color:rgb(220, 241, 243);">
           <ion-card-content>
-            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == 'false'; else loggedIn"> İşlem yapmak için lütfen giriş yapınız</b>
+            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == 'false'; else loggedIn">{{'AboutPage.GIRIS_YAP' | translate}}</b>
           <ng-template #loggedIn>
-              <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="authority == '0'; else isDoctor"> Lütfen aşağıdaki işlemlerden birini seçiniz</b>
+              <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="authority == '0'; else isDoctor">{{'AboutPage.BTNs' | translate }}</b>
           </ng-template>
           <ng-template #isDoctor>
-            <b style="font-size:18px; color:rgb(75, 168, 211); ">Bu kısım sadece hastalar içindir.</b>
+            <b style="font-size:18px; color:rgb(75, 168, 211); ">{{'AboutPage.IS_DOCTOR' | translate}}</b>
           </ng-template>
           </ion-card-content>
           
         </ion-card>
         </div>
    
-  <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="chatWithDoctor()">Doktor ile iletişime geçiniz</button>
-  <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="timer()">Değiştirme süresi</button>
+  <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="chatWithDoctor()">{{'AboutPage.BTN_CHAT_WITH_DOCTOR' | translate}}</button>
+  <button ion-button *ngIf="authority == '0'" class="button-middle" (click)="timer()">{{'AboutPage.BTN_TIMER' | translate}}</button>
   
  
 </ion-content>

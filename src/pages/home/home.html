@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="tabColor">
-    <ion-title text-center>CLEARFIX</ion-title>
+    <ion-title text-center><b>CLEARFIX</b></ion-title>
       <ion-buttons end *ngIf="account">
           <button ion-button icon-only (click)="logoutUser()">
             <ion-icon name="log-out"></ion-icon>
@@ -11,17 +11,19 @@
 
 <ion-content >
 
+    
+
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearHosgeldiniz.png"/>
-        <div *ngIf="account" class="card-title" text-center>Sayın {{name}} {{surname}},</div>
+        <div *ngIf="account" class="card-title" text-center>{{'HomePage.Sayin' | translate}} {{name}} {{surname}},</div>
       </ion-card>
       
-      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">YENİ HESAP OLUŞTUR</button>
-      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">ÜYE GİRİŞİ</button>
+      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{'HomePage.BTN_YENI_HESAP_OLUSTUR' | translate}}</button>
+      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{'HomePage.BTN_UYE_GIRISI' | translate}}</button>
       <ng-template #loggedIn>
-          <button *ngIf="authority == '1'" ion-button class="button-middle" (click)="goToCategories()">KATEGORİLERE GİT</button>
+          <button *ngIf="authority == '1'" ion-button class="button-middle" (click)="goToCategories()">{{'HomePage.BTN_KATEGORILERE_GIT' | translate}}</button>
       </ng-template>
-      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">HEKİM GİRİŞİ</button>
+      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{'HomePage.BTN_HEKIM_GIRISI' | translate}}</button>
 
-
+      <button ion-button class="button-middle" (click)="switchLang()">Change Lang</button>
 </ion-content>

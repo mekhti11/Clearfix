@@ -1,20 +1,32 @@
 {
-    "HOSGELDINIZ":"<br> clearfix mobil <br>uygulamasına hoş geldiniz.",
-    "YENI_HESAP_OLUSTUR":"YENİ HESAP OLUŞTUR",
-    "UYE_GIRISI":"ÜYE GİRİŞİ",
-    "HEKIM_GIRISI":"HEKİM GİRİŞİ", 
-    
-    "ANASAYFA":"Anasayfa",
-    "RANDAVULARIM":"Randevularım",
-    "HESABIM":"Hesabim",
-    "ILETISIM":"İletişim",
 
-    
-    "CEP_TELEFON_AKTIFASYON_KODU":"<br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.",
+    "TabsPage":{
+        "ANASAYFA":"Anasayfa",
+        "RANDAVULARIM":"Randevularım",
+        "HESABIM":"Hesabım",
+        "ILETISIM":"İletişim"
+    },
+    "HomePage":{
+        "BTN_YENI_HESAP_OLUSTUR":"YENİ HESAP OLUŞTUR",
+        "BTN_UYE_GIRISI":"ÜYE GİRİŞİ",
+        "BTN_HEKIM_GIRISI":"HEKİM GİRİŞİ",
+        "BTN_KATEGORILERE_GIT":"KATEGORİLERE GİT",
+        "Sayin":"Sayın"
+    },
+    "AboutPage":{
+        "BASLIK":"HESABIM",
+        "GIRIS_YAP":" İşlem yapabilmek için lütfen giriş yapınız",
+        "BTNs":"Lütfen aşağıdaki işlemlerden birini seçiniz",
+        "BTN_CHAT_WITH_DOCTOR":"Doktor ile iletişime geçiniz",
+        "IS_DOCTOR":"Bu kısım sadece hastalar içindir.",
+        "BTN_TIMER":"Değiştirme süresi"
+    },
+
+    "CEP_TELEFON_AKTIFASYON_KODU":"Cep telefonunuza aktivasyon için SMS ile kod gönderilecektir.",
     "AKTIVASYON_KODU_GONDER":"AKTİVASYON KODU GÖNDER",
 
     "HESAP_AKTIVASYONU":"HESAP AKTİVASYONU",
-    "SMS_KODU_GONDERILECEK":"<br> Cep telefonunuza aktivasyon için<br>SMS ile kod gönderilecektir.",
+    "SMS_KODU_GONDERILECEK":"Cep telefonunuza aktivasyon için SMS ile kod gönderilecektir.",
     "SMS_GELEN_SIFRE":"SMS ile gelen şifre",
     "AKTIVASYONU_TAMAMLA":"AKTİVASYONU TAMAMLA",
     "SIFREYI_TEKRAR_GONDER":"ŞİFREYİ TEKRAR GÖNDER",
@@ -25,11 +37,11 @@
     "SIFRE_ONAYLAYINIZ":"Şifre Onaylayınız",
     "ONAYLA":"ONAYLA",
 
-    "TEBRIKLER_ISLEM_TAMAMLANDI":"<br> Tebrikler! Aktivasyon işlemleri başarıyla tamamlandı.",
+    "TEBRIKLER_ISLEM_TAMAMLANDI":"Tebrikler! Aktivasyon işlemleri başarıyla tamamlandı.",
     "BASLA":"BAŞLA",
 
     "RANDEVU_AL":"RANDEVU AL",
-    "TEMEL_BILGILER":"<br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.",
+    "TEMEL_BILGILER":" Temel Bilgiler Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.",
     "ADINIZ":"Adınız",
     "SOYADINIZ":"Soydınız",
     "LUTFEN_ADINIZI_YAZINIZ":"Lütfen adınızı yazınız",
@@ -42,20 +54,19 @@
     "YASADINGINIZ_IL":"Yaşadığınız İl",
     "YASADIGINIZ_ILCE":"Yaşadığınız İlçe",
     "LUTFEN_YASADIGINIZ_ILCE":"Lütfen yaşadığınız ilçeyi yazınız",
-    "EKLEMEK_ISTEDIKLERINIZ":"Eklemek İstedikleriniz",
     "EKLEMEK_ISTEDIKLERINIZ":"Eklemek istediğiniz....",
     "SONRAKI_ADIM":"Sonraki Adım",
 
     "FOTOGRAF_YUKLEME":"FOTOĞRAF YÜKLEME",
-    "FOTOGRAFLARINIZI_CEKINIZ":"<br>Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz",
+    "FOTOGRAFLARINIZI_CEKINIZ":" Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz",
     "FOTOGRAF_EKLE":"FOTOĞRAF EKLE",
 
     "BILGILERINIZI_KONTROL":"BİLGİLERİNİZİ KONTROL EDİNİZ",
-    "LUTFEN_BILGILERINIZI_SON_KEZ":"<br>Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz",
+    "LUTFEN_BILGILERINIZI_SON_KEZ":" Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz",
     "BILGILERIMI_DUZENLE":"BİLİGİLERİMİ DÜZENLE",
     "RANDEVUYU_OLUSTUR":"RANDEVUYU OLUŞTUR",
-    "TEBRIKLER":"<br>TEBRİKLER",
-    "RANDEVUNUZ_BASARLI":"<br>Randevunuz başarılı bir şeklide oluşturulmuştur.",
+    "TEBRIKLER":" TEBRİKLER",
+    "RANDEVUNUZ_BASARLI":" Randevunuz başarılı bir şeklide oluşturulmuştur.",
     "RANDEVULARIMA_GIT":"Randevularıma Git",
 
     "RANDEVULARIM":"RANDEVULARIM",
@@ -64,10 +75,6 @@
     "RANDEVU_DURUMU":"Randevu Durumu",
     "RANDEVU_DETAYI":"Randevu Detayı",
 
-    "HESABIM":"HESABIM",
-    "LUTFEN_ASAGIDA_ISLEM":"Lütfen aşağıdaki işlemlerden birini seçiniz",
-    "DOKTOR_ILE_ILETISIM":"Doktor ile iletişime geçiniz",
-    "PLAK_DEGISTIRME_SURESI":"Değiştirme süresi",
     "SIMULASYON":"3D simülasyon",
 
     "DOKTOR_ILE_KONUSUNUZ":"Doktor ile Konuşunuz",
@@ -92,7 +99,7 @@
     "LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ":"Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir",
     "KULLANICI_AD":"Kullanıcı Ad",
     "LISANSLI_DIS_HEKIMI":"Lisanslı Diş Hekimi olduğumu onaylıyorum.",
-    "BEYAN_ETTIGIM_BILGILERIN":"Beyan ettiğim bilgilerin doğruluğunu ve <a>Clearfix</a><br> üyelik kural ve koşullarını kabul ediyorum.",
+    "BEYAN_ETTIGIM_BILGILERIN":"Beyan ettiğim bilgilerin doğruluğunu ve <a>Clearfix</a>üyelik kural ve koşullarını kabul ediyorum.",
     "KAYDOL":"Kaydol",
     "HESABIN_VAR_MI":"Hesabın var mı?"
     
