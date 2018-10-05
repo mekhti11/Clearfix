@@ -23,11 +23,13 @@ export class HomePage {
 		public http: Http,
 		public translate: TranslateService) {
 
-		this.lang = "tr";
+		this.lang = localStorage.getItem("language");
 
 		// Define the undefined values.
 		if (!localStorage.getItem('isLoggedIn'))
 			localStorage.setItem('isLoggedIn', 'false');
+		if (!localStorage.getItem('language'))
+			localStorage.setItem('language', 'tr');
 		if (!localStorage.getItem('name'))
 			localStorage.setItem('name', '');
 		if (!localStorage.getItem('surname'))
