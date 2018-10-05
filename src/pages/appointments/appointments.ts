@@ -9,18 +9,21 @@ import { Http } from '@angular/http';
 export class AppointmentsPage {
 
 	appointments: Object;
+	authority: string;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams,
 		public http: Http) {
+			this.authority = localStorage.getItem("user_authority");
 			this.appointments = [];
+			
 			this.postData((json_result) => {
 				console.log(json_result);
 				this.appointments = json_result;
 			});
 	}
 
-	ionViewDidLoad() {
-		console.log('ionViewDidLoad AppointmentsPage');
+	ionViewDidEnter() {
+		this.authority = localStorage.getItem("user_authority");
 	}
 
 	infoAppointment() {

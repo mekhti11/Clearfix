@@ -4,6 +4,7 @@ import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
 import { Http } from '@angular/http';
 import { ToastController } from 'ionic-angular';
 import { SimulationPage } from '../simulation/simulation';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'page-ticket-list',
@@ -14,7 +15,7 @@ export class TicketListPage {
 	ticket: Object;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, 
-		public toastCtrl: ToastController) {
+		public toastCtrl: ToastController, public translate: TranslateService) {
 		this.ticket = JSON.parse(localStorage.getItem("ticketJSON"));
 		switch (this.ticket['step']) {
 			case '0': this.ticket['step'] = 'Ölçüler'; break;
@@ -42,6 +43,7 @@ export class TicketListPage {
 	}
 	
 	goToChat() {
+		this.translateContentChat((translatedContent) => {
 		this.postData((json_result) => {
 			if(json_result['message'] == 'success') {
 				localStorage.setItem("chatval", json_result['id']);	
@@ -50,18 +52,39 @@ export class TicketListPage {
 			else
 			{
 				let toast = this.toastCtrl.create({
-					message: 'Sohbete ulaşılamadı. Bu hasta veritabanında kayıtlı değil.',
+					message: translatedContent,
 					duration: 3000,
 					position: 'bottom'
 				  });
 				toast.present();
 			}
  		});
-		
+	});
 		
 	}
 
+	translateContentChat(callback) {
+		let translatedContent;
+		this.translate.get("TicketListPage.CHAT_MESSAGE").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
+	}
+
+
+	translateContentSimulation(callback) {
+		let translatedContent;
+		this.translate.get("TicketListPage.SIMUL_MESSAGE").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
+	}
+
+
 	goToSimulation() {
+		this.translateContentSimulation((translatedContent) => {
 		this.postDataSimulation((json_result) => {
 			if(json_result['message'] == 'success') {
 				localStorage.setItem("simulation", json_result['url']);	
@@ -70,14 +93,14 @@ export class TicketListPage {
 			else
 			{
 				let toast = this.toastCtrl.create({
-					message: 'Simülasyona ulaşılamadı. Bu hasta için simülasyon yok.',
+					message: translatedContent,
 					duration: 3000,
 					position: 'bottom'
 				  });
 				toast.present();
 			}
  		});
-		
+	});
 		
 	}
 

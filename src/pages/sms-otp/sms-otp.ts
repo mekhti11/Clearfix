@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Http } from "@angular/http";
 import { AlertController } from "ionic-angular";
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'page-sms-otp',
@@ -13,7 +14,7 @@ export class SmsOtpPage {
 
 	activation_user: string;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public alertCtrl:AlertController) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService, public http: Http, public alertCtrl:AlertController) {
 		this.activation_user = "";
 	}
 
@@ -23,34 +24,70 @@ export class SmsOtpPage {
 	closePage() {
 		this.navCtrl.setRoot(HomePage)
 	}
-	completeAppointment() {
-		let activation = localStorage.getItem("activation");
-		if(this.activation_user == activation) {
-			localStorage.setItem("activation", "");
-			this.navCtrl.setRoot(PasswordPage);
-		} else {
-		const alert = this.alertCtrl.create({
-			title: 'Şifre',
-			subTitle: 'Aktivasyon kodunuzu yanlış girdiniz!',
-			buttons: ['OK']
-		});
-		alert.present();
-		this.activation_user = "";
-		}
+
+	translateContentPassword(callback) {
+		let translatedContent;
+		this.translate.get("SMS_OTP_Page.PASSWORD").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
 	}
-	repeatTheSmsOTP() {
-		
-		this.postData((json_result) => {
+
+	translateContentNotActivated(callback) {
+		let translatedContent;
+		this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE1").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
+	}
+
+	translateContentResent(callback) {
+		let translatedContent;
+		this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE2").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
+	}
+
+	completeAppointment() {
+		this.translateContentNotActivated((translatedContent) => {
+			let activation = localStorage.getItem("activation");
+			if(this.activation_user == activation) {
+				localStorage.setItem("activation", "");
+				this.navCtrl.setRoot(PasswordPage);
+			} else {
+			this.translateContentPassword((translatedContent2) => {
 			const alert = this.alertCtrl.create({
-				title: 'Şifre',
-				subTitle: 'Aktivasyon kodunuz yeniden gönderildi!',
+				title: translatedContent2,
+				subTitle: translatedContent,
 				buttons: ['OK']
 			});
 			alert.present();
-			localStorage.setItem("activation", json_result['activation']);
-			console.log(json_result['activation']);
 		});
-		this.navCtrl.setRoot(SmsOtpPage);
+			this.activation_user = "";
+			}
+		});
+	
+	}
+	repeatTheSmsOTP() {
+		this.translateContentNotActivated((translatedContent) => {
+			this.postData((json_result) => {
+				this.translateContentPassword((translatedContent2) => {
+					const alert = this.alertCtrl.create({
+						title: translatedContent2,
+						subTitle: translatedContent,
+						buttons: ['OK']
+					});
+					alert.present();
+				});
+				localStorage.setItem("activation", json_result['activation']);
+				console.log(json_result['activation']);
+			});
+			this.navCtrl.setRoot(SmsOtpPage);
+		});
 	}
 
 	postData(callback) {

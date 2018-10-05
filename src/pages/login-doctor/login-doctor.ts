@@ -76,7 +76,7 @@ export class LoginDoctorPage {
 					localStorage.setItem('name', json_result['name']);
 					localStorage.setItem('surname', json_result['surname']);
 					localStorage.setItem('username', json_result['username']);
-					localStorage.setItem('authority', json_result['user_authority']);
+					localStorage.setItem('user_authority', '1');
 					localStorage.setItem("id", json_result['id']);
 					this.navCtrl.setRoot(HomePage); // After the authentication is complete, redirect to the main page.
 				}

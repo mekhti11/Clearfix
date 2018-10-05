@@ -20,7 +20,8 @@
 		"BTNs": "Please choose an operation from below",
 		"BTN_CHAT_WITH_DOCTOR": "Chat With Doctor",
 		"IS_DOCTOR": "This part is for only patients.",
-		"BTN_TIMER": "Change Time"
+		"BTN_TIMER": "Change Time",
+		"HASTA_ULASILAMADI": "Cannot reach to chat page. There is no appointment to any doctor."
 	},
 
 	"AppointmentPage": {
@@ -135,7 +136,7 @@
 		"SIFRE_ONAYLAYINIZ": "Confirmation Password",
 		"KAYDOL": "Sign up",
 		"CONFIRMATION": "Confirmation password has to be same with password!",
-		"HESABIN_VAR_MI": "Do you have an account?Login."
+		"HESABIN_VAR_MI": "Do you have an account? Login."
 	},
 
 	"SimulationPage": {
@@ -147,7 +148,10 @@
 		"SMS_GELEN_SIFRE": "Password sent with SMS",
 		"BTN_AKTIVASYONU_TAMAMLA": "COMPLETE ACTIVATION",
 		"BTN_SIFREYI_TEKRAR_GONDER": "SEND THE PASSWORD AGAIN",
-		"CLOSE": "Close"
+		"CLOSE": "Close",
+		"PASSWORD": "Password",
+		"ACTIVATION_MESSAGE1":"You entered your activation code incorrect!",
+		"ACTIVATION_MESSAGE2":"Your activation code is resent."
 	},
 
 	"SuccessActivationPage": {
@@ -168,24 +172,26 @@
 
 	"TicketListPage": {
 		"TITLE": "TICKET LIST",
-		"ONCELIK": "Öncelik",
+		"ONCELIK": "Priority",
 		"KONU": "Subject",
 		"KATEGORI": "Category",
 		"OLUSTURULDU": "Created",
 		"GUNCELLENDI": "Updated",
 		"ADIM": "Step",
 		"BTN_CHAT": "Chat With Doctor",
-		"BTN_SIMULATION": "Go to Simulation"
+		"BTN_SIMULATION": "Go to Simulation",
+		"CHAT_MESSAGE": "Cannot reach to chat. This patient is not registered into the database.",
+		"SIMUL_MESSAGE": "Cannot reach to simulation. There is no simulation for this patient."
 	},
 
 	"CategoryPage": {
 		"TITLE": "Category",
 		"TUM_VAKALAR": "All Cases",
-		"OLCULER": "Measurment",
+		"OLCULER": "Measurement",
 		"TARAMA": "Scanning",
 		"KAYIT": "Register",
 		"PLANLAMA": "Planning",
-		"PCT": "P.Ç.T",
+		"PCT": "P.S.R",
 		"KARGODA": "On Cargo",
 		"TAMAMLANMIS": "Done"
 	}

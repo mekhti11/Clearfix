@@ -42,10 +42,14 @@ export class HomePage {
 		console.log(localStorage.getItem('name'));
 		console.log(localStorage.getItem('surname'));
 		console.log(localStorage.getItem('username'));
+		console.log(localStorage.getItem('isLoggedIn'));
+		console.log(localStorage.getItem('user_authority'));
 		console.log(localStorage.getItem('id'));
 	}
 
-
+	ionViewDidLoad() {
+		
+	}
 
 	goToCategories() {
 		this.navCtrl.setRoot(CategoryPage);
@@ -63,7 +67,7 @@ export class HomePage {
 			localStorage.setItem('isLoggedIn', 'false');
 			localStorage.setItem('name', '');
 			localStorage.setItem('username', '');
-			localStorage.setItem('authority', '');
+			localStorage.setItem('user_authority', '');
 			localStorage.setItem('surname', '');
 			localStorage.setItem('id', '');
 			this.navCtrl.setRoot(HomePage);
@@ -100,7 +104,7 @@ export class HomePage {
 					this.account = true;
 					this.name = localStorage.getItem("name");
 					this.surname = localStorage.getItem("surname");
-					this.authority = localStorage.getItem("authority");
+					this.authority = localStorage.getItem("user_authority");
 				}
 				console.log(json_result);
 			}, "check");

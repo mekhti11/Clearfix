@@ -21,7 +21,8 @@
 		"BTNs": "Lütfen aşağıdaki işlemlerden birini seçiniz",
 		"BTN_CHAT_WITH_DOCTOR": "Doktor ile iletişime geçiniz",
 		"IS_DOCTOR": "Bu kısım sadece hastalar içindir.",
-		"BTN_TIMER": "Değiştirme süresi"
+		"BTN_TIMER": "Değiştirme süresi",
+		"HASTA_ULASILAMADI": "Sohbete ulaşılamadı. Bir doktora atanmadınız."
 	},
 	"AppointmentPage": {
 		"RANDEVULARIM": "RANDEVULARIM",
@@ -145,7 +146,9 @@
 		"SMS_GELEN_SIFRE": "SMS ile gelen şifre",
 		"BTN_AKTIVASYONU_TAMAMLA": "AKTİVASYONU TAMAMLA",
 		"BTN_SIFREYI_TEKRAR_GONDER": "ŞİFREYİ TEKRAR GÖNDER",
-		"CLOSE": "Kapat"
+		"CLOSE": "Kapat",
+		"ACTIVATION_MESSAGE1":"",
+		"ACTIVATION_MESSAGE2":""
 	},
 
 	"SuccessActivationPage": {
@@ -173,7 +176,9 @@
 		"GUNCELLENDI": "Güncellendi",
 		"ADIM": "Adım",
 		"BTN_CHAT": "Doktor ile Iletişime Geç",
-		"BTN_SIMULATION": "Simülasyona Git"
+		"BTN_SIMULATION": "Simülasyona Git",
+		"CHAT_MESSAGE": "Sohbete ulaşılamadı. Bu hasta veritabanında kayıtlı değil.",
+		"SIMUL_MESSAGE": "Simülasyona ulaşılamadı. Bu hasta için simülasyon yok."
 	},
 
 	"CategoryPage": {

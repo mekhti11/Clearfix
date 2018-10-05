@@ -5,7 +5,7 @@ import { ChatWithDoctorPage } from '../chat-with-doctor/chat-with-doctor';
 import { SimulationPage } from '../simulation/simulation';
 import { Http } from '@angular/http';
 import { ToastController } from "ionic-angular";
-//import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'page-about',
@@ -17,30 +17,47 @@ export class AboutPage {
 	isLoggedIn: string;
 
 	constructor(public navCtrl: NavController, public http: Http,
-		public toastCtrl: ToastController) {
-		this.authority = localStorage.getItem("authority");
+		public toastCtrl: ToastController, public translate: TranslateService) {
+		this.authority = localStorage.getItem("user_authority");
+		
 		this.isLoggedIn = localStorage.getItem("isLoggedIn");
 	}
 	timer() {
 		this.navCtrl.push(TimerPage);
 	}
-	chatWithDoctor() {
-		this.postData((json_result) => {
-			if(json_result['message'] == 'success') {
-				localStorage.setItem("chatval", json_result['id']);	
-				this.navCtrl.setRoot(ChatWithDoctorPage);	
-			}
-			else
-			{
-				let toast = this.toastCtrl.create({
-					message: 'Sohbete ulaşılamadı. Bir doktora atanmadınız.',
-					duration: 3000,
-					position: 'bottom'
-				  });
-				toast.present();
-			}
- 		});
+	
+	ionViewDidEnter() {
+		this.authority = localStorage.getItem("user_authority");
+		this.isLoggedIn = localStorage.getItem("isLoggedIn");
+	}
 
+	translateContent(callback) {
+		let translatedContent;
+		this.translate.get("AboutPage.HASTA_ULASILAMADI").subscribe(value => {
+			translatedContent = value;
+			console.log(translatedContent);
+			callback(translatedContent);
+		})
+	}
+
+	chatWithDoctor() {
+		this.translateContent((translatedContent) => {
+			this.postData((json_result) => {
+				if(json_result['message'] == 'success') {
+					localStorage.setItem("chatval", json_result['id']);	
+					this.navCtrl.setRoot(ChatWithDoctorPage);	
+				}
+				else
+				{
+					let toast = this.toastCtrl.create({
+						message: translatedContent,
+						duration: 3000,
+						position: 'bottom'
+					});
+					toast.present();
+				}
+			});
+		});
 	}
 	simulation() {
 		this.navCtrl.push(SimulationPage);
