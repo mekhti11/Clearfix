@@ -1,11 +1,19 @@
 <ion-header>
   <ion-navbar color="tabColor">
     <ion-title text-center>
-      İLETİŞİM
+      Ayarlar
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  
+  <ion-card >
+    <ion-item>
+        <ion-label>Diller</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">English</ion-option>
+          <ion-option value="m">Türkçe</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
 </ion-content>

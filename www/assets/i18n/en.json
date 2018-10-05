@@ -4,7 +4,7 @@
     	"ANASAYFA":"Homepage",
     	"RANDAVULARIM":"Appointments",
     	"HESABIM":"Account",
-    	"ILETISIM":"Contact Us"
+    	"AYARLAR":"Settings"
 	},
 	"HomePage":{
 		"BTN_YENI_HESAP_OLUSTUR":"CREATE NEW ACCOUNT",
