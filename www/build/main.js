@@ -461,11 +461,7 @@ var TabsPage = /** @class */ (function () {
         this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__["a" /* AppointmentsPage */];
     }
     TabsPage = __decorate([
-<<<<<<< HEAD
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle=" {{ \'TabsPage.ANASAYFA\' | translate}}" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle=" {{ \'TabsPage.RANDAVULARIM\' | translate}}" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle=" {{ \'TabsPage.HESABIM\' | translate}}" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle=" {{ \'TabsPage.AYARLAR\' | translate}}" tabIcon="build"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/tabs/tabs.html"*/
-=======
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle=" {{ \'TabsPage.ANASAYFA\' | translate}}" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle=" {{ \'TabsPage.RANDAVULARIM\' | translate}}" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle=" {{ \'TabsPage.HESABIM\' | translate}}" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle=" {{ \'TabsPage.ILETISIM\' | translate}}" tabIcon="contacts"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/
->>>>>>> a9850884e7c5a5bf67129dc6eaf7527892676623
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle=" {{ \'TabsPage.ANASAYFA\' | translate}}" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle=" {{ \'TabsPage.RANDAVULARIM\' | translate}}" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle=" {{ \'TabsPage.HESABIM\' | translate}}" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle=" {{ \'TabsPage.AYARLAR\' | translate}}" tabIcon="build"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -609,6 +605,7 @@ var TimerPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -620,19 +617,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ContactPage = /** @class */ (function () {
-    function ContactPage(navCtrl) {
+    function ContactPage(navCtrl, translate) {
         this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.language = "tr";
     }
+    ContactPage.prototype.changeLNG = function () {
+        console.log(this.language);
+        this.translate.use(this.language);
+    };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-contact',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      Ayarlar\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-card >\n\n    <ion-item>\n\n        <ion-label>Diller</ion-label>\n\n        <ion-select [(ngModel)]="gender">\n\n          <ion-option value="f">English</ion-option>\n\n          <ion-option value="m">Türkçe</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/contact/contact.html"*/
-=======
-            selector: 'page-contact',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{ \'ContactPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/
->>>>>>> a9850884e7c5a5bf67129dc6eaf7527892676623
+            selector: 'page-contact',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{ \'ContactPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-card >\n\n    <ion-item>\n\n        <ion-label>\n\n            {{ \'ContactPage.LNG\' | translate}}\n\n        </ion-label>\n\n        <ion-select [(ngModel)]="language" (ionChange)="changeLNG()"\n\n         okText="{{ \'ContactPage.OKAY\' | translate}}"\n\n         cancelText="{{ \'ContactPage.DISMISS\' | translate}}">\n\n          <ion-option value="en">English</ion-option>\n\n          <ion-option value="tr">Türkçe</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
     ], ContactPage);
     return ContactPage;
 }());
@@ -1838,7 +1839,7 @@ var LoginUserPage = /** @class */ (function () {
     };
     LoginUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-login-user',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginUserPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <ion-card class="card-parent">\n\n          <img src="/assets/imgs/cleargiris.png"/>\n\n        </ion-card>\n\n{{appointment.appointment_no}}\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.TEL\' | translate}}</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.PWORD\' | translate}}:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n\n\n\n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                {{ \'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              </button>\n\n            </div>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/,
+            selector: 'page-login-user',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginUserPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <ion-card class="card-parent">\n\n          <img src="/assets/imgs/cleargiris.png"/>\n\n        </ion-card>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.TEL\' | translate}}</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.PWORD\' | translate}}:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n\n\n\n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                {{ \'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              </button>\n\n            </div>\n\n\n\n\n\n</ion-content>\n\ns'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */],
@@ -2306,7 +2307,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_2_make_appointment_2__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_3_make_appointment_3__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_4_make_appointment_4__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ngx_translate_core__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ngx_translate_core__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ngx_translate_http_loader__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_splash_screen__ = __webpack_require__(208);
@@ -2652,7 +2653,7 @@ var TimerProgress = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2697,15 +2698,6 @@ var HomePage = /** @class */ (function () {
         console.log(localStorage.getItem('id'));
     }
     HomePage_1 = HomePage;
-    HomePage.prototype.switchLang = function () {
-        if (this.lang == "tr") {
-            this.lang = "en";
-        }
-        else {
-            this.lang = "tr";
-        }
-        this.translate.use(this.lang);
-    };
     HomePage.prototype.goToCategories = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__category_category__["a" /* CategoryPage */]);
     };
@@ -2731,25 +2723,35 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.loginDoctor = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__["a" /* LoginDoctorPage */]);
     };
+    HomePage.prototype.translateContent = function (callback) {
+        var translatedContent;
+        this.translate.get("HomePage.loader").subscribe(function (value) {
+            translatedContent = value;
+            console.log(translatedContent);
+            callback(translatedContent);
+        });
+    };
     HomePage.prototype.accountCheck = function () {
         var _this = this;
-        var loader = this.loadingCtrl.create({
-            content: 'Lütfen Bekleyiniz...'
+        this.translateContent(function (translatedContent) {
+            var loader = _this.loadingCtrl.create({
+                content: translatedContent
+            });
+            loader.present();
+            _this.postData(function (json_result) {
+                loader.dismiss();
+                if (json_result['message'] == 'not_logged_in') {
+                    _this.account = false;
+                }
+                else {
+                    _this.account = true;
+                    _this.name = localStorage.getItem("name");
+                    _this.surname = localStorage.getItem("surname");
+                    _this.authority = localStorage.getItem("authority");
+                }
+                console.log(json_result);
+            }, "check");
         });
-        loader.present();
-        this.postData(function (json_result) {
-            loader.dismiss();
-            if (json_result['message'] == 'not_logged_in') {
-                _this.account = false;
-            }
-            else {
-                _this.account = true;
-                _this.name = localStorage.getItem("name");
-                _this.surname = localStorage.getItem("surname");
-                _this.authority = localStorage.getItem("authority");
-            }
-            console.log(json_result);
-        }, "check");
     };
     HomePage.prototype.postData = function (callback, action) {
         // Create credentials.
@@ -2764,11 +2766,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = HomePage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-home',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center><b>CLEARFIX</b></ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>    \n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    \n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearHosgeldiniz.png"/>\n\n        <div *ngIf="account" class="card-title" text-center>{{\'HomePage.Sayin\' | translate}} {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{\'HomePage.BTN_YENI_HESAP_OLUSTUR\' | translate}}</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{\'HomePage.BTN_UYE_GIRISI\' | translate}}</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">{{\'HomePage.BTN_KATEGORILERE_GIT\' | translate}}</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{\'HomePage.BTN_HEKIM_GIRISI\' | translate}}</button>\n\n\n\n      <button ion-button class="button-middle" (click)="switchLang()">Change Lang</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfixNew/clearfixSonHali/yeniClear/Clearfix/src/pages/home/home.html"*/
-=======
-            selector: 'page-home',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center><b>CLEARFIX</b></ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n    \n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearHosgeldiniz.png"/>\n\n        <div *ngIf="account" class="card-title" text-center>{{\'HomePage.Sayin\' | translate}} {{name}} {{surname}},</div>\n\n      </ion-card>\n\n      \n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{\'HomePage.BTN_YENI_HESAP_OLUSTUR\' | translate}}</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{\'HomePage.BTN_UYE_GIRISI\' | translate}}</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">{{\'HomePage.BTN_KATEGORILERE_GIT\' | translate}}</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{\'HomePage.BTN_HEKIM_GIRISI\' | translate}}</button>\n\n\n\n      <button ion-button class="button-middle" (click)="switchLang()">Change Lang</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/
->>>>>>> a9850884e7c5a5bf67129dc6eaf7527892676623
+            selector: 'page-home',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center><b>CLEARFIX</b></ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n\n\n\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearHosgeldiniz.png"/>\n\n        <div *ngIf="account" class="card-title" text-center>{{\'HomePage.Sayin\' | translate}} {{name}} {{surname}},</div>\n\n      </ion-card>\n\n\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{\'HomePage.BTN_YENI_HESAP_OLUSTUR\' | translate}}</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{\'HomePage.BTN_UYE_GIRISI\' | translate}}</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">{{\'HomePage.BTN_KATEGORILERE_GIT\' | translate}}</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{\'HomePage.BTN_HEKIM_GIRISI\' | translate}}</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -2792,7 +2790,7 @@ var HomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tabs_tabs__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

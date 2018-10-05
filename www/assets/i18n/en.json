@@ -1,128 +1,18 @@
 {
 
-<<<<<<< HEAD
-	"TabsPage":{    
-    	"ANASAYFA":"Homepage",
-    	"RANDAVULARIM":"Appointments",
-    	"HESABIM":"Account",
-    	"AYARLAR":"Settings"
-	},
-	"HomePage":{
-		"BTN_YENI_HESAP_OLUSTUR":"CREATE NEW ACCOUNT",
-    	"BTN_UYE_GIRISI":"MEMBER LOGIN",
-        "BTN_HEKIM_GIRISI":"DOCTOR LOGIN",
-        "BTN_KATEGORILERE_GIT":"CATEGORIES",
-        "Sayin":"Dear"   
-	},
-    "AboutPage":{
-        "BASLIK":"MY ACCOUNT",
-        "GIRIS_YAP":"Please login to do something",
-        "BTNs":"Please choose an operation from below",
-        "BTN_CHAT_WITH_DOCTOR":"Chat With Doctor",
-        "IS_DOCTOR":"This part is for only patients.",
-        "BTN_TIMER":"Change Time"
-    },
-
-    
-    "CEP_TELEFON_AKTIFASYON_KODU":"<br> An SMS will be sent to your mobile phone.",
-    "AKTIVASYON_KODU_GONDER":"SEND ACTIVATION CODE",
-
-    "HESAP_AKTIVASYONU":"ACCOUNT ACTIVATION",
-    "SMS_KODU_GONDERILECEK":"<br> An SMS will be sent to your mobile phone <br> for activation.",
-    "SMS_GELEN_SIFRE":"Password sent with SMS",
-    "AKTIVASYONU_TAMAMLA":"COMPLETE ACTIVATION",
-    "SIFREYI_TEKRAR_GONDER":"SEND THE PASSWORD AGAIN",
-
-    "SIFRE_OLUSTURMA":"Password Creation",
-    "SIFRENIZI_OLUSTURUNUZ":"Create Your Password",
-    "SIFRE":"Şifre",
-    "SIFRE_ONAYLAYINIZ":"Confirm Password",
-    "ONAYLA":"ONAYLA",
-
-    "TEBRIKLER_ISLEM_TAMAMLANDI":"<br> Congratulations! Activation process has been completed.",
-    "BASLA":"START",
-
-    "RANDEVU_AL":"MAKE APPOINTMENT",
-    "TEMEL_BILGILER":"<br>Main Info<br>Please fill in your main details.",
-    "ADINIZ":"Name",
-    "SOYADINIZ":"Surname",
-    "LUTFEN_ADINIZI_YAZINIZ":"Please write your name",
-    "LUTEFN_SOYADINIZI_YAZINIZ":"Please write your surname",
-    "EPOSTA_ADRESINIZ":"E-mail address",
-    "LUTFEN_EPOSTA":"Please write your e-mail address",
-    "CINSIYETINIZ":"Gender",
-    "BAY":"Male",
-    "BAYAN":"Female",
-    "YASADINGINIZ_IL":"City",
-    "YASADIGINIZ_ILCE":"District",
-    "LUTFEN_YASADIGINIZ_ILCE":"Please write the district you reside",
-    "EKLEMEK_ISTEDIKLERINIZ":"Things you want to add....",
-    "SONRAKI_ADIM":"Next Step",
-
-    "FOTOGRAF_YUKLEME":"UPLOADING PHOTO",
-    "FOTOGRAFLARINIZI_CEKINIZ":"<br>Please capture and send your photo as shown below",
-    "FOTOGRAF_EKLE":"ADD PHOTO",
-
-    "BILGILERINIZI_KONTROL":"CHECK YOUR INFO",
-    "LUTFEN_BILGILERINIZI_SON_KEZ":"<br>Please check your info for last time",
-    "BILGILERIMI_DUZENLE":"CHANGE INFO",
-    "RANDEVUYU_OLUSTUR":"CREATE APPOINTMENT",
-    "TEBRIKLER":"<br>CONGRATULATIONS",
-    "RANDEVUNUZ_BASARLI":"<br>Your appointment has been created successfully.",
-    "RANDEVULARIMA_GIT":"Go to My Appointments",
-
-    "RANDEVULARIM":"MY APPOINTMENTS",
-    "RANDEVU_NO":"Appointment Number",
-    "RANDEVU_TARIHI":"Appointment Date",
-    "RANDEVU_DURUMU":"Appointment Status",
-    "RANDEVU_DETAYI":"Appointment Details",
-
-    "HESABIM":"MY ACCOUNT",
-    "LUTFEN_ASAGIDA_ISLEM":"Please choose an operation from below",
-    "DOKTOR_ILE_ILETISIM":"Correspondence between doctor-patient",
-    "PLAK_DEGISTIRME_SURESI":"Change time",
-    "SIMULASYON":"3D simulation",
-
-    "DOKTOR_ILE_KONUSUNUZ":"Talk with the Doctor",
-    "OTURUM_ACILDI":"Logged in",
-    "SEN":"You",
-    "BIR_MESAJ_YAZ":"Write a message",
-
-    "KRONOMETRE":"Timer",
-    "YANLIS_AYARLANDI":"Set Wrong",
-    "SIFIRLA":"Reset",
-    "DURDUR":"Stop",
-    "DEVAM_ET":"Continue",
-    "BASLA":"Start",
-
-    "GIRIS_YAPINIZ":"Login",
-    "TELEFON":"Telephone Number",
-    "GIRIS_YAP":"LOGIN",
-    "EPOSTA":"E-mail",
-    "HESABIN_YOK_MU":"No account? <a>Register</a>",
-
-    "HEKIM_KAYIT":"DOCTOR REGISTRATION",
-    "LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ":"Please fill in the form completely. Only dentists can register.",
-    "KULLANICI_AD":"Username",
-    "LISANSLI_DIS_HEKIMI":"I confirm that I am a licensed dentist.",
-    "BEYAN_ETTIGIM_BILGILERIN":"I accept the <a>Clearfix</a><br> membership terms and conditions and<br>confirm the correctness of the information I have given.",
-    "KAYDOL":"Sign up",
-    "HESABIN_VAR_MI":"Do you have an account?"
-    
-}
-=======
 	"TabsPage": {
 		"ANASAYFA": "Homepage",
 		"RANDAVULARIM": "Appointments",
 		"HESABIM": "Account",
-		"ILETISIM": "Contact Us"
+		"AYARLAR": "Settings"
 	},
 	"HomePage": {
 		"BTN_YENI_HESAP_OLUSTUR": "CREATE NEW ACCOUNT",
 		"BTN_UYE_GIRISI": "MEMBER LOGIN",
 		"BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
 		"BTN_KATEGORILERE_GIT": "CATEGORIES",
-		"Sayin": "Dear"
+		"Sayin": "Dear",
+		"loader": "Please Wait ..."
 	},
 	"AboutPage": {
 		"BASLIK": "MY ACCOUNT",
@@ -169,8 +59,7 @@
 
 	"MakeAppointment1Page": {
 		"TITLE": "MAKE APPOINTMENT",
-		"TEMEL_BILGILER": "Main Info
-		Please fill in your main details.",
+		"TEMEL_BILGILER": "Please fill in your main details.",
 		"ADINIZ": "Name",
 		"SOYADINIZ": "Surname",
 		"LUTFEN_ADINIZI_YAZINIZ": "Please write your name",
@@ -267,7 +156,10 @@
 	},
 
 	"ContactPage": {
-		"TITLE": "Contact Us"
+		"TITLE": "Settings",
+		"LNG":"Languages",
+		"OKAY":"Okay",
+		"DISMISS":"Dismiss"
 	},
 
 	"TimerPage": {
@@ -301,4 +193,3 @@
 
 
 }
->>>>>>> a9850884e7c5a5bf67129dc6eaf7527892676623

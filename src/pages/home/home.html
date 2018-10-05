@@ -5,19 +5,19 @@
           <button ion-button icon-only (click)="logoutUser()">
             <ion-icon name="log-out"></ion-icon>
           </button>
-      </ion-buttons>    
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content >
 
-    
+
 
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearHosgeldiniz.png"/>
         <div *ngIf="account" class="card-title" text-center>{{'HomePage.Sayin' | translate}} {{name}} {{surname}},</div>
       </ion-card>
-      
+
       <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{'HomePage.BTN_YENI_HESAP_OLUSTUR' | translate}}</button>
       <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{'HomePage.BTN_UYE_GIRISI' | translate}}</button>
       <ng-template #loggedIn>
@@ -25,5 +25,4 @@
       </ng-template>
       <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{'HomePage.BTN_HEKIM_GIRISI' | translate}}</button>
 
-      <button ion-button class="button-middle" (click)="switchLang()">Change Lang</button>
 </ion-content>

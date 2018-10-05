@@ -4,14 +4,15 @@
 		"ANASAYFA": "Homepage",
 		"RANDAVULARIM": "Appointments",
 		"HESABIM": "Account",
-		"ILETISIM": "Contact Us"
+		"AYARLAR": "Settings"
 	},
 	"HomePage": {
 		"BTN_YENI_HESAP_OLUSTUR": "CREATE NEW ACCOUNT",
 		"BTN_UYE_GIRISI": "MEMBER LOGIN",
 		"BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
 		"BTN_KATEGORILERE_GIT": "CATEGORIES",
-		"Sayin": "Dear"
+		"Sayin": "Dear",
+		"loader": "Please Wait ..."
 	},
 	"AboutPage": {
 		"BASLIK": "MY ACCOUNT",
@@ -58,8 +59,7 @@
 
 	"MakeAppointment1Page": {
 		"TITLE": "MAKE APPOINTMENT",
-		"TEMEL_BILGILER": "Main Info
-		Please fill in your main details.",
+		"TEMEL_BILGILER": "Please fill in your main details.",
 		"ADINIZ": "Name",
 		"SOYADINIZ": "Surname",
 		"LUTFEN_ADINIZI_YAZINIZ": "Please write your name",
@@ -156,7 +156,10 @@
 	},
 
 	"ContactPage": {
-		"TITLE": "Contact Us"
+		"TITLE": "Settings",
+		"LNG":"Languages",
+		"OKAY":"Okay",
+		"DISMISS":"Dismiss"
 	},
 
 	"TimerPage": {

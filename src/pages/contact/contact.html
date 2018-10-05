@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="tabColor">
     <ion-title text-center>
-      Ayarlar
+      {{ 'ContactPage.TITLE' | translate}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,10 +9,14 @@
 <ion-content>
   <ion-card >
     <ion-item>
-        <ion-label>Diller</ion-label>
-        <ion-select [(ngModel)]="gender">
-          <ion-option value="f">English</ion-option>
-          <ion-option value="m">Türkçe</ion-option>
+        <ion-label>
+            {{ 'ContactPage.LNG' | translate}}
+        </ion-label>
+        <ion-select [(ngModel)]="language" (ionChange)="changeLNG()"
+         okText="{{ 'ContactPage.OKAY' | translate}}"
+         cancelText="{{ 'ContactPage.DISMISS' | translate}}">
+          <ion-option value="en">English</ion-option>
+          <ion-option value="tr">Türkçe</ion-option>
         </ion-select>
       </ion-item>
     </ion-card>

@@ -4,14 +4,16 @@
 		"ANASAYFA": "Anasayfa",
 		"RANDAVULARIM": "Randevularım",
 		"HESABIM": "Hesabım",
-		"ILETISIM": "İletişim"
+		"AYARLAR": "Ayarlar"
 	},
 	"HomePage": {
 		"BTN_YENI_HESAP_OLUSTUR": "YENİ HESAP OLUŞTUR",
 		"BTN_UYE_GIRISI": "ÜYE GİRİŞİ",
 		"BTN_HEKIM_GIRISI": "HEKİM GİRİŞİ",
 		"BTN_KATEGORILERE_GIT": "KATEGORİLERE GİT",
-		"Sayin": "Sayın"
+		"Sayin": "Sayın",
+		"loader": "Lütfen Bekleyiniz ..."
+
 	},
 	"AboutPage": {
 		"BASLIK": "HESABIM",
@@ -56,8 +58,7 @@
 
 	"MakeAppointment1Page": {
 		"TITLE": "RANDEVU AL",
-		"TEMEL_BILGILER": " Temel Bilgiler
-		Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.",
+		"TEMEL_BILGILER": "Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.",
 		"ADINIZ": "Adınız",
 		"SOYADINIZ": "Soydınız",
 		"LUTFEN_ADINIZI_YAZINIZ": "Lütfen adınızı yazınız",
@@ -153,7 +154,10 @@
 	},
 
 	"ContactPage": {
-		"TITLE": "İLETİŞİM"
+		"TITLE": "Ayarlar",
+		"LNG":"Diller",
+		"OKAY":"Seç",
+		"DISMISS":"Iptal"
 	},
 
 	"TimerPage": {
