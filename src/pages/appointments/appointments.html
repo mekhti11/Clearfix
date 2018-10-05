@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>RANDEVULARIM</ion-title>
+    <ion-title text-center>{{ 'AppointmentPage.RANDEVULARIM' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,12 +12,12 @@
 
   <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">
     <ion-card-content>
-      <h2>Randevu No: {{appointment.appointment_no}}</h2><br>
-      <h2>Randevu Tarihi: {{appointment.appointment_date}}</h2><br>
-      <h2>Randevu Durumu: {{appointment.appointment_content}}</h2><br>
+      <h2>{{ 'AppointmentPage.RANDEVU_NO' | translate }} :  {{appointment.appointment_no}}</h2><br>
+      <h2>{{ 'AppointmentPage.RANDEVU_TARIHI' | translate }} :  {{appointment.appointment_date}}</h2><br>
+      <h2>{{ 'AppointmentPage.RANDEVU_DURUMU' | translate }} :  {{appointment.appointment_content}}</h2><br>
     </ion-card-content>
      <br>
-    
+
   </ion-card>
 
 

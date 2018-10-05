@@ -2,12 +2,15 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title>Zamanlayıcı</ion-title>
+    <ion-title>
+        {{ 'TimerPage.TITLE' | translate}}
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <timer-progress #countdownTimerProgress></timer-progress>
+    <timer-progress #countdownTimerProgress>
+    </timer-progress>
 </ion-content>

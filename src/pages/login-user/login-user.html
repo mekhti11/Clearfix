@@ -2,39 +2,39 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>ÜYE GİRİŞİ</ion-title>
+    <ion-title text-center>{{ 'LoginUserPage.TITLE' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  
+
       <ion-card class="card-parent">
           <img src="/assets/imgs/cleargiris.png"/>
         </ion-card>
-
+{{appointment.appointment_no}}
               <ion-item>
-                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Telefon:</ion-label>
+                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'LoginUserPage.TEL' | translate}}</ion-label>
                 <ion-input [(ngModel)]="user_data" type="text" >
                 </ion-input>
                 <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>
               </ion-item>
-        
+
               <ion-item>
-                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre:</ion-label>
+                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'LoginUserPage.PWORD' | translate}}:</ion-label>
                 <ion-input [(ngModel)]="pass_data" type="password">
                 </ion-input>
                 <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>
               </ion-item>
-        
-          
+
+
             <!--<p text-right ion-text color="light">Forgot Password?</p>-->
             <div margin-top>
               <button (click)="userLogin()" ion-button block class="button-middle" type="submit">
-                GİRİŞ YAP
+                {{ 'LoginUserPage.BTN_LOGIN' | translate}}
               </button>
             </div>
- 
+
 
 </ion-content>

@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>RANDEVU AL (1/4)</ion-title>
+    <ion-title text-center>{{ 'MakeAppointment1Page.TITLE' | translate}} (1/4)</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -9,36 +9,39 @@
 
 <ion-content padding>
     <ion-card class="card-parent">
-        <div class="card-title" text-center><br>Temel Bilgiler<br>Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.</div>
+        <div class="card-title" text-center>
+            {{'MakeAppointment1Page.TEMEL_BILGILER' | translate}}
+        </div>
       </ion-card>
-      
+
 
         <ion-item>
-          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
-          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="Lütfen adınızı yazınız"></ion-input>
-        </ion-item>
-      
-        <ion-item>
-          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Soydınız</ion-label>
-          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="Lütfen soyadınızı yazınız"></ion-input>
+          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{'MakeAppointment1Page.ADINIZ' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="{{ 'MakeAppointment1Page.LUTFEN_ADINIZI_YAZINIZ' | translate}}"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>
-          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Lütfen E-posta adresinizi yazınız"></ion-input>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{'MakeAppointment1Page.SOYADINIZ' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="">{{ 'MakeAppointment1Page.LUTEFN_SOYADINIZI_YAZINIZ' | translate}}
+          </ion-input>
         </ion-item>
-        
+
+        <ion-item>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{'MakeAppointment1Page.EPOSTA_ADRESINIZ' | translate}}</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="{{ 'MakeAppointment1Page.LUTFEN_EPOSTA' | translate}}"></ion-input>
+        </ion-item>
+
         <ion-list>
           <ion-item>
-            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>
+            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{'MakeAppointment1Page.CINSIYETINIZ' | translate}}</ion-label>
             <ion-select [(ngModel)]="gender" name="gender" ngDefaultControl>
-              <ion-option value="male">Bay</ion-option>
-              <ion-option value="female">Bayan</ion-option>
+              <ion-option value="male">{{ 'MakeAppointment1Page.BAY' | translate}}</ion-option>
+              <ion-option value="female">{{ 'MakeAppointment1Page.BAYAN' | translate}}</ion-option>
             </ion-select>
           </ion-item>
-        
+
           <ion-item>
-            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>
+            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment1Page.YASADINGINIZ_IL' | translate}}</ion-label>
             <ion-select [(ngModel)]="city" name="city" ngDefaultControl>
               <ion-option value="1">Adana</ion-option>
               <ion-option value="2">Adıyaman</ion-option>
@@ -124,23 +127,24 @@
             </ion-select>
           </ion-item>
         </ion-list>
-        
+
         <ion-item>
-          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>
-          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="Lütfen yaşadığınız ilçeyi yazınız"></ion-input>
+          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment1Page.YASADIGINIZ_ILCE' | translate}}
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="{{ 'MakeAppointment1Page.LUTFEN_YASADIGINIZ_ILCE' | translate}}"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek İstedikleriniz</ion-label>
-          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="Eklemek istediğiniz..."></ion-textarea>
+            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment1Page.EK' | translate}}</ion-label>
+          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="{{ 'MakeAppointment1Page.EKLEMEK_ISTEDIKLERINIZ' | translate}}"></ion-textarea>
         </ion-item>
-        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">Sonraki Adım</button>
+        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">{{ 'MakeAppointment1Page.BTN_SONRAKI' | translate}}</button>
 
-      
-      
 
-        
-        
+
+
+
+
 
 
 </ion-content>

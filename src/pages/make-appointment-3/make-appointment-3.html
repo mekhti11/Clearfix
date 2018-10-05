@@ -1,13 +1,7 @@
-<!--
-  Generated template for the MakeAppointment_3Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>RANDEVU AL (3/4)</ion-title>
+    <ion-title text-center>{{ 'MakeAppointment3Page.TITLE' | translate}} (3/4)</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,34 +10,34 @@
 <ion-content padding>
     <ion-card class="card-parent">
         <div class="card-title" text-center><br>
-          <h1 class="h1">BİLGİLERİNİZİ KONTROL EDİNİZ </h1>
-        <br>Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz</div>
+          <h1 class="h1">{{ 'MakeAppointment3Page.BILGILERINIZI_KONTROL' | translate}} </h1>
+        <br>{{ 'MakeAppointment3Page.LUTFEN_BILGILERINIZI_SON_KEZ' | translate}}</div>
     </ion-card><br><br>
-    
-    
-        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Adınız</ion-label>
+
+
+        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.ADINIZ' | translate}}</ion-label>
         <h5>{{name}}</h5>
-    
-        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">Soyadınız</ion-label>
+
+        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">{{ 'MakeAppointment3Page.SOYADINIZ' | translate}}</ion-label>
         <h5>{{surname}}</h5>
-      
-      
-        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta Adresiniz</ion-label>
+
+
+        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.EPOSTA_ADRESINIZ' | translate}}</ion-label>
         <h5>{{email}}</h5>
-      
-        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Cinsiyetiniz</ion-label>
+
+        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.CINSIYETINIZ' | translate}}</ion-label>
         <h5>{{gender}}</h5>
 
-        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İl</ion-label>
+        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.YASADIGINIZ_IL' | translate}}</ion-label>
         <h5>{{city}}</h5>
 
-        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Yaşadığınız İlçe</ion-label>
+        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.YASADIGINIZ_ILCE' | translate}}</ion-label>
         <h5>{{district}}</h5>
 
-        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Eklemek istediğniz</ion-label>
+        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'MakeAppointment3Page.EK' | translate}}</ion-label>
         <h5>{{text}}</h5>
 
-        <h5 class="h5">1. FOTOĞRAF </h5>
+        <h5 class="h5">1. {{'MakeAppointment3Page.FOTOGRAF' | translate}} </h5>
         <ion-grid>
             <ion-row center>
               <ion-col col-6 no-padding>
@@ -51,18 +45,18 @@
                     <img src="/assets/imgs/resim1.png"/>
                 </ion-card>
             </ion-col>
-            <ion-col col-6 no-padding> 
+            <ion-col col-6 no-padding>
                 <ion-card>
                     <ion-avatar >
                         <img [src]="chosenPicture1" onerror="this.src='/assets/imgs/picture.png'" />
                     </ion-avatar>
-                </ion-card>   
+                </ion-card>
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture1()">1. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture1()">1. {{'MakeAppointment3Page.FOTOGRAF_EKLE' | translate}}</button>
           <br><br>
-          <h5 class="h5">2. FOTOĞRAF </h5>
+          <h5 class="h5">2. {{'MakeAppointment3Page.FOTOGRAF' | translate}} </h5>
         <ion-grid>
             <ion-row center>
               <ion-col col-6 no-padding>
@@ -70,18 +64,18 @@
                     <img src="/assets/imgs/resim3.png"/>
                 </ion-card>
             </ion-col>
-            <ion-col col-6 no-padding> 
+            <ion-col col-6 no-padding>
                 <ion-card>
                     <ion-avatar >
                         <img [src]="chosenPicture2" onerror="this.src='/assets/imgs/picture.png'" />
                     </ion-avatar>
-                </ion-card>   
+                </ion-card>
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture2()">2. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture2()">2. {{'MakeAppointment3Page.FOTOGRAF_EKLE' | translate}}</button>
           <br><br>
-          <h5 class="h5">3. FOTOĞRAF </h5>
+          <h5 class="h5">3. {{'MakeAppointment3Page.FOTOGRAF' | translate}} </h5>
         <ion-grid>
             <ion-row center>
               <ion-col col-6 no-padding>
@@ -89,18 +83,18 @@
                     <img src="/assets/imgs/resim2.png"/>
                 </ion-card>
             </ion-col>
-            <ion-col col-6 no-padding> 
+            <ion-col col-6 no-padding>
                 <ion-card>
                     <ion-avatar >
                         <img [src]="chosenPicture3" onerror="this.src='/assets/imgs/picture.png'" />
                     </ion-avatar>
-                </ion-card>   
+                </ion-card>
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture3()">3. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture3()">3. {{'MakeAppointment3Page.FOTOGRAF_EKLE' | translate}}</button>
           <br><br>
-          <h5 class="h5">4. FOTOĞRAF </h5>
+          <h5 class="h5">4. {{'MakeAppointment3Page.FOTOGRAF' | translate}} </h5>
         <ion-grid>
             <ion-row center>
               <ion-col col-6 no-padding>
@@ -108,18 +102,18 @@
                     <img src="/assets/imgs/resim4.png"/>
                 </ion-card>
             </ion-col>
-            <ion-col col-6 no-padding> 
+            <ion-col col-6 no-padding>
                 <ion-card>
                     <ion-avatar >
                       <img [src]="chosenPicture4" onerror="this.src='/assets/imgs/picture.png'" />
                    </ion-avatar>
-                </ion-card>   
+                </ion-card>
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture4()">4. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture4()">4. {{'MakeAppointment3Page.FOTOGRAF_EKLE' | translate}}</button>
           <br><br>
-          <h5 class="h5">5. FOTOĞRAF </h5>
+          <h5 class="h5">5. {{'MakeAppointment3Page.FOTOGRAF' | translate}} </h5>
         <ion-grid>
             <ion-row center>
               <ion-col col-6 no-padding>
@@ -127,19 +121,19 @@
                     <img src="/assets/imgs/resim5.png"/>
                 </ion-card>
             </ion-col>
-            <ion-col col-6 no-padding> 
+            <ion-col col-6 no-padding>
                 <ion-card>
                     <ion-avatar >
                        <img [src]="chosenPicture5" onerror="this.src='/assets/imgs/picture.png'" />
                     </ion-avatar>
-                </ion-card>   
+                </ion-card>
           </ion-col>
             </ion-row>
           </ion-grid>
-          <button ion-button class="button-middle" (click)="changePicture5()">5. FOTOĞRAF EKLE</button>
+          <button ion-button class="button-middle" (click)="changePicture5()">5. {{'MakeAppointment3Page.FOTOGRAF_EKLE' | translate}}</button>
           <br><br><br><br>
-          
-          <button ion-button class="button-edit-information" (click)="create_appointment()">RANDEVUYU OLUŞTUR</button>
 
-      
+          <button ion-button class="button-edit-information" (click)="create_appointment()">{{'MakeAppointment3Page.BTN_RANDEVUYU_OLUSTUR' | translate}}</button>
+
+
 </ion-content>

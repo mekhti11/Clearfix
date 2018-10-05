@@ -1,13 +1,7 @@
-<!--
-  Generated template for the MakeAppointment_2Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>RANDEVU AL (2/4)</ion-title>
+    <ion-title text-center>{{ 'MakeAppointment2Page.TITLE' | translate}} (2/4)</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,9 +9,15 @@
 
 <ion-content padding>
     <ion-card class="card-parent">
-        <div class="card-title" text-center><br><h1 class="h1">FOTOĞRAF YÜKLEME</h1><br>Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz</div>
+        <div class="card-title" text-center><br>
+            <h1 class="h1">{{ 'MakeAppointment2Page.FOTOGRAF_YUKLEME' | translate}}
+            </h1><br>
+            {{ 'MakeAppointment2Page.FOTOGRAFLARINIZI_CEKINIZ' | translate}}
+        </div>
       </ion-card>  <br><br>
-      <h5 class="h5">1. FOTOĞRAF EKLE</h5>
+      <h5 class="h5">
+          1. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}
+      </h5>
       <ion-grid>
           <ion-row center>
             <ion-col col-6 no-padding>
@@ -25,18 +25,18 @@
                   <img src="/assets/imgs/resim1.png"/>
               </ion-card>
           </ion-col>
-          <ion-col col-6 no-padding> 
+          <ion-col col-6 no-padding>
               <ion-card>
                   <ion-avatar >
                    <img [src]="chosenPicture1" onerror="this.src='/assets/imgs/picture.png'" />
                   </ion-avatar>
-              </ion-card>   
+              </ion-card>
         </ion-col>
           </ion-row>
         </ion-grid>
-        <button ion-button class="button-middle" (click)="changePicture1()">1. FOTOĞRAF EKLE</button>
+        <button ion-button class="button-middle" (click)="changePicture1()">1. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</button>
         <br><br>
-        <h5 class="h5">2. FOTOĞRAF EKLE</h5>
+        <h5 class="h5">2. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</h5>
       <ion-grid>
           <ion-row center>
             <ion-col col-6 no-padding>
@@ -44,18 +44,18 @@
                   <img src="/assets/imgs/resim3.png"/>
               </ion-card>
           </ion-col>
-          <ion-col col-6 no-padding> 
+          <ion-col col-6 no-padding>
               <ion-card>
                   <ion-avatar >
                    <img [src]="chosenPicture2" onerror="this.src='/assets/imgs/picture.png'" />
                   </ion-avatar>
-              </ion-card>   
+              </ion-card>
         </ion-col>
           </ion-row>
         </ion-grid>
-        <button ion-button class="button-middle" (click)="changePicture2()">2. FOTOĞRAF EKLE</button>
+        <button ion-button class="button-middle" (click)="changePicture2()">2. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</button>
         <br><br>
-        <h5 class="h5">3. FOTOĞRAF EKLE</h5>
+        <h5 class="h5">3. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</h5>
       <ion-grid>
           <ion-row center>
             <ion-col col-6 no-padding>
@@ -63,18 +63,18 @@
                   <img src="/assets/imgs/resim2.png"/>
               </ion-card>
           </ion-col>
-          <ion-col col-6 no-padding> 
+          <ion-col col-6 no-padding>
               <ion-card>
                   <ion-avatar >
                     <img [src]="chosenPicture3" onerror="this.src='/assets/imgs/picture.png'" />
                   </ion-avatar>
-              </ion-card>   
+              </ion-card>
         </ion-col>
           </ion-row>
         </ion-grid>
-        <button ion-button class="button-middle" (click)="changePicture3()">3. FOTOĞRAF EKLE</button>
+        <button ion-button class="button-middle" (click)="changePicture3()">3. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</button>
         <br><br>
-        <h5 class="h5">4. FOTOĞRAF EKLE</h5>
+        <h5 class="h5">4. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</h5>
       <ion-grid>
           <ion-row center>
             <ion-col col-6 no-padding>
@@ -82,18 +82,18 @@
                   <img src="/assets/imgs/resim4.png"/>
               </ion-card>
           </ion-col>
-          <ion-col col-6 no-padding> 
+          <ion-col col-6 no-padding>
               <ion-card>
                   <ion-avatar >
                      <img [src]="chosenPicture4"  onerror="this.src='/assets/imgs/picture.png'" />
                   </ion-avatar>
-              </ion-card>   
+              </ion-card>
         </ion-col>
           </ion-row>
         </ion-grid>
-        <button ion-button class="button-middle" (click)="changePicture4()">4. FOTOĞRAF EKLE</button>
+        <button ion-button class="button-middle" (click)="changePicture4()">4. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</button>
         <br><br>
-        <h5 class="h5">5. FOTOĞRAF EKLE</h5>
+        <h5 class="h5">5. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</h5>
       <ion-grid>
           <ion-row center>
             <ion-col col-6 no-padding>
@@ -101,18 +101,18 @@
                   <img src="/assets/imgs/resim5.png"/>
               </ion-card>
           </ion-col>
-          <ion-col col-6 no-padding> 
+          <ion-col col-6 no-padding>
               <ion-card>
                 <ion-avatar >
                    <img [src]="chosenPicture5" onerror="this.src='/assets/imgs/picture.png'" />
                 </ion-avatar>
-              </ion-card>   
+              </ion-card>
         </ion-col>
           </ion-row>
         </ion-grid>
-        <button ion-button class="button-middle" (click)="changePicture5()">5. FOTOĞRAF EKLE</button>
+        <button ion-button class="button-middle" (click)="changePicture5()">5. {{ 'MakeAppointment2Page.FOTOGRAF_EKLE' | translate}}</button>
         <br><br><br><br>
-        <button ion-button class="button-nextStep" (click)="nextStep_2()">SONRAKİ ADIM</button>
+        <button ion-button class="button-nextStep" (click)="nextStep_2()">{{ 'MakeAppointment2Page.BTN_NEXT' | translate}}</button>
 
 
 

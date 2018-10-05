@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title>Hasta listesi</ion-title>
+    <ion-title>{{'IdListPage.TITLE' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,14 +10,14 @@
 
 <ion-content padding>
   <!-- <div>
-     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar> 
+     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar>
   </div> -->
     <ion-card no-padding style="box-shadow: none;">
         <ion-card-content>
-            <b style="font-size:25px; color:rgb(101, 183, 221);">Hasta listesi</b>
+            <b style="font-size:25px; color:rgb(101, 183, 221);">{{'IdListPage.LIST' | translate}}</b>
         </ion-card-content>
       </ion-card>
-    
+
       <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">
           <ion-card-header>
             <b> {{ticket.id}}: {{ticket.subject}} </b>

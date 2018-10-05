@@ -2,14 +2,16 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title >3D Simülasyon</ion-title>
+    <ion-title >
+        {{'SimulationPage.TITLE' | translate}}
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  
+
     <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen name="OnyxCephWebGL"></iframe>
 
 </ion-content>
