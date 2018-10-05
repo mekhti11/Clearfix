@@ -1,13 +1,7 @@
-<!--
-  Generated template for the MakeAppointment_4Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>RANDEVU AL (4/4)</ion-title>
+    <ion-title text-center>{{ 'MakeAppointment4Page.TITLE' | translate}} (4/4)</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,10 +10,10 @@
 <ion-content padding>
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearfix.png"/>
-        <div class="card-title" text-center> <br>TEBRİKLER<br>Randevunuz başarılı bir şeklide oluşturulmuştur. </div>
+        <div class="card-title" text-center> <br>{{ 'MakeAppointment4Page.TEBRIKLER' | translate}}<br>{{ 'MakeAppointment4Page.RANDEVUNUZ_BASARLI' | translate}} </div>
       </ion-card>
       <br><br>
-      <button ion-button class="button-middle" (click)="appointments()">Randevularıma Git</button>
+      <button ion-button class="button-middle" (click)="appointments()">{{ 'MakeAppointment4Page.BTN_RANDEVULARIMA_GIT' | translate}}</button>
 
 
 </ion-content>

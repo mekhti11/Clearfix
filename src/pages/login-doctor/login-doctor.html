@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>{{ 'TabsPage.ANASAYFA' | translate}}</ion-title>
+    <ion-title text-center>{{ 'LoginDoctorPage.TITLE' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -21,14 +21,14 @@
 
           <ion-item>
 
-            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">E-posta</ion-label>
+            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'LoginDoctorPage.EMAIL' | translate}}</ion-label>
 
             <ion-input type="email" [(ngModel)]="user_data">
             </ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">Şifre</ion-label>
+            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ 'LoginDoctorPage.PWORD' | translate}}</ion-label>
             <ion-input type="password" [(ngModel)]="pass_data">
             </ion-input>
           </ion-item>
@@ -37,12 +37,12 @@
 
         <div margin-top>
           <button ion-button block (click)="login()" class="button-middle">
-              GIRIŞ YAP
+              {{ 'LoginDoctorPage.BTN_LOGIN' | translate}}
           </button>
         </div>
         <!-- Other links -->
         <div text-center margin-top>
-          <span ion-text (click)="register()">Hesabın yok mu?<a>Kaydol</a></span>
+          <span ion-text (click)="register()">{{ 'LoginDoctorPage.HESABIN_YOK_MU' | translate}}<b>{{ 'LoginDoctorPage.KAYDOL' | translate}}</b></span>
         </div>
       </div>
 

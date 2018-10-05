@@ -2,7 +2,9 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title text-center>HESAP AKTİVASYONU</ion-title>
+    <ion-title text-center>
+        {{ 'SuccessActivationPage.TITLE' | translate}}
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,9 +14,11 @@
 
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearTebrikler.png"/>
-      </ion-card>
-     
-        <button ion-button class="button-middle" (click)="makeappointment()">BAŞLA</button>
+    </ion-card>
+
+    <button ion-button class="button-middle" (click)="makeappointment()">
+        {{ 'SuccessActivationPage.BTN_BASLA' | translate}}
+    </button>
 
 
 </ion-content>

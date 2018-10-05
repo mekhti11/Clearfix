@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="tabColor">
-    <ion-title >Sohbet</ion-title>
+    <ion-title >{{'ChatWithDoctorPage.TITLE' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,14 +10,14 @@
 <ion-content padding>
     <ion-list>
         <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->
-            <div class="chat-message" text-right *ngIf="chat.receiver_id !== your_id"> <!-- burasi doktor attiginda sag gider mesaj --> 
+            <div class="chat-message" text-right *ngIf="chat.receiver_id !== your_id"> <!-- burasi doktor attiginda sag gider mesaj -->
               <div class="right-bubble">
-                <span class="msg-name">Sen</span> <!-- Yani doktor olacak burada -->
+                <span class="msg-name">{{'ChatWithDoctorPage.SEN' | translate}}</span> <!-- Yani doktor olacak burada -->
                 <span class="msg-date">{{chat.date | date:'short'}}</span>
                 <p text-wrap> <b>{{chat.content}}</b></p>
               </div>
             </div>
-            <div class="chat-message" text-left *ngIf="chat.receiver_id === your_id"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider --> 
+            <div class="chat-message" text-left *ngIf="chat.receiver_id === your_id"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider -->
               <div class="left-bubble">
                 <span class="msg-name">{{chat.your_id}}</span>
                 <span class="msg-date">{{chat.date | date:'short'}}</span>
@@ -33,7 +33,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-10>
-          <ion-input type="text" placeholder="Bir mesaj yaz"   name="message" [(ngModel)]="message"></ion-input>
+          <ion-input type="text" placeholder=" {{ 'ChatWithDoctorPage.BIR_MESAJ_YAZ' | translate }} "   name="message" [(ngModel)]="message"></ion-input>
         </ion-col>
         <ion-col col-2 (click)="sendMessage()">
           <ion-icon name="paper-plane"></ion-icon>
@@ -41,4 +41,3 @@
       </ion-row>
     </ion-grid>
   </ion-footer>
-
