@@ -23,7 +23,7 @@ export class HomePage {
 		public http: Http,
 		public translate: TranslateService) {
 
-		this.lang = localStorage.getItem("language");
+	
 
 		// Define the undefined values.
 		if (!localStorage.getItem('isLoggedIn'))
@@ -41,6 +41,8 @@ export class HomePage {
 		if (!localStorage.getItem('id'))
 			localStorage.setItem('id', '');
 		this.accountCheck();
+
+		this.lang = localStorage.getItem("language");
 		console.log(localStorage.getItem('name'));
 		console.log(localStorage.getItem('surname'));
 		console.log(localStorage.getItem('username'));

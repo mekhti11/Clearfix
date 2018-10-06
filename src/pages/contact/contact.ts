@@ -14,7 +14,7 @@ export class ContactPage {
 
 	changeLNG() {
 		console.log(this.language);
-		localStorage.setItem("language", this.language);
 		this.translate.use(this.language);
+		localStorage.setItem("language", this.language);
 	}
 }
