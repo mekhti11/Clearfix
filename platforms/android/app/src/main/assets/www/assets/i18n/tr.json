@@ -1,0 +1,197 @@
+{
+
+	"TabsPage": {
+		"ANASAYFA": "Anasayfa",
+		"RANDAVULARIM": "Randevularım",
+		"HESABIM": "Hesabım",
+		"AYARLAR": "Ayarlar"
+	},
+	"HomePage": {
+		"BTN_YENI_HESAP_OLUSTUR": "YENİ HESAP OLUŞTUR",
+		"BTN_UYE_GIRISI": "ÜYE GİRİŞİ",
+		"BTN_HEKIM_GIRISI": "HEKİM GİRİŞİ",
+		"BTN_KATEGORILERE_GIT": "KATEGORİLERE GİT",
+		"Sayin": "Sayın",
+		"loader": "Lütfen Bekleyiniz ..."
+
+	},
+	"AboutPage": {
+		"BASLIK": "HESABIM",
+		"GIRIS_YAP": " İşlem yapabilmek için lütfen giriş yapınız",
+		"BTNs": "Lütfen aşağıdaki işlemlerden birini seçiniz",
+		"BTN_CHAT_WITH_DOCTOR": "Doktor ile iletişime geçiniz",
+		"IS_DOCTOR": "Bu kısım sadece hastalar içindir.",
+		"BTN_TIMER": "Değiştirme süresi",
+		"HASTA_ULASILAMADI": "Sohbete ulaşılamadı. Bir doktora atanmadınız."
+	},
+	"AppointmentPage": {
+		"RANDEVULARIM": "RANDEVULARIM",
+		"RANDEVU_NO": "Randevu No",
+		"RANDEVU_TARIHI": "Randevu Tarihi",
+		"RANDEVU_DURUMU": "Randevu Durumu",
+		"RANDEVU_DETAYI": "Randevu Detayı"
+	},
+	"ChatWithDoctorPage": {
+		"SEN": "Sen",
+		"BIR_MESAJ_YAZ": "Bir mesaj yaz",
+		"TITLE": "Sohbet"
+	},
+
+	"IdListPage": {
+		"TITLE": "Hasta Listesi",
+		"LIST": "Hastalar"
+	},
+	"LoginDoctorPage": {
+		"TITLE": "Doktor Girişi",
+		"EMAIL": "E-posta",
+		"PWORD": "Şifre",
+		"BTN_LOGIN": "GIRIŞ YAP",
+		"HESABIN_YOK_MU": "Hesabın yok mu?",
+		"KAYDOL": "Kaydol"
+	},
+
+	"LoginUserPage": {
+		"TITLE": "HASTA GİRİŞİ",
+		"TEL": "Telefon :",
+		"PWORD": "Şifre",
+		"BTN_LOGIN": "GIRIŞ YAP"
+	},
+
+	"MakeAppointment1Page": {
+		"TITLE": "RANDEVU AL",
+		"TEMEL_BILGILER": "Lütfen temel bilgilerinizi eksiksiz bir şekilde doldurunuz.",
+		"ADINIZ": "Adınız",
+		"SOYADINIZ": "Soydınız",
+		"LUTFEN_ADINIZI_YAZINIZ": "Lütfen adınızı yazınız",
+		"LUTEFN_SOYADINIZI_YAZINIZ": "Lütfen soyadınızı yazınız",
+		"EPOSTA_ADRESINIZ": "E-posta Adresiniz",
+		"LUTFEN_EPOSTA": "Lütfen E-posta adresinizi yazınız",
+		"CINSIYETINIZ": "Cinsiyetiniz",
+		"BAY": "Bay",
+		"BAYAN": "Bayan",
+		"YASADINGINIZ_IL": "Yaşadığınız İl",
+		"YASADIGINIZ_ILCE": "Yaşadığınız İlçe",
+		"LUTFEN_YASADIGINIZ_ILCE": "Lütfen yaşadığınız ilçeyi yazınız",
+		"EK": "Eklemek İstedikleriniz",
+		"EKLEMEK_ISTEDIKLERINIZ": "Eklemek istediğiniz....",
+		"BTN_SONRAKI": "Sonraki Adım"
+	},
+
+	"MakeAppointment2Page": {
+		"TITLE": "RANDEVU AL",
+		"FOTOGRAF_YUKLEME": "FOTOĞRAF YÜKLEME",
+		"FOTOGRAFLARINIZI_CEKINIZ": "Lütfen aşağıda belirtildiği gibi fotoğraflarınızı çekip yükleyiniz",
+		"FOTOGRAF_EKLE": "FOTOĞRAF EKLE",
+		"BTN_NEXT": "Sonraki Adım"
+	},
+
+	"MakeAppointment3Page": {
+		"TITLE": "RANDEVU AL",
+		"BILGILERINIZI_KONTROL": "BİLGİLERİNİZİ KONTROL EDİNİZ",
+		"LUTFEN_BILGILERINIZI_SON_KEZ": "Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz",
+		"BILGILERIMI_DUZENLE": "BİLİGİLERİMİ DÜZENLE",
+		"BTN_RANDEVUYU_OLUSTUR": "RANDEVUYU OLUŞTUR",
+		"ADINIZ": "Adınız",
+		"SOYADINIZ": "Soydınız",
+		"EPOSTA_ADRESINIZ": "E-posta Adresiniz",
+		"CINSIYETINIZ": "Cinsiyetiniz",
+		"YASADIGINIZ_IL": "Yaşadığınız İl",
+		"YASADIGINIZ_ILCE": "Yaşadığınız İlçe",
+		"EK": "Eklemek İstedikleriniz",
+		"FOTOGRAF": "FOTOĞRAF",
+		"FOTOGRAF_EKLE": "FOTOĞRAF EKLE"
+	},
+
+	"MakeAppointment4Page": {
+		"TITLE": "RANDEVU AL",
+		"TEBRIKLER": " TEBRİKLER",
+		"RANDEVUNUZ_BASARLI": " Randevunuz başarılı bir şeklide oluşturulmuştur.",
+		"BTN_RANDEVULARIMA_GIT": "Randevularıma Git"
+	},
+
+	"NewAccountPage": {
+		"TITLE": "YENİ HESAP OLUŞTUR",
+		"CLOSE": "Kapat",
+		"BTN_SEND_SMS": "AKTİVASYON KODU GÖNDER"
+	},
+
+	"PasswordPage": {
+		"TITLE": "Şifre Oluşturma",
+		"SIFRENIZI_OLUSTURUNUZ": "Şifrenizi Oluşturunuz",
+		"PWORD": "Şifre",
+		"SIFRE_ONAYLAYINIZ": "Şifre Onaylayınız",
+		"BTN_ONAYLA": "ONAYLA",
+		"CONFIRMATION": "Şifre onayı asıl şifre ile aynı olmalıdır."
+	},
+
+	"RegisterDoctorPage": {
+		"TITLE": "HEKİM KAYIT",
+		"LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ": "Lütfen formu eksiksiz doldurunuz. Sadece Diş Hekimleri uygulamaya kayıt yapabilir",
+		"NAME": "Tam Adınız",
+		"EMAIL": "E-posta",
+		"KULLANICI_AD": "Kullanıcı Ad",
+		"PWORD": "Şifre",
+		"SIFRE_ONAYLAYINIZ": "Şifre Onaylayınız",
+		"BTN_KAYDOL": "Kaydol",
+		"CONFIRMATION": "Şifre onayı asıl şifre ile aynı olmalıdır.",
+		"HESABIN_VAR_MI": "Hesabın var mı?Giriş Yap."
+	},
+
+	"SimulationPage": {
+		"TITLE": "3D Simülasyon"
+	},
+
+	"SMS_OTP_Page": {
+		"TITLE": "HESAP AKTİVASYONU",
+		"SMS_GELEN_SIFRE": "SMS ile gelen şifre",
+		"BTN_AKTIVASYONU_TAMAMLA": "AKTİVASYONU TAMAMLA",
+		"BTN_SIFREYI_TEKRAR_GONDER": "ŞİFREYİ TEKRAR GÖNDER",
+		"CLOSE": "Kapat",
+		"ACTIVATION_MESSAGE1":"",
+		"ACTIVATION_MESSAGE2":""
+	},
+
+	"SuccessActivationPage": {
+		"TITLE": "HESAP AKTİVASYONU",
+		"BTN_BASLA": "Başla"
+	},
+
+	"ContactPage": {
+		"TITLE": "Ayarlar",
+		"LNG":"Diller",
+		"OKAY":"Seç",
+		"DISMISS":"Iptal"
+	},
+
+	"TimerPage": {
+		"TITLE": "ZAMANLAYICI"
+	},
+
+	"TicketListPage": {
+		"TITLE": "TİCKET LİSTESİ",
+		"ONCELIK": "Öncelik",
+		"KONU": "Konu",
+		"KATEGORI": "Kategori",
+		"OLUSTURULDU": "Oluşturuldu",
+		"GUNCELLENDI": "Güncellendi",
+		"ADIM": "Adım",
+		"BTN_CHAT": "Doktor ile Iletişime Geç",
+		"BTN_SIMULATION": "Simülasyona Git",
+		"CHAT_MESSAGE": "Sohbete ulaşılamadı. Bu hasta veritabanında kayıtlı değil.",
+		"SIMUL_MESSAGE": "Simülasyona ulaşılamadı. Bu hasta için simülasyon yok."
+	},
+
+	"CategoryPage": {
+		"TITLE": "Kategori",
+		"TUM_VAKALAR": "Tüm Vakalar",
+		"OLCULER": "Ölçüler",
+		"TARAMA": "Tarama",
+		"KAYIT": "Kayıt",
+		"PLANLAMA": "Planlama",
+		"PCT": "P.Ç.T",
+		"KARGODA": "Kargoda",
+		"TAMAMLANMIS": "Tamamlanmış"
+	}
+
+
+}

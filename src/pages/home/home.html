@@ -15,8 +15,8 @@
 
     <ion-card class="card-parent">
         <img src="/assets/imgs/clearHosgeldiniz.png"/>
-        <div *ngIf="account" class="card-title" text-center>{{'HomePage.Sayin' | translate}} {{name}} {{surname}},</div>
-      </ion-card>
+<!--         <div *ngIf="account" class="card-title" text-center>{{'HomePage.Sayin' | translate}} {{name}} {{surname}},</div>
+ -->      </ion-card>
 
       <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{'HomePage.BTN_YENI_HESAP_OLUSTUR' | translate}}</button>
       <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{'HomePage.BTN_UYE_GIRISI' | translate}}</button>
