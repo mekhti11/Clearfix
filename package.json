@@ -49,7 +49,8 @@
     "plugins": {
       "cordova-plugin-screen-orientation": {},
       "cordova-plugin-camera": {},
-      "cordova-plugin-advanced-http": {}
+      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-statusbar": {}
     }
   }
 }
