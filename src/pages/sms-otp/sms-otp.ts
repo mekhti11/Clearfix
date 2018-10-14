@@ -29,7 +29,7 @@ export class SmsOtpPage {
 		let translatedContent;
 		this.translate.get("SMS_OTP_Page.PASSWORD").subscribe(value => {
 			translatedContent = value;
-			console.log(translatedContent);
+			
 			callback(translatedContent);
 		})
 	}
@@ -38,7 +38,7 @@ export class SmsOtpPage {
 		let translatedContent;
 		this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE1").subscribe(value => {
 			translatedContent = value;
-			console.log(translatedContent);
+			
 			callback(translatedContent);
 		})
 	}
@@ -47,7 +47,7 @@ export class SmsOtpPage {
 		let translatedContent;
 		this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE2").subscribe(value => {
 			translatedContent = value;
-			console.log(translatedContent);
+			
 			callback(translatedContent);
 		})
 	}
@@ -84,7 +84,7 @@ export class SmsOtpPage {
 					alert.present();
 				});
 				localStorage.setItem("activation", json_result['activation']);
-				console.log(json_result['activation']);
+				
 			});
 			this.navCtrl.setRoot(SmsOtpPage);
 		});

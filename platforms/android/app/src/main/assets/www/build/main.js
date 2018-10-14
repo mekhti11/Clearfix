@@ -598,7 +598,6 @@ var TimerPage = /** @class */ (function () {
         this.navParams = navParams;
     }
     TimerPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TimerPage');
     };
     TimerPage.prototype.ionViewDidEnter = function () {
     };
@@ -639,7 +638,7 @@ var ContactPage = /** @class */ (function () {
     function ContactPage(navCtrl, translate) {
         this.navCtrl = navCtrl;
         this.translate = translate;
-        this.language = "tr";
+        this.language = this.translate.currentLang;
     }
     ContactPage.prototype.changeLNG = function () {
         console.log(this.language);
@@ -792,7 +791,6 @@ var SmsOtpPage = /** @class */ (function () {
         var translatedContent;
         this.translate.get("SMS_OTP_Page.PASSWORD").subscribe(function (value) {
             translatedContent = value;
-            console.log(translatedContent);
             callback(translatedContent);
         });
     };
@@ -800,7 +798,6 @@ var SmsOtpPage = /** @class */ (function () {
         var translatedContent;
         this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE1").subscribe(function (value) {
             translatedContent = value;
-            console.log(translatedContent);
             callback(translatedContent);
         });
     };
@@ -808,7 +805,6 @@ var SmsOtpPage = /** @class */ (function () {
         var translatedContent;
         this.translate.get("SMS_OTP_Page.ACTIVATION_MESSAGE2").subscribe(function (value) {
             translatedContent = value;
-            console.log(translatedContent);
             callback(translatedContent);
         });
     };
@@ -846,7 +842,6 @@ var SmsOtpPage = /** @class */ (function () {
                     alert.present();
                 });
                 localStorage.setItem("activation", json_result['activation']);
-                console.log(json_result['activation']);
             });
             _this.navCtrl.setRoot(SmsOtpPage_1);
         });
@@ -2770,13 +2765,7 @@ var HomePage = /** @class */ (function () {
         if (!localStorage.getItem('id'))
             localStorage.setItem('id', '');
         this.accountCheck();
-        this.lang = localStorage.getItem("language");
-        console.log(localStorage.getItem('name'));
-        console.log(localStorage.getItem('surname'));
-        console.log(localStorage.getItem('username'));
-        console.log(localStorage.getItem('isLoggedIn'));
-        console.log(localStorage.getItem('user_authority'));
-        console.log(localStorage.getItem('id'));
+        this.translate.use(localStorage.getItem('language'));
     }
     HomePage_1 = HomePage;
     HomePage.prototype.ionViewDidLoad = function () {
@@ -2810,7 +2799,6 @@ var HomePage = /** @class */ (function () {
         var translatedContent;
         this.translate.get("HomePage.loader").subscribe(function (value) {
             translatedContent = value;
-            console.log(translatedContent);
             callback(translatedContent);
         });
     };
@@ -2832,7 +2820,6 @@ var HomePage = /** @class */ (function () {
                     _this.surname = localStorage.getItem("surname");
                     _this.authority = localStorage.getItem("user_authority");
                 }
-                console.log(json_result);
             }, "check");
         });
     };

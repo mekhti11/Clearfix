@@ -14,8 +14,7 @@ export class TimerPage {
 
 
 	ionViewDidLoad() {
-		console.log('ionViewDidLoad TimerPage');
-
+		
 
 	}
 

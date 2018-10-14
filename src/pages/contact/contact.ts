@@ -6,10 +6,10 @@ import { TranslateService } from '@ngx-translate/core';
 	templateUrl: 'contact.html'
 })
 export class ContactPage {
-	language: any = "tr";
+	language: any;
 	constructor(public navCtrl: NavController,
 		public translate: TranslateService) {
-
+			this.language = this.translate.currentLang;
 	}
 
 	changeLNG() {

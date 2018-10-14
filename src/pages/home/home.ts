@@ -42,13 +42,7 @@ export class HomePage {
 			localStorage.setItem('id', '');
 		this.accountCheck();
 
-		this.lang = localStorage.getItem("language");
-		console.log(localStorage.getItem('name'));
-		console.log(localStorage.getItem('surname'));
-		console.log(localStorage.getItem('username'));
-		console.log(localStorage.getItem('isLoggedIn'));
-		console.log(localStorage.getItem('user_authority'));
-		console.log(localStorage.getItem('id'));
+		this.translate.use(localStorage.getItem('language'));
 	}
 
 	ionViewDidLoad() {
@@ -86,7 +80,6 @@ export class HomePage {
 		let translatedContent;
 		this.translate.get("HomePage.loader").subscribe(value => {
 			translatedContent = value;
-			console.log(translatedContent);
 			callback(translatedContent);
 		})
 	}
@@ -110,7 +103,6 @@ export class HomePage {
 					this.surname = localStorage.getItem("surname");
 					this.authority = localStorage.getItem("user_authority");
 				}
-				console.log(json_result);
 			}, "check");
 		})
 		
