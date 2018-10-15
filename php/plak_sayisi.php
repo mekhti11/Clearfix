@@ -28,10 +28,12 @@
 			echo json_encode($arr);
 		}
 		if($_POST['action'] == 'send') {
-			$sql  = "INSERT INTO kronometre (plak_sayisi) VALUES (?) WHERE patient_id = " .$_POST['id'];
+			$sql  = "UPDATE kronometre SET plak_sayisi = " .$_POST['plak_sayisi'] . " WHERE patient_id = " .$_POST['id'];
 			$exec = $db_mobile->prepare($sql);
-			$exec->execute([rand(), $_POST['plak_sayisi']]);
-			
+			$exec->execute();
+			$arr = array('message' => 'not_found','plak_sayisi'=>$_POST['plak_sayisi'],'sql'=>$sql);
+			echo json_encode($arr);
+
 		}
 	}
 ?>

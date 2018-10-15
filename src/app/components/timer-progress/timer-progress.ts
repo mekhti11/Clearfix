@@ -45,8 +45,7 @@ export class TimerProgress {
       
     });
     this.getPlakSayisi();
-    var d = new Date();
-    d.setMonth(d.getMonth() + 1);    
+ 
     
   }
 
@@ -63,7 +62,7 @@ export class TimerProgress {
     else{
       return false;
     }
-    // localStorage.getItem("isPhoto")
+    // localStorage.setItem("isPhoto",status)
   }
 
   addPhotos(){
@@ -84,6 +83,19 @@ export class TimerProgress {
     });
   }
 
+  postDataPlakSayisiSend() {
+    let formData = new FormData();
+
+    formData.append("action", "send");
+    formData.append("id", localStorage.getItem("id"));
+    formData.append("plak_sayisi", this.plak_sayisi.toString());
+
+    this.http.post("http://www.clearfix.com.tr/clearfix_new_app/plak_sayisi.php", formData).subscribe(function response(res) {
+      console.log(JSON.parse(res['_body']));
+      
+    });
+    this.plak_sayisi++;
+  }
   postDataPlakSayisi(callback) {
     let formData = new FormData();
 
@@ -124,7 +136,30 @@ export class TimerProgress {
     if(this.plak_sayisi % 2 == 1){
       this.isPhoto = true;
     }
-    //plak_sayisi++ ve db'e ekle 
+
+  }
+
+  reset(){
+    this.initProgressBar();
+    if (!this.timeInSeconds) { this.timeInSeconds = 0; }
+
+    this.timer = <CountdownTimer>{
+      seconds: this.timeInSeconds,
+      runTimer: false,
+      hasStarted: false,
+      hasFinished: false,
+      secondsRemaining: this.timeInSeconds
+    };
+
+    this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
+    
+    if(this.plak_sayisi % 2 == 1){
+      this.isPhoto = true;
+    }
+
+    //send plak_sayisi to db
+    this.postDataPlakSayisiSend();
+
   }
 
   startTimerWithoutPostDataSend() {
@@ -144,7 +179,7 @@ export class TimerProgress {
     d.setMonth(d.getMonth() + 1);
     this.notification.schedule({
       title : 'Clearfix',
-      text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyin.',
+      text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyiniz.',
       trigger: {at: d},
       led: 'FF0000',
    });

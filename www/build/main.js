@@ -2610,8 +2610,6 @@ var TimerProgress = /** @class */ (function () {
             }
         });
         this.getPlakSayisi();
-        var d = new Date();
-        d.setMonth(d.getMonth() + 1);
     }
     TimerProgress.prototype.ngOnInit = function () {
     };
@@ -2622,7 +2620,7 @@ var TimerProgress = /** @class */ (function () {
         else {
             return false;
         }
-        // localStorage.getItem("isPhoto")
+        // localStorage.setItem("isPhoto",status)
     };
     TimerProgress.prototype.addPhotos = function () {
     };
@@ -2637,6 +2635,16 @@ var TimerProgress = /** @class */ (function () {
             else {
             }
         });
+    };
+    TimerProgress.prototype.postDataPlakSayisiSend = function () {
+        var formData = new FormData();
+        formData.append("action", "send");
+        formData.append("id", localStorage.getItem("id"));
+        formData.append("plak_sayisi", this.plak_sayisi.toString());
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/plak_sayisi.php", formData).subscribe(function response(res) {
+            console.log(JSON.parse(res['_body']));
+        });
+        this.plak_sayisi++;
     };
     TimerProgress.prototype.postDataPlakSayisi = function (callback) {
         var formData = new FormData();
@@ -2673,7 +2681,25 @@ var TimerProgress = /** @class */ (function () {
         if (this.plak_sayisi % 2 == 1) {
             this.isPhoto = true;
         }
-        //plak_sayisi++ ve db'e ekle 
+    };
+    TimerProgress.prototype.reset = function () {
+        this.initProgressBar();
+        if (!this.timeInSeconds) {
+            this.timeInSeconds = 0;
+        }
+        this.timer = {
+            seconds: this.timeInSeconds,
+            runTimer: false,
+            hasStarted: false,
+            hasFinished: false,
+            secondsRemaining: this.timeInSeconds
+        };
+        this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
+        if (this.plak_sayisi % 2 == 1) {
+            this.isPhoto = true;
+        }
+        //send plak_sayisi to db
+        this.postDataPlakSayisiSend();
     };
     TimerProgress.prototype.startTimerWithoutPostDataSend = function () {
         this.timer.hasStarted = true;
@@ -2690,7 +2716,7 @@ var TimerProgress = /** @class */ (function () {
         d.setMonth(d.getMonth() + 1);
         this.notification.schedule({
             title: 'Clearfix',
-            text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyin.',
+            text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyiniz.',
             trigger: { at: d },
             led: 'FF0000',
         });
@@ -2757,7 +2783,7 @@ var TimerProgress = /** @class */ (function () {
     };
     TimerProgress = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<h1>{{plak_sayisi}}. PLAK</h1>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="!ifPhoto()" (click)="addPhotos()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
+            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<h1>{{plak_sayisi}}. PLAK</h1>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="!ifPhoto()" (click)="addPhotos()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="reset()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]) === "function" && _c || Object])
     ], TimerProgress);
