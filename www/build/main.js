@@ -2386,6 +2386,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_splash_screen__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_id_list_id_list__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__app_providers_camera_provider__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_local_notifications__ = __webpack_require__(313);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2403,6 +2404,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // import pages
+
 
 
 
@@ -2516,6 +2518,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_35__app_providers_camera_provider__["a" /* CameraProvider */],
                 __WEBPACK_IMPORTED_MODULE_8__ionic_native_screen_orientation__["a" /* ScreenOrientation */],
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_36__ionic_native_local_notifications__["a" /* LocalNotifications */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] }
             ]
         })
@@ -2573,6 +2576,7 @@ var ComponentsModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__ = __webpack_require__(313);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2585,11 +2589,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TimerProgress = /** @class */ (function () {
-    function TimerProgress(sanitizer, http) {
+    function TimerProgress(sanitizer, http, notification) {
         var _this = this;
         this.sanitizer = sanitizer;
         this.http = http;
+        this.notification = notification;
         this.timeInSeconds = 1209600;
         this.postDataLoad(function (json_result) {
             console.log(json_result);
@@ -2604,8 +2610,21 @@ var TimerProgress = /** @class */ (function () {
             }
         });
         this.getPlakSayisi();
+        var d = new Date();
+        d.setMonth(d.getMonth() + 1);
     }
     TimerProgress.prototype.ngOnInit = function () {
+    };
+    TimerProgress.prototype.ifPhoto = function () {
+        if (this.plak_sayisi > 1 && this.plak_sayisi % 2 == 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        // localStorage.getItem("isPhoto")
+    };
+    TimerProgress.prototype.addPhotos = function () {
     };
     TimerProgress.prototype.getPlakSayisi = function () {
         var _this = this;
@@ -2627,9 +2646,6 @@ var TimerProgress = /** @class */ (function () {
             var json_result = JSON.parse(res['_body']);
             callback(json_result);
         });
-    };
-    TimerProgress.prototype.ifPhoto = function () {
-        //Eger (plak sayisi + 1 ) - 1 0'dan buyuk ve cift ise return true else return false 
     };
     TimerProgress.prototype.hasFinished = function () {
         return this.timer.hasFinished;
@@ -2654,6 +2670,9 @@ var TimerProgress = /** @class */ (function () {
             secondsRemaining: this.timeInSeconds
         };
         this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
+        if (this.plak_sayisi % 2 == 1) {
+            this.isPhoto = true;
+        }
         //plak_sayisi++ ve db'e ekle 
     };
     TimerProgress.prototype.startTimerWithoutPostDataSend = function () {
@@ -2666,6 +2685,15 @@ var TimerProgress = /** @class */ (function () {
         this.timer.runTimer = true;
         this.timerTick();
         this.postDataSend();
+        //triggered notification
+        var d = new Date();
+        d.setMonth(d.getMonth() + 1);
+        this.notification.schedule({
+            title: 'Clearfix',
+            text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyin.',
+            trigger: { at: d },
+            led: 'FF0000',
+        });
     };
     TimerProgress.prototype.postDataSend = function () {
         var formData = new FormData();
@@ -2729,12 +2757,12 @@ var TimerProgress = /** @class */ (function () {
     };
     TimerProgress = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<h1>{{plak_sayisi}}. PLAK</h1>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="ifPhoto()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
+            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<h1>{{plak_sayisi}}. PLAK</h1>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="!ifPhoto()" (click)="addPhotos()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="initTimer()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]) === "function" && _c || Object])
     ], TimerProgress);
     return TimerProgress;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=timer-progress.js.map

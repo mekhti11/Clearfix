@@ -41,6 +41,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IdListPage } from '../pages/id-list/id-list';
 import { CameraProvider } from '../app/providers/camera.provider';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 
 // The translate loader needs to know where to load i18n files
@@ -127,6 +128,7 @@ export function setTranslateLoader(http: HttpClient) {
     CameraProvider,
     ScreenOrientation,
     Camera,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Http} from '@angular/http';
 import { TranslateService } from '@ngx-translate/core';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 export interface CountdownTimer {
   seconds: number;
@@ -25,7 +26,10 @@ export class TimerProgress {
   private percent;
   private fixTransform;
   private plak_sayisi:number;
-  constructor(private sanitizer: DomSanitizer, public http: Http) { 
+  private isPhoto;
+  constructor(private sanitizer: DomSanitizer, public http: Http,
+             private notification:LocalNotifications) { 
+
     this.postDataLoad( (json_result) => {
       console.log(json_result);
       if(json_result['message'] === 'found') {
@@ -41,10 +45,29 @@ export class TimerProgress {
       
     });
     this.getPlakSayisi();
+    var d = new Date();
+    d.setMonth(d.getMonth() + 1);    
+    
   }
 
   ngOnInit() {
     
+  }
+
+
+
+  ifPhoto(){
+    if(this.plak_sayisi>1 && this.plak_sayisi % 2 == 1){
+      return true;
+    }
+    else{
+      return false;
+    }
+    // localStorage.getItem("isPhoto")
+  }
+
+  addPhotos(){
+
   }
 
   getPlakSayisi(){
@@ -73,10 +96,6 @@ export class TimerProgress {
     });
   }
 
-  ifPhoto(){
-    //Eger (plak sayisi + 1 ) - 1 0'dan buyuk ve cift ise return true else return false 
-  }
-
   hasFinished() {
     return this.timer.hasFinished;
   }
@@ -102,6 +121,9 @@ export class TimerProgress {
 
     this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
     
+    if(this.plak_sayisi % 2 == 1){
+      this.isPhoto = true;
+    }
     //plak_sayisi++ ve db'e ekle 
   }
 
@@ -116,6 +138,16 @@ export class TimerProgress {
     this.timer.runTimer = true;
     this.timerTick();
     this.postDataSend();
+
+    //triggered notification
+    var d = new Date();
+    d.setMonth(d.getMonth() + 1);
+    this.notification.schedule({
+      title : 'Clearfix',
+      text: 'Lütfen Değiştirme Süresi sayfasından yeni fotoğraflarınızı yükleyin.',
+      trigger: {at: d},
+      led: 'FF0000',
+   });
   }
 
   postDataSend() {
