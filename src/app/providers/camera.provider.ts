@@ -36,7 +36,7 @@ export class CameraProvider {
       const base64Image = 'data:image/png;base64,' + imageData;
       return base64Image;
     }, error => {
-      console.log('CAMERA ERROR -> ' + JSON.stringify(error));
+      alert('CAMERA ERROR -> ' + JSON.stringify(error));
     });
   }
 }

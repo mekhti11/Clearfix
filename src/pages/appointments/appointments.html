@@ -9,21 +9,26 @@
 
 
 <ion-content padding>
+  <ion-card *ngIf="authority == '0'; else error" >
   <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">
-    <ion-card-content *ngIf="authority == '0'; else error">
+    <ion-card-content >
       <h2>{{ 'AppointmentPage.RANDEVU_NO' | translate }} :  {{appointment.appointment_no}}</h2><br>
       <h2>{{ 'AppointmentPage.RANDEVU_TARIHI' | translate }} :  {{appointment.appointment_date}}</h2><br>
       <h2>{{ 'AppointmentPage.RANDEVU_DURUMU' | translate }} :  {{appointment.appointment_content}}</h2><br>
     </ion-card-content>
-    <ng-template #error>
-      <ion-card-content style="background-color:rgb(220, 241, 243);">
-        <b style="font-size:18px; color:rgb(75, 168, 211); ">{{'AboutPage.IS_DOCTOR' | translate}}</b>
-    </ion-card-content>
-    </ng-template>
+
      <br>
 
   </ion-card>
-  
 
+</ion-card>
+
+<ng-template #error>
+    <ion-card >
+    <ion-card-content style="background-color:rgb(220, 241, 243);">
+      <b style="font-size:18px; color:rgb(75, 168, 211); ">{{'AboutPage.IS_DOCTOR' | translate}}</b>
+  </ion-card-content>
+</ion-card>
+  </ng-template>
 
 </ion-content>

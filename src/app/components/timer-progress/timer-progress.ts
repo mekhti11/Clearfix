@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Http} from '@angular/http';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface CountdownTimer {
   seconds: number;

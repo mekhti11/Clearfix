@@ -11,12 +11,15 @@
 
 <ion-content >
 
-
-
-    <ion-card class="card-parent">
-        <img src="/assets/imgs/clearHosgeldiniz.png"/>
-<!--         <div *ngIf="account" class="card-title" text-center>{{'HomePage.Sayin' | translate}} {{name}} {{surname}},</div>
- -->      </ion-card>
+        <div padding text-center>
+            <div class="logo primary-bg">
+                <img src="/assets/imgs/loginDoktor.png"/>
+            </div>
+            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">
+            <!-- {{'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ' | translate}} -->
+            {{'HomePage.WELCOME' | translate}}
+        </h5>
+        </div>
 
       <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{'HomePage.BTN_YENI_HESAP_OLUSTUR' | translate}}</button>
       <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{'HomePage.BTN_UYE_GIRISI' | translate}}</button>

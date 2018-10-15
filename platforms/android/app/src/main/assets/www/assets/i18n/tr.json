@@ -12,8 +12,8 @@
 		"BTN_HEKIM_GIRISI": "HEKİM GİRİŞİ",
 		"BTN_KATEGORILERE_GIT": "KATEGORİLERE GİT",
 		"Sayin": "Sayın",
-		"loader": "Lütfen Bekleyiniz ..."
-
+		"loader": "Lütfen Bekleyiniz ...",
+		"WELCOME": "Clearfix Mobil Uygulamasına Hoş Geldiniz"
 	},
 	"AboutPage": {
 		"BASLIK": "HESABIM",
@@ -134,7 +134,7 @@
 		"SIFRE_ONAYLAYINIZ": "Şifre Onaylayınız",
 		"BTN_KAYDOL": "Kaydol",
 		"CONFIRMATION": "Şifre onayı asıl şifre ile aynı olmalıdır.",
-		"HESABIN_VAR_MI": "Hesabın var mı?Giriş Yap."
+		"HESABIN_VAR_MI": "Hesabın var mı? Giriş Yap."
 	},
 
 	"SimulationPage": {

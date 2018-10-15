@@ -35,7 +35,7 @@ export class MakeAppointment_2Page {
 			title: 'Fotoğraf Yükle',
 			buttons: [
 				{
-					text: 'Kamera',
+					text: 'Camera',
 					icon: !this.platform.is('ios') ? 'camera' : null,
 					handler: () => {
 						this.takePicture1();
@@ -49,7 +49,7 @@ export class MakeAppointment_2Page {
 					}
 				},
 				{
-					text: 'Kapat',
+					text: 'Cancel',
 					icon: !this.platform.is('ios') ? 'close' : null,
 					role: 'destructive',
 					handler: () => {
@@ -67,7 +67,7 @@ export class MakeAppointment_2Page {
 			title: 'Fotoğraf Yükle',
 			buttons: [
 				{
-					text: 'Kamera',
+					text: 'Camera',
 					icon: !this.platform.is('ios') ? 'camera' : null,
 					handler: () => {
 						this.takePicture2();
@@ -81,7 +81,7 @@ export class MakeAppointment_2Page {
 					}
 				},
 				{
-					text: 'Kapat',
+					text: 'Cancel',
 					icon: !this.platform.is('ios') ? 'close' : null,
 					role: 'destructive',
 					handler: () => {
@@ -99,7 +99,7 @@ export class MakeAppointment_2Page {
 			title: 'Fotoğraf Yükle',
 			buttons: [
 				{
-					text: 'Kamera',
+					text: 'Camera',
 					icon: !this.platform.is('ios') ? 'camera' : null,
 					handler: () => {
 						this.takePicture3();
@@ -113,7 +113,7 @@ export class MakeAppointment_2Page {
 					}
 				},
 				{
-					text: 'Kapat',
+					text: 'Cancel',
 					icon: !this.platform.is('ios') ? 'close' : null,
 					role: 'destructive',
 					handler: () => {
@@ -131,7 +131,7 @@ export class MakeAppointment_2Page {
 			title: 'Fotoğraf Yükle',
 			buttons: [
 				{
-					text: 'Kamera',
+					text: 'Camera',
 					icon: !this.platform.is('ios') ? 'camera' : null,
 					handler: () => {
 						this.takePicture4();
@@ -145,7 +145,7 @@ export class MakeAppointment_2Page {
 					}
 				},
 				{
-					text: 'Kapat',
+					text: 'Cancel',
 					icon: !this.platform.is('ios') ? 'close' : null,
 					role: 'destructive',
 					handler: () => {
@@ -163,7 +163,7 @@ export class MakeAppointment_2Page {
 			title: 'Fotoğraf Yükle',
 			buttons: [
 				{
-					text: 'Kamera',
+					text: 'Camera',
 					icon: !this.platform.is('ios') ? 'camera' : null,
 					handler: () => {
 						this.takePicture5();
@@ -177,7 +177,7 @@ export class MakeAppointment_2Page {
 					}
 				},
 				{
-					text: 'Kapat',
+					text: 'Cancel',
 					icon: !this.platform.is('ios') ? 'close' : null,
 					role: 'destructive',
 					handler: () => {

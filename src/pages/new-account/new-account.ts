@@ -14,6 +14,7 @@ import { Http } from "@angular/http";
 export class NewAccountPage {
 
 	telephone: string;
+	checker = false;
 
 	constructor(public navCtrl: NavController,
 		public navParams: NavParams,

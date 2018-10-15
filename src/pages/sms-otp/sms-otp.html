@@ -15,9 +15,15 @@
 
 
 <ion-content padding>
-    <ion-card class="card-parent">
-        <img src="/assets/imgs/clearcepTelefon.png"/>
-    </ion-card>
+    <div padding text-center>
+        <div class="logo primary-bg">
+            <img src="/assets/imgs/loginDoktor.png"/>
+        </div>
+        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">
+          <!-- {{'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ' | translate}} -->
+          {{ 'NewAccountPage.ACTIVATION' | translate}}
+      </h5>
+      </div>
     <ion-item>
         <ion-label stacked>
             {{ 'SMS_OTP_Page.SMS_GELEN_SIFRE' | translate}}

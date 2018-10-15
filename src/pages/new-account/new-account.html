@@ -17,9 +17,15 @@
 
 <ion-content padding>
 
-    <ion-card class="card-parent">
-        <img src="/assets/imgs/clearcepTelefon.png"/>
-      </ion-card>
+      <div padding text-center>
+        <div class="logo primary-bg">
+            <img src="/assets/imgs/loginDoktor.png"/>
+        </div>
+        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">
+          <!-- {{'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ' | translate}} -->
+          {{ 'NewAccountPage.ACTIVATION' | translate}}
+      </h5>
+      </div>
 
     <ion-item>
         <ion-label style="font-weight: bold;">+90</ion-label>
@@ -28,14 +34,14 @@
     <br><br>
     <ion-item>
         <ion-label style="float:left;margin-right:8px;font-size: 14px">
-            Beyan ettiğim bilgilerin doğruluğunu ve <br>
-            <a>Clearfix</a>
-            üyelik kural ve koşullarını <br> kabul ediyorum.
+            {{ 'NewAccountPage.TERMS_RIGHTS1' | translate}} <br>
+            {{ 'NewAccountPage.TERMS_RIGHTS2' | translate}} <a>Clearfix</a> <br>
+            {{ 'NewAccountPage.TERMS_RIGHTS3' | translate}}
         </ion-label>
-        <ion-checkbox checked="true"></ion-checkbox>
+        <ion-checkbox checked="true" [(ngModel)]="checker"></ion-checkbox>
     </ion-item>
 
-      <button ion-button class="button-middle" (click)="sendSmsOTP()">
+      <button ion-button class="button-middle" [disabled]="!checker" (click)="sendSmsOTP()">
           {{ 'NewAccountPage.BTN_SEND_SMS' | translate}}
       </button>
 

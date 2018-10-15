@@ -12,7 +12,8 @@
 		"BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
 		"BTN_KATEGORILERE_GIT": "CATEGORIES",
 		"Sayin": "Dear",
-		"loader": "Please Wait ..."
+		"loader": "Please Wait ...",
+		"WELCOME": "Welcome to the Clearfix Mobile App"
 	},
 	"AboutPage": {
 		"BASLIK": "MY ACCOUNT",
@@ -70,7 +71,7 @@
 		"CINSIYETINIZ": "Gender",
 		"BAY": "Male",
 		"BAYAN": "Female",
-		"YASADINGINIZ_IL": "City",
+		"YASADIGINIZ_IL": "City",
 		"YASADIGINIZ_ILCE": "District",
 		"LUTFEN_YASADIGINIZ_ILCE": "Please write the district you reside",
 		"EK": "Do you want to add something",
@@ -113,8 +114,8 @@
 	"NewAccountPage": {
 		"TITLE": "CREATE NEW ACCOUNT",
 		"CLOSE": "Close",
-		"BTN_SEND_SMS": "SEND ACTIVATION CODE"
-
+		"BTN_SEND_SMS": "SEND ACTIVATION CODE",
+		"ACTIVATION":"An SMS For Activation Code Will Be Sent on Your Phone"
 	},
 
 	"PasswordPage": {

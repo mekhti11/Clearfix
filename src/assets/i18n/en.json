@@ -12,7 +12,8 @@
 		"BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
 		"BTN_KATEGORILERE_GIT": "CATEGORIES",
 		"Sayin": "Dear",
-		"loader": "Please Wait ..."
+		"loader": "Please Wait ...",
+		"WELCOME": "Welcome to the Clearfix Mobile App"
 	},
 	"AboutPage": {
 		"BASLIK": "MY ACCOUNT",
