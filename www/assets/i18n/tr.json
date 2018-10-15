@@ -147,8 +147,8 @@
 		"BTN_AKTIVASYONU_TAMAMLA": "AKTİVASYONU TAMAMLA",
 		"BTN_SIFREYI_TEKRAR_GONDER": "ŞİFREYİ TEKRAR GÖNDER",
 		"CLOSE": "Kapat",
-		"ACTIVATION_MESSAGE1":"Aktivasyon kodunu yanlış girdiniz!",
-		"ACTIVATION_MESSAGE2":"Aktivasyon kodunuz yeniden gönderildi."
+		"ACTIVATION_MESSAGE1":"",
+		"ACTIVATION_MESSAGE2":""
 	},
 
 	"SuccessActivationPage": {

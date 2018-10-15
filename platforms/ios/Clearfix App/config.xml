@@ -106,4 +106,10 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="CDVIonicKeyboard" />
     </feature>
+    <feature name="Badge">
+        <param name="ios-package" value="APPBadge" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="ios-package" value="APPLocalNotification" />
+    </feature>
 </widget>

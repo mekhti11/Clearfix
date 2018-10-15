@@ -24,6 +24,7 @@ export class TimerProgress {
   private transform;
   private percent;
   private fixTransform;
+  private plak_sayisi:number;
   constructor(private sanitizer: DomSanitizer, public http: Http) { 
     this.postDataLoad( (json_result) => {
       console.log(json_result);
@@ -39,10 +40,41 @@ export class TimerProgress {
       }
       
     });
+    this.getPlakSayisi();
   }
 
   ngOnInit() {
     
+  }
+
+  getPlakSayisi(){
+    this.postDataPlakSayisi((json_result) => {
+      console.log(json_result);
+      if(json_result['message'] === 'success') {
+        this.plak_sayisi = json_result['plak_sayisi'];
+        this.plak_sayisi++;          
+      }
+      else{
+        
+      }
+      
+    });
+  }
+
+  postDataPlakSayisi(callback) {
+    let formData = new FormData();
+
+    formData.append("action", "load");
+    formData.append("id", localStorage.getItem("id"));
+
+    this.http.post("http://www.clearfix.com.tr/clearfix_new_app/plak_sayisi.php", formData).subscribe(function response(res) {
+      var json_result = JSON.parse(res['_body']);
+      callback(json_result);
+    });
+  }
+
+  ifPhoto(){
+    //Eger (plak sayisi + 1 ) - 1 0'dan buyuk ve cift ise return true else return false 
   }
 
   hasFinished() {
@@ -68,8 +100,9 @@ export class TimerProgress {
       secondsRemaining: this.timeInSeconds
     };
 
-  this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
-  
+    this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsRemaining);
+    
+    //plak_sayisi++ ve db'e ekle 
   }
 
   startTimerWithoutPostDataSend() {
