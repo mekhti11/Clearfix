@@ -2764,6 +2764,13 @@ var TimerProgress = /** @class */ (function () {
                 _this.timer.hasFinished = true;
             }
         }, 1000);
+        if (this.timer.secondsRemaining == 0) {
+            this.notification.schedule([{
+                    id: 2,
+                    title: 'Clearfix',
+                    text: 'Plak değiştirmeniz gerekiyor.',
+                }]);
+        }
     };
     TimerProgress.prototype.getSecondsAsDigitalClock = function (inputSeconds) {
         var secNum = parseInt(inputSeconds.toString(), 10); // don't forget the second param
