@@ -1,4 +1,3 @@
-﻿ 
 {
 
 	"TabsPage": {
@@ -200,6 +199,7 @@
 		"KARGODA": "On Cargo",
 		"TAMAMLANMIS": "Done"
 	},
+	
 	"LISANS": {
 		"LISANSLI1":"I Hereby Accept that I Am a Licensed Dentist.",
 		"LISANSLI2":"I Hereby Accept the Validity of the information",
@@ -207,7 +207,4 @@
 		"LISANSLI4":"membership terms and conditions.",
 		"MARKA":"Clearfix"
 	}
-
-
-
 }
