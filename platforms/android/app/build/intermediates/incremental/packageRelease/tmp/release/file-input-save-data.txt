@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 16 19:19:17 EET 2018
+#Tue Oct 16 19:52:07 EET 2018
 60.set=ASSET
 52.set=ASSET
 53.base=/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/platforms/android/app/build/intermediates/merged_assets/release/mergeReleaseAssets/out
