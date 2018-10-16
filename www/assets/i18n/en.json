@@ -1,3 +1,4 @@
+﻿ 
 {
 
 	"TabsPage": {
@@ -108,13 +109,15 @@
 		"TITLE": "MAKE APPOINTMENT",
 		"BTN_RANDEVULARIMA_GIT": "Go to My Appointments",
 		"TEBRIKLER": "CONGRATULATIONS",
-		"RANDEVUNUZ_BASARLI": ">Your appointment has been created successfully."
+		"RANDEVUNUZ_BASARLI": "Your appointment has been created successfully."
 	},
 
 	"NewAccountPage": {
 		"TITLE": "CREATE NEW ACCOUNT",
 		"CLOSE": "Close",
-		"BTN_SEND_SMS": "SEND ACTIVATION CODE"
+		"BTN_SEND_SMS": "SEND ACTIVATION CODE",
+		"ACTIVATION":"An SMS for Activation Will be Sent to Your Phone. "
+
 
 	},
 
@@ -157,7 +160,8 @@
 
 	"SuccessActivationPage": {
 		"TITLE": "ACCOUNT ACTIVATION",
-		"BTN_BASLA": "START"
+		"BTN_BASLA": "START",
+		"COMPLETE":"Congratulations! Activation Process has been Completed."
 	},
 
 	"ContactPage": {
@@ -195,6 +199,13 @@
 		"PCT": "P.S.R",
 		"KARGODA": "On Cargo",
 		"TAMAMLANMIS": "Done"
+	},
+	"LISANS": {
+		"LISANSLI1":"I Hereby Accept that I Am a Licensed Dentist.",
+		"LISANSLI2":"I Hereby Accept the Validity of the information",
+		"LISANSLI3":"given and",
+		"LISANSLI4":"membership terms and conditions.",
+		"MARKA":"Clearfix"
 	}
 
 

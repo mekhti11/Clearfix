@@ -54,13 +54,15 @@
 
         <!--<p text-right ion-text color="light">Forgot Password?</p>-->
         <ion-checkbox  [(ngModel)]="chk1" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>
-        <ion-label >{{'RegisterDoctorPage.LICENSE' | translate}}
+        <ion-label >{{'LISANS.LISANSLI1' | translate}}
         </ion-label>
 
         <ion-checkbox  [(ngModel)]="chk2" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>
-        <ion-label>{{ 'NewAccountPage.TERMS_RIGHTS1' | translate}} <br>
-            {{ 'NewAccountPage.TERMS_RIGHTS2' | translate}} <a>Clearfix</a> <br>
-            {{ 'NewAccountPage.TERMS_RIGHTS3' | translate}}</ion-label>
+        <ion-label>{{ 'LISANS.LISANSLI2' | translate}} <br>
+
+            {{ 'LISANS.LISANSLI3' | translate}} <a>Clearfix</a> <br>
+            {{ 'LISANS.LISANSLI4' | translate}}</ion-label>
+
 
         <div margin-top="margin-top">
             <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword || !chk1 || !chk2 || pword != confirmation_pword   ">

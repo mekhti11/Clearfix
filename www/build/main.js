@@ -81,7 +81,7 @@ var ChatWithDoctorPage = /** @class */ (function () {
     };
     ChatWithDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >{{\'ChatWithDoctorPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== your_id"> <!-- burasi doktor attiginda sag gider mesaj -->\n\n              <div class="right-bubble">\n\n                <span class="msg-name">{{\'ChatWithDoctorPage.SEN\' | translate}}</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === your_id"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider -->\n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder=" {{ \'ChatWithDoctorPage.BIR_MESAJ_YAZ\' | translate }} "   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/,
+            selector: 'page-chat-with-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >{{\'ChatWithDoctorPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item no-lines *ngFor="let chat of chats"> <!---burada *ngFor olacak-->\n\n            <div class="chat-message" text-right *ngIf="chat.receiver_id !== your_id"> <!-- burasi doktor attiginda sag gider mesaj -->\n\n              <div class="right-bubble">\n\n                <span class="msg-name">{{\'ChatWithDoctorPage.SEN\' | translate}}</span> <!-- Yani doktor olacak burada -->\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n            <div class="chat-message" text-left *ngIf="chat.receiver_id === your_id"> <!-- *ngIf="chat.your_id !== 10" burasi hasta attiginda sola gider -->\n\n              <div class="left-bubble">\n\n                <span class="msg-name">{{chat.your_id}}</span>\n\n                <span class="msg-date">{{chat.date | date:\'short\'}}</span>\n\n                <p text-wrap> <b>{{chat.content}}</b></p>\n\n              </div>\n\n            </div>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col col-10>\n\n          <ion-input type="text" placeholder=" {{ \'ChatWithDoctorPage.BIR_MESAJ_YAZ\' | translate }} "   name="message" [(ngModel)]="message"></ion-input>\n\n        </ion-col>\n\n        <ion-col col-2 (click)="sendMessage()">\n\n          <ion-icon name="paper-plane"></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </ion-footer>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/chat-with-doctor/chat-with-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -103,7 +103,7 @@ var ChatWithDoctorPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_screen_orientation__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_screen_orientation__ = __webpack_require__(214);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -147,7 +147,7 @@ var SimulationPage = /** @class */ (function () {
     };
     SimulationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-simulation',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/simulation/simulation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >\n\n        {{\'SimulationPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen name="OnyxCephWebGL"></iframe>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/simulation/simulation.html"*/,
+            selector: 'page-simulation',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/simulation/simulation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >\n\n        {{\'SimulationPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <iframe class="iframe" [src]="sanitizer(vid)" frameborder="0"  allowfullscreen name="OnyxCephWebGL"></iframe>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/simulation/simulation.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_screen_orientation__["a" /* ScreenOrientation */]])
@@ -165,7 +165,7 @@ var SimulationPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_camera__ = __webpack_require__(222);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -275,7 +275,7 @@ var AppointmentsPage = /** @class */ (function () {
     };
     AppointmentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-appointments',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/appointments/appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'AppointmentPage.RANDEVULARIM\' | translate }}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card *ngIf="authority == \'0\'; else error" >\n\n  <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">\n\n    <ion-card-content >\n\n      <h2>{{ \'AppointmentPage.RANDEVU_NO\' | translate }} :  {{appointment.appointment_no}}</h2><br>\n\n      <h2>{{ \'AppointmentPage.RANDEVU_TARIHI\' | translate }} :  {{appointment.appointment_date}}</h2><br>\n\n      <h2>{{ \'AppointmentPage.RANDEVU_DURUMU\' | translate }} :  {{appointment.appointment_content}}</h2><br>\n\n    </ion-card-content>\n\n\n\n     <br>\n\n\n\n  </ion-card>\n\n\n\n</ion-card>\n\n\n\n<ng-template #error>\n\n    <ion-card >\n\n    <ion-card-content style="background-color:rgb(220, 241, 243);">\n\n      <b style="font-size:18px; color:rgb(75, 168, 211); ">{{\'AboutPage.IS_DOCTOR\' | translate}}</b>\n\n  </ion-card-content>\n\n</ion-card>\n\n  </ng-template>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/appointments/appointments.html"*/,
+            selector: 'page-appointments',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/appointments/appointments.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'AppointmentPage.RANDEVULARIM\' | translate }}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card *ngIf="authority == \'0\'; else error" >\n\n  <ion-card style="background-color:#EBEDEF;" *ngFor="let appointment of appointments">\n\n    <ion-card-content >\n\n      <h2>{{ \'AppointmentPage.RANDEVU_NO\' | translate }} :  {{appointment.appointment_no}}</h2><br>\n\n      <h2>{{ \'AppointmentPage.RANDEVU_TARIHI\' | translate }} :  {{appointment.appointment_date}}</h2><br>\n\n      <h2>{{ \'AppointmentPage.RANDEVU_DURUMU\' | translate }} :  {{appointment.appointment_content}}</h2><br>\n\n    </ion-card-content>\n\n\n\n     <br>\n\n\n\n  </ion-card>\n\n\n\n</ion-card>\n\n\n\n<ng-template #error>\n\n    <ion-card >\n\n    <ion-card-content style="background-color:rgb(220, 241, 243);">\n\n      <b style="font-size:18px; color:rgb(75, 168, 211); ">{{\'AboutPage.IS_DOCTOR\' | translate}}</b>\n\n  </ion-card-content>\n\n</ion-card>\n\n  </ng-template>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/appointments/appointments.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
@@ -294,7 +294,7 @@ var AppointmentsPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginDoctorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_doctor_register_doctor__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -382,7 +382,7 @@ var LoginDoctorPage = /** @class */ (function () {
     };
     LoginDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-doctor/login-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginDoctorPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding>\n\n\n\n        <!-- Logo -->\n\n        <div padding text-center>\n\n          <div class="logo primary-bg">\n\n              <img src="/assets/imgs/loginDoktor.png"/>\n\n          </div>\n\n          <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n            <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n            {{\'LoginUserPage.BTN_LOGIN\' | translate}}\n\n        </h5>\n\n        </div>\n\n     \n\n\n\n        <!-- Login form -->\n\n\n\n          <ion-item>\n\n\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginDoctorPage.EMAIL\' | translate}}</ion-label>\n\n\n\n            <ion-input type="email" [(ngModel)]="user_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginDoctorPage.PWORD\' | translate}}</ion-label>\n\n            <ion-input type="password" [(ngModel)]="pass_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n\n\n        <div margin-top>\n\n          <button ion-button block (click)="login()" class="button-middle">\n\n              {{ \'LoginDoctorPage.BTN_LOGIN\' | translate}}\n\n          </button>\n\n        </div>\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n          <span ion-text (click)="register()">{{ \'LoginDoctorPage.HESABIN_YOK_MU\' | translate}}<b>{{ \'LoginDoctorPage.KAYDOL\' | translate}}</b></span>\n\n        </div>\n\n      </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-doctor/login-doctor.html"*/,
+            selector: 'page-login-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/login-doctor/login-doctor.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginDoctorPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding>\n\n\n\n        <!-- Logo -->\n\n        <div padding text-center>\n\n          <div class="logo primary-bg">\n\n              <img src="/assets/imgs/loginDoktor.png"/>\n\n          </div>\n\n          <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n            <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n            {{\'LoginUserPage.BTN_LOGIN\' | translate}}\n\n        </h5>\n\n        </div>\n\n     \n\n\n\n        <!-- Login form -->\n\n\n\n          <ion-item>\n\n\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginDoctorPage.EMAIL\' | translate}}</ion-label>\n\n\n\n            <ion-input type="email" [(ngModel)]="user_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginDoctorPage.PWORD\' | translate}}</ion-label>\n\n            <ion-input type="password" [(ngModel)]="pass_data">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n\n\n        <div margin-top>\n\n          <button ion-button block (click)="login()" class="button-middle">\n\n              {{ \'LoginDoctorPage.BTN_LOGIN\' | translate}}\n\n          </button>\n\n        </div>\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n          <span ion-text (click)="register()">{{ \'LoginDoctorPage.HESABIN_YOK_MU\' | translate}}<b>{{ \'LoginDoctorPage.KAYDOL\' | translate}}</b></span>\n\n        </div>\n\n      </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/login-doctor/login-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -430,14 +430,14 @@ webpackEmptyAsyncContext.id = 165;
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -462,7 +462,7 @@ var TabsPage = /** @class */ (function () {
         this.tab4Root = __WEBPACK_IMPORTED_MODULE_4__appointments_appointments__["a" /* AppointmentsPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle=" {{ \'TabsPage.ANASAYFA\' | translate}}" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle=" {{ \'TabsPage.RANDAVULARIM\' | translate}}" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle=" {{ \'TabsPage.HESABIM\' | translate}}" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle=" {{ \'TabsPage.AYARLAR\' | translate}}" tabIcon="build"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/tabs/tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle=" {{ \'TabsPage.ANASAYFA\' | translate}}" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle=" {{ \'TabsPage.RANDAVULARIM\' | translate}}" tabIcon="calendar"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle=" {{ \'TabsPage.HESABIM\' | translate}}" tabIcon="person"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle=" {{ \'TabsPage.AYARLAR\' | translate}}" tabIcon="build"></ion-tab>\n\n\n\n</ion-tabs>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -473,14 +473,14 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_timer__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_timer__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__chat_with_doctor_chat_with_doctor__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__simulation_simulation__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
@@ -562,7 +562,7 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/about/about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{\'AboutPage.BASLIK\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == \'false\'; else loggedIn">{{\'AboutPage.GIRIS_YAP\' | translate}}</b>\n\n          <ng-template #loggedIn>\n\n              <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="authority == \'0\'; else isDoctor">{{\'AboutPage.BTNs\' | translate }}</b>\n\n          </ng-template>\n\n          <ng-template #isDoctor>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); ">{{\'AboutPage.IS_DOCTOR\' | translate}}</b>\n\n          </ng-template>\n\n          </ion-card-content>\n\n          \n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="chatWithDoctor()">{{\'AboutPage.BTN_CHAT_WITH_DOCTOR\' | translate}}</button>\n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="timer()">{{\'AboutPage.BTN_TIMER\' | translate}}</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/about/about.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{\'AboutPage.BASLIK\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        <ion-card style="background-color:rgb(220, 241, 243);">\n\n          <ion-card-content>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="isLoggedIn == \'false\'; else loggedIn">{{\'AboutPage.GIRIS_YAP\' | translate}}</b>\n\n          <ng-template #loggedIn>\n\n              <b style="font-size:18px; color:rgb(75, 168, 211); " *ngIf="authority == \'0\'; else isDoctor">{{\'AboutPage.BTNs\' | translate }}</b>\n\n          </ng-template>\n\n          <ng-template #isDoctor>\n\n            <b style="font-size:18px; color:rgb(75, 168, 211); ">{{\'AboutPage.IS_DOCTOR\' | translate}}</b>\n\n          </ng-template>\n\n          </ion-card-content>\n\n          \n\n        </ion-card>\n\n        </div>\n\n   \n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="chatWithDoctor()">{{\'AboutPage.BTN_CHAT_WITH_DOCTOR\' | translate}}</button>\n\n  <button ion-button *ngIf="authority == \'0\'" class="button-middle" (click)="timer()">{{\'AboutPage.BTN_TIMER\' | translate}}</button>\n\n  \n\n \n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__["c" /* TranslateService */]])
@@ -574,7 +574,7 @@ var AboutPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -603,7 +603,7 @@ var TimerPage = /** @class */ (function () {
     };
     TimerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-timer',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/timer/timer.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>\n\n        {{ \'TimerPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <timer-progress #countdownTimerProgress>\n\n    </timer-progress>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/timer/timer.html"*/,
+            selector: 'page-timer',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/timer/timer.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>\n\n        {{ \'TimerPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <timer-progress #countdownTimerProgress>\n\n    </timer-progress>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/timer/timer.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TimerPage);
@@ -614,7 +614,7 @@ var TimerPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -647,7 +647,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{ \'ContactPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-card >\n\n    <ion-item>\n\n        <ion-label>\n\n            {{ \'ContactPage.LNG\' | translate}}\n\n        </ion-label>\n\n        <ion-select [(ngModel)]="language" (ionChange)="changeLNG()"\n\n         okText="{{ \'ContactPage.OKAY\' | translate}}"\n\n         cancelText="{{ \'ContactPage.DISMISS\' | translate}}">\n\n          <ion-option value="en">English</ion-option>\n\n          <ion-option value="tr">Türkçe</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/contact/contact.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n      {{ \'ContactPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-card >\n\n    <ion-item>\n\n        <ion-label>\n\n            {{ \'ContactPage.LNG\' | translate}}\n\n        </ion-label>\n\n        <ion-select [(ngModel)]="language" (ionChange)="changeLNG()"\n\n         okText="{{ \'ContactPage.OKAY\' | translate}}"\n\n         cancelText="{{ \'ContactPage.DISMISS\' | translate}}">\n\n          <ion-option value="en">English</ion-option>\n\n          <ion-option value="tr">Türkçe</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
@@ -659,7 +659,7 @@ var ContactPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -667,7 +667,7 @@ var ContactPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -731,7 +731,7 @@ var NewAccountPage = /** @class */ (function () {
     };
     NewAccountPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-new-account',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'NewAccountPage.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         {{ \'NewAccountPage.CLOSE\' | translate}}\n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input>\n\n    </ion-item>\n\n    <br><br>\n\n    <ion-item>\n\n        <ion-label style="float:left;margin-right:8px;font-size: 14px">\n\n            {{ \'NewAccountPage.TERMS_RIGHTS1\' | translate}} <br>\n\n            {{ \'NewAccountPage.TERMS_RIGHTS2\' | translate}} <a>Clearfix</a> <br>\n\n            {{ \'NewAccountPage.TERMS_RIGHTS3\' | translate}}\n\n        </ion-label>\n\n        <ion-checkbox checked="true" [(ngModel)]="checker"></ion-checkbox>\n\n    </ion-item>\n\n\n\n      <button ion-button class="button-middle" [disabled]="!checker" (click)="sendSmsOTP()">\n\n          {{ \'NewAccountPage.BTN_SEND_SMS\' | translate}}\n\n      </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/new-account/new-account.html"*/,
+            selector: 'page-new-account',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'NewAccountPage.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         {{ \'NewAccountPage.CLOSE\' | translate}}\n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input>\n\n    </ion-item>\n\n    <br><br>\n\n    <ion-item>\n\n        <ion-label style="float:left;margin-right:8px;font-size: 14px">\n\n                {{ \'LISANS.LISANSLI2\' | translate}} <br>\n\n                {{ \'LISANS.LISANSLI3\' | translate}}\n\n                <a>{{ \'LISANS.MARKA\' | translate}}</a> <br>\n\n                {{ \'LISANS.LISANSLI4\' | translate}}\n\n        </ion-label>\n\n        <ion-checkbox checked="true" [(ngModel)]="checker"></ion-checkbox>\n\n    </ion-item>\n\n\n\n      <button ion-button class="button-middle" [disabled]="!checker" (click)="sendSmsOTP()">\n\n          {{ \'NewAccountPage.BTN_SEND_SMS\' | translate}}\n\n      </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/new-account/new-account.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -745,12 +745,12 @@ var NewAccountPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SmsOtpPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__password_password__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__password_password__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(29);
@@ -858,7 +858,7 @@ var SmsOtpPage = /** @class */ (function () {
     };
     SmsOtpPage = SmsOtpPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-sms-otp',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/sms-otp/sms-otp.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'SMS_OTP_Page.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n            {{ \'SMS_OTP_Page.CLOSE\' | translate}}\n\n        </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n    <ion-item>\n\n        <ion-label stacked>\n\n            {{ \'SMS_OTP_Page.SMS_GELEN_SIFRE\' | translate}}\n\n        <br></ion-label>\n\n        <ion-input type="text" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>\n\n    </ion-item>\n\n    <button ion-button class="button-middle" (click)="completeAppointment()">\n\n        {{ \'SMS_OTP_Page.BTN_AKTIVASYONU_TAMAMLA\' | translate}}\n\n    </button>\n\n    <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">\n\n        {{ \'SMS_OTP_Page.BTN_SIFREYI_TEKRAR_GONDER\' | translate}}\n\n    </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/sms-otp/sms-otp.html"*/,
+            selector: 'page-sms-otp',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/sms-otp/sms-otp.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'SMS_OTP_Page.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n            {{ \'SMS_OTP_Page.CLOSE\' | translate}}\n\n        </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n    <ion-item>\n\n        <ion-label stacked>\n\n            {{ \'SMS_OTP_Page.SMS_GELEN_SIFRE\' | translate}}\n\n        <br></ion-label>\n\n        <ion-input type="text" [(ngModel)]="activation_user" placeholder="XXXXXX"></ion-input>\n\n    </ion-item>\n\n    <button ion-button class="button-middle" (click)="completeAppointment()">\n\n        {{ \'SMS_OTP_Page.BTN_AKTIVASYONU_TAMAMLA\' | translate}}\n\n    </button>\n\n    <button ion-button class="button-middle" (click)="repeatTheSmsOTP()">\n\n        {{ \'SMS_OTP_Page.BTN_SIFREYI_TEKRAR_GONDER\' | translate}}\n\n    </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/sms-otp/sms-otp.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* AlertController */]])
     ], SmsOtpPage);
@@ -870,14 +870,14 @@ var SmsOtpPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success_activation_success_activation__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__success_activation_success_activation__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -913,7 +913,7 @@ var PasswordPage = /** @class */ (function () {
     };
     PasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-password',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/password/password.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>\n\n    {{ \'PasswordPage.TITLE\' | translate}}\n\n     </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <div padding text-center>\n\n    <div class="logo primary-bg">\n\n        <img src="/assets/imgs/loginDoktor.png"/>\n\n    </div>\n\n    <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n      <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n      {{ \'PasswordPage.SIFRENIZI_OLUSTURUNUZ\' | translate}}\n\n  </h5>\n\n  </div>\n\n    <form (ngSubmit)="loginUser()">\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'PasswordPage.PWORD\' | translate}}:</ion-label>\n\n          <ion-input type="password" [(ngModel)]=\'pword\' [ngModelOptions]="{standalone: true}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'PasswordPage.SIFRE_ONAYLAYINIZ\' | translate}}:</ion-label>\n\n            <ion-input type="password" [(ngModel)]=\'confirmation_pword\' [ngModelOptions]="{standalone: true}">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n              {{ \'PasswordPage.CONFIRMATION\' | translate}}\n\n          </p>\n\n          <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n          <div margin-top>\n\n            <button ion-button block class="button-middle" type="submit" [disabled]="!pword ||\n\n                        !confirmation_pword ||\n\n                        pword != confirmation_pword">\n\n              {{ \'PasswordPage.BTN_ONAYLA\' | translate}}\n\n            </button>\n\n          </div>\n\n        </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/password/password.html"*/,
+            selector: 'page-password',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/password/password.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>\n\n    {{ \'PasswordPage.TITLE\' | translate}}\n\n     </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <div padding text-center>\n\n    <div class="logo primary-bg">\n\n        <img src="/assets/imgs/loginDoktor.png"/>\n\n    </div>\n\n    <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n      <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n      {{ \'PasswordPage.SIFRENIZI_OLUSTURUNUZ\' | translate}}\n\n  </h5>\n\n  </div>\n\n    <form (ngSubmit)="loginUser()">\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'PasswordPage.PWORD\' | translate}}:</ion-label>\n\n          <ion-input type="password" [(ngModel)]=\'pword\' [ngModelOptions]="{standalone: true}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'PasswordPage.SIFRE_ONAYLAYINIZ\' | translate}}:</ion-label>\n\n            <ion-input type="password" [(ngModel)]=\'confirmation_pword\' [ngModelOptions]="{standalone: true}">\n\n            </ion-input>\n\n          </ion-item>\n\n\n\n          <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n              {{ \'PasswordPage.CONFIRMATION\' | translate}}\n\n          </p>\n\n          <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n          <div margin-top>\n\n            <button ion-button block class="button-middle" type="submit" [disabled]="!pword ||\n\n                        !confirmation_pword ||\n\n                        pword != confirmation_pword">\n\n              {{ \'PasswordPage.BTN_ONAYLA\' | translate}}\n\n            </button>\n\n          </div>\n\n        </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/password/password.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -927,12 +927,12 @@ var PasswordPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuccessActivationPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__make_appointment_1_make_appointment_1__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__make_appointment_1_make_appointment_1__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(6);
@@ -965,7 +965,7 @@ var SuccessActivationPage = /** @class */ (function () {
     };
     SuccessActivationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'page-success-activation',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/success-activation/success-activation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'SuccessActivationPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'SuccessActivationPage.COMPLETE\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <button ion-button class="button-middle" (click)="makeappointment()">\n\n        {{ \'SuccessActivationPage.BTN_BASLA\' | translate}}\n\n    </button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/success-activation/success-activation.html"*/,
+            selector: 'page-success-activation',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/success-activation/success-activation.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'SuccessActivationPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'SuccessActivationPage.COMPLETE\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <button ion-button class="button-middle" (click)="makeappointment()">\n\n        {{ \'SuccessActivationPage.BTN_BASLA\' | translate}}\n\n    </button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/success-activation/success-activation.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */]])
     ], SuccessActivationPage);
@@ -976,14 +976,14 @@ var SuccessActivationPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MakeAppointment_1Page; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__make_appointment_2_make_appointment_2__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1019,7 +1019,7 @@ var MakeAppointment_1Page = /** @class */ (function () {
     };
     MakeAppointment_1Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-make-appointment-1',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment1Page.TITLE\' | translate}} (1/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center>\n\n            {{\'MakeAppointment1Page.TEMEL_BILGILER\' | translate}}\n\n        </div>\n\n      </ion-card>\n\n\n\n\n\n        <ion-item>\n\n          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.ADINIZ\' | translate}}</ion-label>\n\n          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="{{ \'MakeAppointment1Page.LUTFEN_ADINIZI_YAZINIZ\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.SOYADINIZ\' | translate}}</ion-label>\n\n          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="">{{ \'MakeAppointment1Page.LUTEFN_SOYADINIZI_YAZINIZ\' | translate}}\n\n          </ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.EPOSTA_ADRESINIZ\' | translate}}</ion-label>\n\n          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="{{ \'MakeAppointment1Page.LUTFEN_EPOSTA\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.CINSIYETINIZ\' | translate}}</ion-label>\n\n            <ion-select [(ngModel)]="gender" name="gender" ngDefaultControl>\n\n              <ion-option value="male">{{ \'MakeAppointment1Page.BAY\' | translate}}</ion-option>\n\n              <ion-option value="female">{{ \'MakeAppointment1Page.BAYAN\' | translate}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.YASADINGINIZ_IL\' | translate}}</ion-label>\n\n            <ion-select [(ngModel)]="city" name="city" ngDefaultControl>\n\n              <ion-option value="Adana">Adana</ion-option>\n\n              <ion-option value="Adıyaman">Adıyaman</ion-option>\n\n              <ion-option value="Afyonkarahisar">Afyonkarahisar</ion-option>\n\n              <ion-option value="Ağrı">Ağrı</ion-option>\n\n              <ion-option value="Amasya">Amasya</ion-option>\n\n              <ion-option value="Ankara">Ankara</ion-option>\n\n              <ion-option value="Antalya">Antalya</ion-option>\n\n              <ion-option value="Artvin">Artvin</ion-option>\n\n              <ion-option value="Aydın">Aydın</ion-option>\n\n              <ion-option value="Balıkesir">Balıkesir</ion-option>\n\n              <ion-option value="Bilecik">Bilecik</ion-option>\n\n              <ion-option value="Bingöl">Bingöl</ion-option>\n\n              <ion-option value="Bitlis">Bitlis</ion-option>\n\n              <ion-option value="Bolu">Bolu</ion-option>\n\n              <ion-option value="Burdur">Burdur</ion-option>\n\n              <ion-option value="Bursa">Bursa</ion-option>\n\n              <ion-option value="Çanakkale">Çanakkale</ion-option>\n\n              <ion-option value="Çankırı">Çankırı</ion-option>\n\n              <ion-option value="Çorum">Çorum</ion-option>\n\n              <ion-option value="Denizli">Denizli</ion-option>\n\n              <ion-option value="Diyarbakır">Diyarbakır</ion-option>\n\n              <ion-option value="Edirne">Edirne</ion-option>\n\n              <ion-option value="Elazığ">Elazığ</ion-option>\n\n              <ion-option value="Erzincan">Erzincan</ion-option>\n\n              <ion-option value="Erzurum">Erzurum</ion-option>\n\n              <ion-option value="Eskişehir">Eskişehir</ion-option>\n\n              <ion-option value="Gaziantep">Gaziantep</ion-option>\n\n              <ion-option value="Giresun">Giresun</ion-option>\n\n              <ion-option value="Gümüşhane">Gümüşhane</ion-option>\n\n              <ion-option value="Hakkari">Hakkari</ion-option>\n\n              <ion-option value="Hatay">Hatay</ion-option>\n\n              <ion-option value="Isparta">Isparta</ion-option>\n\n              <ion-option value="Mersin">Mersin</ion-option>\n\n              <ion-option value="İstanbul">İstanbul</ion-option>\n\n              <ion-option value="İzmir">İzmir</ion-option>\n\n              <ion-option value="Kars">Kars</ion-option>\n\n              <ion-option value="Kastamonu">Kastamonu</ion-option>\n\n              <ion-option value="Kayseri">Kayseri</ion-option>\n\n              <ion-option value="Kırklareli">Kırklareli</ion-option>\n\n              <ion-option value="Kırşehir">Kırşehir</ion-option>\n\n              <ion-option value="Kocaeli">Kocaeli</ion-option>\n\n              <ion-option value="Konya">Konya</ion-option>\n\n              <ion-option value="Kütahya">Kütahya</ion-option>\n\n              <ion-option value="Malatya">Malatya</ion-option>\n\n              <ion-option value="Manisa">Manisa</ion-option>\n\n              <ion-option value="Kahramanmaraş">Kahramanmaraş</ion-option>\n\n              <ion-option value="Mardin">Mardin</ion-option>\n\n              <ion-option value="Muğla">Muğla</ion-option>\n\n              <ion-option value="Muş">Muş</ion-option>\n\n              <ion-option value="Nevşehir">Nevşehir</ion-option>\n\n              <ion-option value="Niğde">Niğde</ion-option>\n\n              <ion-option value="Ordu">Ordu</ion-option>\n\n              <ion-option value="Rize">Rize</ion-option>\n\n              <ion-option value="Sakarya">Sakarya</ion-option>\n\n              <ion-option value="Samsun">Samsun</ion-option>\n\n              <ion-option value="Siirt">Siirt</ion-option>\n\n              <ion-option value="Sinop">Sinop</ion-option>\n\n              <ion-option value="Sivas">Sivas</ion-option>\n\n              <ion-option value="Tekirdağ">Tekirdağ</ion-option>\n\n              <ion-option value="Tokat">Tokat</ion-option>\n\n              <ion-option value="Trabzon">Trabzon</ion-option>\n\n              <ion-option value="Tunceli">Tunceli</ion-option>\n\n              <ion-option value="Şanlıurfa">Şanlıurfa</ion-option>\n\n              <ion-option value="Uşak">Uşak</ion-option>\n\n              <ion-option value="Van">Van</ion-option>\n\n              <ion-option value="Yozgat">Yozgat</ion-option>\n\n              <ion-option value="Zonguldak">Zonguldak</ion-option>\n\n              <ion-option value="Aksaray">Aksaray</ion-option>\n\n              <ion-option value="Bayburt">Bayburt</ion-option>\n\n              <ion-option value="Karaman">Karaman</ion-option>\n\n              <ion-option value="Kırıkkale">Kırıkkale</ion-option>\n\n              <ion-option value="Batman">Batman</ion-option>\n\n              <ion-option value="Şırnak">Şırnak</ion-option>\n\n              <ion-option value="Bartın">Bartın</ion-option>\n\n              <ion-option value="Ardahan">Ardahan</ion-option>\n\n              <ion-option value="Iğdır">Iğdır</ion-option>\n\n              <ion-option value="Yalova">Yalova</ion-option>\n\n              <ion-option value="Karabük">Karabük</ion-option>\n\n              <ion-option value="Kilis">Kilis</ion-option>\n\n              <ion-option value="Osmaniye">Osmaniye</ion-option>\n\n              <ion-option value="Düzce">Düzce</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        </ion-list>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.YASADIGINIZ_ILCE\' | translate}}\n\n          </ion-label>\n\n          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="{{ \'MakeAppointment1Page.LUTFEN_YASADIGINIZ_ILCE\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.EK\' | translate}}</ion-label>\n\n          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="{{ \'MakeAppointment1Page.EKLEMEK_ISTEDIKLERINIZ\' | translate}}"></ion-textarea>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">{{ \'MakeAppointment1Page.BTN_SONRAKI\' | translate}}</button>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/,
+            selector: 'page-make-appointment-1',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment1Page.TITLE\' | translate}} (1/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center>\n\n            {{\'MakeAppointment1Page.TEMEL_BILGILER\' | translate}}\n\n        </div>\n\n      </ion-card>\n\n\n\n\n\n        <ion-item>\n\n          <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.ADINIZ\' | translate}}</ion-label>\n\n          <ion-input type="text" [(ngModel)]="name" name="name" placeholder="{{ \'MakeAppointment1Page.LUTFEN_ADINIZI_YAZINIZ\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.SOYADINIZ\' | translate}}</ion-label>\n\n          <ion-input type="text" [(ngModel)]="surname" name="surname" placeholder="">{{ \'MakeAppointment1Page.LUTEFN_SOYADINIZI_YAZINIZ\' | translate}}\n\n          </ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.EPOSTA_ADRESINIZ\' | translate}}</ion-label>\n\n          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="{{ \'MakeAppointment1Page.LUTFEN_EPOSTA\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'MakeAppointment1Page.CINSIYETINIZ\' | translate}}</ion-label>\n\n            <ion-select [(ngModel)]="gender" name="gender" ngDefaultControl>\n\n              <ion-option value="male">{{ \'MakeAppointment1Page.BAY\' | translate}}</ion-option>\n\n              <ion-option value="female">{{ \'MakeAppointment1Page.BAYAN\' | translate}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n\n\n          <ion-item>\n\n            <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.YASADINGINIZ_IL\' | translate}}</ion-label>\n\n            <ion-select [(ngModel)]="city" name="city" ngDefaultControl>\n\n              <ion-option value="Adana">Adana</ion-option>\n\n              <ion-option value="Adıyaman">Adıyaman</ion-option>\n\n              <ion-option value="Afyonkarahisar">Afyonkarahisar</ion-option>\n\n              <ion-option value="Ağrı">Ağrı</ion-option>\n\n              <ion-option value="Amasya">Amasya</ion-option>\n\n              <ion-option value="Ankara">Ankara</ion-option>\n\n              <ion-option value="Antalya">Antalya</ion-option>\n\n              <ion-option value="Artvin">Artvin</ion-option>\n\n              <ion-option value="Aydın">Aydın</ion-option>\n\n              <ion-option value="Balıkesir">Balıkesir</ion-option>\n\n              <ion-option value="Bilecik">Bilecik</ion-option>\n\n              <ion-option value="Bingöl">Bingöl</ion-option>\n\n              <ion-option value="Bitlis">Bitlis</ion-option>\n\n              <ion-option value="Bolu">Bolu</ion-option>\n\n              <ion-option value="Burdur">Burdur</ion-option>\n\n              <ion-option value="Bursa">Bursa</ion-option>\n\n              <ion-option value="Çanakkale">Çanakkale</ion-option>\n\n              <ion-option value="Çankırı">Çankırı</ion-option>\n\n              <ion-option value="Çorum">Çorum</ion-option>\n\n              <ion-option value="Denizli">Denizli</ion-option>\n\n              <ion-option value="Diyarbakır">Diyarbakır</ion-option>\n\n              <ion-option value="Edirne">Edirne</ion-option>\n\n              <ion-option value="Elazığ">Elazığ</ion-option>\n\n              <ion-option value="Erzincan">Erzincan</ion-option>\n\n              <ion-option value="Erzurum">Erzurum</ion-option>\n\n              <ion-option value="Eskişehir">Eskişehir</ion-option>\n\n              <ion-option value="Gaziantep">Gaziantep</ion-option>\n\n              <ion-option value="Giresun">Giresun</ion-option>\n\n              <ion-option value="Gümüşhane">Gümüşhane</ion-option>\n\n              <ion-option value="Hakkari">Hakkari</ion-option>\n\n              <ion-option value="Hatay">Hatay</ion-option>\n\n              <ion-option value="Isparta">Isparta</ion-option>\n\n              <ion-option value="Mersin">Mersin</ion-option>\n\n              <ion-option value="İstanbul">İstanbul</ion-option>\n\n              <ion-option value="İzmir">İzmir</ion-option>\n\n              <ion-option value="Kars">Kars</ion-option>\n\n              <ion-option value="Kastamonu">Kastamonu</ion-option>\n\n              <ion-option value="Kayseri">Kayseri</ion-option>\n\n              <ion-option value="Kırklareli">Kırklareli</ion-option>\n\n              <ion-option value="Kırşehir">Kırşehir</ion-option>\n\n              <ion-option value="Kocaeli">Kocaeli</ion-option>\n\n              <ion-option value="Konya">Konya</ion-option>\n\n              <ion-option value="Kütahya">Kütahya</ion-option>\n\n              <ion-option value="Malatya">Malatya</ion-option>\n\n              <ion-option value="Manisa">Manisa</ion-option>\n\n              <ion-option value="Kahramanmaraş">Kahramanmaraş</ion-option>\n\n              <ion-option value="Mardin">Mardin</ion-option>\n\n              <ion-option value="Muğla">Muğla</ion-option>\n\n              <ion-option value="Muş">Muş</ion-option>\n\n              <ion-option value="Nevşehir">Nevşehir</ion-option>\n\n              <ion-option value="Niğde">Niğde</ion-option>\n\n              <ion-option value="Ordu">Ordu</ion-option>\n\n              <ion-option value="Rize">Rize</ion-option>\n\n              <ion-option value="Sakarya">Sakarya</ion-option>\n\n              <ion-option value="Samsun">Samsun</ion-option>\n\n              <ion-option value="Siirt">Siirt</ion-option>\n\n              <ion-option value="Sinop">Sinop</ion-option>\n\n              <ion-option value="Sivas">Sivas</ion-option>\n\n              <ion-option value="Tekirdağ">Tekirdağ</ion-option>\n\n              <ion-option value="Tokat">Tokat</ion-option>\n\n              <ion-option value="Trabzon">Trabzon</ion-option>\n\n              <ion-option value="Tunceli">Tunceli</ion-option>\n\n              <ion-option value="Şanlıurfa">Şanlıurfa</ion-option>\n\n              <ion-option value="Uşak">Uşak</ion-option>\n\n              <ion-option value="Van">Van</ion-option>\n\n              <ion-option value="Yozgat">Yozgat</ion-option>\n\n              <ion-option value="Zonguldak">Zonguldak</ion-option>\n\n              <ion-option value="Aksaray">Aksaray</ion-option>\n\n              <ion-option value="Bayburt">Bayburt</ion-option>\n\n              <ion-option value="Karaman">Karaman</ion-option>\n\n              <ion-option value="Kırıkkale">Kırıkkale</ion-option>\n\n              <ion-option value="Batman">Batman</ion-option>\n\n              <ion-option value="Şırnak">Şırnak</ion-option>\n\n              <ion-option value="Bartın">Bartın</ion-option>\n\n              <ion-option value="Ardahan">Ardahan</ion-option>\n\n              <ion-option value="Iğdır">Iğdır</ion-option>\n\n              <ion-option value="Yalova">Yalova</ion-option>\n\n              <ion-option value="Karabük">Karabük</ion-option>\n\n              <ion-option value="Kilis">Kilis</ion-option>\n\n              <ion-option value="Osmaniye">Osmaniye</ion-option>\n\n              <ion-option value="Düzce">Düzce</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n        </ion-list>\n\n\n\n        <ion-item>\n\n          <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.YASADIGINIZ_ILCE\' | translate}}\n\n          </ion-label>\n\n          <ion-input type="text" [(ngModel)]="district" name="district" placeholder="{{ \'MakeAppointment1Page.LUTFEN_YASADIGINIZ_ILCE\' | translate}}"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment1Page.EK\' | translate}}</ion-label>\n\n          <ion-textarea rows="4" [(ngModel)]="text" name="text" autosize placeholder="{{ \'MakeAppointment1Page.EKLEMEK_ISTEDIKLERINIZ\' | translate}}"></ion-textarea>\n\n        </ion-item>\n\n        <button ion-button class="button-middle" (click)="nextStep_1()"  [disabled]="!name || !surname || !email || !gender || !city || !district">{{ \'MakeAppointment1Page.BTN_SONRAKI\' | translate}}</button>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-1/make-appointment-1.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
     ], MakeAppointment_1Page);
@@ -1030,7 +1030,7 @@ var MakeAppointment_1Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1038,7 +1038,7 @@ var MakeAppointment_1Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__make_appointment_3_make_appointment_3__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__make_appointment_3_make_appointment_3__ = __webpack_require__(223);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1359,7 +1359,7 @@ var MakeAppointment_2Page = /** @class */ (function () {
     };
     MakeAppointment_2Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-make-appointment-2',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment2Page.TITLE\' | translate}} (2/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n            <h1 class="h1">{{ \'MakeAppointment2Page.FOTOGRAF_YUKLEME\' | translate}}\n\n            </h1><br>\n\n            {{ \'MakeAppointment2Page.FOTOGRAFLARINIZI_CEKINIZ\' | translate}}\n\n        </div>\n\n      </ion-card>  <br><br>\n\n      <h5 class="h5">\n\n          1. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}\n\n      </h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim1.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture1()">1. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">2. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim3.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture2()">2. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">3. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim2.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                    <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture3()">3. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">4. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim4.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                     <img [src]="chosenPicture4"  onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture4()">4. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">5. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim5.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                <ion-avatar >\n\n                   <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture5()">5. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br><br><br>\n\n        <button ion-button class="button-nextStep" (click)="nextStep_2()">{{ \'MakeAppointment2Page.BTN_NEXT\' | translate}}</button>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/,
+            selector: 'page-make-appointment-2',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment2Page.TITLE\' | translate}} (2/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n            <h1 class="h1">{{ \'MakeAppointment2Page.FOTOGRAF_YUKLEME\' | translate}}\n\n            </h1><br>\n\n            {{ \'MakeAppointment2Page.FOTOGRAFLARINIZI_CEKINIZ\' | translate}}\n\n        </div>\n\n      </ion-card>  <br><br>\n\n      <h5 class="h5">\n\n          1. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}\n\n      </h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim1.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture1()">1. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">2. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim3.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                   <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture2()">2. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">3. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim2.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                    <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture3()">3. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">4. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim4.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <ion-avatar >\n\n                     <img [src]="chosenPicture4"  onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                  </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture4()">4. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br>\n\n        <h5 class="h5">5. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</h5>\n\n      <ion-grid>\n\n          <ion-row center>\n\n            <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                  <img src="/assets/imgs/resim5.png"/>\n\n              </ion-card>\n\n          </ion-col>\n\n          <ion-col col-6 no-padding>\n\n              <ion-card>\n\n                <ion-avatar >\n\n                   <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                </ion-avatar>\n\n              </ion-card>\n\n        </ion-col>\n\n          </ion-row>\n\n        </ion-grid>\n\n        <button ion-button class="button-middle" (click)="changePicture5()">5. {{ \'MakeAppointment2Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n        <br><br><br><br>\n\n        <button ion-button class="button-nextStep" (click)="nextStep_2()">{{ \'MakeAppointment2Page.BTN_NEXT\' | translate}}</button>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-2/make-appointment-2.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -1375,7 +1375,7 @@ var MakeAppointment_2Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1384,7 +1384,7 @@ var MakeAppointment_2Page = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__make_appointment_4_make_appointment_4__ = __webpack_require__(224);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1737,7 +1737,7 @@ var MakeAppointment_3Page = /** @class */ (function () {
     };
     MakeAppointment_3Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-make-appointment-3',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment3Page.TITLE\' | translate}} (3/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n          <h1 class="h1">{{ \'MakeAppointment3Page.BILGILERINIZI_KONTROL\' | translate}} </h1>\n\n        <br>{{ \'MakeAppointment3Page.LUTFEN_BILGILERINIZI_SON_KEZ\' | translate}}</div>\n\n    </ion-card><br><br>\n\n\n\n\n\n        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.ADINIZ\' | translate}}</ion-label>\n\n        <h5>{{name}}</h5>\n\n\n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">{{ \'MakeAppointment3Page.SOYADINIZ\' | translate}}</ion-label>\n\n        <h5>{{surname}}</h5>\n\n\n\n\n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.EPOSTA_ADRESINIZ\' | translate}}</ion-label>\n\n        <h5>{{email}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.CINSIYETINIZ\' | translate}}</ion-label>\n\n        <h5>{{gender}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.YASADIGINIZ_IL\' | translate}}</ion-label>\n\n        <h5>{{city}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.YASADIGINIZ_ILCE\' | translate}}</ion-label>\n\n        <h5>{{district}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.EK\' | translate}}</ion-label>\n\n        <h5>{{text}}</h5>\n\n\n\n        <h5 class="h5">1. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim1.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture1()">1. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">2. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim3.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture2()">2. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">3. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim2.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture3()">3. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">4. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim4.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                      <img [src]="chosenPicture4" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                   </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture4()">4. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">5. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim5.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                       <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture5()">5. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br><br><br>\n\n\n\n          <button ion-button class="button-edit-information" (click)="create_appointment()">{{\'MakeAppointment3Page.BTN_RANDEVUYU_OLUSTUR\' | translate}}</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/,
+            selector: 'page-make-appointment-3',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment3Page.TITLE\' | translate}} (3/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <div class="card-title" text-center><br>\n\n          <h1 class="h1">{{ \'MakeAppointment3Page.BILGILERINIZI_KONTROL\' | translate}} </h1>\n\n        <br>{{ \'MakeAppointment3Page.LUTFEN_BILGILERINIZI_SON_KEZ\' | translate}}</div>\n\n    </ion-card><br><br>\n\n\n\n\n\n        <ion-label stacked  style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.ADINIZ\' | translate}}</ion-label>\n\n        <h5>{{name}}</h5>\n\n\n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221); ">{{ \'MakeAppointment3Page.SOYADINIZ\' | translate}}</ion-label>\n\n        <h5>{{surname}}</h5>\n\n\n\n\n\n        <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.EPOSTA_ADRESINIZ\' | translate}}</ion-label>\n\n        <h5>{{email}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.CINSIYETINIZ\' | translate}}</ion-label>\n\n        <h5>{{gender}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.YASADIGINIZ_IL\' | translate}}</ion-label>\n\n        <h5>{{city}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.YASADIGINIZ_ILCE\' | translate}}</ion-label>\n\n        <h5>{{district}}</h5>\n\n\n\n        <ion-label style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'MakeAppointment3Page.EK\' | translate}}</ion-label>\n\n        <h5>{{text}}</h5>\n\n\n\n        <h5 class="h5">1. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim1.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture1" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture1()">1. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">2. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim3.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture2" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture2()">2. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">3. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim2.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                        <img [src]="chosenPicture3" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture3()">3. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">4. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim4.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                      <img [src]="chosenPicture4" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                   </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture4()">4. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br>\n\n          <h5 class="h5">5. {{\'MakeAppointment3Page.FOTOGRAF\' | translate}} </h5>\n\n        <ion-grid>\n\n            <ion-row center>\n\n              <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <img src="/assets/imgs/resim5.png"/>\n\n                </ion-card>\n\n            </ion-col>\n\n            <ion-col col-6 no-padding>\n\n                <ion-card>\n\n                    <ion-avatar >\n\n                       <img [src]="chosenPicture5" onerror="this.src=\'/assets/imgs/picture.png\'" />\n\n                    </ion-avatar>\n\n                </ion-card>\n\n          </ion-col>\n\n            </ion-row>\n\n          </ion-grid>\n\n          <button ion-button class="button-middle" (click)="changePicture5()">5. {{\'MakeAppointment3Page.FOTOGRAF_EKLE\' | translate}}</button>\n\n          <br><br><br><br>\n\n\n\n          <button ion-button class="button-edit-information" (click)="create_appointment()">{{\'MakeAppointment3Page.BTN_RANDEVUYU_OLUSTUR\' | translate}}</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-3/make-appointment-3.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__app_providers_camera_provider__["a" /* CameraProvider */],
@@ -1753,7 +1753,7 @@ var MakeAppointment_3Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1786,7 +1786,7 @@ var MakeAppointment_4Page = /** @class */ (function () {
     };
     MakeAppointment_4Page = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-make-appointment-4',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment4Page.TITLE\' | translate}} (4/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br>{{ \'MakeAppointment4Page.TEBRIKLER\' | translate}}<br>{{ \'MakeAppointment4Page.RANDEVUNUZ_BASARLI\' | translate}} </div>\n\n      </ion-card>\n\n      <br><br>\n\n      <button ion-button class="button-middle" (click)="appointments()">{{ \'MakeAppointment4Page.BTN_RANDEVULARIMA_GIT\' | translate}}</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/,
+            selector: 'page-make-appointment-4',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'MakeAppointment4Page.TITLE\' | translate}} (4/4)</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-card class="card-parent">\n\n        <img src="/assets/imgs/clearfix.png"/>\n\n        <div class="card-title" text-center> <br>{{ \'MakeAppointment4Page.TEBRIKLER\' | translate}}<br>{{ \'MakeAppointment4Page.RANDEVUNUZ_BASARLI\' | translate}} </div>\n\n      </ion-card>\n\n      <br><br>\n\n      <button ion-button class="button-middle" (click)="appointments()">{{ \'MakeAppointment4Page.BTN_RANDEVULARIMA_GIT\' | translate}}</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/make-appointment-4/make-appointment-4.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
     ], MakeAppointment_4Page);
@@ -1797,7 +1797,7 @@ var MakeAppointment_4Page = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 224:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1889,7 +1889,7 @@ var LoginUserPage = /** @class */ (function () {
     };
     LoginUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-login-user',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginUserPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n          <div padding text-center>\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n               {{\'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              \n\n          </h5>\n\n          </div>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.TEL\' | translate}}</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.PWORD\' | translate}}:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n\n\n\n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                {{ \'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              </button>\n\n            </div>\n\n\n\n\n\n</ion-content>\n\ns'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/login-user/login-user.html"*/,
+            selector: 'page-login-user',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/login-user/login-user.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>{{ \'LoginUserPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n          <div padding text-center>\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n               {{\'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              \n\n          </h5>\n\n          </div>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.TEL\' | translate}}</ion-label>\n\n                <ion-input [(ngModel)]="user_data" type="text" >\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_user}}</ion-label>\n\n              </ion-item>\n\n\n\n              <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{ \'LoginUserPage.PWORD\' | translate}}:</ion-label>\n\n                <ion-input [(ngModel)]="pass_data" type="password">\n\n                </ion-input>\n\n                <ion-label style="font-size:14px; color:red">{{warning_pass}}</ion-label>\n\n              </ion-item>\n\n\n\n\n\n            <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n            <div margin-top>\n\n              <button (click)="userLogin()" ion-button block class="button-middle" type="submit">\n\n                {{ \'LoginUserPage.BTN_LOGIN\' | translate}}\n\n              </button>\n\n            </div>\n\n\n\n\n\n</ion-content>\n\ns'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/login-user/login-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */],
@@ -1903,7 +1903,7 @@ var LoginUserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1993,7 +1993,7 @@ var RegisterDoctorPage = /** @class */ (function () {
     };
     RegisterDoctorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register-doctor',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/register-doctor/register-doctor.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="tabColor">\n\n        <ion-title text-center>\n\n            {{\'RegisterDoctorPage.TITLE\' | translate}}\n\n        </ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding="padding">\n\n        <!--logo-->\n\n        <div padding text-center="text-center">\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n                {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}}\n\n            </h5>\n\n        </div>\n\n        <!-- Login form -->\n\n        <ion-list class="list-form list-no-border">\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.NAME\' | translate}}</ion-label>\n\n                <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.KULLANICI_AD\' | translate}}</ion-label>\n\n                <ion-input type="text" [(ngModel)]="uname"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.EMAIL\' | translate}}</ion-label>\n\n                <ion-input type="email" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.PWORD\' | translate}}</ion-label>\n\n                <ion-input type="password" [(ngModel)]="pword"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.SIFRE_ONAYLAYINIZ\' | translate}}</ion-label>\n\n                <ion-input type="password" [(ngModel)]="confirmation_pword"></ion-input>\n\n\n\n            </ion-item>\n\n            <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n\n\n                {{\'RegisterDoctorPage.CONFIRMATION\' | translate}}\n\n            </p>\n\n        </ion-list>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n        <ion-checkbox  [(ngModel)]="chk1" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label >{{\'RegisterDoctorPage.LICENSE\' | translate}}\n\n        </ion-label>\n\n\n\n        <ion-checkbox  [(ngModel)]="chk2" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label>{{ \'NewAccountPage.TERMS_RIGHTS1\' | translate}} <br>\n\n            {{ \'NewAccountPage.TERMS_RIGHTS2\' | translate}} <a>Clearfix</a> <br>\n\n            {{ \'NewAccountPage.TERMS_RIGHTS3\' | translate}}</ion-label>\n\n\n\n        <div margin-top="margin-top">\n\n            <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword || !chk1 || !chk2 || pword != confirmation_pword   ">\n\n                {{\'RegisterDoctorPage.BTN_KAYDOL\' | translate}}\n\n            </button>\n\n        </div>\n\n\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n            <span ion-text (click)="login()">\n\n                {{\'RegisterDoctorPage.HESABIN_VAR_MI\' | translate}}\n\n            </span>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/register-doctor/register-doctor.html"*/,
+            selector: 'page-register-doctor',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/register-doctor/register-doctor.html"*/'<ion-header>\n\n\n\n    <ion-navbar color="tabColor">\n\n        <ion-title text-center>\n\n            {{\'RegisterDoctorPage.TITLE\' | translate}}\n\n        </ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div col-lg-4 class="login-content card" padding="padding">\n\n        <!--logo-->\n\n        <div padding text-center="text-center">\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n                {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}}\n\n            </h5>\n\n        </div>\n\n        <!-- Login form -->\n\n        <ion-list class="list-form list-no-border">\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.NAME\' | translate}}</ion-label>\n\n                <ion-input type="text" [(ngModel)]="name" required="required"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.KULLANICI_AD\' | translate}}</ion-label>\n\n                <ion-input type="text" [(ngModel)]="uname"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.EMAIL\' | translate}}</ion-label>\n\n                <ion-input type="email" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.PWORD\' | translate}}</ion-label>\n\n                <ion-input type="password" [(ngModel)]="pword"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label stacked style="font-size:18px; font-weight: bold; color:rgb(101, 183, 221);">{{\'RegisterDoctorPage.SIFRE_ONAYLAYINIZ\' | translate}}</ion-label>\n\n                <ion-input type="password" [(ngModel)]="confirmation_pword"></ion-input>\n\n\n\n            </ion-item>\n\n            <p *ngIf="pword != confirmation_pword &&  confirmation_pword " style="font-size: 12px;color: red">\n\n\n\n                {{\'RegisterDoctorPage.CONFIRMATION\' | translate}}\n\n            </p>\n\n        </ion-list>\n\n\n\n        <!--<p text-right ion-text color="light">Forgot Password?</p>-->\n\n        <ion-checkbox  [(ngModel)]="chk1" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label >{{\'LISANS.LISANSLI1\' | translate}}\n\n        </ion-label>\n\n\n\n        <ion-checkbox  [(ngModel)]="chk2" style="float:left;margin-right:8px; color:rgb(101, 183, 221);"></ion-checkbox>\n\n        <ion-label>{{ \'LISANS.LISANSLI2\' | translate}} <br>\n\n\n\n            {{ \'LISANS.LISANSLI3\' | translate}} <a>Clearfix</a> <br>\n\n            {{ \'LISANS.LISANSLI4\' | translate}}</ion-label>\n\n\n\n\n\n        <div margin-top="margin-top">\n\n            <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword || !chk1 || !chk2 || pword != confirmation_pword   ">\n\n                {{\'RegisterDoctorPage.BTN_KAYDOL\' | translate}}\n\n            </button>\n\n        </div>\n\n\n\n        <!-- Other links -->\n\n        <div text-center margin-top>\n\n            <span ion-text (click)="login()">\n\n                {{\'RegisterDoctorPage.HESABIN_VAR_MI\' | translate}}\n\n            </span>\n\n        </div>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/register-doctor/register-doctor.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -2008,14 +2008,14 @@ var RegisterDoctorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 226:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__id_list_id_list__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2068,7 +2068,7 @@ var CategoryPage = /** @class */ (function () {
     };
     CategoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-category',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/category/category.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'CategoryPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-grid >\n\n        <ion-row>\n\n          <ion-col col-6>\n\n\n\n           <ion-card class="cardColor" (click)="userList(0)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="list-box" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center>\n\n                    <b class="bfont">\n\n                        {{ \'CategoryPage.TUM_VAKALAR\' | translate}}\n\n                    </b>\n\n                </h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[0]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n\n\n        </ion-col>\n\n        <ion-col col-6>\n\n            <ion-card class="cardColor" (click)="userList(1)">\n\n                <div class="divIcon">\n\n                    <ion-icon name="custom-ruler" color="tabColor"></ion-icon>\n\n                </div>\n\n                <div>\n\n                    <h3 text-center>\n\n                        <b class="bfont">\n\n                            {{ \'CategoryPage.OLCULER\' | translate}}\n\n                        </b>\n\n                    </h3>\n\n                </div>\n\n                <div>\n\n                  <br>\n\n                  <h1 text-center><b>{{rows[1]}}</b></h1>\n\n                </div>\n\n             </ion-card>\n\n      </ion-col >\n\n      <ion-col col-6>\n\n          <ion-card class="cardColor" (click)="userList(2)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="qr-scanner" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center>\n\n                    <b class="bfont">\n\n                        {{ \'CategoryPage.TARAMA\' | translate}}\n\n                    </b>\n\n                </h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[2]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n    </ion-col >\n\n    <ion-col col-6>\n\n        <ion-card class="cardColor" (click)="userList(3)">\n\n            <div class="divIcon">\n\n                <ion-icon name="custom-register" color="tabColor"></ion-icon>\n\n\n\n            </div>\n\n            <div>\n\n              <h3 text-center><b class="bfont">\n\n                  {{ \'CategoryPage.KAYIT\' | translate}}\n\n              </b></h3>\n\n            </div>\n\n            <div>\n\n              <br>\n\n              <h1 text-center><b>{{rows[3]}}</b></h1>\n\n            </div>\n\n         </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(4)">\n\n          <div class="divIcon">\n\n              <ion-icon name="cog" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Set-Up</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[4]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(5)">\n\n          <div class="divIcon">\n\n              <ion-icon name="custom-plan" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.PLANLAMA\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[5]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(6)">\n\n          <div class="divIcon">\n\n              <ion-icon name="log-out" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Export</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[6]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(7)">\n\n          <div class="divIcon">\n\n              <ion-icon name="color-fill" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.PCT\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[7]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n    <ion-card class="cardColor" (click)="userList(8)">\n\n        <div class="divIcon">\n\n            <ion-icon name="custom-truck" color="tabColor"></ion-icon>\n\n        </div>\n\n        <div>\n\n          <h3 text-center><b class="bfont">\n\n              {{ \'CategoryPage.KARGODA\' | translate}}\n\n          </b></h3>\n\n        </div>\n\n        <div>\n\n          <br>\n\n          <h1 text-center><b>{{rows[8]}}</b></h1>\n\n        </div>\n\n     </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(9)">\n\n          <div class="divIcon">\n\n              <ion-icon name="checkbox" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.TAMAMLANMIS\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[9]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n    </ion-col >\n\n        </ion-row>\n\n      </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/category/category.html"*/,
+            selector: 'page-category',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/category/category.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'CategoryPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-grid >\n\n        <ion-row>\n\n          <ion-col col-6>\n\n\n\n           <ion-card class="cardColor" (click)="userList(0)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="list-box" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center>\n\n                    <b class="bfont">\n\n                        {{ \'CategoryPage.TUM_VAKALAR\' | translate}}\n\n                    </b>\n\n                </h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[0]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n\n\n        </ion-col>\n\n        <ion-col col-6>\n\n            <ion-card class="cardColor" (click)="userList(1)">\n\n                <div class="divIcon">\n\n                    <ion-icon name="custom-ruler" color="tabColor"></ion-icon>\n\n                </div>\n\n                <div>\n\n                    <h3 text-center>\n\n                        <b class="bfont">\n\n                            {{ \'CategoryPage.OLCULER\' | translate}}\n\n                        </b>\n\n                    </h3>\n\n                </div>\n\n                <div>\n\n                  <br>\n\n                  <h1 text-center><b>{{rows[1]}}</b></h1>\n\n                </div>\n\n             </ion-card>\n\n      </ion-col >\n\n      <ion-col col-6>\n\n          <ion-card class="cardColor" (click)="userList(2)">\n\n              <div class="divIcon">\n\n                  <ion-icon name="qr-scanner" color="tabColor"></ion-icon>\n\n              </div>\n\n              <div>\n\n                <h3 text-center>\n\n                    <b class="bfont">\n\n                        {{ \'CategoryPage.TARAMA\' | translate}}\n\n                    </b>\n\n                </h3>\n\n              </div>\n\n              <div>\n\n                <br>\n\n                <h1 text-center><b>{{rows[2]}}</b></h1>\n\n              </div>\n\n           </ion-card>\n\n    </ion-col >\n\n    <ion-col col-6>\n\n        <ion-card class="cardColor" (click)="userList(3)">\n\n            <div class="divIcon">\n\n                <ion-icon name="custom-register" color="tabColor"></ion-icon>\n\n\n\n            </div>\n\n            <div>\n\n              <h3 text-center><b class="bfont">\n\n                  {{ \'CategoryPage.KAYIT\' | translate}}\n\n              </b></h3>\n\n            </div>\n\n            <div>\n\n              <br>\n\n              <h1 text-center><b>{{rows[3]}}</b></h1>\n\n            </div>\n\n         </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(4)">\n\n          <div class="divIcon">\n\n              <ion-icon name="cog" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Set-Up</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[4]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(5)">\n\n          <div class="divIcon">\n\n              <ion-icon name="custom-plan" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.PLANLAMA\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[5]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(6)">\n\n          <div class="divIcon">\n\n              <ion-icon name="log-out" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">Export</b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[6]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(7)">\n\n          <div class="divIcon">\n\n              <ion-icon name="color-fill" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.PCT\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[7]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n    <ion-card class="cardColor" (click)="userList(8)">\n\n        <div class="divIcon">\n\n            <ion-icon name="custom-truck" color="tabColor"></ion-icon>\n\n        </div>\n\n        <div>\n\n          <h3 text-center><b class="bfont">\n\n              {{ \'CategoryPage.KARGODA\' | translate}}\n\n          </b></h3>\n\n        </div>\n\n        <div>\n\n          <br>\n\n          <h1 text-center><b>{{rows[8]}}</b></h1>\n\n        </div>\n\n     </ion-card>\n\n  </ion-col >\n\n  <ion-col col-6>\n\n      <ion-card class="cardColor" (click)="userList(9)">\n\n          <div class="divIcon">\n\n              <ion-icon name="checkbox" color="tabColor"></ion-icon>\n\n          </div>\n\n          <div>\n\n            <h3 text-center><b class="bfont">\n\n                {{ \'CategoryPage.TAMAMLANMIS\' | translate}}\n\n            </b></h3>\n\n          </div>\n\n          <div>\n\n            <br>\n\n            <h1 text-center><b>{{rows[9]}}</b></h1>\n\n          </div>\n\n       </ion-card>\n\n    </ion-col >\n\n        </ion-row>\n\n      </ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/category/category.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -2083,14 +2083,14 @@ var CategoryPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 227:
+/***/ 228:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IdListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ticket_list_ticket_list__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2140,7 +2140,7 @@ var IdListPage = /** @class */ (function () {
     };
     IdListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-id-list',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/id-list/id-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>{{\'IdListPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!-- <div>\n\n     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar>\n\n  </div> -->\n\n    <ion-card no-padding style="box-shadow: none;">\n\n        <ion-card-content>\n\n            <b style="font-size:25px; color:rgb(101, 183, 221);">{{\'IdListPage.LIST\' | translate}}</b>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">\n\n          <ion-card-header>\n\n            <b> {{ticket.id}}: {{ticket.subject}} </b>\n\n          </ion-card-header>\n\n        </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/id-list/id-list.html"*/,
+            selector: 'page-id-list',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/id-list/id-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title>{{\'IdListPage.TITLE\' | translate}}</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <!-- <div>\n\n     <ion-searchbar (ionInput)="getItems($event)" placeholder="Ara"></ion-searchbar>\n\n  </div> -->\n\n    <ion-card no-padding style="box-shadow: none;">\n\n        <ion-card-content>\n\n            <b style="font-size:25px; color:rgb(101, 183, 221);">{{\'IdListPage.LIST\' | translate}}</b>\n\n        </ion-card-content>\n\n      </ion-card>\n\n\n\n      <ion-card *ngFor="let ticket of tickets" (click)="ticket_send(ticket)">\n\n          <ion-card-header>\n\n            <b> {{ticket.id}}: {{ticket.subject}} </b>\n\n          </ion-card-header>\n\n        </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/id-list/id-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -2154,7 +2154,7 @@ var IdListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 228:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2318,7 +2318,7 @@ var TicketListPage = /** @class */ (function () {
     };
     TicketListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-ticket-list',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/ticket-list/ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >\n\n        {{ \'TicketListPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n\n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding>\n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.ONCELIK\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              {{ \'TicketListPage.KONU\' | translate}}\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n  </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.KATEGORI\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.OLUSTURULDU\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            {{ \'TicketListPage.GUNCELLENDI\' | translate}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>\n\n   </ion-col>\n\n   <ion-col col-6 no-padding>\n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          {{ \'TicketListPage.ADIM\' | translate}}\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>\n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n\n\n    <ion-card text-center class="cardColor">\n\n        <ion-card-content>\n\n            <button (click)="goToChat();" ion-button color="secondary" style="font-size:18px;">\n\n                {{ \'TicketListPage.BTN_CHAT\' | translate}}\n\n            </button>\n\n            <button (click)="goToSimulation();" ion-button color="secondary" style="font-size:18px;">\n\n                {{ \'TicketListPage.BTN_SIMULATION\' | translate}}\n\n            </button>\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/ticket-list/ticket-list.html"*/,
+            selector: 'page-ticket-list',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/ticket-list/ticket-list.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title >\n\n        {{ \'TicketListPage.TITLE\' | translate}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content >\n\n\n\n  <ion-grid>\n\n\n\n    <ion-row center>\n\n      <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n              ID\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n             <b style="font-size:20px;">{{ticket.id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n      <ion-col col-6 no-padding>\n\n          <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.ONCELIK\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <ion-badge color="danger" style="font-size:18px;">{{ticket.priority}}</ion-badge>\n\n            </ion-card-content>\n\n          </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n          <ion-card-header style="font-size:20px;">\n\n              {{ \'TicketListPage.KONU\' | translate}}\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n              <b style="font-size:18px;">{{ticket.subject}}</b>\n\n          </ion-card-content>\n\n        </ion-card>\n\n  </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.KATEGORI\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.cat_id}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n            <ion-card-header style="font-size:20px;">\n\n                {{ \'TicketListPage.OLUSTURULDU\' | translate}}\n\n            </ion-card-header>\n\n            <ion-card-content>\n\n                <b style="font-size:16px;">{{ticket.create_time | date: short}}</b>\n\n            </ion-card-content>\n\n        </ion-card>\n\n    </ion-col>\n\n    <ion-col col-6 no-padding>\n\n        <ion-card text-center class="cardColor">\n\n        <ion-card-header style="font-size:20px;">\n\n            {{ \'TicketListPage.GUNCELLENDI\' | translate}}\n\n        </ion-card-header>\n\n        <ion-card-content>\n\n            <b style="font-size:16px;">{{ticket.update_time | date: short}}</b>\n\n        </ion-card-content>\n\n        </ion-card>\n\n   </ion-col>\n\n   <ion-col col-6 no-padding>\n\n      <ion-card text-center class="cardColor">\n\n      <ion-card-header style="font-size:20px;">\n\n          {{ \'TicketListPage.ADIM\' | translate}}\n\n      </ion-card-header>\n\n      <ion-card-content>\n\n          <ion-badge color="secondary" style="font-size:18px;">{{ticket.step}}</ion-badge>\n\n      </ion-card-content>\n\n      </ion-card>\n\n     </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n\n\n    <ion-card text-center class="cardColor">\n\n        <ion-card-content>\n\n            <button (click)="goToChat();" ion-button color="secondary" style="font-size:18px;">\n\n                {{ \'TicketListPage.BTN_CHAT\' | translate}}\n\n            </button>\n\n            <button (click)="goToSimulation();" ion-button color="secondary" style="font-size:18px;">\n\n                {{ \'TicketListPage.BTN_SIMULATION\' | translate}}\n\n            </button>\n\n        </ion-card-content>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/ticket-list/ticket-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */]])
@@ -2330,13 +2330,13 @@ var TicketListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(248);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -2344,7 +2344,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 247:
+/***/ 248:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2353,40 +2353,40 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(295);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_screen_orientation__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_about_about__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_screen_orientation__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_about_about__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contact_contact__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabs_tabs__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_appointments_appointments__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_new_account_new_account__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_sms_otp_sms_otp__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_new_account_new_account__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_sms_otp_sms_otp__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_login_doctor_login_doctor__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_register_doctor_register_doctor__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_login_user_login_user__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_ticket_list_ticket_list__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_timer_timer__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_register_doctor_register_doctor__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_login_user_login_user__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_ticket_list_ticket_list__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_timer_timer__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_simulation_simulation__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_category_category__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_password_password__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_category_category__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_password_password__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_chat_with_doctor_chat_with_doctor__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_success_activation_success_activation__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_make_appointment_1_make_appointment_1__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_2_make_appointment_2__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_3_make_appointment_3__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_4_make_appointment_4__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_success_activation_success_activation__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_make_appointment_1_make_appointment_1__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_make_appointment_2_make_appointment_2__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_make_appointment_3_make_appointment_3__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_make_appointment_4_make_appointment_4__ = __webpack_require__(224);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ngx_translate_core__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ngx_translate_http_loader__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_splash_screen__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_id_list_id_list__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__ngx_translate_http_loader__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_splash_screen__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_id_list_id_list__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__app_providers_camera_provider__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_local_notifications__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_local_notifications__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2530,7 +2530,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2538,7 +2538,7 @@ var AppModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_progress_timer_progress__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timer_progress_timer_progress__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2568,7 +2568,145 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 29:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl, loadingCtrl, http, translate) {
+        this.navCtrl = navCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.http = http;
+        this.translate = translate;
+        // Define the undefined values.
+        if (!localStorage.getItem('isLoggedIn'))
+            localStorage.setItem('isLoggedIn', 'false');
+        if (!localStorage.getItem('language'))
+            localStorage.setItem('language', 'tr');
+        if (!localStorage.getItem('name'))
+            localStorage.setItem('name', '');
+        if (!localStorage.getItem('surname'))
+            localStorage.setItem('surname', '');
+        if (!localStorage.getItem('user_authority'))
+            localStorage.setItem('user_authority', '');
+        if (!localStorage.getItem('username'))
+            localStorage.setItem('username', '');
+        if (!localStorage.getItem('id'))
+            localStorage.setItem('id', '');
+        this.accountCheck();
+        this.translate.use(localStorage.getItem('language'));
+    }
+    HomePage_1 = HomePage;
+    HomePage.prototype.ionViewDidLoad = function () {
+    };
+    HomePage.prototype.goToCategories = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__category_category__["a" /* CategoryPage */]);
+    };
+    HomePage.prototype.newAccount = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__new_account_new_account__["a" /* NewAccountPage */]);
+    };
+    HomePage.prototype.loginUser = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_user_login_user__["a" /* LoginUserPage */]);
+    };
+    HomePage.prototype.logoutUser = function () {
+        var _this = this;
+        this.postData(function () {
+            _this.account = false;
+            localStorage.setItem('isLoggedIn', 'false');
+            localStorage.setItem('name', '');
+            localStorage.setItem('username', '');
+            localStorage.setItem('user_authority', '');
+            localStorage.setItem('surname', '');
+            localStorage.setItem('id', '');
+            _this.navCtrl.setRoot(HomePage_1);
+        }, "logout");
+    };
+    HomePage.prototype.loginDoctor = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__["a" /* LoginDoctorPage */]);
+    };
+    HomePage.prototype.translateContent = function (callback) {
+        var translatedContent;
+        this.translate.get("HomePage.loader").subscribe(function (value) {
+            translatedContent = value;
+            callback(translatedContent);
+        });
+    };
+    HomePage.prototype.accountCheck = function () {
+        var _this = this;
+        this.translateContent(function (translatedContent) {
+            var loader = _this.loadingCtrl.create({
+                content: translatedContent
+            });
+            loader.present();
+            _this.postData(function (json_result) {
+                loader.dismiss();
+                if (json_result['message'] == 'not_logged_in') {
+                    _this.account = false;
+                }
+                else {
+                    _this.account = true;
+                    _this.name = localStorage.getItem("name");
+                    _this.surname = localStorage.getItem("surname");
+                    _this.authority = localStorage.getItem("user_authority");
+                }
+            }, "check");
+        });
+    };
+    HomePage.prototype.postData = function (callback, action) {
+        // Create credentials.
+        var json_result;
+        var formData = new FormData();
+        formData.append("action", action);
+        formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
+        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
+            json_result = JSON.parse(res['_body']);
+            callback(json_result);
+        });
+    };
+    HomePage = HomePage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center><b>CLEARFIX</b></ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n        <div padding text-center>\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n            <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n            {{\'HomePage.WELCOME\' | translate}}\n\n        </h5>\n\n        </div>\n\n\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{\'HomePage.BTN_YENI_HESAP_OLUSTUR\' | translate}}</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{\'HomePage.BTN_UYE_GIRISI\' | translate}}</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">{{\'HomePage.BTN_KATEGORILERE_GIT\' | translate}}</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{\'HomePage.BTN_HEKIM_GIRISI\' | translate}}</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["c" /* TranslateService */]])
+    ], HomePage);
+    return HomePage;
+    var HomePage_1;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2576,7 +2714,7 @@ var ComponentsModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2790,167 +2928,29 @@ var TimerProgress = /** @class */ (function () {
     };
     TimerProgress = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'timer-progress',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<h1>{{plak_sayisi}}. PLAK</h1>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="ifPhoto()" (click)="addPhotos()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="reset()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
+            selector: 'timer-progress',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/app/components/timer-progress/timer-progress.html"*/'<ion-card><ion-card-header><h1>{{plak_sayisi}}. PLAK</h1></ion-card-header></ion-card>\n\n<ion-card *ngIf="timer">\n\n    <button ion-button block *ngIf="ifPhoto()" (click)="addPhotos()">ADD PHOTOS</button>\n\n	<ion-card-header>\n\n         <div class="radial-progress" data-progress="0">\n\n            <div class="circle">\n\n                <div class="mask full" [style.transform]="transform">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                </div>\n\n                <div class="mask half">\n\n                <div class="fill" [style.transform]="transform"></div>\n\n                <div class="fill fix" [style.transform]="fixTransform"></div>\n\n                </div>\n\n                <div class="shadow"></div>\n\n            </div>\n\n            <div class="inset">\n\n                <div class="percentage">{{timer.displayTime}}</div>\n\n            </div>\n\n        </div>\n\n		<button ion-button *ngIf="!timeInSeconds || timeInSeconds == 0" large block clear class="timer-button">Set Incorrectly</button>\n\n	</ion-card-header>\n\n	<ion-item *ngIf="timeInSeconds && timeInSeconds > 0">\n\n		<button ion-button clear class="large" color="danger" (click)="reset()" item-start *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">\n\n            <ion-icon name="refresh"></ion-icon>\n\n            Reset\n\n        </button>\n\n		<button ion-button clear class="large" (click)="startTimer()" item-end *ngIf="!timer.hasStarted">\n\n            <ion-icon name="play"></ion-icon>\n\n            Start\n\n        </button>\n\n	</ion-item>\n\n</ion-card>'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/app/components/timer-progress/timer-progress.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_local_notifications__["a" /* LocalNotifications */]])
     ], TimerProgress);
     return TimerProgress;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=timer-progress.js.map
 
 /***/ }),
 
-/***/ 29:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_account_new_account__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_user_login_user__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__category_category__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__(32);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, loadingCtrl, http, translate) {
-        this.navCtrl = navCtrl;
-        this.loadingCtrl = loadingCtrl;
-        this.http = http;
-        this.translate = translate;
-        // Define the undefined values.
-        if (!localStorage.getItem('isLoggedIn'))
-            localStorage.setItem('isLoggedIn', 'false');
-        if (!localStorage.getItem('language'))
-            localStorage.setItem('language', 'tr');
-        if (!localStorage.getItem('name'))
-            localStorage.setItem('name', '');
-        if (!localStorage.getItem('surname'))
-            localStorage.setItem('surname', '');
-        if (!localStorage.getItem('user_authority'))
-            localStorage.setItem('user_authority', '');
-        if (!localStorage.getItem('username'))
-            localStorage.setItem('username', '');
-        if (!localStorage.getItem('id'))
-            localStorage.setItem('id', '');
-        this.accountCheck();
-        this.translate.use(localStorage.getItem('language'));
-    }
-    HomePage_1 = HomePage;
-    HomePage.prototype.ionViewDidLoad = function () {
-    };
-    HomePage.prototype.goToCategories = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__category_category__["a" /* CategoryPage */]);
-    };
-    HomePage.prototype.newAccount = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__new_account_new_account__["a" /* NewAccountPage */]);
-    };
-    HomePage.prototype.loginUser = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_user_login_user__["a" /* LoginUserPage */]);
-    };
-    HomePage.prototype.logoutUser = function () {
-        var _this = this;
-        this.postData(function () {
-            _this.account = false;
-            localStorage.setItem('isLoggedIn', 'false');
-            localStorage.setItem('name', '');
-            localStorage.setItem('username', '');
-            localStorage.setItem('user_authority', '');
-            localStorage.setItem('surname', '');
-            localStorage.setItem('id', '');
-            _this.navCtrl.setRoot(HomePage_1);
-        }, "logout");
-    };
-    HomePage.prototype.loginDoctor = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__login_doctor_login_doctor__["a" /* LoginDoctorPage */]);
-    };
-    HomePage.prototype.translateContent = function (callback) {
-        var translatedContent;
-        this.translate.get("HomePage.loader").subscribe(function (value) {
-            translatedContent = value;
-            callback(translatedContent);
-        });
-    };
-    HomePage.prototype.accountCheck = function () {
-        var _this = this;
-        this.translateContent(function (translatedContent) {
-            var loader = _this.loadingCtrl.create({
-                content: translatedContent
-            });
-            loader.present();
-            _this.postData(function (json_result) {
-                loader.dismiss();
-                if (json_result['message'] == 'not_logged_in') {
-                    _this.account = false;
-                }
-                else {
-                    _this.account = true;
-                    _this.name = localStorage.getItem("name");
-                    _this.surname = localStorage.getItem("surname");
-                    _this.authority = localStorage.getItem("user_authority");
-                }
-            }, "check");
-        });
-    };
-    HomePage.prototype.postData = function (callback, action) {
-        // Create credentials.
-        var json_result;
-        var formData = new FormData();
-        formData.append("action", action);
-        formData.append("loginInfo", localStorage.getItem('isLoggedIn'));
-        this.http.post("http://www.clearfix.com.tr/clearfix_new_app/home.php", formData).subscribe(function respond(res) {
-            json_result = JSON.parse(res['_body']);
-            callback(json_result);
-        });
-    };
-    HomePage = HomePage_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center><b>CLEARFIX</b></ion-title>\n\n      <ion-buttons end *ngIf="account">\n\n          <button ion-button icon-only (click)="logoutUser()">\n\n            <ion-icon name="log-out"></ion-icon>\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content >\n\n\n\n        <div padding text-center>\n\n            <div class="logo primary-bg">\n\n                <img src="/assets/imgs/loginDoktor.png"/>\n\n            </div>\n\n            <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n            <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n            {{\'HomePage.WELCOME\' | translate}}\n\n        </h5>\n\n        </div>\n\n\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="newAccount()">{{\'HomePage.BTN_YENI_HESAP_OLUSTUR\' | translate}}</button>\n\n      <button *ngIf="!account; else loggedIn" ion-button class="button-middle" (click)="loginUser()">{{\'HomePage.BTN_UYE_GIRISI\' | translate}}</button>\n\n      <ng-template #loggedIn>\n\n          <button *ngIf="authority == \'1\'" ion-button class="button-middle" (click)="goToCategories()">{{\'HomePage.BTN_KATEGORILERE_GIT\' | translate}}</button>\n\n      </ng-template>\n\n      <button *ngIf="!account" ion-button class="button-middle" (click)="loginDoctor()">{{\'HomePage.BTN_HEKIM_GIRISI\' | translate}}</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["c" /* TranslateService */]])
-    ], HomePage);
-    return HomePage;
-    var HomePage_1;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 295:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tabs_tabs__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tabs_tabs__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2983,7 +2983,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2997,5 +2997,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[229]);
+},[230]);
 //# sourceMappingURL=main.js.map

@@ -1,4 +1,4 @@
-#Mon Oct 15 16:50:43 EET 2018
-base.0=/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/Clearfix/platforms/android/app/build/intermediates/transforms/dexMerger/release/0
+#Tue Oct 16 17:41:27 EET 2018
+base.0=/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/platforms/android/app/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex

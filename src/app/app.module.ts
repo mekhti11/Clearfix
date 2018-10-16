@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ComponentsModule } from './components/components.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HttpModule, Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
     // Cordova
 import { MyApp } from './app.component';
