@@ -28078,6 +28078,57 @@ page-about .button-middle {
   background-color: #4FC3F7;
 }
 
+page-add-photos .card-title {
+  position: absolute;
+  top: 5%;
+  font-size: 1.4em;
+  width: 100%;
+  margin-left: -1.5%;
+  color: #41aadb;
+}
+
+page-add-photos .card-parent {
+  position: relative;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 350px;
+  height: 140px;
+}
+
+page-add-photos .h1 {
+  font-weight: bold;
+}
+
+page-add-photos .photoCard {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 7px;
+}
+
+page-add-photos .button-middle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #0c86be;
+}
+
+page-add-photos .button-nextStep {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  background-color: #4FC3F7;
+}
+
+page-add-photos .h5 {
+  position: relative;
+  color: #128bc4;
+  left: 100px;
+}
+
 page-appointments .card-title {
   position: absolute;
   top: 36%;

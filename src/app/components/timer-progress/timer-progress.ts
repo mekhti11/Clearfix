@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Http} from '@angular/http';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { NavController } from 'ionic-angular';
+import { AddPhotosPage } from '../../../pages/add-photos/add-photos';
+
 
 export interface CountdownTimer {
   seconds: number;
@@ -27,7 +30,7 @@ export class TimerProgress {
   private plak_sayisi:number;
   private isPhoto;
   constructor(private sanitizer: DomSanitizer, public http: Http,
-             private notification:LocalNotifications) { 
+             private notification:LocalNotifications , private navCtrl:NavController) { 
 
     this.postDataLoad( (json_result) => {
       console.log(json_result);
@@ -65,7 +68,7 @@ export class TimerProgress {
   }
 
   addPhotos(){
-
+    this.navCtrl.setRoot(AddPhotosPage);
   }
 
   getPlakSayisi(){

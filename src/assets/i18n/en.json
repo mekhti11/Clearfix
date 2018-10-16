@@ -184,6 +184,11 @@
 	  "LISANSLI3": "given and",
 	  "LISANSLI4": "membership terms and conditions.",
 	  "MARKA": "Clearfix"
+	},
+
+	"AddPhotos":{
+		"ADD_PHOTOS":"Add Photos",
+		"BTN_NEXT":"SEND"
 	}
-  }
+}
   

@@ -1,0 +1,46 @@
+page-add-photos {
+    .card-title {
+        position: absolute;
+        top: 5%;
+        font-size: 1.4em;
+        width: 100%;
+        margin-left: -1.5%;
+        color:rgb(65, 170, 219);
+
+      }
+      .card-parent {
+        position:relative;
+        box-shadow: none;
+        width:350px;
+        height:140px;
+       }
+       .h1{
+           font-weight: bold;
+       }
+       .photoCard{
+        height: 150px;
+        width: 150px;
+        margin-bottom: 7px;
+       }
+       .button-middle {
+        position:relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:94%;
+       background-color: rgb(12, 134, 190);
+      }
+      .button-nextStep{
+        position:relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:94%;
+        background-color: #4FC3F7;
+      }
+      .h5{
+          position: relative;
+          color: rgb(18, 139, 196);
+          left: 100px;
+      }
+}
