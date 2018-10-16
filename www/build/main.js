@@ -1069,12 +1069,12 @@ var NewAccountPage = /** @class */ (function () {
             this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__sms_otp_sms_otp__["a" /* SmsOtpPage */]);
         }
         else {
-            var alert_1 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: 'HATA!',
                 subTitle: 'Lütfen 10 haneli telefon numaranızı doğru giriniz!',
                 buttons: ['OK']
             });
-            alert_1.present();
+            alert.present();
             console.log(this.telephone);
         }
     };
@@ -1090,14 +1090,21 @@ var NewAccountPage = /** @class */ (function () {
     };
     NewAccountPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+<<<<<<< HEAD
             selector: 'page-new-account',template:/*ion-inline-start:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'NewAccountPage.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         {{ \'NewAccountPage.CLOSE\' | translate}}\n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input>\n\n    </ion-item>\n\n    <br><br>\n\n    <ion-item>\n\n        <ion-label style="float:left;margin-right:8px;font-size: 14px">\n\n                {{ \'LISANS.LISANSLI2\' | translate}} <br>\n\n                {{ \'LISANS.LISANSLI3\' | translate}}\n\n                <a>{{ \'LISANS.MARKA\' | translate}}</a> <br>\n\n                {{ \'LISANS.LISANSLI4\' | translate}}\n\n        </ion-label>\n\n        <ion-checkbox checked="true" [(ngModel)]="checker"></ion-checkbox>\n\n    </ion-item>\n\n\n\n      <button ion-button class="button-middle" [disabled]="!checker" (click)="sendSmsOTP()">\n\n          {{ \'NewAccountPage.BTN_SEND_SMS\' | translate}}\n\n      </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/mekhti/workspace/ioncApps/CF/Clearfix/src/pages/new-account/new-account.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
+=======
+            selector: 'page-new-account',template:/*ion-inline-start:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/new-account/new-account.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="tabColor">\n\n    <ion-title text-center>\n\n        {{ \'NewAccountPage.TITLE\' | translate}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="closePage()">\n\n         {{ \'NewAccountPage.CLOSE\' | translate}}\n\n         </button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n      <div padding text-center>\n\n        <div class="logo primary-bg">\n\n            <img src="/assets/imgs/loginDoktor.png"/>\n\n        </div>\n\n        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">\n\n          <!-- {{\'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ\' | translate}} -->\n\n          {{ \'NewAccountPage.ACTIVATION\' | translate}}\n\n      </h5>\n\n      </div>\n\n\n\n    <ion-item>\n\n        <ion-label style="font-weight: bold;">+90</ion-label>\n\n          <ion-input type="tel" [(ngModel)]="telephone"  placeholder="(111)-111-1111" pattern="06([0-9]{3})-([0-9]{3})-([0-9]{4})"></ion-input>\n\n    </ion-item>\n\n    <br><br>\n\n    <ion-item>\n\n        <ion-label style="float:left;margin-right:8px;font-size: 12px">\n\n        \n\n                {{ \'LISANS.LISANSLI2\' | translate}} <br>\n\n                {{ \'LISANS.LISANSLI3\' | translate}}\n\n                {{ \'LISANS.MARKA\' | translate}} <br>\n\n                {{ \'LISANS.LISANSLI4\' | translate}}\n\n        </ion-label>\n\n        <ion-checkbox checked="true" [(ngModel)]="checker"></ion-checkbox>\n\n    </ion-item>\n\n\n\n      <button ion-button class="button-middle" [disabled]="!checker" (click)="sendSmsOTP()">\n\n          {{ \'NewAccountPage.BTN_SEND_SMS\' | translate}}\n\n      </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/home/vinos/Masaüstü/clearfixapp/clearfix/clearfixPazar/SonAlanClearFix/Clearfix/src/pages/new-account/new-account.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _d || Object])
+>>>>>>> 01f0306e891c7bb147263646bf9f4142688097ff
     ], NewAccountPage);
     return NewAccountPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=new-account.js.map
