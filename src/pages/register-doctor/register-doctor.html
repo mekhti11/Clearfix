@@ -62,8 +62,6 @@
 
             {{ 'LISANS.LISANSLI3' | translate}} <a>Clearfix</a> <br>
             {{ 'LISANS.LISANSLI4' | translate}}</ion-label>
-
-
         <div margin-top="margin-top">
             <button ion-button block class="button-middle" (click)="register()" [disabled]="!name || !uname || !email || !pword || !confirmation_pword || !chk1 || !chk2 || pword != confirmation_pword   ">
                 {{'RegisterDoctorPage.BTN_KAYDOL' | translate}}

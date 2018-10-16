@@ -1,4 +1,4 @@
-﻿{
+{
 
 	"TabsPage": {
 		"ANASAYFA": "Anasayfa",
@@ -194,6 +194,7 @@
 		"KARGODA": "Kargoda",
 		"TAMAMLANMIS": "Tamamlanmış"
 	},
+	
 	"LISANS": {
 		"LISANSLI1":"Lisanslı Diş Hekimi Olduğumu onaylıyorum.",
 		"LISANSLI2":"Beyen Ettiğim Bilgilerin Doğruluğunu",
@@ -202,7 +203,5 @@
 		"MARKA":"Clearfix"
 
 	}
-
-
 }
  

@@ -3,6 +3,8 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SmsOtpPage } from '../sms-otp/sms-otp';
 import { Http } from "@angular/http";
+// import { TranslateService } from '@ngx-translate/core';
+
 
 
 

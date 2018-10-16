@@ -112,7 +112,8 @@
 	"NewAccountPage": {
 		"TITLE": "YENİ HESAP OLUŞTUR",
 		"CLOSE": "Kapat",
-		"BTN_SEND_SMS": "AKTİVASYON KODU GÖNDER"
+		"BTN_SEND_SMS": "AKTİVASYON KODU GÖNDER",
+		"ACTIVATION":"Cep Telefonunuza Aktivasyon İçin SMS ile Kod Gönderilecektir."
 	},
 
 	"PasswordPage": {
@@ -153,7 +154,8 @@
 
 	"SuccessActivationPage": {
 		"TITLE": "HESAP AKTİVASYONU",
-		"BTN_BASLA": "Başla"
+		"BTN_BASLA": "Başla",
+		"COMPLETE":"Tebrikler! Aktivasyon İşlemi Başarıyla Tamamlandı."
 	},
 
 	"ContactPage": {
@@ -191,7 +193,15 @@
 		"PCT": "P.Ç.T",
 		"KARGODA": "Kargoda",
 		"TAMAMLANMIS": "Tamamlanmış"
+	},
+	
+	"LISANS": {
+		"LISANSLI1":"Lisanslı Diş Hekimi Olduğumu onaylıyorum.",
+		"LISANSLI2":"Beyen Ettiğim Bilgilerin Doğruluğunu",
+		"LISANSLI3":"",
+		"LISANSLI4":"Üyelik Kural ve Koşularını Kabul Ediyorum.",
+		"MARKA":"Clearfix"
+
 	}
-
-
 }
+ 

@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Http} from '@angular/http';
-import { TranslateService } from '@ngx-translate/core';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 
 export interface CountdownTimer {
