@@ -178,17 +178,12 @@
 	  "KARGODA": "On Cargo",
 	  "TAMAMLANMIS": "Done"
 	},
-	
 	"LISANS": {
 	  "LISANSLI1": "I Hereby Accept that I Am a Licensed Dentist.",
-	  "LISANSLI2": "I Hereby Accept the Validity of the information",
-	  "LISANSLI3": "given and",
+	  "LISANSLI2": "I Hereby Accept the Validity of the",
+	  "LISANSLI3": " information given and",
 	  "LISANSLI4": "membership terms and conditions.",
 	  "MARKA": "Clearfix"
 	}
-<<<<<<< HEAD
   }
   
-=======
-}
->>>>>>> baf298b73b0adf0a1f4044594e891bc979e9e1d8
