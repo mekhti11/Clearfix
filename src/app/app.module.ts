@@ -42,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IdListPage } from '../pages/id-list/id-list';
 import { CameraProvider } from '../app/providers/camera.provider';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { AddPhotosPage } from '../pages/add-photos/add-photos';
 
 
 // The translate loader needs to know where to load i18n files
@@ -77,6 +78,7 @@ export function setTranslateLoader(http: HttpClient) {
     MakeAppointment_2Page,
     MakeAppointment_3Page,
     MakeAppointment_4Page,
+    AddPhotosPage
   ],
   imports: [
     BrowserModule,
@@ -120,7 +122,7 @@ export function setTranslateLoader(http: HttpClient) {
     MakeAppointment_2Page,
     MakeAppointment_3Page,
     MakeAppointment_4Page,
-
+    AddPhotosPage
   ],
   providers: [
     StatusBar,
