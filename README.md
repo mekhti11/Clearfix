@@ -1,1 +1,2 @@
-﻿# Clearfix App
+# Clearfix App
+## The End :)
