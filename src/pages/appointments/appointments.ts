@@ -27,12 +27,13 @@ export class AppointmentsPage {
 	}
 
 	infoAppointment() {
-		console.log("Randevu detayları");
+		
 
 	}
 
 	postData(callback) {
 		let formData = new FormData();
+		console.log("Randevu detayları " + localStorage.getItem("id"));
 		formData.append("action", "load");
 		formData.append("id", localStorage.getItem("id"));
 		this.http.post("http://www.clearfix.com.tr/clearfix_new_app/appointments.php", formData).subscribe(function response(res) {

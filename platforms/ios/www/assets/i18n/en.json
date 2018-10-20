@@ -1,201 +1,194 @@
 {
-
 	"TabsPage": {
-		"ANASAYFA": "Homepage",
-		"RANDAVULARIM": "Appointments",
-		"HESABIM": "Account",
-		"AYARLAR": "Settings"
+	  "ANASAYFA": "Homepage",
+	  "RANDAVULARIM": "Appointments",
+	  "HESABIM": "Account",
+	  "AYARLAR": "Settings"
 	},
 	"HomePage": {
-		"BTN_YENI_HESAP_OLUSTUR": "CREATE NEW ACCOUNT",
-		"BTN_UYE_GIRISI": "MEMBER LOGIN",
-		"BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
-		"BTN_KATEGORILERE_GIT": "CATEGORIES",
-		"Sayin": "Dear",
-		"loader": "Please Wait ..."
+	  "BTN_YENI_HESAP_OLUSTUR": "CREATE NEW ACCOUNT",
+	  "BTN_UYE_GIRISI": "PATIENT LOGIN",
+	  "BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
+	  "BTN_KATEGORILERE_GIT": "CATEGORIES",
+	  "Sayin": "Dear",
+	  "loader": "Please Wait ...",
+	  "WELCOME": "Welcome to the Clearfix Mobile App"
 	},
 	"AboutPage": {
-		"BASLIK": "MY ACCOUNT",
-		"GIRIS_YAP": "Please login to do something",
-		"BTNs": "Please choose an operation from below",
-		"BTN_CHAT_WITH_DOCTOR": "Chat With Doctor",
-		"IS_DOCTOR": "This part is for only patients.",
-		"BTN_TIMER": "Change Time",
-		"HASTA_ULASILAMADI": "Cannot reach to chat page. There is no appointment to any doctor."
+	  "BASLIK": "MY ACCOUNT",
+	  "GIRIS_YAP": "Please login to do something",
+	  "BTNs": "Please choose an operation from below",
+	  "BTN_CHAT_WITH_DOCTOR": "Chat With Doctor",
+	  "IS_DOCTOR": "This part is for only patients.",
+	  "BTN_TIMER": "Change Time",
+	  "HASTA_ULASILAMADI": "Cannot reach to chat page. There is no appointment to any doctor."
 	},
-
 	"AppointmentPage": {
-		"RANDEVULARIM": "MY APPOINTMENTS",
-		"RANDEVU_NO": "Appointment Number",
-		"RANDEVU_TARIHI": "Appointment Date",
-		"RANDEVU_DURUMU": "Appointment Status",
-		"RANDEVU_DETAYI": "Appointment Details"
+	  "RANDEVULARIM": "MY APPOINTMENTS",
+	  "RANDEVU_NO": "Appointment Number",
+	  "RANDEVU_TARIHI": "Appointment Date",
+	  "RANDEVU_DURUMU": "Appointment Status",
+	  "RANDEVU_DETAYI": "Appointment Details"
 	},
 	"ChatWithDoctorPage": {
-		"SEN": "You",
-		"BIR_MESAJ_YAZ": "Write a message",
-		"TITLE": "Chat"
+	  "SEN": "You",
+	  "BIR_MESAJ_YAZ": "Write a message",
+	  "TITLE": "Chat"
 	},
-
 	"IdListPage": {
-		"TITLE": "List of patients",
-		"LIST": "Patients"
+	  "TITLE": "List of patients",
+	  "LIST": "Patients"
 	},
-
 	"LoginDoctorPage": {
-		"TITLE": "Doctor Login",
-		"EMAIL": "E-Mail",
-		"PWORD": "Password",
-		"BTN_LOGIN": "LOGIN",
-		"HESABIN_YOK_MU": "Don't have an account?",
-		"KAYDOL": "Signup"
+	  "TITLE": "Doctor Login",
+	  "EMAIL": "E-Mail",
+	  "PWORD": "Password",
+	  "BTN_LOGIN": "LOGIN",
+	  "HESABIN_YOK_MU": "Don't have an account?",
+	  "KAYDOL": "Signup"
 	},
-
 	"LoginUserPage": {
-		"TITLE": "Patients Login",
-		"TEL": "Phone :",
-		"PWORD": "Password",
-		"BTN_LOGIN": "Login"
+	  "TITLE": "Patients Login",
+	  "TEL": "Phone :",
+	  "PWORD": "Password",
+	  "BTN_LOGIN": "Login"
 	},
-
 	"MakeAppointment1Page": {
-		"TITLE": "MAKE APPOINTMENT",
-		"TEMEL_BILGILER": "Please fill in your main details.",
-		"ADINIZ": "Name",
-		"SOYADINIZ": "Surname",
-		"LUTFEN_ADINIZI_YAZINIZ": "Please write your name",
-		"LUTEFN_SOYADINIZI_YAZINIZ": "Please write your surname",
-		"EPOSTA_ADRESINIZ": "E-mail address",
-		"LUTFEN_EPOSTA": "Please write your e-mail address",
-		"CINSIYETINIZ": "Gender",
-		"BAY": "Male",
-		"BAYAN": "Female",
-		"YASADINGINIZ_IL": "City",
-		"YASADIGINIZ_ILCE": "District",
-		"LUTFEN_YASADIGINIZ_ILCE": "Please write the district you reside",
-		"EK": "Do you want to add something",
-		"EKLEMEK_ISTEDIKLERINIZ": "Things you want to add....",
-		"BTN_SONRAKI": "Next Step"
+	  "TITLE": "MAKE APPOINTMENT",
+	  "TEMEL_BILGILER": "Please fill in your main details.",
+	  "ADINIZ": "Name",
+	  "SOYADINIZ": "Surname",
+	  "LUTFEN_ADINIZI_YAZINIZ": "Please write your name",
+	  "LUTEFN_SOYADINIZI_YAZINIZ": "Please write your surname",
+	  "EPOSTA_ADRESINIZ": "E-mail address",
+	  "LUTFEN_EPOSTA": "Please write your e-mail address",
+	  "CINSIYETINIZ": "Gender",
+	  "BAY": "Male",
+	  "BAYAN": "Female",
+	  "YASADINGINIZ_IL": "City",
+	  "YASADIGINIZ_ILCE": "District",
+	  "LUTFEN_YASADIGINIZ_ILCE": "Please write the district you reside",
+	  "EK": "Do you want to add something",
+	  "EKLEMEK_ISTEDIKLERINIZ": "Things you want to add....",
+	  "BTN_SONRAKI": "Next Step"
 	},
-
 	"MakeAppointment2Page": {
-		"TITLE": "MAKE APPOINTMENT",
-		"FOTOGRAF_YUKLEME": "UPLOADING PHOTO",
-		"FOTOGRAFLARINIZI_CEKINIZ": "Please capture and send your photo as shown below",
-		"FOTOGRAF_EKLE": "ADD PHOTO",
-		"BTN_NEXT": "Next Step"
+	  "TITLE": "MAKE APPOINTMENT",
+	  "FOTOGRAF_YUKLEME": "UPLOADING PHOTO",
+	  "FOTOGRAFLARINIZI_CEKINIZ": "Capture and send your photo as shown below",
+	  "FOTOGRAF_EKLE": "ADD PHOTO",
+	  "BTN_NEXT": "Next Step"
 	},
-
 	"MakeAppointment3Page": {
-		"TITLE": "MAKE APPOINTMENT",
-		"BILGILERINIZI_KONTROL": "CHECK YOUR INFO",
-		"LUTFEN_BILGILERINIZI_SON_KEZ": "Please check your info for last time",
-		"BILGILERIMI_DUZENLE": "CHANGE INFO",
-		"BTN_RANDEVUYU_OLUSTUR": "CREATE APPOINTMENT",
-		"ADINIZ": "Name",
-		"SOYADINIZ": "Surname",
-		"EPOSTA_ADRESINIZ": "E-Mail",
-		"CINSIYETINIZ": "Gender",
-		"YASADINGINIZ_IL": "City",
-		"YASADIGINIZ_ILCE": "District",
-		"EK": "Things you want to add",
-		"FOTOGRAF": "PHOTO",
-		"FOTOGRAF_EKLE": "ADD PHOTO"
+	  "TITLE": "MAKE APPOINTMENT",
+	  "BILGILERINIZI_KONTROL": "CHECK YOUR INFO",
+	  "LUTFEN_BILGILERINIZI_SON_KEZ": "Please check your info for last time",
+	  "BILGILERIMI_DUZENLE": "CHANGE INFO",
+	  "BTN_RANDEVUYU_OLUSTUR": "CREATE APPOINTMENT",
+	  "ADINIZ": "Name",
+	  "SOYADINIZ": "Surname",
+	  "EPOSTA_ADRESINIZ": "E-Mail",
+	  "CINSIYETINIZ": "Gender",
+	  "YASADINGINIZ_IL": "City",
+	  "YASADIGINIZ_ILCE": "District",
+	  "EK": "Things you want to add",
+	  "FOTOGRAF": "PHOTO",
+	  "FOTOGRAF_EKLE": "ADD PHOTO"
 	},
-
 	"MakeAppointment4Page": {
-		"TITLE": "MAKE APPOINTMENT",
-		"BTN_RANDEVULARIMA_GIT": "Go to My Appointments",
-		"TEBRIKLER": "CONGRATULATIONS",
-		"RANDEVUNUZ_BASARLI": ">Your appointment has been created successfully."
+	  "TITLE": "MAKE APPOINTMENT",
+	  "BTN_RANDEVULARIMA_GIT": "Go to My Appointments",
+	  "TEBRIKLER": "CONGRATULATIONS",
+	  "RANDEVUNUZ_BASARLI": "Your appointment has been created successfully."
 	},
-
 	"NewAccountPage": {
-		"TITLE": "CREATE NEW ACCOUNT",
-		"CLOSE": "Close",
-		"BTN_SEND_SMS": "SEND ACTIVATION CODE"
-
+	  "TITLE": "CREATE NEW ACCOUNT",
+	  "CLOSE": "Close",
+	  "BTN_SEND_SMS": "SEND ACTIVATION CODE",
+	  "ACTIVATION": "An SMS for Activation Will be Sent to Your Phone. "
 	},
-
 	"PasswordPage": {
-		"TITLE": "Password Creation",
-		"SIFRENIZI_OLUSTURUNUZ": "Create Your Password",
-		"PWORD": "Password",
-		"SIFRE_ONAYLAYINIZ": "Confirmation Password",
-		"BTN_ONAYLA": "CONFIRM",
-		"CONFIRMATION": "Confirmation password has to be same with password!"
+	  "TITLE": "Password Creation",
+	  "SIFRENIZI_OLUSTURUNUZ": "Create Your Password",
+	  "PWORD": "Password",
+	  "SIFRE_ONAYLAYINIZ": "Confirmation Password",
+	  "BTN_ONAYLA": "CONFIRM",
+	  "CONFIRMATION": "Confirmation password has to be same with password!"
 	},
-
 	"RegisterDoctorPage": {
-		"TITLE": "DOCTOR REGISTRATION",
-		"LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ": "Please fill in the form completely. Only dentists can register.",
-		"NAME": "Full Name",
-		"EMAIL": "E-Mail",
-		"KULLANICI_AD": "Username",
-		"PWORD": "Password",
-		"SIFRE_ONAYLAYINIZ": "Confirmation Password",
-		"KAYDOL": "Sign up",
-		"CONFIRMATION": "Confirmation password has to be same with password!",
-		"HESABIN_VAR_MI": "Do you have an account? Login."
+	  "TITLE": "DOCTOR REGISTRATION",
+	  "LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ": "Please fill in the form completely. Only dentists can register.",
+	  "NAME": "Full Name",
+	  "EMAIL": "E-Mail",
+	  "KULLANICI_AD": "Username",
+	  "PWORD": "Password",
+	  "SIFRE_ONAYLAYINIZ": "Confirmation Password",
+	  "KAYDOL": "Sign up",
+	  "CONFIRMATION": "Confirmation password has to be same with password!",
+	  "HESABIN_VAR_MI": "Do you have an account? Login."
 	},
-
 	"SimulationPage": {
-		"TITLE": "3D Simulation"
+	  "TITLE": "3D Simulation"
 	},
-
 	"SMS_OTP_Page": {
-		"TITLE": "ACCOUNT ACTIVATION",
-		"SMS_GELEN_SIFRE": "Password sent with SMS",
-		"BTN_AKTIVASYONU_TAMAMLA": "COMPLETE ACTIVATION",
-		"BTN_SIFREYI_TEKRAR_GONDER": "SEND THE PASSWORD AGAIN",
-		"CLOSE": "Close",
-		"PASSWORD": "Password",
-		"ACTIVATION_MESSAGE1":"You entered your activation code incorrect!",
-		"ACTIVATION_MESSAGE2":"Your activation code is resent."
+	  "TITLE": "ACCOUNT ACTIVATION",
+	  "SMS_GELEN_SIFRE": "Password sent with SMS",
+	  "BTN_AKTIVASYONU_TAMAMLA": "COMPLETE ACTIVATION",
+	  "BTN_SIFREYI_TEKRAR_GONDER": "SEND THE PASSWORD AGAIN",
+	  "CLOSE": "Close",
+	  "PASSWORD": "Password",
+	  "ACTIVATION_MESSAGE1": "You entered your activation code incorrect!",
+	  "ACTIVATION_MESSAGE2": "Your activation code is resent."
 	},
-
 	"SuccessActivationPage": {
-		"TITLE": "ACCOUNT ACTIVATION",
-		"BTN_BASLA": "START"
+	  "TITLE": "ACCOUNT ACTIVATION",
+	  "BTN_BASLA": "START",
+	  "COMPLETE": "Congratulations! Activation Process has been Completed."
 	},
-
 	"ContactPage": {
-		"TITLE": "Settings",
-		"LNG":"Languages",
-		"OKAY":"Okay",
-		"DISMISS":"Dismiss"
+	  "TITLE": "Settings",
+	  "LNG": "Languages",
+	  "OKAY": "Okay",
+	  "DISMISS": "Dismiss"
 	},
-
 	"TimerPage": {
-		"TITLE": "TIMER"
+	  "TITLE": "TIMER"
 	},
-
 	"TicketListPage": {
-		"TITLE": "TICKET LIST",
-		"ONCELIK": "Priority",
-		"KONU": "Subject",
-		"KATEGORI": "Category",
-		"OLUSTURULDU": "Created",
-		"GUNCELLENDI": "Updated",
-		"ADIM": "Step",
-		"BTN_CHAT": "Chat With Doctor",
-		"BTN_SIMULATION": "Go to Simulation",
-		"CHAT_MESSAGE": "Cannot reach to chat. This patient is not registered into the database.",
-		"SIMUL_MESSAGE": "Cannot reach to simulation. There is no simulation for this patient."
+	  "TITLE": "TICKET LIST",
+	  "ONCELIK": "Priority",
+	  "KONU": "Subject",
+	  "KATEGORI": "Category",
+	  "OLUSTURULDU": "Created",
+	  "GUNCELLENDI": "Updated",
+	  "ADIM": "Step",
+	  "BTN_CHAT": "Chat With Doctor",
+	  "BTN_SIMULATION": "Go to Simulation",
+	  "CHAT_MESSAGE": "Cannot reach to chat. This patient is not registered into the database.",
+	  "SIMUL_MESSAGE": "Cannot reach to simulation. There is no simulation for this patient."
+	},
+	"CategoryPage": {
+	  "TITLE": "Category",
+	  "TUM_VAKALAR": "All Cases",
+	  "OLCULER": "Measurement",
+	  "TARAMA": "Scanning",
+	  "KAYIT": "Register",
+	  "PLANLAMA": "Planning",
+	  "PCT": "P.S.R",
+	  "KARGODA": "On Cargo",
+	  "TAMAMLANMIS": "Done"
+	},
+	"LISANS": {
+	  "LISANSLI1": "I Hereby Accept that I Am a Licensed Dentist.",
+	  "LISANSLI2": "I Hereby Accept the Validity of the",
+	  "LISANSLI3": " information given and",
+	  "LISANSLI4": "membership terms and conditions.",
+	  "MARKA": "Clearfix"
 	},
 
-	"CategoryPage": {
-		"TITLE": "Category",
-		"TUM_VAKALAR": "All Cases",
-		"OLCULER": "Measurement",
-		"TARAMA": "Scanning",
-		"KAYIT": "Register",
-		"PLANLAMA": "Planning",
-		"PCT": "P.S.R",
-		"KARGODA": "On Cargo",
-		"TAMAMLANMIS": "Done"
+	"AddPhotos":{
+		"ADD_PHOTOS":"Add Photos",
+		"BTN_NEXT":"SEND"
 	}
-
-
-
 }
+  

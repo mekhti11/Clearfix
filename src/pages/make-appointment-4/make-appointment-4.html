@@ -8,10 +8,19 @@
 
 
 <ion-content padding>
-    <ion-card class="card-parent">
-        <img src="/assets/imgs/clearfix.png"/>
-        <div class="card-title" text-center> <br>{{ 'MakeAppointment4Page.TEBRIKLER' | translate}}<br>{{ 'MakeAppointment4Page.RANDEVUNUZ_BASARLI' | translate}} </div>
-      </ion-card>
+   
+      <div padding text-center>
+        <div class="logo primary-bg">
+            <img src="/assets/imgs/loginDoktor.png"/>
+        </div>
+        <h5 style="font-weight: bold; color:rgb(101, 183, 221);">
+        <!-- {{'RegisterDoctorPage.LUTFEN_FORMU_EKSIKSIZ_DOLDURUNUZ' | translate}} -->
+        <br>
+        {{ 'MakeAppointment4Page.TEBRIKLER' | translate}}  
+        <br>
+        {{ 'MakeAppointment4Page.RANDEVUNUZ_BASARLI' | translate}}
+        </h5>
+    </div>
       <br><br>
       <button ion-button class="button-middle" (click)="appointments()">{{ 'MakeAppointment4Page.BTN_RANDEVULARIMA_GIT' | translate}}</button>
 

@@ -7,7 +7,7 @@
 	},
 	"HomePage": {
 	  "BTN_YENI_HESAP_OLUSTUR": "CREATE NEW ACCOUNT",
-	  "BTN_UYE_GIRISI": "MEMBER LOGIN",
+	  "BTN_UYE_GIRISI": "PATIENT LOGIN",
 	  "BTN_HEKIM_GIRISI": "DOCTOR LOGIN",
 	  "BTN_KATEGORILERE_GIT": "CATEGORIES",
 	  "Sayin": "Dear",
@@ -75,7 +75,7 @@
 	"MakeAppointment2Page": {
 	  "TITLE": "MAKE APPOINTMENT",
 	  "FOTOGRAF_YUKLEME": "UPLOADING PHOTO",
-	  "FOTOGRAFLARINIZI_CEKINIZ": "Please capture and send your photo as shown below",
+	  "FOTOGRAFLARINIZI_CEKINIZ": "Capture and send your photo as shown below",
 	  "FOTOGRAF_EKLE": "ADD PHOTO",
 	  "BTN_NEXT": "Next Step"
 	},

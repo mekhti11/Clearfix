@@ -8,7 +8,7 @@
 	},
 	"HomePage": {
 		"BTN_YENI_HESAP_OLUSTUR": "YENİ HESAP OLUŞTUR",
-		"BTN_UYE_GIRISI": "ÜYE GİRİŞİ",
+		"BTN_UYE_GIRISI": "HASTA GİRİŞİ",
 		"BTN_HEKIM_GIRISI": "HEKİM GİRİŞİ",
 		"BTN_KATEGORILERE_GIT": "KATEGORİLERE GİT",
 		"Sayin": "Sayın",
@@ -88,7 +88,7 @@
 	"MakeAppointment3Page": {
 		"TITLE": "RANDEVU AL",
 		"BILGILERINIZI_KONTROL": "BİLGİLERİNİZİ KONTROL EDİNİZ",
-		"LUTFEN_BILGILERINIZI_SON_KEZ": "Lütfen bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz",
+		"LUTFEN_BILGILERINIZI_SON_KEZ": "Bilgilerinizi son bir kez daha kontrol ediniz ve gönderiniz",
 		"BILGILERIMI_DUZENLE": "BİLİGİLERİMİ DÜZENLE",
 		"BTN_RANDEVUYU_OLUSTUR": "RANDEVUYU OLUŞTUR",
 		"ADINIZ": "Adınız",

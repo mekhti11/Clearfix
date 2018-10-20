@@ -16,11 +16,11 @@
 			$queries = $db_mobile->query("SELECT * FROM fotograflar INNER JOIN kayit ON fotograflar.user_id = kayit.id WHERE fotograflar.user_id = " . $_POST['id'] );
 			if ( $queries->rowCount() ){
 			foreach( $queries as $query ){
-				array_push($arr, array(
+				$arr = array(
 					'appointment_no'       => $query['id'],
 					'appointment_date' 	   => $query['tarih'],
 					'appointment_content' => $query['ekleme'],
-					));
+					);
 				}
 			}
 			echo json_encode($arr);
